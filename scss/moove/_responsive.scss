@@ -214,6 +214,8 @@
     flex-basis: calc(25% - .5rem);
     flex-shrink: 0;
     flex-grow: 0;
+    background-color:white;
+
   }
 
   .pagelayout-mydashboard .card-deck .card {
@@ -275,4 +277,10 @@
   #page-site-index.notloggedin:not(.disablefrontpageloginbox) .btn-login-top {
     display: none;
   }
+}
+
+
+.card-deck .card .card-footer{
+  display: grid;
+  justify-items: center;
 }
