@@ -279,8 +279,14 @@
   }
 }
 
-
+.card{
+  border-radius: 20px;
+}
 .card-deck .card .card-footer{
   display: grid;
   justify-items: center;
+}
+
+.card a img{
+  border-radius: 20px 20px 0px 0px;
 }
