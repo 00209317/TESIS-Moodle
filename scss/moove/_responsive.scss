@@ -77,7 +77,7 @@
         .list-group-item {
           padding: 0 .6rem;
 
-          > ul {
+          >ul {
             display: none;
             padding: 10px;
           }
@@ -101,7 +101,7 @@
               display: none;
             }
 
-            > ul {
+            >ul {
               display: block;
               height: auto;
               overflow: auto;
@@ -214,6 +214,8 @@
     flex-basis: calc(25% - .5rem);
     flex-shrink: 0;
     flex-grow: 0;
+    background-color: white;
+
   }
 
   .pagelayout-mydashboard .card-deck .card {
@@ -254,6 +256,7 @@
           .pgr-img {
             display: none !important;
           }
+
           .pgr-content {
             width: 100% !important;
           }
@@ -274,5 +277,35 @@
 
   #page-site-index.notloggedin:not(.disablefrontpageloginbox) .btn-login-top {
     display: none;
+  }
+}
+
+.card {
+  border-radius: 20px;
+}
+
+.card-deck .card .card-footer {
+  display: grid;
+  justify-items: center;
+}
+
+.card a img {
+  border-radius: 20px 20px 0px 0px;
+}
+
+.card-deck {
+  .card-body {
+    text-align: center;
+  }
+}
+
+.card-deck {
+  .card-body {
+    .no-overflow {
+      p{
+        text-align: center !important; 
+      }
+    }
+
   }
 }
