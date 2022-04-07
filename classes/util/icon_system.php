@@ -43,7 +43,7 @@ class icon_system extends icon_system_fontawesome {
      * @var array $map Cached map of moodle icon names to font awesome icon names.
      */
     private $map = [];
-
+ 
     /**
      * Get the icon mapping
      *
