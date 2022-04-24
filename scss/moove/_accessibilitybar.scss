@@ -1,18 +1,24 @@
 #accessibilitybar {
     display: none;
-    background-color: #fff;
     padding: .2rem;
     height: 30px;
+    
+
+    
 
     .bars {
         display: -ms-flexbox;
         display: flex;
+        flex-direction: column;
         margin-left: auto;
 
+        border: double;
+        background-color: #272c33;
+        color: white;
+        padding: 2rem;
+
         .fontsize,
-        .sitecolor {
-            display: flex;
-        }
+        
 
         .fontsize {
             margin-left: auto;
@@ -31,20 +37,49 @@
                 margin-left: .5rem;
 
                 .btn {
-                    padding: 0 .5rem;
-                    border-radius: 4px;
-                    color: #212529;
+                    padding: .5rem;
+                    border-radius: 0px;
+                    color: white;
                     cursor: pointer;
                 }
             }
         }
 
+        .lang-menu{
+            width: fit-content;
+            align-self: flex-end !important;
+            height: fit-content;
+
+            .dropdown {
+                height: fit-content;
+                .dropdown-toggle{
+                    height: 2rem;
+                    width: 2rem;
+                }
+            }
+
+            .slicon-globe{
+                display: inherit;
+            }
+        }
+
+        .sitecolor {
+            display: flex;
+            border: #000000;
+            li {
+                border: inset;
+                margin: 0;
+            }
+        }
+
         #sitecolor_color2 {
             background-color: #ffffcc;
+            color: #272c33;
         }
 
         #sitecolor_color3 {
             background-color: #99ccff;
+            color: #272c33;
         }
 
         #sitecolor_color4 {
@@ -56,7 +91,7 @@
 
 body.hasaccessibilitybar:not(.notloggedin) {
     nav.navbar {
-        top: 30px;
+        top: 0px;
     }
 
     #page {
@@ -65,17 +100,19 @@ body.hasaccessibilitybar:not(.notloggedin) {
 
     [data-region="blocks-column"],
     [data-region=right-hand-drawer].drawer {
-        top: 100px;
+        top: 70px;
     }
 
     #nav-drawer {
-        top: 100px;
+        top: 70px;
     }
 }
 
 body.hasaccessibilitybar {
     #accessibilitybar {
-        display: block;
+        display: flex;
+        position: fixed;
+        margin-top: calc(#{$navbar-height});;
     }
 
     #nav-drawer {
@@ -83,6 +120,6 @@ body.hasaccessibilitybar {
     }
 
     .message-app .footer-container {
-        top: -30px;
+        top: 0px;
     }
 }
