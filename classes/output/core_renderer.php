@@ -826,7 +826,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * @since Moodle 2.5.1 2.6
      */
     public function body_attributes($additionalclasses = array()) {
-        $hasaccessibilitybar = get_user_preferences('thememoovesettings_enableaccessibilitytoolbar', '');
+        $hasaccessibilitybar = false; //get_user_preferences('thememoovesettings_enableaccessibilitytoolbar', '');
         if ($hasaccessibilitybar) {
             $additionalclasses[] = 'hasaccessibilitybar';
 

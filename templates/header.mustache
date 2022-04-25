@@ -61,16 +61,28 @@
             {{> theme_moove/accessibilitybar }}
         </li>
 
-        <li class="nav-item accessibility-menu-btn">
-            <div id="nav-drawer-footery">
-                <span id="themesettings-control">
+        <li class="nav-item accessibility-menu-btn-mod">
+                <span id="themesettings-control-mod">
                     <i title="{{#str}}themesettingstitle, theme_moove{{/str}}"
                        class="fa fa-universal-access">
                     </i>
-                    <span class="text">{{#str}}themesettingstitle, theme_moove{{/str}}</span>
                 </span>
             </div>
         </li>
+
+        <script>
+            
+            document.getElementById("themesettings-control-mod").onclick = function(event) {
+                if (document.getElementById("accessibilitybar").style.display == "none"){
+                    document.getElementById("accessibilitybar").style.display = "flex";
+                } else {
+                    document.getElementById("accessibilitybar").style.display = "none";
+                }
+                
+              }
+            ;
+            
+        </script>
 
 
         

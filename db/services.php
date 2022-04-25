@@ -40,6 +40,13 @@ $functions = array(
         'type' => 'write',
         'ajax' => true
     ),
+    'theme_moove_sitefont' => array(
+        'classname' => 'theme_moove\api\accessibility',
+        'methodname' => 'sitefont',
+        'description' => 'Changes the site font aspect.',
+        'type' => 'write',
+        'ajax' => true
+    ),
     'theme_moove_savethemesettings' => array(
         'classname' => 'theme_moove\api\accessibility',
         'methodname' => 'savethemesettings',
