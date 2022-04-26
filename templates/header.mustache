@@ -54,7 +54,7 @@
     </ul>
     <ul class="nav navbar-nav ml-auto mr-3">
         <div class="d-none d-lg-block">
- 
+
         </div>
 
         <li class="nav-item accessibility-menu-panel">
@@ -69,18 +69,21 @@
                         </i>
                     </span>
                 </li>
-        <li class="nav-item accessibility-menu-btn-mod">
-                <span id="themesettings-control-mod">
-                    <i title="{{#str}}themesettingstitle, theme_moove{{/str}}"
-                        class="fa fa-universal-access">
-                    </i>
-                </span>
             </div>
         </div>
-
-
-
-
+        <div class="popover-region collapsed">
+            <div class="popover-region-toggle nav-link icon-no-margin">
+                <li class="nav-item accessibility-menu-btn-mod">
+                        <span id="personalizarDashboard_button">
+                            <i title="{{#str}}themesettingstitle, theme_moove{{/str}}"
+                                class="fa fa-pencil">
+                            </i>
+                        </span>
+                    </div>
+                </li>
+            </div>
+        </div>
+            
 
         {{> theme_moove/personalizarDashboard }}
 
@@ -89,14 +92,6 @@
         {{{ output.user_menu }}}
 
         
-        <li class="nav-item accessibility-menu-btn-mod">
-                <span id="personalizarDashboard_button">
-                    <i title="{{#str}}themesettingstitle, theme_moove{{/str}}"
-                       class="fa fa-universal-access">
-                    </i>
-                </span>
-            </div>
-        </li>
                 <script>
             
             document.getElementById("themesettings-control-mod").onclick = function(event) {
