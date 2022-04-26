@@ -45,7 +45,7 @@
             <span class="site-name d-none d-md-inline">{{{ sitename }}}</span>
         {{/ output.get_logo }}
     </a>
-
+    {{> theme_moove/accessibilitybar }}
     <ul class="navbar-nav d-none d-md-flex custom-menus">
         <!-- custom_menu -->
         {{{ output.custom_menu }}}
@@ -54,7 +54,7 @@
     </ul>
     <ul class="nav navbar-nav ml-auto mr-3">
         <div class="d-none d-lg-block">
-            {{{ output.search_box }}}
+ 
         </div>
 
         <li class="nav-item accessibility-menu-panel">
@@ -69,10 +69,35 @@
                         </i>
                     </span>
                 </li>
+        <li class="nav-item accessibility-menu-btn-mod">
+                <span id="themesettings-control-mod">
+                    <i title="{{#str}}themesettingstitle, theme_moove{{/str}}"
+                        class="fa fa-universal-access">
+                    </i>
+                </span>
             </div>
         </div>
 
-        <script>
+
+
+
+
+        {{> theme_moove/personalizarDashboard }}
+
+        {{{ output.navbar_plugin_output }}}
+
+        {{{ output.user_menu }}}
+
+        
+        <li class="nav-item accessibility-menu-btn-mod">
+                <span id="personalizarDashboard_button">
+                    <i title="{{#str}}themesettingstitle, theme_moove{{/str}}"
+                       class="fa fa-universal-access">
+                    </i>
+                </span>
+            </div>
+        </li>
+                <script>
             
             document.getElementById("themesettings-control-mod").onclick = function(event) {
                 if (document.getElementById("accessibilitybar").style.display == "none"){
@@ -83,20 +108,18 @@
                 
             }
             ;
-            
+            document.getElementById("personalizarDashboard_button").onclick = function(event) {
+                if (document.getElementById("personalizarDashboard").style.display == "none"){
+                    document.getElementById("personalizarDashboard").style.display = "flex";
+                } else {
+                    document.getElementById("personalizarDashboard").style.display = "none";
+                }
+                
+              }
+            ;
         </script>
-
-
-        
-
-        
-
-        {{{ output.navbar_plugin_output }}}
-
-        {{{ output.user_menu }}}
-
-        
     </ul>
 
     {{{output.}}}
 </nav>
+
