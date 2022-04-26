@@ -22,7 +22,7 @@
     Example context (json): {}
 }}
 
-{{> theme_moove/accessibilitybar }}
+
 
 <nav class="fixed-top navbar navbar-light navbar-expand moodle-has-zindex">
     {{#hasdrawertoggle}}
@@ -57,9 +57,37 @@
             {{{ output.search_box }}}
         </div>
 
-        <li class="nav-item lang-menu">
-            {{{ output.render_lang_menu }}}
+        <li class="nav-item accessibility-menu-panel">
+            {{> theme_moove/accessibilitybar }}
         </li>
+
+        <li class="nav-item accessibility-menu-btn-mod">
+                <span id="themesettings-control-mod">
+                    <i title="{{#str}}themesettingstitle, theme_moove{{/str}}"
+                       class="fa fa-universal-access">
+                    </i>
+                </span>
+            </div>
+        </li>
+
+        <script>
+            
+            document.getElementById("themesettings-control-mod").onclick = function(event) {
+                if (document.getElementById("accessibilitybar").style.display == "none"){
+                    document.getElementById("accessibilitybar").style.display = "flex";
+                } else {
+                    document.getElementById("accessibilitybar").style.display = "none";
+                }
+                
+              }
+            ;
+            
+        </script>
+
+
+        
+
+        
 
         {{{ output.navbar_plugin_output }}}
 

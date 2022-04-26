@@ -202,6 +202,22 @@ class accessibility extends external_api {
         return ['success' => true];
     }
 
+
+    public static function sitefont($action) {
+        $params = self::validate_parameters(self::fontsize_parameters(), ['action' => $action]);
+
+        $fonttype = null;
+        
+        if ($params['action'] == 'odafont') {
+            $fonttype = 'odafont';
+        }
+        $fonttype = 'odafont';
+
+        set_user_preference('thememoovesettings_fonttype', $fonttype);
+
+        return ['success' => true];
+    }
+
     /**
      * Site color endpoint return definition
      *
@@ -250,12 +266,13 @@ class accessibility extends external_api {
             set_user_preference('thememoovesettings_fonttype', $fonttype);
         }
 
-        $enableaccessibilitytoolbar = null;
+        /*$enableaccessibilitytoolbar = null;
         if ($data['enableaccessibilitytoolbar']) {
-            $enableaccessibilitytoolbar = true;
+            //$enableaccessibilitytoolbar = true;
         }
 
         set_user_preference('thememoovesettings_enableaccessibilitytoolbar', $enableaccessibilitytoolbar);
+        */
 
         \core\notification::success(get_string('themesettinggsavedsuccessfully', 'theme_moove'));
 
@@ -292,7 +309,7 @@ class accessibility extends external_api {
     public static function getthemesettings() {
         return [
             'fonttype' => get_user_preferences('thememoovesettings_fonttype', 'default'),
-            'enableaccessibilitytoolbar' => get_user_preferences('thememoovesettings_enableaccessibilitytoolbar', false)
+            //'enableaccessibilitytoolbar' => get_user_preferences('thememoovesettings_enableaccessibilitytoolbar', false)
         ];
     }
 
@@ -304,7 +321,7 @@ class accessibility extends external_api {
     public static function getthemesettings_returns() {
         return new external_single_structure([
             'fonttype' => new external_value(PARAM_TEXT, 'the user selected font'),
-            'enableaccessibilitytoolbar' => new external_value(PARAM_BOOL, 'the user selected toolbar option')
+            //'enableaccessibilitytoolbar' => new external_value(PARAM_BOOL, 'the user selected toolbar option')
         ]);
     }
 }

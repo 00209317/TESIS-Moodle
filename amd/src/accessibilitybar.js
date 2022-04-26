@@ -26,7 +26,8 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
 
     var SELECTORS = {
         FONT_SIZE: '#fontsize_dec, #fontsize_reset, #fontsize_inc',
-        SITE_COLOR: '#sitecolor_color1, #sitecolor_color2, #sitecolor_color3, #sitecolor_color4'
+        SITE_COLOR: '#sitecolor_color1, #sitecolor_color2, #sitecolor_color3, #sitecolor_color4',
+        SITE_FONT: '#fontsite_odafont, fontsite_default'
     };
 
     var fontsizeClass = null;
@@ -34,6 +35,7 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
     var fontsizeClassSize = null;
     var fontsizeCurrentAction = null;
     var sitecolorCurrentAction = null;
+    var sitefontCurrentAction = null;
 
     var AccessibilityBar = function() {
         var classList = jQuery('body').attr('class').split(/\s+/);
@@ -67,6 +69,14 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
             sitecolorCurrentAction = btn.data('action');
 
             this.siteColor();
+        }.bind(this));
+
+        jQuery(SELECTORS.SITE_FONT).click(function(element) {
+            var btn = jQuery(element.currentTarget);
+
+            sitefontCurrentAction = btn.data('action');
+
+            this.siteFont();
         }.bind(this));
     };
 
@@ -179,6 +189,19 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
 
         request[0].done(function() {
             this.reloadSitecolorClass();
+        }.bind(this));
+    };
+
+    AccessibilityBar.prototype.siteFont = function() {
+        var request = Ajax.call([{
+            methodname: 'theme_moove_sitefont',
+            args: {
+                action: sitefontCurrentAction
+            }
+        }]);
+
+        request[0].done(function() {
+            document.location.reload(true);
         }.bind(this));
     };
 

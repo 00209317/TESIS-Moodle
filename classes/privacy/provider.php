@@ -62,7 +62,7 @@ class provider implements
         $items->add_user_preference(self::FONTSIZE, 'privacy:metadata:preference:accessibilitystyles_fontsizeclass');
         $items->add_user_preference(self::SITECOLOR, 'privacy:metadata:preference:accessibilitystyles_sitecolorclass');
         $items->add_user_preference(self::FONTTYPE, 'privacy:metadata:preference:thememoovesettings_fonttype');
-        $items->add_user_preference(self::TOOLBAR, 'privacy:metadata:preference:thememoovesettings_enableaccessibilitytoolbar');
+        //$items->add_user_preference(self::TOOLBAR, 'privacy:metadata:preference:thememoovesettings_enableaccessibilitytoolbar');
         return $items;
     }
 
@@ -79,7 +79,7 @@ class provider implements
                 'theme_moove',
                 self::TOOLBAR,
                 $toolbar,
-                get_string('privacy:thememoovesettings_enableaccessibilitytoolbar', 'theme_moove', $toolbar)
+                //get_string('privacy:thememoovesettings_enableaccessibilitytoolbar', 'theme_moove', $toolbar)
             );
 
             $fontsize = get_user_preferences(self::FONTSIZE, null, $userid);

@@ -46,7 +46,7 @@ define(['jquery', 'core/notification', 'core/custom_interaction_events', 'core/m
                 document.getElementById('fonttype').value = result.fonttype;
 
                 if (result.enableaccessibilitytoolbar) {
-                    document.getElementById('enableaccessibilitytoolbar').checked = true;
+                    //document.getElementById('enableaccessibilitytoolbar').checked = true;
                 }
             });
         };
