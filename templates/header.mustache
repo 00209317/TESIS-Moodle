@@ -60,15 +60,17 @@
         <li class="nav-item accessibility-menu-panel">
             {{> theme_moove/accessibilitybar }}
         </li>
-
-        <li class="nav-item accessibility-menu-btn-mod">
-                <span id="themesettings-control-mod">
-                    <i title="{{#str}}themesettingstitle, theme_moove{{/str}}"
-                       class="fa fa-universal-access">
-                    </i>
-                </span>
+        <div class="popover-region collapsed">
+            <div class="popover-region-toggle nav-link icon-no-margin">
+                <li class="nav-item accessibility-menu-btn-mod">
+                    <span id="themesettings-control-mod">
+                        <i title="{{#str}}themesettingstitle, theme_moove{{/str}}"
+                            class="fa fa-universal-access">
+                        </i>
+                    </span>
+                </li>
             </div>
-        </li>
+        </div>
 
         <script>
             
@@ -79,7 +81,7 @@
                     document.getElementById("accessibilitybar").style.display = "none";
                 }
                 
-              }
+            }
             ;
             
         </script>
