@@ -2,7 +2,7 @@ nav.navbar {
     min-height: $navbar-height;
     -webkit-box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    background-color:#003c71;
+    background-color:$navbar-bg;
     position: fixed;
     top: 0;
     right: 0;
@@ -14,7 +14,7 @@ nav.navbar {
         width: 70px;
         margin-left: -16px;
         padding: 16px 9px 0 9px;
-        background-color: $navbar-bg;
+        background-color: $sidebar-bg;
 
         .nav-link {
             color: #fff;
@@ -82,7 +82,8 @@ nav.navbar {
                 border-radius: 0;
                 font-size: 17px;
                 height: 70px;
-            }
+                border-bottom: 1px solid #00000018;
+            } 
 
             .close-search {
                 position: absolute;

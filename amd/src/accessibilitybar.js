@@ -59,7 +59,7 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
             fontsizeCurrentAction = btn.data('action');
 
             this.fontSize();
-        }.bind(this));
+        }.bind(this)); 
 
         jQuery(SELECTORS.SITE_COLOR).click(function(element) {
             var btn = jQuery(element.currentTarget);

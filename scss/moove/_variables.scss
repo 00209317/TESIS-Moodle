@@ -9,12 +9,14 @@ $headings-color: #455a64 !default;
 
 $body-bg: #eef5f9 !default;
 
-$card-border-radius: 0 !default;
+$card-border-radius: 1em !default;
 $card-border-color: #d7dfe3 !default;
 
 $navbar-height: 70px !default;
-$navbar-bg: #272c33 !default;
-$navbar-bg-hover: #26c6da !default;
+$navbar-bg: #fff !default;
+$navbar-bg-hover: #fff !default;
+$sidebar-bg: #003c71 !default;
+$sidebar-bg-hover: #2568a1 !default;
 $navbar-separator: #374850 !default;
 
 $calendarEventCategoryColor: #fc4b6c !default;

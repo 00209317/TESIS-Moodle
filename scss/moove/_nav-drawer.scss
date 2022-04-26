@@ -1,10 +1,13 @@
 #nav-drawer {
     padding: 5px;
-    background-color: $navbar-bg;
+    background-color: $sidebar-bg;
     top: 70px;
     height: calc(100% - #{$navbar-height} - 50px);
     padding-bottom: 20px;
     overflow-y: auto;
+    border-bottom-right-radius: 1em;
+    border-top-right-radius: 1em;
+    transition: all 0.5s ease;
 
     &::-webkit-scrollbar {
         width: 7px;
@@ -32,7 +35,7 @@
             border: 0;
 
             &:hover {
-                background-color: $navbar-bg-hover;
+                background-color: $sidebar-bg-hover;
             }
 
             a {
@@ -154,6 +157,8 @@
     overflow: visible;
     width: 70px;
     left: 0;
+    border-top-right-radius: 0;
+    
 
     .metismenu .has-arrow::after {
         display: none;
@@ -179,7 +184,7 @@
 
             &:hover {
                 width: 270px;
-                background-color: $navbar-bg-hover;
+                background-color: $sidebar-bg-hover;
 
                 &[data-key="mycourses"] {
                     border-bottom-right-radius: 0;
@@ -246,7 +251,7 @@
     left: 5px;
     bottom: 0;
     margin: 0 -5px;
-    background-color: $navbar-bg-hover;
+    background-color: $sidebar-bg-hover;
     width: 70px;
 
     #themesettings-control {

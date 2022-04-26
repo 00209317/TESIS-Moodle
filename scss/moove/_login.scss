@@ -23,6 +23,10 @@
 
         img {
             max-height: 200px;
+            $breakpoint-tablet: 768px;
+            @media (max-width: $breakpoint-tablet) {
+                width: 80%;
+            }
         }
     }
 
@@ -58,8 +62,8 @@
                     margin-bottom: 0;
                     font-size: 1rem;
                     text-align: center;
-                    background-color: #eceeef;
-                    border: 1px solid rgba(0,0,0,.15);
+                    background-color: #eceeef00;
+                    border-bottom: 1px solid #00000018;
                     border-right: 0;
                 }
                 .input-group-username .input-group-addon {
