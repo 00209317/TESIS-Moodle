@@ -51,9 +51,6 @@
     {{>theme_moove/inc_start}}
 
     <div id="page" class="container-fluid d-print-block">
-        {{#canviewadmininfos}}
-            {{>theme_moove/mydashboard_admin}}
-        {{/canviewadmininfos}}
         {{^canviewadmininfos}}
             {{{ output.full_header }}}
         {{/canviewadmininfos}}
