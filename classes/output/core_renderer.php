@@ -37,6 +37,25 @@ use core_text;
 use help_icon;
 use context_system;
 use core_course_list_element;
+use context_course;
+
+use coding_exception;
+
+use tabobject;
+use tabtree;
+use custom_menu_item;
+
+use block_contents;
+use navigation_node;
+use action_link;
+
+use preferences_groups;
+
+use single_button;
+use single_select;
+use paging_bar;
+use url_select;
+
 
 defined('MOODLE_INTERNAL') || die;
 
@@ -851,5 +870,95 @@ class core_renderer extends \theme_boost\output\core_renderer {
         }
 
         return ' id="'. $this->body_id().'" class="'.$this->body_css_classes($additionalclasses).'"';
+    }
+    public function teacherdashmenu() {
+        global $PAGE, $COURSE, $CFG, $DB, $OUTPUT;
+        $course = $this->page->course;
+        $context = context_course::instance($course->id);
+        $showincourseonly = isset($COURSE->id) && $COURSE->id > 1 && $PAGE->theme->settings->coursemanagementtoggle && isloggedin() && !isguestuser();
+        $haspermission = has_capability('enrol/category:config', $context) && $PAGE->theme->settings->coursemanagementtoggle && isset($COURSE->id) && $COURSE->id > 1;
+        $togglebutton = '';
+        $togglebuttonstudent = '';
+        $hasteacherdash = '';
+        $hasstudentdash = '';
+        $globalhaseasyenrollment = enrol_get_plugin('easy');
+        $coursehaseasyenrollment = '';
+        if ($globalhaseasyenrollment) {
+            $coursehaseasyenrollment = $DB->record_exists('enrol', array(
+                'courseid' => $COURSE->id,
+                'enrol' => 'easy'
+            ));
+            $easyenrollinstance = $DB->get_record('enrol', array(
+                'courseid' => $COURSE->id,
+                'enrol' => 'easy'
+            ));
+        }
+        if ($coursehaseasyenrollment && isset($COURSE->id) && $COURSE->id > 1) {
+            $easycodetitle = get_string('header_coursecodes', 'enrol_easy');
+            $easycodelink = new moodle_url('/enrol/editinstance.php', array(
+                'courseid' => $PAGE->course->id,
+                'id' => $easyenrollinstance->id,
+                'type' => 'easy'
+            ));
+        }
+        if (isloggedin() && ISSET($COURSE->id) && $COURSE->id > 1) {
+            $course = $this->page->course;
+            $context = context_course::instance($course->id);
+            $hasteacherdash = has_capability('moodle/course:viewhiddenactivities', $context);
+            $hasstudentdash = !has_capability('moodle/course:viewhiddenactivities', $context);
+            if (has_capability('moodle/course:viewhiddenactivities', $context)) {
+                $togglebutton = get_string('coursemanagementbutton', 'theme_moove');
+            }
+            else {
+                $togglebuttonstudent = get_string('studentdashbutton', 'theme_moove');
+            }
+        }
+        $siteadmintitle = get_string('siteadminquicklink', 'theme_moove');
+        $siteadminurl = new moodle_url('/admin/search.php');
+        $hasadminlink = has_capability('moodle/site:configview', $context);
+        $course = $this->page->course;
+        // Send to template.
+        $dashmenu = ['showincourseonly' => $showincourseonly, 'togglebutton' => $togglebutton, 'togglebuttonstudent' => $togglebuttonstudent, 'hasteacherdash' => $hasteacherdash, 'hasstudentdash' => $hasstudentdash, 'haspermission' => $haspermission, 'hasadminlink' => $hasadminlink, 'siteadmintitle' => $siteadmintitle, 'siteadminurl' => $siteadminurl, ];
+        // Attach easy enrollment links if active.
+        if ($globalhaseasyenrollment && $coursehaseasyenrollment) {
+            $dashmenu['dashmenu'][] = array(
+                'haseasyenrollment' => $coursehaseasyenrollment,
+                'title' => $easycodetitle,
+                'url' => $easycodelink
+            );
+        }
+        return $this->render_from_template('theme_moove/teacherdashmenu', $dashmenu);
+    }
+    public function edit_button_fhs() {
+        global $SITE, $PAGE, $USER, $CFG, $COURSE;
+        if (!$PAGE->user_allowed_editing() || $COURSE->id <= 1) {
+            return '';
+        }
+        if ($PAGE->pagelayout == 'course') {
+            $url = new moodle_url($PAGE->url);
+            $url->param('sesskey', sesskey());
+            if ($PAGE->user_is_editing()) {
+                $url->param('edit', 'off');
+                $btn = 'btn-danger editingbutton';
+                $title = get_string('editoff', 'theme_fordson');
+                $icon = 'fa-power-off';
+            }
+            else {
+                $url->param('edit', 'on');
+                $btn = 'btn-success editingbutton';
+                $title = get_string('editon', 'theme_fordson');
+                $icon = 'fa-edit';
+            }
+            return html_writer::tag('a', html_writer::start_tag('i', array(
+                'class' => $icon . ' fa fa-fw'
+            )) . html_writer::end_tag('i') , array(
+                'href' => $url,
+                'class' => 'btn edit-btn ' . $btn,
+                'data-tooltip' => "tooltip",
+                'data-placement' => "bottom",
+                'title' => $title,
+            ));
+            return $output;
+        }
     }
 }

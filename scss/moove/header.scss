@@ -68,7 +68,6 @@
   }
 
 #personalizarDashboard{
-  display: none;
   padding: .2rem;
   height: 30px;
   position: fixed;
@@ -78,4 +77,20 @@
     display: flex;
     flex-direction: column;
   }
+
+  .oculto{
+    visibility: hidden; /* Al alterar las márgenes y el height no es necesaria esta propiedad */
+    opacity: 0;
+    height: 0;
+    padding: 0;
+ }
+ 
+ .visible{
+     visibility: visible; /* Al alterar las márgenes y el height no es necesaria esta propiedad */
+     opacity: 1;
+     height: auto;
+     padding: 15px 0px;
+     transition: opacity 2s linear;
+ }
+
 }

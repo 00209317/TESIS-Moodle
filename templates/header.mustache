@@ -45,6 +45,10 @@
             <span class="site-name d-none d-md-inline">{{{ sitename }}}</span>
         {{/ output.get_logo }}
     </a>
+    <div class="coursecontrols nav-item d-flex">
+        {{{ output.teacherdashmenu }}}
+        {{{ output.edit_button_fhs }}}
+    </div>
     {{> theme_moove/accessibilitybar }}
     <ul class="navbar-nav d-none d-md-flex custom-menus">
         <!-- custom_menu -->
@@ -90,8 +94,6 @@
         {{{ output.navbar_plugin_output }}}
 
         {{{ output.user_menu }}}
-
-        
                 <script>
             
             document.getElementById("themesettings-control-mod").onclick = function(event) {
@@ -103,15 +105,18 @@
                 
             }
             ;
-            document.getElementById("personalizarDashboard_button").onclick = function(event) {
-                if (document.getElementById("personalizarDashboard").style.display == "none"){
-                    document.getElementById("personalizarDashboard").style.display = "flex";
+            document.getElementById("personalizarDashboard_buttonOPTION!").onclick = function(event) {
+                if (document.getElementById("personalizarDashboard").getClass() == "oculto"){
+                    document.getElementById("accessibilitybar").style.display = "flex";
                 } else {
-                    document.getElementById("personalizarDashboard").style.display = "none";
+                    document.getElementById("accessibilitybar").style.display = "none";
                 }
                 
               }
             ;
+            document.getElementById("personalizarDashboard_button").onclick = function(event){
+                if(document.getElementById("personalizarDashboard").getClass())
+            }
         </script>
     </ul>
 
