@@ -298,7 +298,7 @@ function theme_moove_add_certificatesmenuitem(\flat_navigation $flatnav) {
     try {
         if (!theme_moove_has_certificates_plugin()) {
             return;
-        }
+        } 
 
         $actionurl = new \moodle_url('/theme/moove/certificates.php');
 

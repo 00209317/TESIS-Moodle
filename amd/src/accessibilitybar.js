@@ -198,7 +198,7 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
             args: {
                 action: sitefontCurrentAction
             }
-        }]);
+        }]); 
 
         request[0].done(function() {
             document.location.reload(true);

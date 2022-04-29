@@ -33,6 +33,7 @@ use coursecat_helper;
 use stdClass;
 use core_course_list_element;
 use theme_moove\util\extras;
+use context_course;
 
 /**
  * Renderers to align Moove's course elements to what is expect
