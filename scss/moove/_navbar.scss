@@ -291,6 +291,7 @@ nav.navbar {
 
             .dropdown-toggle::after {
                 border: none;
+                display: none !important;
             }
 
             .nav-link {
