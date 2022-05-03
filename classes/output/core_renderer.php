@@ -39,6 +39,24 @@ use context_system;
 use core_course_list_element;
 use context_course;
 
+use coding_exception;
+
+use tabobject;
+use tabtree;
+use custom_menu_item;
+
+use block_contents;
+use navigation_node;
+use action_link;
+
+use preferences_groups;
+
+use single_button;
+use single_select;
+use paging_bar;
+use url_select;
+
+
 defined('MOODLE_INTERNAL') || die;
 
 /**
@@ -853,7 +871,6 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
         return ' id="'. $this->body_id().'" class="'.$this->body_css_classes($additionalclasses).'"';
     }
-    
     public function teacherdashmenu() {
         global $PAGE, $COURSE, $CFG, $DB, $OUTPUT;
         $course = $this->page->course;
@@ -890,13 +907,13 @@ class core_renderer extends \theme_boost\output\core_renderer {
             $hasteacherdash = has_capability('moodle/course:viewhiddenactivities', $context);
             $hasstudentdash = !has_capability('moodle/course:viewhiddenactivities', $context);
             if (has_capability('moodle/course:viewhiddenactivities', $context)) {
-                $togglebutton = get_string('coursemanagementbutton', 'theme_fordson');
+                $togglebutton = get_string('coursemanagementbutton', 'theme_moove');
             }
             else {
-                $togglebuttonstudent = get_string('studentdashbutton', 'theme_fordson');
+                $togglebuttonstudent = get_string('studentdashbutton', 'theme_moove');
             }
         }
-        $siteadmintitle = get_string('siteadminquicklink', 'theme_fordson');
+        $siteadmintitle = get_string('siteadminquicklink', 'theme_moove');
         $siteadminurl = new moodle_url('/admin/search.php');
         $hasadminlink = has_capability('moodle/site:configview', $context);
         $course = $this->page->course;
@@ -910,9 +927,8 @@ class core_renderer extends \theme_boost\output\core_renderer {
                 'url' => $easycodelink
             );
         }
-        return $this->render_from_template('theme_fordson/teacherdashmenu', $dashmenu);
+        return $this->render_from_template('theme_moove/teacherdashmenu', $dashmenu);
     }
-    
     public function edit_button_fhs() {
         global $SITE, $PAGE, $USER, $CFG, $COURSE;
         if (!$PAGE->user_allowed_editing() || $COURSE->id <= 1) {

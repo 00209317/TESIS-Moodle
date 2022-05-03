@@ -45,6 +45,10 @@
             <span class="site-name d-none d-md-inline">{{{ sitename }}}</span>
         {{/ output.get_logo }}
     </a>
+    <div class="coursecontrols nav-item d-flex">
+        {{{ output.teacherdashmenu }}}
+        {{{ output.edit_button_fhs }}}
+    </div>
     {{> theme_moove/accessibilitybar }}
     <ul class="navbar-nav d-none d-md-flex custom-menus">
         <!-- custom_menu -->
@@ -52,10 +56,6 @@
         <!-- page_heading_menu -->
         {{{ output.page_heading_menu }}}
     </ul>
-    <div class="coursecontrols nav-item d-flex">
-            {{{ output.teacherdashmenu }}}
-            {{{ output.edit_button_fhs }}}
-        </div>
     <ul class="nav navbar-nav ml-auto mr-3">
         <div class="d-none d-lg-block">
 
@@ -75,28 +75,14 @@
                 </li>
             </div>
         </div>
-        <div class="popover-region collapsed">
-            <div class="popover-region-toggle nav-link icon-no-margin">
-                <li class="nav-item accessibility-menu-btn-mod">
-                        <span id="personalizarDashboard_button">
-                            <i title="{{#str}}themesettingstitle, theme_moove{{/str}}"
-                                class="fa fa-pencil">
-                            </i>
-                        </span>
-                    </div>
-                </li>
-            </div>
-        </div>
             
 
         {{> theme_moove/personalizarDashboard }}
-
+        
         {{{ output.navbar_plugin_output }}}
 
         {{{ output.user_menu }}}
-
-        
-                <script>
+        <script>
             
             document.getElementById("themesettings-control-mod").onclick = function(event) {
                 if (document.getElementById("accessibilitybar").style.display == "none"){
@@ -105,20 +91,8 @@
                     document.getElementById("accessibilitybar").style.display = "none";
                 }
                 
-            }
-            ;
-            document.getElementById("personalizarDashboard_button").onclick = function(event) {
-                if (document.getElementById("personalizarDashboard").style.display == "none"){
-                    document.getElementById("personalizarDashboard").style.display = "flex";
-                } else {
-                    document.getElementById("personalizarDashboard").style.display = "none";
-                }
-                
-              }
-            ;
+            };
         </script>
     </ul>
-
-    {{{output.}}}
 </nav>
 
