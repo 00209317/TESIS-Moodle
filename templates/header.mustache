@@ -75,18 +75,6 @@
                 </li>
             </div>
         </div>
-        <div class="popover-region collapsed">
-            <div class="popover-region-toggle nav-link icon-no-margin">
-                <li class="nav-item accessibility-menu-btn-mod">
-                        <span id="personalizarDashboard_button">
-                            <i title="{{#str}}themesettingstitle, theme_moove{{/str}}"
-                                class="fa fa-pencil">
-                            </i>
-                        </span>
-                    </div>
-                </li>
-            </div>
-        </div>
             
 
         {{> theme_moove/personalizarDashboard }}
@@ -94,7 +82,7 @@
         {{{ output.navbar_plugin_output }}}
 
         {{{ output.user_menu }}}
-                <script>
+        <script>
             
             document.getElementById("themesettings-control-mod").onclick = function(event) {
                 if (document.getElementById("accessibilitybar").style.display == "none"){
@@ -103,23 +91,8 @@
                     document.getElementById("accessibilitybar").style.display = "none";
                 }
                 
-            }
-            ;
-            document.getElementById("personalizarDashboard_buttonOPTION!").onclick = function(event) {
-                if (document.getElementById("personalizarDashboard").getClass() == "oculto"){
-                    document.getElementById("accessibilitybar").style.display = "flex";
-                } else {
-                    document.getElementById("accessibilitybar").style.display = "none";
-                }
-                
-              }
-            ;
-            document.getElementById("personalizarDashboard_button").onclick = function(event){
-                if(document.getElementById("personalizarDashboard").getClass())
-            }
+            };
         </script>
     </ul>
-
-    {{{output.}}}
 </nav>
 
