@@ -228,7 +228,7 @@ if ($ADMIN->fulltree) {
     $name = 'theme_moove/bannerheading';
     $title = get_string('bannerheading', 'theme_moove');
     $description = get_string('bannerheadingdesc', 'theme_moove');
-    $default = 'Perfect Learning System';
+    $default = '';
     $setting = new admin_setting_configtext($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);

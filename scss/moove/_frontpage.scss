@@ -99,9 +99,12 @@
         background-position: left top;
         background-repeat: no-repeat;
         background-color: #fff;
-        background-size: 100%;
         min-height: 540px;
         padding: 0 4rem;
+        height: 20vh;
+        margin-bottom: 3em;
+        background-attachment: local;
+        background-size: cover;
     }
 
     .frontpage-marketing {
@@ -132,7 +135,7 @@
             }
         }
     }
-
+ 
     .frontpage-numbers {
         background: $brand-primary;
         padding: 8rem 0;
@@ -433,15 +436,6 @@ body.notloggedin {
         }
 
         .sign-up-btn {
-            .btn {
-                padding: 10px 20px;
-                margin-left: 0;
-                font-size: 1.3rem;
-                -webkit-border-radius: 0;
-                -moz-border-radius: 0;
-                border-radius: 0;
-            }
-        }
 
         p {
             text-shadow: none;
