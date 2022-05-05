@@ -27,7 +27,7 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
     var SELECTORS = {
         FONT_SIZE: '#fontsize_dec, #fontsize_reset, #fontsize_inc',
         SITE_COLOR: '#sitecolor_color1, #sitecolor_color2, #sitecolor_color3, #sitecolor_color4',
-        SITE_FONT: '#fontsite_odafont, fontsite_default'
+        SITE_FONT: '#fontsite_odafont, #fontsite_default'
     };
 
     var fontsizeClass = null;
