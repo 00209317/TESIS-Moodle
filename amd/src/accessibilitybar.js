@@ -94,6 +94,7 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
     };
 
     AccessibilityBar.prototype.reloadFontsizeClass = function() {
+        console.log("reload size");
         if (fontsizeCurrentAction === 'reset'
             || (fontsizeCurrentAction === 'increase' && fontsizeClass === 'fontsize-dec-1')
             || (fontsizeCurrentAction === 'decrease' && fontsizeClass === 'fontsize-inc-1')
@@ -193,6 +194,9 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
     };
 
     AccessibilityBar.prototype.siteFont = function() {
+        console.log("change font");
+        console.log("change font 2");
+        console.log("change font 3");
         var request = Ajax.call([{
             methodname: 'theme_moove_sitefont',
             args: {
