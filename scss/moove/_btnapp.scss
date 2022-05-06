@@ -216,7 +216,10 @@
     color: #fee088;
 }
 .btn {
-    border-radius: 0.75em;
+    border: 0;
+    padding: 8px 16px;
+    border-radius:2em;
+    margin-bottom: 0.5em;
 }
 .btn.btn-secondary {
     color: white;
