@@ -21,65 +21,69 @@
 
     Example context (json): {}
 }}
-<div id="accessibilitybar" >
-    <div class="container_accessibilitybar">
-            
-        <div class="bars">
-            <div class="lang-menu">
-                {{{ output.render_lang_menu }}}
-            </div>
-            
-            <span><b>{{#str}}accessibilitysitecolor, theme_moove{{/str}}</b></span>
-            <div class="sitecolor">
-                
-                <ul>
-                    <li><a class="btn btn-default" data-action="reset" title="{{#str}}accessibilityresetsitecolor, theme_moove{{/str}}" id="sitecolor_color1">Default</a></li>
-                    <li><a class="btn btn-default" data-action="sitecolor-color-2" title="{{#str}}accessibilitysitecolor2, theme_moove{{/str}}" id="sitecolor_color2">A</a></li>
-                    <li><a class="btn btn-default" data-action="sitecolor-color-3" title="{{#str}}accessibilitysitecolor3, theme_moove{{/str}}" id="sitecolor_color3">A</a></li>
-                    <li><a class="btn btn-default" data-action="sitecolor-color-4" title="{{#str}}accessibilitysitecolor4, theme_moove{{/str}}" id="sitecolor_color4">A</a></li>
-                </ul>
-            </div>
 
-            <span><b>Fuente</b></span>
-            <div class="sitefont">
-                <ul>
-                    <li><a class="btn btn-default" data-action="default" title="{{#str}}accessibilityresetfont, theme_moove{{/str}}" id="fontsite_default">Default</a></li>
-                    <li><a class="btn btn-default" data-action="odafont" title="{{#str}}accessibilityresetfont, theme_moove{{/str}}" id="fontsite_odafont">Dislexic</a></li>
-                </ul>
-            </div> 
-            <div class="modal-body" data-region="body">
-                <div class="container">
-                    <form autocomplete="off" accept-charset="utf-8" class="mform">
-                        <div class="form-group">
-                            <label for="fonttype">{{#str}}themesettingsfonttype, theme_moove{{/str}}</label>
-                            <select id="fonttype" name="fonttype" class="form-control" required>
-                                <option value="default">{{#str}}themesettingsdefaultfont, theme_moove{{/str}}</option>
-                                <option value="odafont">{{#str}}themesettingsdyslexicfont, theme_moove{{/str}}</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="enableaccessibilitytoolbar" name="enableaccessibilitytoolbar">
-                                <label class="form-check-label" for="enableaccessibilitytoolbar">{{#str}}themesettingsenableaccessibilitytoolbar, theme_moove{{/str}}</label>
-                            </div>
-                        </div>
-                    </form>
+<div id="accessibilitybar_container">
+    <span id="accessibilitybar_modal"  class="hidden-display"/>
+    <div id="accessibilitybar" class="hidden-display" >
+        <div class="container_accessibilitybar">
+    
+            <div class="bars">
+                <div class="lang-menu">
+                    {{{ output.render_lang_menu }}}
                 </div>
+    
+                <span><b>{{#str}}accessibilitysitecolor, theme_moove{{/str}}</b></span>
+                <div class="sitecolor">
+    
+                    <ul>
+                        <li><a class="btn btn-default" data-action="reset" title="{{#str}}accessibilityresetsitecolor, theme_moove{{/str}}" id="sitecolor_color1">Default</a></li>
+                        <li><a class="btn btn-default" data-action="sitecolor-color-2" title="{{#str}}accessibilitysitecolor2, theme_moove{{/str}}" id="sitecolor_color2">A</a></li>
+                        <li><a class="btn btn-default" data-action="sitecolor-color-3" title="{{#str}}accessibilitysitecolor3, theme_moove{{/str}}" id="sitecolor_color3">A</a></li>
+                        <li><a class="btn btn-default" data-action="sitecolor-color-4" title="{{#str}}accessibilitysitecolor4, theme_moove{{/str}}" id="sitecolor_color4">A</a></li>
+                    </ul>
+                </div>
+    
+                <span><b>Fuente</b></span>
+                <div class="sitefont">
+                    <ul>
+                        <li><a class="btn btn-default" data-action="default" title="{{#str}}accessibilityresetfont, theme_moove{{/str}}" id="fontsite_default">Default</a></li>
+                        <li><a class="btn btn-default" data-action="odafont" title="{{#str}}accessibilityresetfont, theme_moove{{/str}}" id="fontsite_odafont">Dislexic</a></li>
+                    </ul>
+                </div>
+                <div class="modal-body" data-region="body">
+                    <div class="container">
+                        <form autocomplete="off" accept-charset="utf-8" class="mform">
+                            <div class="form-group">
+                                <label for="fonttype">{{#str}}themesettingsfonttype, theme_moove{{/str}}</label>
+                                <select id="fonttype" name="fonttype" class="form-control" required>
+                                    <option value="default">{{#str}}themesettingsdefaultfont, theme_moove{{/str}}</option>
+                                    <option value="odafont">{{#str}}themesettingsdyslexicfont, theme_moove{{/str}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="enableaccessibilitytoolbar" name="enableaccessibilitytoolbar">
+                                    <label class="form-check-label" for="enableaccessibilitytoolbar">{{#str}}themesettingsenableaccessibilitytoolbar, theme_moove{{/str}}</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer" data-region="footer">
+                    <button type="button" class="btn btn-primary" data-action="save">{{#str}}save{{/str}}</button>
+                    <button type="button" class="btn btn-secondary" data-action="cancel">{{#str}}cancel{{/str}}</button>
+                </div>
+    
+                <span><b>{{#str}}accessibilityfontsize, theme_moove{{/str}}</b></span>
+                <div class="fontsize">
+                    <ul>
+                        <li><a class="btn btn-default" data-action="decrease" title="{{#str}}accessibilitydecreasefont, theme_moove{{/str}}" id="fontsize_dec">A-</a></li>
+                        <li><a class="btn btn-default" data-action="reset" title="{{#str}}accessibilityresetfont, theme_moove{{/str}}" id="fontsize_reset">Default</a></li>
+                        <li><a class="btn btn-default" data-action="increase" title="{{#str}}accessibilityincreasefont, theme_moove{{/str}}" id="fontsize_inc">A+</a></li>
+                    </ul>
+                </div>
+    
             </div>
-            <div class="modal-footer" data-region="footer">
-                <button type="button" class="btn btn-primary" data-action="save">{{#str}}save{{/str}}</button>
-                <button type="button" class="btn btn-secondary" data-action="cancel">{{#str}}cancel{{/str}}</button>
-            </div>
-
-            <span><b>{{#str}}accessibilityfontsize, theme_moove{{/str}}</b></span>
-            <div class="fontsize">
-                <ul>
-                    <li><a class="btn btn-default" data-action="decrease" title="{{#str}}accessibilitydecreasefont, theme_moove{{/str}}" id="fontsize_dec">A-</a></li>
-                    <li><a class="btn btn-default" data-action="reset" title="{{#str}}accessibilityresetfont, theme_moove{{/str}}" id="fontsize_reset">Default</a></li>
-                    <li><a class="btn btn-default" data-action="increase" title="{{#str}}accessibilityincreasefont, theme_moove{{/str}}" id="fontsize_inc">A+</a></li>
-                </ul>
-            </div>
-            
         </div>
     </div>
 </div>

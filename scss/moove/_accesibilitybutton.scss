@@ -4,3 +4,22 @@
 
     
 }
+
+.show-display-flex {
+    display: flex;
+}
+
+.hidden-display {
+    display: none;
+}
+
+#accessibilitybar_modal{
+    width: 100vw;
+    height: 1000vh;
+    background-color: #1c1d1d1c;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: auto;
+}

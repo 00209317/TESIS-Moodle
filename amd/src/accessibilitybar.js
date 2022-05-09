@@ -39,6 +39,7 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
 
     var AccessibilityBar = function() {
         var classList = jQuery('body').attr('class').split(/\s+/);
+        console.log('render accesibility bar')
         jQuery.each(classList, function(index, item) {
             if (item.includes('fontsize-inc-') || item.includes('fontsize-dec-')) {
                 var itemarr = item.split('-');
@@ -195,8 +196,10 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
 
     AccessibilityBar.prototype.siteFont = function() {
         console.log("change font");
-        console.log("change font 2");
-        console.log("change font 3");
+        console.log("change font 3" + sitefontCurrentAction);
+        console.log("change font 3" + sitefontCurrentAction);
+        console.log("change font 3" + sitefontCurrentAction);
+        console.log("change font 34243" + sitefontCurrentAction);
         var request = Ajax.call([{
             methodname: 'theme_moove_sitefont',
             args: {
@@ -205,8 +208,10 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
         }]); 
 
         request[0].done(function() {
+            console.log("change font success");
             document.location.reload(true);
         }.bind(this));
+        console.log("change font exit");
     };
 
     AccessibilityBar.prototype.reloadSitecolorClass = function() {

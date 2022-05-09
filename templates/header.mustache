@@ -22,6 +22,14 @@
     Example context (json): {}
 }}
 
+{{!
+    @template theme_moove/accessibilitymodal
+
+    Blocks drawer template
+
+    Example context (json): {}
+}}
+
 
 
 <nav class="fixed-top navbar navbar-light navbar-expand moodle-has-zindex">
@@ -82,17 +90,7 @@
         {{{ output.navbar_plugin_output }}}
 
         {{{ output.user_menu }}}
-        <script>
-            
-            document.getElementById("themesettings-control-mod").onclick = function(event) {
-                if (document.getElementById("accessibilitybar").style.display == "none"){
-                    document.getElementById("accessibilitybar").style.display = "flex";
-                } else {
-                    document.getElementById("accessibilitybar").style.display = "none";
-                }
-                
-            };
-        </script>
+        
     </ul>
 </nav>
 
