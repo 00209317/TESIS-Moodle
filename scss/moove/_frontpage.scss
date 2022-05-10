@@ -99,9 +99,12 @@
         background-position: left top;
         background-repeat: no-repeat;
         background-color: #fff;
-        background-size: 100%;
         min-height: 540px;
         padding: 0 4rem;
+        height: 20vh;
+        margin-bottom: 3em;
+        background-attachment: local;
+        background-size: cover;
     }
 
     .frontpage-marketing {
@@ -135,7 +138,7 @@
 
     .frontpage-numbers {
         background: $brand-primary;
-        padding: 8rem 0;
+        padding: 4rem 0;
 
         .row {
             max-width: 1140px;
@@ -311,6 +314,7 @@
 
 #page-site-index {
     #frontpage-available-course-list {
+        
         h2 {
             color: $brand-primary;
             text-align: center;
@@ -429,17 +433,6 @@ body.notloggedin {
                 font-weight: 400;
                 color: #55595c;
                 text-align: center;
-            }
-        }
-
-        .sign-up-btn {
-            .btn {
-                padding: 10px 20px;
-                margin-left: 0;
-                font-size: 1.3rem;
-                -webkit-border-radius: 0;
-                -moz-border-radius: 0;
-                border-radius: 0;
             }
         }
 

@@ -209,13 +209,12 @@
       border-bottom-left-radius: $m-login-padding;
     }
   }
-
+  
   .card-deck .card {
     flex-basis: calc(25% - .5rem);
     flex-shrink: 0;
     flex-grow: 0;
     background-color: white;
-
   }
 
   .pagelayout-mydashboard .card-deck .card {
@@ -306,5 +305,12 @@
       }
     }
 
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .card-deck{
+    display: block;
   }
 }

@@ -4,9 +4,8 @@
     top: 70px;
     padding-bottom: 20px;
     overflow-y: auto;
-    border-bottom-right-radius: 1em;
-    border-top-right-radius: 1em;
     transition: all 0.5s ease;
+    border-right: 5px solid #f29450;
 
     &::-webkit-scrollbar {
         width: 7px;
@@ -28,13 +27,15 @@
     .list-group {
         .list-group-item {
             min-height: 50px;
-            padding: 0 0 0 .5rem;
+            padding: 0;
             background-color: inherit;
-            border-radius: $card-border-radius;
+            border-radius: 0;
             border: 0;
-
+            transition: background 0.5s;
             &:hover {
-                background-color: $sidebar-bg-hover;
+                transition: background 0.5s;
+                background-color: white;
+                color: rgb(56, 56, 56);
             }
 
             a {
@@ -44,10 +45,13 @@
                 text-decoration: none;
                 width: 100%;
                 display: inherit;
-                border-radius: $card-border-radius;
-
+                border-radius: 0;
+                transition: all 0.5s;
                 &:hover {
-                    color: #fff;
+                    transition: all 0.5s;
+                    background-color: white;
+                    color: rgb(56, 56, 56);
+                    border-right: 5px solid #f29450;
                 }
 
                 &:focus {
@@ -144,7 +148,7 @@
     }
 
     .list-group + .list-group {
-        border-top: 3px solid $navbar-separator;
+        border-top: 3px solid #f39550;
     }
 }
 
@@ -166,7 +170,7 @@
     .list-group {
         .list-group-item {
             text-align: left;
-            padding: 0 .5rem;
+            padding: 0;
 
             > ul {
                 display: none;
@@ -201,7 +205,7 @@
                     display: block;
                     height: auto !important;
                     overflow: auto;
-                    background-color: $navbar-bg;
+                    background-color: #003c71;
                     position: absolute;
                     left: 70px;
                     top: 50px;
@@ -285,7 +289,6 @@ body.drawer-open-left #nav-drawer-footer {
     body.drawer-open-left {
         #nav-drawer-footer {
             width: 70px;
-            display: block;
 
             #themesettings-control {
                 .text {

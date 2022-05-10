@@ -168,3 +168,131 @@
         display: none;
     }
 }
+
+.card2{
+    border: 0 !important;
+    border-radius:0 !important;
+    background-color:#fbfbfb !important;
+    border-left: 4px solid #0f3b81 !important;
+    transition: all 1s;
+    padding: 1em 1em;
+    
+    .card-footer{
+        border: 0;
+        background-color: transparent !important;
+        justify-content:start;
+        
+        .btn{
+            background-color:transparent !important;
+            border: 0;
+            padding: 10px 20px;
+            border-radius:2em;
+            margin: 0;
+            color:rgba(0, 0, 0, 0.776)
+        }
+    }
+    &:hover {
+        transition: all 0.5s;
+        background-color: #0f3b81 !important;
+        .card-body h3{
+            color: #fff !important;
+        }
+        
+        .card-footer .btn{
+            background-color:rgba(255, 255, 255, 0.877) !important;
+            &:hover{
+                background-color:#032b4f !important;
+                color: rgb(255, 255, 255);
+                transition: all 0.5s;
+            }
+        }
+    }
+}
+
+.card3{
+    border: 0 !important;
+    border-radius:0 !important;
+    background-color:#fbfbfb !important;
+    border-left: 4px solid #0f3b81 !important;
+    transition: all 1s;
+    
+    a img{
+        border-radius: 0 !important;
+    }
+    
+    h4 a{
+        text-decoration: none !important;
+        color: #000;
+    }
+    
+    .card-footer{
+        border: 0;
+        background-color: transparent !important;
+        justify-content:end;
+        
+        .btn{
+            background-color:transparent !important;
+            border: 0;
+            padding: 10px 20px;
+            border-radius:2em;
+            color:rgba(0, 0, 0, 0.776)
+        }
+    }
+    &:hover {
+        transition: all 0.5s;
+        background-color: #f29550 !important;
+        border-left: 4px solid #f29550 !important;
+        .card-body {
+            h4 a{ 
+                transition: all 0.5s;
+                color: rgb(255, 255, 255);
+            }
+            p{
+                transition: all 0.5s;
+                color: rgb(255, 255, 255);
+            }
+        }
+        
+        .card-footer .btn{
+            background-color:rgba(255, 255, 255, 0.877) !important;
+            &:hover{
+                background-color:#ac6b3a !important;
+                color: rgb(255, 255, 255);
+                transition: all 0.5s;
+            }
+        }
+    }
+}
+
+td, th{
+    text-align: center;
+}
+
+.img-fluid{
+    height: 6em !important;
+}
+
+.flexCardNumbers{
+    .cardNumbers{
+        border-radius: 0 !important;
+        border-left: 5px solid #f39550;
+        
+    }
+    
+}
+
+@media (max-width: 600px){
+    .flexCardNumbers{
+        flex-direction: column;
+        align-items:center
+        
+    }
+    .cardNumbers{
+        width: 80% !important;
+    }
+}
+
+.btnCircles{
+    padding: 8px 10px !important;
+    margin: 0;
+}

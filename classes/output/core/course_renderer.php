@@ -204,7 +204,7 @@ class course_renderer extends \core_course_renderer {
 
         // End coursebox.
         $content = html_writer::start_tag('div', array(
-            'class' => $classes,
+            'class' => 'card card3',
             'data-courseid' => $course->id,
             'data-type' => self::COURSECAT_TYPE_COURSE,
         ));

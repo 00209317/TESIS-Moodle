@@ -29,29 +29,30 @@
 {{#numbersfrontpage}}
     <div class="container-fluid frontpage-numbers">
         <div class="row">
-            <div class="col-md-3">
-                <h2><p>{{#str}} frontpagenumbersome, theme_moove {{/str}}</p>{{#str}} frontpagenumbernumbers, theme_moove {{/str}}</h2>
+            <div class="col-md-12 text-center mb-4">
+                <h2>{{#str}} frontpagenumbersome, theme_moove {{/str}} {{#str}} frontpagenumbernumbers, theme_moove {{/str}}</h2>
             </div>
-
-            <div class="col-md-3 number">
-                <span class="fa fa-user-circle fa-4x"></span>
-                <h3>{{{ numberusers }}}</h3>
-                <hr />
-                <p>{{#str}} frontpagenumberusers, theme_moove {{/str}}</p>
-            </div>
-
-            <div class="col-md-3 number">
-                <span class="fa fa-graduation-cap fa-4x"></span>
-                <h3>{{{ numbercourses }}}</h3>
-                <hr />
-                <p>{{#str}} frontpagenumbercourses, theme_moove {{/str}}</p>
-            </div>
-
-            <div class="col-md-3 number">
-                <span class="fa fa-puzzle-piece fa-4x"></span>
-                <h3>{{{ numberactivities }}}</h3>
-                <hr />
-                <p>{{#str}} frontpagenumberactivities, theme_moove {{/str}}</p>
+            <div class="d-flex justify-content-center w-100 flexCardNumbers">
+                <div class="number card bg-ligth p-3 m-1 w-25 cardNumbers">
+                    <span class="fa fa-user-circle fa-4x  text-dark"></span>
+                    <h3 class=" text-dark">{{{ numberusers }}}</h3>
+                    <hr />
+                    <p class=" text-dark">{{#str}} frontpagenumberusers, theme_moove {{/str}}</p>
+                </div>
+    
+                <div class="number card bg-light p-3 m-1 w-25 cardNumbers">
+                    <span class="fa fa-graduation-cap fa-4x  text-dark"></span>
+                    <h3 class=" text-dark">{{{ numbercourses }}}</h3>
+                    <hr />
+                    <p class=" text-dark">{{#str}} frontpagenumbercourses, theme_moove {{/str}}</p>
+                </div>
+    
+                <div class="number card bg-light p-3 m-1 w-25 cardNumbers">
+                    <span class="fa fa-puzzle-piece fa-4x  text-dark"></span>
+                    <h3 class=" text-dark">{{{ numberactivities }}}</h3>
+                    <hr />
+                    <p class=" text-dark">{{#str}} frontpagenumberactivities, theme_moove {{/str}}</p>
+                </div>
             </div>
         </div>
     </div>

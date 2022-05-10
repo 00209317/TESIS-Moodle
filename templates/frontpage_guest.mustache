@@ -46,7 +46,6 @@
 
     <div id="page" class="container-fluid">
         <div id="page-header" class="frontpage-guest-header">
-
             {{#sliderenabled}}
                 {{#sliderfrontpage}}
                     {{>theme_moove/slideshow}}
@@ -63,13 +62,12 @@
 
             {{^sliderenabled}}
                 <div class="row" id="loginbox">
-                    <div class="col-sm-12 hidden-sm-down {{#disablefrontpageloginbox}}col-md-12{{/disablefrontpageloginbox}}{{^disablefrontpageloginbox}}col-md-7{{/disablefrontpageloginbox}}" id="intro">
+                    <div class="col-sm-12 hidden-sm-down {{#disablefrontpageloginbox}}col-md-12{{/disablefrontpageloginbox}}{{^disablefrontpageloginbox}}col-md-8{{/disablefrontpageloginbox}}" id="intro">
                         {{#bannerheading}}
-                            <h1>{{{ bannerheading }}}</h1>
                         {{/bannerheading}}
                     </div>
                     {{^disablefrontpageloginbox}}
-                        <div class="col-12 col-sm-12 col-md-5 card d-none d-lg-block" id="boxForm">
+                        <div class="col-12 col-sm-12 col-md-4 card d-none d-lg-block rounded-0 border-right-0 border-top-0 border-bottom-0" style="border-left: 10px solid #f39550;" id="boxForm">
                             {{>theme_moove/frontpage_login}}
                         </div><!-- end of .card-body -->
                     {{/disablefrontpageloginbox}}
@@ -80,7 +78,7 @@
         {{>theme_moove/frontpage_marketing}}
 
         <div class="container frontpage-maincontent">
-          {{{ output.main_content }}}
+            {{{ output.main_content }}}
         </div>
 
         {{>theme_moove/frontpage_numbers}}
