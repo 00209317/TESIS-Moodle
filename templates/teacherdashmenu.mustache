@@ -24,6 +24,9 @@
 {{/showincourseonly}}
 {{! Dirige a Administracion del Sitio }}
 {{#hasadminlink}}
+    <div class="teacherdash nav-item nav-link">
+            <a role="button" data-tooltip="tooltip" data-placement= "bottom" title="{{{togglebutton}}}" data-toggle="modal" href="#teacherdashslider" class="btn btn-secondary fhs-tooltip">  <i class="fa fa-cogs" aria-hidden="true"></i></a>
+    </div>
     <div class="siteadminlink nav-item nav-link">
         <a href="{{{siteadminurl}}}" data-tooltip="tooltip" data-placement= "bottom" title="{{{siteadmintitle}}}" class="btn btn-secondary fhs-tooltip"><i class="fa fa-sitemap" aria-hidden="true"></i></a>
     </div>
