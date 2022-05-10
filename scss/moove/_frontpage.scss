@@ -135,10 +135,10 @@
             }
         }
     }
- 
+
     .frontpage-numbers {
         background: $brand-primary;
-        padding: 8rem 0;
+        padding: 4rem 0;
 
         .row {
             max-width: 1140px;
@@ -314,6 +314,7 @@
 
 #page-site-index {
     #frontpage-available-course-list {
+        
         h2 {
             color: $brand-primary;
             text-align: center;

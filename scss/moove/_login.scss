@@ -240,7 +240,8 @@
     }
     &:hover {
         transition: all 0.5s;
-        background-color: #0f3b81 !important;
+        background-color: #f29550 !important;
+        border-left: 4px solid #f29550 !important;
         .card-body {
             h4 a{ 
                 transition: all 0.5s;
@@ -255,10 +256,43 @@
         .card-footer .btn{
             background-color:rgba(255, 255, 255, 0.877) !important;
             &:hover{
-                background-color:#032b4f !important;
+                background-color:#ac6b3a !important;
                 color: rgb(255, 255, 255);
                 transition: all 0.5s;
             }
         }
     }
+}
+
+td, th{
+    text-align: center;
+}
+
+.img-fluid{
+    height: 6em !important;
+}
+
+.flexCardNumbers{
+    .cardNumbers{
+        border-radius: 0 !important;
+        border-left: 5px solid #f39550;
+        
+    }
+    
+}
+
+@media (max-width: 600px){
+    .flexCardNumbers{
+        flex-direction: column;
+        align-items:center
+        
+    }
+    .cardNumbers{
+        width: 80% !important;
+    }
+}
+
+.btnCircles{
+    padding: 8px 10px !important;
+    margin: 0;
 }

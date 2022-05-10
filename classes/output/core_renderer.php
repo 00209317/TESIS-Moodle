@@ -939,13 +939,13 @@ class core_renderer extends \theme_boost\output\core_renderer {
             $url->param('sesskey', sesskey());
             if ($PAGE->user_is_editing()) {
                 $url->param('edit', 'off');
-                $btn = 'btn-danger editingbutton';
+                $btn = 'btn-danger editingbutton btnCircles';
                 $title = get_string('editoff', 'theme_fordson');
                 $icon = 'fa-power-off';
             }
             else {
                 $url->param('edit', 'on');
-                $btn = 'btn-success editingbutton';
+                $btn = 'btn-success editingbutton btnCircles';
                 $title = get_string('editon', 'theme_fordson');
                 $icon = 'fa-edit';
             }

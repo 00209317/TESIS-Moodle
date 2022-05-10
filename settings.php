@@ -620,7 +620,7 @@ if ($ADMIN->fulltree) {
     $name = 'theme_moove/getintouchcontent';
     $title = get_string('getintouchcontent', 'theme_moove');
     $description = get_string('getintouchcontentdesc', 'theme_moove');
-    $default = 'Conecti.me';
+    $default = 'Universidad Centroamericana José Simeón Cañas';
     $setting = new admin_setting_configtextarea($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
@@ -629,7 +629,7 @@ if ($ADMIN->fulltree) {
     $name = 'theme_moove/website';
     $title = get_string('website', 'theme_moove');
     $description = get_string('websitedesc', 'theme_moove');
-    $default = 'http://conecti.me';
+    $default = 'https://uca.edu.sv/';
     $setting = new admin_setting_configtext($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
@@ -638,7 +638,7 @@ if ($ADMIN->fulltree) {
     $name = 'theme_moove/mobile';
     $title = get_string('mobile', 'theme_moove');
     $description = get_string('mobiledesc', 'theme_moove');
-    $default = 'Mobile : +55 (98) 00123-45678';
+    $default = '2210 6600';
     $setting = new admin_setting_configtext($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);

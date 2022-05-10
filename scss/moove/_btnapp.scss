@@ -217,11 +217,17 @@
 }
 .btn {
     border: 0;
-    padding: 8px 16px;
+    padding: 8px 12px;
     border-radius:2em;
     margin-bottom: 0.5em;
+    margin-top: 0.5em;
 }
 .btn.btn-secondary {
     color: white;
     background-color: #003C71;
+    transition: all 1s;
+    &:hover{
+        transition: all 0.5s;
+        background-color: #002444
+    }
 }
