@@ -28,4 +28,15 @@
 
 @import "moove/accesibilitybutton";
 @import "moove/header.scss";
-@import "moove/flat_navigation.scss"
+@import "moove/flat_navigation.scss";
+
+
+.conversationcontainer{
+    flex: 0 0 100%;
+	max-width: 100%;
+}
+
+.flex-column{
+    flex: 0 100 100%;
+	max-width: 100%;
+}
