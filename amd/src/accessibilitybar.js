@@ -27,7 +27,7 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
     var SELECTORS = {
         FONT_SIZE: '#fontsize_dec, #fontsize_reset, #fontsize_inc',
         SITE_COLOR: '#sitecolor_color1, #sitecolor_color2, #sitecolor_color3, #sitecolor_color4',
-        SITE_FONT: '#fontsite_odafont, fontsite_default'
+        SITE_FONT: '#fontsite_odafont, #fontsite_default'
     };
 
     var fontsizeClass = null;
@@ -43,16 +43,36 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
         jQuery.each(classList, function(index, item) {
             if (item.includes('fontsize-inc-') || item.includes('fontsize-dec-')) {
                 var itemarr = item.split('-');
-
                 fontsizeClass = item;
                 fontsizeClassOp = itemarr[1];
                 fontsizeClassSize = itemarr[2];
             }
         });
 
+        var request = Ajax.call([{
+            methodname: 'theme_moove_getthemesettingscolor',
+            args: {}
+        }]);
+
+
+        request[0].done(function(result) {
+            console.log("color 1 is: " + result.fonttype)
+            //document.getElementById('fonttype').value = result.fonttype;
+            sitecolorCurrentAction = result.color                
+            
+        }).fail(function(error){
+            console.log("color 1 is: fail")
+        }) 
+
+        
+
+        this.reloadFontSite();
+
         this.toggleFontsizeButtons();
 
         this.registerEventListeners();
+        
+        this.reloadSitecolorClass();
     };
 
     AccessibilityBar.prototype.registerEventListeners = function() {
@@ -79,6 +99,30 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
 
             this.siteFont();
         }.bind(this));
+    };
+
+    AccessibilityBar.prototype.reloadFontSite = function() {
+        var request = Ajax.call([{
+            methodname: 'theme_moove_getthemesettingsfont',
+            args: {}
+        }]);
+
+
+        request[0].done(function(result) {
+            console.log("font 1 is: " + result.fonttype)
+            //document.getElementById('fonttype').value = result.fonttype;
+            if(result.fonttype != 'odafont') {
+                jQuery('#fontsite_default').addClass('disabled');
+                jQuery('#fontsite_odafont').removeClass('disabled');
+            } else {
+                jQuery('#fontsite_default').removeClass('disabled');
+                jQuery('#fontsite_odafont').addClass('disabled');
+            }
+            
+        }).fail(function(error){
+            console.log("font 1 is: fail")
+        }) 
+        
     };
 
     AccessibilityBar.prototype.fontSize = function() {
@@ -195,11 +239,8 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
     };
 
     AccessibilityBar.prototype.siteFont = function() {
-        console.log("change font");
-        console.log("change font 3" + sitefontCurrentAction);
-        console.log("change font 3" + sitefontCurrentAction);
-        console.log("change font 3" + sitefontCurrentAction);
-        console.log("change font 34243" + sitefontCurrentAction);
+        console.log("change font: " + sitefontCurrentAction);
+
         var request = Ajax.call([{
             methodname: 'theme_moove_sitefont',
             args: {
@@ -207,10 +248,14 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
             }
         }]); 
 
-        request[0].done(function() {
+        request[0].then(function(responce) {
             console.log("change font success");
             document.location.reload(true);
-        }.bind(this));
+        }).fail(function(error){
+            var message = error.message;
+            console.log("change font error " + message);
+        });
+
         console.log("change font exit");
     };
 

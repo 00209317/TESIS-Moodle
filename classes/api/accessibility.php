@@ -203,20 +203,7 @@ class accessibility extends external_api {
     }
 
 
-    public static function sitefont($action) {
-        $params = self::validate_parameters(self::fontsize_parameters(), ['action' => $action]);
-
-        $fonttype = null;
-        
-        if ($params['action'] == 'odafont') {
-            $fonttype = 'odafont';
-        }
-        $fonttype = 'odafont';
-
-        set_user_preference('thememoovesettings_fonttype', $fonttype);
-
-        return ['success' => true];
-    }
+    
 
     /**
      * Site color endpoint return definition
@@ -322,6 +309,64 @@ class accessibility extends external_api {
         return new external_single_structure([
             'fonttype' => new external_value(PARAM_TEXT, 'the user selected font'),
             //'enableaccessibilitytoolbar' => new external_value(PARAM_BOOL, 'the user selected toolbar option')
+        ]);
+    }
+
+
+    public static function getthemesettingsfont_parameters() {
+        return new external_function_parameters([]);
+    }
+
+    public static function getthemesettingsfont() {
+        return [
+            'fonttype' => get_user_preferences('thememoovesettings_fonttype', 'default'),
+        ];
+    }
+    
+    public static function getthemesettingsfont_returns() {
+        return new external_single_structure([
+            'fonttype' => new external_value(PARAM_TEXT, 'the user selected font'),
+        ]);
+    }
+
+
+    public static function getthemesettingscolor_parameters() {
+        return new external_function_parameters([]);
+    }
+
+    public static function getthemesettingscolor() {
+        return [
+            'color' => get_user_preferences('accessibilitystyles_sitecolorclass', 'sitecolor_color1'),
+        ];
+    }
+    
+    public static function getthemesettingscolor_returns() {
+        return new external_single_structure([
+            'color' => new external_value(PARAM_TEXT, 'the user selected font'),
+        ]);
+    }
+
+
+
+    public static function sitefont($action) {
+        $params = self::validate_parameters(self::fontsize_parameters(), ['action' => $action]);
+ 
+        $fonttype = $params['action'];
+ 
+        set_user_preference('thememoovesettings_fonttype', $fonttype);
+ 
+         return ['success' => true];
+     }
+
+     public static function sitefont_returns() {
+        return new external_single_structure([
+            'success' => new external_value(PARAM_BOOL, 'Operation response')
+        ]);
+    }
+
+    public static function sitefont_parameters() {
+        return new external_function_parameters([
+            'action' => new external_value(PARAM_RAW, 'The colorscheme value'),
         ]);
     }
 }

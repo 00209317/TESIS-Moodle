@@ -23,7 +23,8 @@
 }}
 
 <div id="accessibilitybar_container">
-    <span id="accessibilitybar_modal"  class="hidden-display"/>
+    <span id="accessibilitybar_modal" class="hidden-display">
+    </span>
     <div id="accessibilitybar" class="hidden-display" >
         <div class="container_accessibilitybar">
     
@@ -50,29 +51,8 @@
                         <li><a class="btn btn-default" data-action="odafont" title="{{#str}}accessibilityresetfont, theme_moove{{/str}}" id="fontsite_odafont">Dislexic</a></li>
                     </ul>
                 </div>
-                <div class="modal-body" data-region="body">
-                    <div class="container">
-                        <form autocomplete="off" accept-charset="utf-8" class="mform">
-                            <div class="form-group">
-                                <label for="fonttype">{{#str}}themesettingsfonttype, theme_moove{{/str}}</label>
-                                <select id="fonttype" name="fonttype" class="form-control" required>
-                                    <option value="default">{{#str}}themesettingsdefaultfont, theme_moove{{/str}}</option>
-                                    <option value="odafont">{{#str}}themesettingsdyslexicfont, theme_moove{{/str}}</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="enableaccessibilitytoolbar" name="enableaccessibilitytoolbar">
-                                    <label class="form-check-label" for="enableaccessibilitytoolbar">{{#str}}themesettingsenableaccessibilitytoolbar, theme_moove{{/str}}</label>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="modal-footer" data-region="footer">
-                    <button type="button" class="btn btn-primary" data-action="save">{{#str}}save{{/str}}</button>
-                    <button type="button" class="btn btn-secondary" data-action="cancel">{{#str}}cancel{{/str}}</button>
-                </div>
+                
+                
     
                 <span><b>{{#str}}accessibilityfontsize, theme_moove{{/str}}</b></span>
                 <div class="fontsize">

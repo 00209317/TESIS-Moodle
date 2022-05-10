@@ -60,5 +60,21 @@ $functions = array(
         'description' => 'Get the user theme settings.',
         'type' => 'read',
         'ajax' => true
+    ),
+    'theme_moove_getthemesettingsfont' => array(
+        'classname' => 'theme_moove\api\accessibility',
+        'classpath' => 'theme_moove\classes\api\accessibility.php',
+        'methodname' => 'getthemesettingsfont',
+        'description' => 'Get the user theme settings font.',
+        'type' => 'read',
+        'ajax' => true
+    ),
+    'theme_moove_getthemesettingscolor' => array(
+        'classname' => 'theme_moove\api\accessibility',
+        'classpath' => 'theme_moove\classes\api\accessibility.php',
+        'methodname' => 'getthemesettingscolor',
+        'description' => 'Get the user theme settings color.',
+        'type' => 'read',
+        'ajax' => true
     )
 );
