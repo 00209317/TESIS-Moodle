@@ -17,7 +17,7 @@
         margin: 0 3px;
 
         img {
-            width: 48px;
+            width: 55px;
             border: 2px solid white;
             cursor: pointer;
             border-radius: 50%;
@@ -524,6 +524,19 @@ body.notloggedin {
             .card-title {
                 font-size: 1.171875rem;
             }
+        }
+    }
+}
+
+.input-group{
+    .form-control{
+        border-radius:  0.75em 0 0 0.75em;
+    }
+    .input-group-append{
+        .btn{
+            margin:0;
+            padding: .375rem .75rem;
+            border-radius: 0 0.75em 0.75em 0;
         }
     }
 }

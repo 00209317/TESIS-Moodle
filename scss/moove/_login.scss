@@ -238,6 +238,12 @@
             color:rgba(0, 0, 0, 0.776)
         }
     }
+    
+    .rounded-circle {
+        border-radius: 50%!important;
+        border: 0 !important;
+    } 
+    
     &:hover {
         transition: all 0.5s;
         background-color: #f29550 !important;
@@ -295,4 +301,8 @@ td, th{
 .btnCircles{
     padding: 8px 10px !important;
     margin: 0;
+}
+
+.card{
+    border: 0 !important
 }

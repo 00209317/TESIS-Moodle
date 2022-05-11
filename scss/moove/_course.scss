@@ -94,11 +94,8 @@ body.coursepresentation-cover {
 
         .single-section .sectionname,
         .section .sectionname {
-            border-color: $body-bg;
-            border-style: solid;
-            border-width: 5px 5px 5px 0;
             background: #fff;
-            margin: 0 0 0 -28px;
+            margin: 0;
             padding: .75rem;
             letter-spacing: .1em;
             color: $brand-primary;
@@ -391,5 +388,60 @@ body.pagelayout-course {
     .labelbar.concrete {
         background-color: #95a5a6;
         color: #95a5a6;
+    }
+}
+
+.activity{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 !important;
+    border-radius:0.25em !important;
+    background-color:#fbfbfb !important;
+    border-left: 4px solid #f29550 !important;
+    transition: all 1s;
+    margin: 1em !important;
+    
+    
+    a{
+        text-decoration: none !important;
+        color: #000;
+    }    
+    &:hover {
+        transition: all 0.5s;
+        background-color: #dff1f7 !important;
+        border-left: 4px solid #f29550 !important;
+        .card-body {
+            a{ 
+                transition: all 0.5s;
+                color: rgb(255, 255, 255);
+            }
+            p{
+                transition: all 0.5s;
+                color: rgb(255, 255, 255);
+            }
+        }
+        
+        .card-footer .btn{
+            background-color:rgba(255, 255, 255, 0.877) !important;
+            &:hover{
+                background-color:#ac6b3a !important;
+                color: rgb(255, 255, 255);
+                transition: all 0.5s;
+            }
+        }
+    }
+    
+    .activity-information{
+        padding-left: 2em;
+    }
+    .activityinstance{
+        .aalink{
+            padding-left: 2em !important;
+        }
     }
 }
