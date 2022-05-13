@@ -496,12 +496,37 @@ nav.navbar {
     }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 800px) {
     .popover-region{
         display: none;
     }
+    .siteadminlink{
+        display: none;
+    }
 }
-@media (max-width: 550px) {
+.coursecontrols .nav-item.nav-link {
+    padding: 0;
+    justify-content:center;
+    align-items:center;
+}
+
+// Navbar Styling
+.navbar-nav .coursecontrols .nav-item + .nav-item {
+    margin-left: .25rem;
+}
+li.nav-item {
+    display: inline-flex;
+}
+@media (max-width: 500px) {
+    .popover-region{
+        display: none;
+    }
+    .siteadminlink{
+        display: none;
+    }
+    .popover-regionbar{
+        display: none;
+    }
     .siteadminlink{
         display: none;
     }
