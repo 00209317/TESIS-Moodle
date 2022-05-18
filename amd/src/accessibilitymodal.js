@@ -44,7 +44,6 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
     return {
         'init': function() {
             return new AccessibilityModal();
-      
         }
     };
 

@@ -322,7 +322,7 @@ class theme_moove_format_topics_renderer extends format_topics_renderer {
         $output .= html_writer::start_tag('li', array('id' => 'section-'.$section->section,
             'class' => $classattr, 'role' => 'region', 'aria-label' => $title));
 
-        $output .= html_writer::start_tag('div', array('class' => 'card card-block'));
+        $output .= html_writer::start_tag('div', array('class' => 'card activity card-block'));
 
         $output .= html_writer::tag('div', '<i class="fa fa-laptop"></i>', array('class' => 'pgr-img'));
 

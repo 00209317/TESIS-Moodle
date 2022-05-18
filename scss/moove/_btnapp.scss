@@ -231,3 +231,49 @@
         background-color: #002444
     }
 }
+
+.btn.btn-link{
+    background-color: #003c71 !important;
+    color: white;
+    padding: 0.5em 0.8em !important;
+    transition: all 0.7s;
+    
+    &:hover{
+        text-decoration: none !important;
+        background-color: #002444 !important;
+        color: white !important;
+        transition: all 0.7s;
+    }
+    
+    i.icon{
+        margin: 0 !important;
+        color: white !important;
+    }
+}
+
+.btn.btn-link.p-0{
+    margin-left: 1.25em !important;
+}
+
+a{
+    text-decoration: none !important;
+    &:hover {
+        text-decoration: none !important;
+    }
+}
+
+p a{
+    margin-left: 1em !important;
+}
+
+a.nav-link{
+    text-decoration: none !important;
+    border-radius: 0.75em 0.75em 0 0 !important;
+}
+
+.custom-select{
+    border-radius: 0.75em !important;
+    border: 0.5px solid #ececec !important;
+    margin:auto;
+}
+

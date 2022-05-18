@@ -21,8 +21,11 @@
 
     Example context (json): {}
 }}
-<div id="top-footer">
-  <div class="container-fluid">
+<div class="d-flex justify-content-end">
+  
+</div>
+<div id="top-footer" class="d-none">
+  <div class="container-fluid" id="footer-contact">
     <div class="row">
         <div class="col-md-7 contact">
             <h3>{{#str}}stayintouch, theme_moove{{/str}}</h3>
@@ -117,8 +120,8 @@
       <div class="madewithmoodle">
           <p>{{#str}}madewitmoodle, theme_moove{{/str}}</p>
           <a href="https://download.moodle.org/mobile?version=2020110903.08&lang=es_mx&iosappid=633359593&androidappid=com.moodle.moodlemobile"><img src="{{output.get_pix_image_url_base}}/moodle-logo-white.png" alt="Moodle logo"></a>
+          <button class="btn btn-secondary mr-3" id="btn-contact"><i class="fa fa-chevron-up" id="fasBtn" aria-hidden="true"></i> </button>
       </div>
-
       <br>
   </div>
 </footer>

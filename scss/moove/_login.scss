@@ -169,6 +169,11 @@
     }
 }
 
+.card{
+    border: 0 !important
+}
+
+
 .card2{
     border: 0 !important;
     border-radius:0 !important;
@@ -215,7 +220,7 @@
     background-color:#fbfbfb !important;
     border-left: 4px solid #0f3b81 !important;
     transition: all 1s;
-    
+    margin: 1em 0.25em;
     a img{
         border-radius: 0 !important;
     }
@@ -303,6 +308,3 @@ td, th{
     margin: 0;
 }
 
-.card{
-    border: 0 !important
-}

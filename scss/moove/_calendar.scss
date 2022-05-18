@@ -118,3 +118,18 @@
         }
     }
 }
+
+
+.list-unstyled li{
+    padding: 0.4rem;
+    
+    &:hover {
+        background-color: #003c71;
+        border-radius: 0.75em;
+        transition: all 0.1s;
+        
+        a{
+            color: #fff;
+        }
+    }
+}
