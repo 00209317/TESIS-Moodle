@@ -55,10 +55,13 @@
     </a>
     <div class="coursecontrols nav-item d-flex justify-content-center align-items-center">
         {{{ output.teacherdashmenu }}}
-        {{{ output.edit_button_fhs }}}
+        <div class="nav-item nav-link">
+            {{{ output.edit_button_fhs }}}
+        </div> 
+        
     </div>
     {{> theme_ecampus/accessibilitybar }}
-    <ul class="navbar-nav d-none d-md-flex custom-menus">
+    <ul class="navbar-nav d-none d-md-flex custom-menus ">
         <!-- custom_menu -->
         {{{ output.custom_menu }}}
         <!-- page_heading_menu -->
@@ -72,7 +75,7 @@
         <li class="nav-item accessibility-menu-panel">
             {{> theme_ecampus/accessibilitybar }}
         </li>
-        <div class="popover-regionbar collapsed">
+        <div class="popover-regionbar collapsed accesibilitybutton">
             <div class="popover-regionbar-toggle nav-link icon-no-margin">
                 <li class="nav-item accessibility-menu-btn-mod">
                     <span id="themesettings-control-mod">

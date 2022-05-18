@@ -495,14 +495,27 @@ nav.navbar {
         }
     }
 }
-
-@media (max-width: 550px) {
+.coursecontrols .nav-item.nav-link {
+    padding: 10px;
+    justify-content:center;
+    align-items:center;
+}
+@media (max-width: 800px) {
     .popover-region{
         display: none;
     }
-}
-@media (max-width: 550px) {
     .siteadminlink{
+        display: none;
+    }
+}
+@media (max-width: 360px) {
+    
+    .popover-regionbar{
+        display: none;
+    }
+}
+@media (max-width: 360px) {
+    .coursecontrols .nav-item.nav-link{
         display: none;
     }
 }
