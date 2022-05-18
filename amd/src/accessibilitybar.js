@@ -36,8 +36,10 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
     var fontsizeCurrentAction = null;
     var sitecolorCurrentAction = null;
     var sitefontCurrentAction = null;
+    var myClass = null
 
     var AccessibilityBar = function() {
+        myClass = this
         var classList = jQuery('body').attr('class').split(/\s+/);
         console.log('render accesibility bar')
         jQuery.each(classList, function(index, item) {
@@ -49,22 +51,9 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
             }
         });
 
-        var request = Ajax.call([{
-            methodname: 'theme_moove_getthemesettingscolor',
-            args: {}
-        }]);
-
-
-        request[0].done(function(result) {
-            console.log("color 1 is: " + result.fonttype)
-            //document.getElementById('fonttype').value = result.fonttype;
-            sitecolorCurrentAction = result.color                
-            
-        }).fail(function(error){
-            console.log("color 1 is: fail")
-        }) 
-
         
+
+        this.getColor();
 
         this.reloadFontSite();
 
@@ -72,7 +61,7 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
 
         this.registerEventListeners();
         
-        this.reloadSitecolorClass();
+        
     };
 
     AccessibilityBar.prototype.registerEventListeners = function() {
@@ -100,6 +89,25 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
             this.siteFont();
         }.bind(this));
     };
+
+    AccessibilityBar.prototype.getColor = function() {
+        var request = Ajax.call([{
+            methodname: 'theme_moove_getthemesettingscolor',
+            args: {}
+        }]);
+
+        
+
+        request[0].done(function(result) {
+            console.log("color 1 is: " + result.sitecolor);
+            //document.getElementById('fonttype').value = result.fonttype;
+            sitecolorCurrentAction = result.sitecolor;  
+            myClass.reloadSitecolorClass();              
+            
+        }).fail(function(error){
+            console.log("color 1 is: fail")
+        }) 
+    }
 
     AccessibilityBar.prototype.reloadFontSite = function() {
         var request = Ajax.call([{
@@ -264,8 +272,12 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
             return (className.match(/(^|\s)sitecolor-color-\S+/g) || []).join(' ');
         });
 
+        console.log("cahnge color reloadSitecolorClass")
+
         if (sitecolorCurrentAction !== 'reset') {
             jQuery('body').addClass(sitecolorCurrentAction);
+            
+            console.log("change color reloadSitecolorClass" + sitecolorCurrentAction)
         }
     };
 
