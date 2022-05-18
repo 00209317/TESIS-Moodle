@@ -188,12 +188,8 @@ class accessibility extends external_api {
         $params = self::validate_parameters(self::fontsize_parameters(), ['action' => $action]);
 
         $newsitecolorclass = null;
-        switch ($params['action']) {
-            case 'sitecolor-color-2':
-            case 'sitecolor-color-3':
-            case 'sitecolor-color-4':
-                $newsitecolorclass = $params['action'];
-        }
+        
+        $newsitecolorclass = $params['action'];
 
         if (isloggedin() && !isguestuser()) {
             set_user_preference('accessibilitystyles_sitecolorclass', $newsitecolorclass);
@@ -336,13 +332,13 @@ class accessibility extends external_api {
 
     public static function getthemesettingscolor() {
         return [
-            'color' => get_user_preferences('accessibilitystyles_sitecolorclass', 'sitecolor_color1'),
+            'sitecolor' => get_user_preferences('accessibilitystyles_sitecolorclass', 'reset'),
         ];
     }
     
     public static function getthemesettingscolor_returns() {
         return new external_single_structure([
-            'color' => new external_value(PARAM_TEXT, 'the user selected font'),
+            'sitecolor' => new external_value(PARAM_TEXT, 'the user selected color'),
         ]);
     }
 
