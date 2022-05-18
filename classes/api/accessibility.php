@@ -365,4 +365,22 @@ class accessibility extends external_api {
             'action' => new external_value(PARAM_RAW, 'The colorscheme value'),
         ]);
     }
+
+
+    public static function getthemesettingsfontsize_parameters() {
+        return new external_function_parameters([]);
+    }
+
+    public static function getthemesettingsfontsize() {
+        return [
+            'sitefontsize' => get_user_preferences('accessibilitystyles_fontsizeclass', 'default'),
+        ];
+    }
+    
+    public static function getthemesettingsfontsize_returns() {
+        return new external_single_structure([
+            'sitefontsize' => new external_value(PARAM_TEXT, 'the user selected color'),
+        ]);
+    }
+    
 }

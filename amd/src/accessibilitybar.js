@@ -40,16 +40,9 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
 
     var AccessibilityBar = function() {
         myClass = this
-        var classList = jQuery('body').attr('class').split(/\s+/);
-        console.log('render accesibility bar')
-        jQuery.each(classList, function(index, item) {
-            if (item.includes('fontsize-inc-') || item.includes('fontsize-dec-')) {
-                var itemarr = item.split('-');
-                fontsizeClass = item;
-                fontsizeClassOp = itemarr[1];
-                fontsizeClassSize = itemarr[2];
-            }
-        });
+        
+
+        //this.setFontSize(classList);
 
         
 
@@ -60,6 +53,8 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
         this.toggleFontsizeButtons();
 
         this.registerEventListeners();
+
+        this.getFontSize();
         
         
     };
@@ -96,8 +91,6 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
             args: {}
         }]);
 
-        
-
         request[0].done(function(result) {
             console.log("color 1 is: " + result.sitecolor);
             //document.getElementById('fonttype').value = result.fonttype;
@@ -107,6 +100,44 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
         }).fail(function(error){
             console.log("color 1 is: fail")
         }) 
+    }
+
+    AccessibilityBar.prototype.getFontSize = function() {
+        var request = Ajax.call([{
+            methodname: 'theme_ecampus_getthemesettingsfontsize',
+            args: {}
+        }]);
+
+        request[0].done(function(result) {
+            console.log("size 1 is: " + result.sitefontsize);
+            //document.getElementById('fonttype').value = result.fonttype;
+            myClass.setFontSize(result.sitefontsize)
+
+            
+            myClass.reloadSitecolorClass();              
+            
+        }).fail(function(error){
+            console.log("size 1 is: fail")
+        }) 
+    }
+
+    AccessibilityBar.prototype.setFontSize = function(item){
+        console.log('setfont')
+
+        if (item.includes('fontsize-inc-')){
+            fontsizeCurrentAction = 'increase'
+        } 
+        if (item.includes('fontsize-dec-')){
+            fontsizeCurrentAction = 'decrease'
+        }
+
+        console.log('setfont' + item)
+        var itemarr = item.split('-');
+        fontsizeClass = item;
+        fontsizeClassOp = itemarr[1];
+        fontsizeClassSize = itemarr[2];
+        this.reloadFontsizeClass();
+    
     }
 
     AccessibilityBar.prototype.reloadFontSite = function() {

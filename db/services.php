@@ -76,5 +76,13 @@ $functions = array(
         'description' => 'Get the user theme settings color.',
         'type' => 'read',
         'ajax' => true
+    ),
+    'theme_ecampus_getthemesettingsfontsize' => array(
+        'classname' => 'theme_ecampus\api\accessibility',
+        'classpath' => 'theme_ecampus\classes\api\accessibility.php',
+        'methodname' => 'getthemesettingsfontsize',
+        'description' => 'Get the user theme settings font size.',
+        'type' => 'read',
+        'ajax' => true
     )
 );
