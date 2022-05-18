@@ -31,7 +31,7 @@ defined('MOODLE_INTERNAL') || die();
  *
  * @since      Moodle 3.0
  * @package    theme_ecampus
- * @copyright  2017 David Bogner <info@edulabs.org> and Gareth Barnard
+ * @copyright  2017 David Bogner <info@edulabs.org> and Gareth Barnard 
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class renderer_htmlemail extends \mod_forum\output\email\renderer {
