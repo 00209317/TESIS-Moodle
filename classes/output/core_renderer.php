@@ -953,7 +953,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
                 'class' => $icon . ' fa fa-fw'
             )) . html_writer::end_tag('i') , array(
                 'href' => $url,
-                'class' => 'btn edit-btn ' . $btn,
+                'class' => 'btn edit-btn' . $btn,
                 'data-tooltip' => "tooltip",
                 'data-placement' => "bottom",
                 'title' => $title,
