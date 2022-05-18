@@ -17,16 +17,16 @@
 /**
  * Language file.
  *
- * @package   theme_moove
+ * @package   theme_ecampus
  * @copyright 2017 Willian Mano - http://conecti.me
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['pluginname'] = 'Moove';
-$string['configtitle'] = 'Moove';
-$string['choosereadme'] = 'Moove é um tema moderno e altamente customizável. Este tema tem por objetivo ser usado diretamente, ou como um tema pai quando criados novos temas utilizando Bootstrap 4.';
+$string['pluginname'] = 'ECampus';
+$string['configtitle'] = 'ECampus';
+$string['choosereadme'] = 'ECampus é um tema moderno e altamente customizável. Este tema tem por objetivo ser usado diretamente, ou como um tema pai quando criados novos temas utilizando Bootstrap 4.';
 
 $string['currentinparentheses'] = '(atual)';
 $string['region-side-pre'] = 'Direita';
@@ -44,7 +44,7 @@ $string['by'] = 'por';
 $string['discipline_progress'] = 'Progresso';
 $string['access'] = 'Acessar';
 $string['cachedef_admininfos'] = 'Definição do cache das informações do painel do administrador';
-$string['cachedef_fontawesomemooveiconmapping'] = 'Definição de cache dos ícones do tema';
+$string['cachedef_fontawesomeecampusiconmapping'] = 'Definição de cache dos ícones do tema';
 $string['diskusage'] = 'Uso do disco(moodledata)';
 $string['notcalculatedyet'] = 'Não calculado';
 $string['calculatediskusagetask'] = 'Tarefa para calcular o uso do disco';
@@ -274,10 +274,10 @@ $string['accessibilitysitecolor4'] = 'Alto contraste';
 // Data privacy.
 $string['privacy:metadata:preference:accessibilitystyles_fontsizeclass'] = 'Preferências do usuário para tamanho da fonte.';
 $string['privacy:metadata:preference:accessibilitystyles_sitecolorclass'] = 'Preferências do usuário para cor do site.';
-$string['privacy:metadata:preference:thememoovesettings_fonttype'] = 'Preferências do usuário para tipo de fonte.';
-$string['privacy:metadata:preference:thememoovesettings_enableaccessibilitytoolbar'] = 'Preferências do usuário para habilitar a barra de acessibilidade.';
+$string['privacy:metadata:preference:themeecampussettings_fonttype'] = 'Preferências do usuário para tipo de fonte.';
+$string['privacy:metadata:preference:themeecampussettings_enableaccessibilitytoolbar'] = 'Preferências do usuário para habilitar a barra de acessibilidade.';
 
 $string['privacy:accessibilitystyles_fontsizeclass'] = 'A preferência atual para o tamanho da fonte é: {$a}.';
 $string['privacy:accessibilitystyles_sitecolorclass'] = 'A preferência atual para a cor do site é: {$a}.';
-$string['privacy:thememoovesettings_fonttype'] = 'A preferência atual para o tipo de fonte é: {$a}.';
-$string['privacy:thememoovesettings_enableaccessibilitytoolbar'] = 'A preferência atual para habilitar a barra de acessibilidade é para exibi-lá';
+$string['privacy:themeecampussettings_fonttype'] = 'A preferência atual para o tipo de fonte é: {$a}.';
+$string['privacy:themeecampussettings_enableaccessibilitytoolbar'] = 'A preferência atual para habilitar a barra de acessibilidade é para exibi-lá';

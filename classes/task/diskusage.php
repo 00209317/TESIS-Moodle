@@ -17,12 +17,12 @@
 /**
  * Calculates the disk usage
  *
- * @package   theme_moove
+ * @package   theme_ecampus
  * @copyright 2020 Willian Mano - http://conecti.me
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_moove\task;
+namespace theme_ecampus\task;
 
 // This line protects the file from being accessed by a URL directly.
 defined('MOODLE_INTERNAL') || die();
@@ -32,7 +32,7 @@ use cache;
 /**
  * Task to calculates the disk usage
  *
- * @package    theme_moove
+ * @package    theme_ecampus
  * @copyright  2020 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -46,7 +46,7 @@ class diskusage extends \core\task\scheduled_task {
      * @throws \coding_exception
      */
     public function get_name() {
-        return get_string('calculatediskusagetask', 'theme_moove');
+        return get_string('calculatediskusagetask', 'theme_ecampus');
     }
 
     /**
@@ -55,7 +55,7 @@ class diskusage extends \core\task\scheduled_task {
     public function execute() {
         global $CFG;
 
-        $cache = cache::make('theme_moove', 'admininfos');
+        $cache = cache::make('theme_ecampus', 'admininfos');
 
         $totalusage = get_directory_size($CFG->dataroot);
         $totalusagereadable = number_format(ceil($totalusage / 1048576));

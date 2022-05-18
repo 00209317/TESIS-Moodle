@@ -15,14 +15,14 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Custom moove extras functions
+ * Custom ecampus extras functions
  *
- * @package    theme_moove
+ * @package    theme_ecampus
  * @copyright  2018 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_moove\util;
+namespace theme_ecampus\util;
 
 use core_competency\api as competency_api;
 use moodle_url;
@@ -32,7 +32,7 @@ defined('MOODLE_INTERNAL') || die();
 /**
  * Class to get some extras info in Moodle.
  *
- * @package    theme_moove
+ * @package    theme_ecampus
  * @copyright  2019 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -121,7 +121,7 @@ class extras {
         }
 
         if (empty($contentimage)) {
-            $url = $CFG->wwwroot . "/theme/moove/pix/default_course.jpg";
+            $url = $CFG->wwwroot . "/theme/ecampus/pix/default_course.jpg";
 
             $contentimage = \html_writer::link($courselink, \html_writer::empty_tag('img', array(
                 'src' => $url,
@@ -255,7 +255,7 @@ class extras {
                     'class' => 'btn btn-block btn-outline-primary'
                 ],
                 [
-                    'title' => get_string($contacttitle, 'theme_moove'),
+                    'title' => get_string($contacttitle, 'theme_ecampus'),
                     'url' => new \moodle_url('/message/index.php', [
                             'user1' => $USER->id,
                             'user2' => $user->id,

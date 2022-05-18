@@ -17,16 +17,16 @@
 /**
  * Language file.
  *
- * @package   theme_moove
+ * @package   theme_ecampus
  * @copyright 2017 Willian Mano - http://conecti.me
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['pluginname'] = 'Moove';
-$string['configtitle'] = 'Moove';
-$string['choosereadme'] = 'Moove is a modern highly-customisable theme. This theme is intended to be used directly, or as a parent theme when creating new themes utilising Bootstrap 4.';
+$string['pluginname'] = 'ECampus';
+$string['configtitle'] = 'ECampus';
+$string['choosereadme'] = 'ECampus is a modern highly-customisable theme. This theme is intended to be used directly, or as a parent theme when creating new themes utilising Bootstrap 4.';
 
 $string['currentinparentheses'] = '(current)';
 $string['region-side-pre'] = 'Right';
@@ -44,7 +44,7 @@ $string['by'] = 'by';
 $string['discipline_progress'] = 'Topic\'s progress';
 $string['access'] = 'Access';
 $string['cachedef_admininfos'] = 'Site administrator dashboard infos cache definition';
-$string['cachedef_fontawesomemooveiconmapping'] = 'Theme icon font definition';
+$string['cachedef_fontawesomeecampusiconmapping'] = 'Theme icon font definition';
 $string['diskusage'] = 'Disk usage(moodledata)';
 $string['notcalculatedyet'] = 'Not calculated yet';
 $string['calculatediskusagetask'] = 'Task to calculate the disk usage';
@@ -275,10 +275,10 @@ $string['accessibilitysitecolor4'] = 'High contrast';
 // Data privacy.
 $string['privacy:metadata:preference:accessibilitystyles_fontsizeclass'] = 'The user\'s preference for font size.';
 $string['privacy:metadata:preference:accessibilitystyles_sitecolorclass'] = 'The user\'s preference for site color.';
-$string['privacy:metadata:preference:thememoovesettings_fonttype'] = 'The user\'s preference for font type.';
-$string['privacy:metadata:preference:thememoovesettings_enableaccessibilitytoolbar'] = 'The user\'s preference for enable the accessibility toolbar.';
+$string['privacy:metadata:preference:themeecampussettings_fonttype'] = 'The user\'s preference for font type.';
+$string['privacy:metadata:preference:themeecampussettings_enableaccessibilitytoolbar'] = 'The user\'s preference for enable the accessibility toolbar.';
 
 $string['privacy:accessibilitystyles_fontsizeclass'] = 'The current preference for the font size is: {$a}.';
 $string['privacy:accessibilitystyles_sitecolorclass'] = 'The current preference for the site color is: {$a}.';
-$string['privacy:thememoovesettings_fonttype'] = 'The current preference for the font type is: {$a}.';
-$string['privacy:thememoovesettings_enableaccessibilitytoolbar'] = 'The current preference for enable accessibility toolbar is to show it.';
+$string['privacy:themeecampussettings_fonttype'] = 'The current preference for the font type is: {$a}.';
+$string['privacy:themeecampussettings_enableaccessibilitytoolbar'] = 'The current preference for enable accessibility toolbar is to show it.';

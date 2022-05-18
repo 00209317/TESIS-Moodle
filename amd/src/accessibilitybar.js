@@ -16,7 +16,7 @@
 /**
  * Contain the logic for accessibility bar.
  *
- * @package    theme_moove
+ * @package    theme_ecampus
  * @copyright  2020 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -92,7 +92,7 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
 
     AccessibilityBar.prototype.getColor = function() {
         var request = Ajax.call([{
-            methodname: 'theme_moove_getthemesettingscolor',
+            methodname: 'theme_ecampus_getthemesettingscolor',
             args: {}
         }]);
 
@@ -111,7 +111,7 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
 
     AccessibilityBar.prototype.reloadFontSite = function() {
         var request = Ajax.call([{
-            methodname: 'theme_moove_getthemesettingsfont',
+            methodname: 'theme_ecampus_getthemesettingsfont',
             args: {}
         }]);
 
@@ -135,7 +135,7 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
 
     AccessibilityBar.prototype.fontSize = function() {
         var request = Ajax.call([{
-            methodname: 'theme_moove_fontsize',
+            methodname: 'theme_ecampus_fontsize',
             args: {
                 action: fontsizeCurrentAction
             }
@@ -235,7 +235,7 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
 
     AccessibilityBar.prototype.siteColor = function() {
         var request = Ajax.call([{
-            methodname: 'theme_moove_sitecolor',
+            methodname: 'theme_ecampus_sitecolor',
             args: {
                 action: sitecolorCurrentAction
             }
@@ -250,7 +250,7 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
         console.log("change font: " + sitefontCurrentAction);
 
         var request = Ajax.call([{
-            methodname: 'theme_moove_sitefont',
+            methodname: 'theme_ecampus_sitefont',
             args: {
                 action: sitefontCurrentAction
             }

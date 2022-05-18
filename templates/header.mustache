@@ -15,7 +15,7 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template theme_moove/header
+    @template theme_ecampus/header
 
     Page header template
 
@@ -23,7 +23,7 @@
 }}
 
 {{!
-    @template theme_moove/accessibilitymodal
+    @template theme_ecampus/accessibilitymodal
 
     Blocks drawer template
 
@@ -57,7 +57,7 @@
         {{{ output.teacherdashmenu }}}
         {{{ output.edit_button_fhs }}}
     </div>
-    {{> theme_moove/accessibilitybar }}
+    {{> theme_ecampus/accessibilitybar }}
     <ul class="navbar-nav d-none d-md-flex custom-menus">
         <!-- custom_menu -->
         {{{ output.custom_menu }}}
@@ -70,13 +70,13 @@
         </div>
 
         <li class="nav-item accessibility-menu-panel">
-            {{> theme_moove/accessibilitybar }}
+            {{> theme_ecampus/accessibilitybar }}
         </li>
         <div class="popover-regionbar collapsed">
             <div class="popover-regionbar-toggle nav-link icon-no-margin">
                 <li class="nav-item accessibility-menu-btn-mod">
                     <span id="themesettings-control-mod">
-                        <i title="{{#str}}themesettingstitle, theme_moove{{/str}}"
+                        <i title="{{#str}}themesettingstitle, theme_ecampus{{/str}}"
                             class="fa fa-universal-access">
                         </i>
                     </span>
@@ -85,7 +85,7 @@
         </div>
             
 
-        {{> theme_moove/personalizarDashboard }}
+        {{> theme_ecampus/personalizarDashboard }}
         
         {{{ output.navbar_plugin_output }}}
 

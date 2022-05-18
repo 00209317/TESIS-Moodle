@@ -17,12 +17,12 @@
 /**
  * Mustache helper to load a theme configuration.
  *
- * @package    theme_moove
+ * @package    theme_ecampus
  * @copyright  2017 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_moove\util;
+namespace theme_ecampus\util;
 
 use theme_config;
 use stdClass;
@@ -32,7 +32,7 @@ defined('MOODLE_INTERNAL') || die();
 /**
  * Helper to load a theme configuration.
  *
- * @package    theme_moove
+ * @package    theme_ecampus
  * @copyright  2017 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -44,7 +44,7 @@ class theme_settings {
      * @return array
      */
     public function footer_items() {
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('ecampus');
 
         $templatecontext = [];
 
@@ -70,7 +70,7 @@ class theme_settings {
     public function slideshow() {
         global $OUTPUT;
 
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('ecampus');
 
         $templatecontext['sliderenabled'] = $theme->settings->sliderenabled;
 
@@ -112,7 +112,7 @@ class theme_settings {
     public function marketing_items() {
         global $OUTPUT;
 
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('ecampus');
 
         $templatecontext = [];
 
@@ -130,17 +130,17 @@ class theme_settings {
 
             $templatecontext[$marketingheading] = '';
             if (!empty($theme->settings->$marketingheading)) {
-                $templatecontext[$marketingheading] = theme_moove_get_setting($marketingheading, true);
+                $templatecontext[$marketingheading] = theme_ecampus_get_setting($marketingheading, true);
             }
 
             $templatecontext[$marketingsubheading] = '';
             if (!empty($theme->settings->$marketingsubheading)) {
-                $templatecontext[$marketingsubheading] = theme_moove_get_setting($marketingsubheading, true);
+                $templatecontext[$marketingsubheading] = theme_ecampus_get_setting($marketingsubheading, true);
             }
 
             $templatecontext[$marketingcontent] = '';
             if (!empty($theme->settings->$marketingcontent)) {
-                $templatecontext[$marketingcontent] = theme_moove_get_setting($marketingcontent, true);
+                $templatecontext[$marketingcontent] = theme_ecampus_get_setting($marketingcontent, true);
             }
 
             $templatecontext[$marketingurl] = '';
@@ -173,7 +173,7 @@ class theme_settings {
      * @return array
      */
     public function sponsors() {
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('ecampus');
 
         $templatecontext['sponsorstitle'] = $theme->settings->sponsorstitle;
         $templatecontext['sponsorssubtitle'] = $theme->settings->sponsorssubtitle;
@@ -203,7 +203,7 @@ class theme_settings {
      * @return array
      */
     public function clients() {
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('ecampus');
 
         $templatecontext['clientstitle'] = format_string($theme->settings->clientstitle);
         $templatecontext['clientssubtitle'] = format_string($theme->settings->clientssubtitle);

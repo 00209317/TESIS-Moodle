@@ -15,11 +15,11 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template theme_moove/frontpage_guest
+    @template theme_ecampus/frontpage_guest
 
     Guest frontpage template.
 
-    Moove frontpage guest layout template.
+    ECampus frontpage guest layout template.
 
     Context variables required for this template:
     * sitename - The name of the site
@@ -42,18 +42,18 @@
         "shoulddisplaymarketing": true
     }
 }}
-    {{>theme_moove/inc_start}}
+    {{>theme_ecampus/inc_start}}
 
     <div id="page" class="container-fluid">
         <div id="page-header" class="frontpage-guest-header">
             {{#sliderenabled}}
                 {{#sliderfrontpage}}
-                    {{>theme_moove/slideshow}}
+                    {{>theme_ecampus/slideshow}}
 
                     {{^disablefrontpageloginbox}}
                         <div id="loginbox" class="d-none d-lg-block">
                             <div class="card" id="boxForm">
-                                {{>theme_moove/frontpage_login}}
+                                {{>theme_ecampus/frontpage_login}}
                             </div>
                         </div>
                     {{/disablefrontpageloginbox}}
@@ -68,22 +68,22 @@
                     </div>
                     {{^disablefrontpageloginbox}}
                         <div class="col-12 col-sm-12 col-md-4 card d-none d-lg-block rounded-0 border-right-0 border-top-0 border-bottom-0" style="border-left: 10px solid #f39550;" id="boxForm">
-                            {{>theme_moove/frontpage_login}}
+                            {{>theme_ecampus/frontpage_login}}
                         </div><!-- end of .card-body -->
                     {{/disablefrontpageloginbox}}
                 </div> <!-- end of #boxForm -->
             {{/sliderenabled}}
         </div>
 
-        {{>theme_moove/frontpage_marketing}}
+        {{>theme_ecampus/frontpage_marketing}}
 
         <div class="container frontpage-maincontent">
             {{{ output.main_content }}}
         </div>
 
-        {{>theme_moove/frontpage_numbers}}
+        {{>theme_ecampus/frontpage_numbers}}
 
-        {{>theme_moove/frontpage_sponsorsclients}}
+        {{>theme_ecampus/frontpage_sponsorsclients}}
     </div>
 
-{{>theme_moove/inc_end}}
+{{>theme_ecampus/inc_end}}

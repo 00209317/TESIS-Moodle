@@ -17,14 +17,14 @@
 /**
  * A login page layout for the boost theme.
  *
- * @package   theme_moove
+ * @package   theme_ecampus
  * @copyright 2017 Willian Mano - http://conecti.me
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$extraclasses[] = 'moove-login';
+$extraclasses[] = 'ecampus-login';
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);
 
 $templatecontext = [
@@ -37,4 +37,4 @@ if ($this->page->pagetype == 'login-signup') {
     $templatecontext['logourl'] = $OUTPUT->get_logo();
 }
 
-echo $OUTPUT->render_from_template('theme_moove/login', $templatecontext);
+echo $OUTPUT->render_from_template('theme_ecampus/login', $templatecontext);

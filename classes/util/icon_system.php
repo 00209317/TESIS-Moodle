@@ -15,14 +15,14 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Custom moove icon system
+ * Custom ecampus icon system
  *
- * @package    theme_moove
+ * @package    theme_ecampus
  * @copyright  2017 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_moove\util;
+namespace theme_ecampus\util;
 
 use core\output\icon_system_fontawesome;
 use renderer_base;
@@ -33,7 +33,7 @@ defined('MOODLE_INTERNAL') || die();
 /**
  * Class allowing different systems for mapping and rendering icons.
  *
- * @package    theme_moove
+ * @package    theme_ecampus
  * @copyright  2017 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -433,7 +433,7 @@ class icon_system extends icon_system_fontawesome {
      */
     public function get_icon_name_map() {
         if ($this->map === []) {
-            $cache = \cache::make('theme_moove', 'fontawesomemooveiconmapping');
+            $cache = \cache::make('theme_ecampus', 'fontawesomeecampusiconmapping');
 
             $this->map = $cache->get('mapping');
 

@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * A two column layout for the moove theme.
+ * A two column layout for the ecampus theme.
  *
- * @package   theme_moove
+ * @package   theme_ecampus
  * @copyright 2017 Willian Mano - http://conecti.me
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -49,7 +49,7 @@ if ($draweropenright && $hasblocks) {
     $extraclasses[] = 'drawer-open-right';
 }
 
-$coursepresentation = theme_moove_get_setting('coursepresentation');
+$coursepresentation = theme_ecampus_get_setting('coursepresentation');
 if ($coursepresentation == 2) {
     $extraclasses[] = 'coursepresentation-cover';
 }
@@ -70,16 +70,16 @@ $templatecontext = [
 ];
 
 // Improve boost navigation.
-theme_moove_extend_flat_navigation($PAGE->flatnav);
+theme_ecampus_extend_flat_navigation($PAGE->flatnav);
 
 $templatecontext['flatnavigation'] = $PAGE->flatnav;
 
-$themesettings = new \theme_moove\util\theme_settings();
+$themesettings = new \theme_ecampus\util\theme_settings();
 
 $templatecontext = array_merge($templatecontext, $themesettings->footer_items());
 
 if (!$coursepresentation || $coursepresentation == 1) {
-    echo $OUTPUT->render_from_template('theme_moove/columns2', $templatecontext);
+    echo $OUTPUT->render_from_template('theme_ecampus/columns2', $templatecontext);
 } else if ($coursepresentation == 2) {
-    echo $OUTPUT->render_from_template('theme_moove/course_cover', $templatecontext);
+    echo $OUTPUT->render_from_template('theme_ecampus/course_cover', $templatecontext);
 }

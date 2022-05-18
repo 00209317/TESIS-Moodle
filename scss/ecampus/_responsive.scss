@@ -155,7 +155,7 @@
     }
   }
 
-  #page-login-index.moove-login {
+  #page-login-index.ecampus-login {
     #page {
       padding: 1rem 0 0 0;
 
@@ -203,7 +203,7 @@
     margin-right: 0;
   }
 
-  #page-login-index.moove-login {
+  #page-login-index.ecampus-login {
     .loginpanel .instructions {
       border-top-left-radius: $m-login-padding;
       border-bottom-left-radius: $m-login-padding;
@@ -223,7 +223,7 @@
 }
 
 @media (max-width: 991px) {
-  #page-site-index.slideshow #mooveslideshow .carousel-caption {
+  #page-site-index.slideshow #ecampusslideshow .carousel-caption {
     max-width: calc(100% - 80px);
 
     .title,
@@ -269,7 +269,7 @@
     display: block;
   }
 
-  #page-site-index.slideshow #mooveslideshow .carousel-indicators {
+  #page-site-index.slideshow #ecampusslideshow .carousel-indicators {
     bottom: 80px;
   }
 

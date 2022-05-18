@@ -15,7 +15,7 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template theme_moove/slideshow
+    @template theme_ecampus/slideshow
 
     Blocks drawer template
 
@@ -33,10 +33,10 @@
     }
 }}
 {{#sliderenabled}}
-    <div id="mooveslideshow" class="carousel slide" data-ride="carousel" data-interval="5000">
+    <div id="ecampusslideshow" class="carousel slide" data-ride="carousel" data-interval="5000">
         <ol class="carousel-indicators">
             {{#slides}}
-                <li data-target="#mooveslideshow" data-slide-to="{{{ key }}}" {{#active}}class="active"{{/active}}></li>
+                <li data-target="#ecampusslideshow" data-slide-to="{{{ key }}}" {{#active}}class="active"{{/active}}></li>
             {{/slides}}
         </ol>
         <div class="carousel-inner">
@@ -55,7 +55,7 @@
     </div>
     {{#js}}
         require(['jquery', 'theme_boost/bootstrap/carousel'], function($, carousel) {
-            $('#mooveslideshow').carousel({
+            $('#ecampusslideshow').carousel({
                 interval: 5000,
                 pause: 'hover'
             });

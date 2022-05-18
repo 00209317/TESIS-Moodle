@@ -17,12 +17,12 @@
 /**
  * Overriden theme boost core renderer.
  *
- * @package    theme_moove
+ * @package    theme_ecampus
  * @copyright  2017 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_moove\output;
+namespace theme_ecampus\output;
 
 use html_writer;
 use custom_menu;
@@ -62,7 +62,7 @@ defined('MOODLE_INTERNAL') || die;
 /**
  * Renderers to align Moodle's HTML with that expected by Bootstrap
  *
- * @package    theme_moove
+ * @package    theme_ecampus
  * @copyright  2017 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -116,7 +116,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
             }
 
             if (isset($context)) {
-                return $this->render_from_template('theme_moove/lang_menu', $context);
+                return $this->render_from_template('theme_ecampus/lang_menu', $context);
             }
         }
     }
@@ -221,7 +221,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
     public function get_pix_image_url_base() {
         global $CFG;
 
-        return $CFG->wwwroot . "/theme/moove/pix";
+        return $CFG->wwwroot . "/theme/ecampus/pix";
     }
 
     /**
@@ -244,7 +244,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
     public function favicon() {
         global $CFG;
 
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('ecampus');
 
         $favicon = $theme->setting_file_url('favicon', 'favicon');
 
@@ -264,7 +264,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * @return string
      */
     public function get_theme_logo_url() {
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('ecampus');
 
         return $theme->setting_file_url('logo', 'logo');
     }
@@ -348,7 +348,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
                 $returnstr .= "<a class='btn btn-login-top' href=\"$loginurl\">" . get_string('login') . '</a>';
             }
 
-            $theme = theme_config::load('moove');
+            $theme = theme_config::load('ecampus');
 
             if (!$theme->settings->disablefrontpageloginbox) {
                 return html_writer::tag(
@@ -370,7 +370,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
             ];
 
-            return $this->render_from_template('theme_moove/frontpage_guest_loginbtn', $context);
+            return $this->render_from_template('theme_ecampus/frontpage_guest_loginbtn', $context);
         }
 
         // If logged in as a guest user, show a string to that effect.
@@ -556,7 +556,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
     public function render_help_icon(help_icon $helpicon) {
         $context = $helpicon->export_for_template($this);
         // Solving the issue - "Your progress" help tooltip in course home page displays in outside the screen display.
-        // Check issue https://github.com/willianmano/moodle-theme_moove/issues/5.
+        // Check issue https://github.com/willianmano/moodle-theme_ecampus/issues/5.
         if ($helpicon->identifier === 'completionicons' && $helpicon->component === 'completion') {
             $context->ltr = right_to_left();
         }
@@ -608,7 +608,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
         return html_writer::tag('div',
                                 $searchicon . $searchinput,
-                                array('class' => 'moove-search-input nav-link', 'id' => $identifier));
+                                array('class' => 'ecampus-search-input nav-link', 'id' => $identifier));
     }
 
     /**
@@ -634,7 +634,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
                                     gtag('config', 'GOOGLE-ANALYTICS-CODE');
                                 </script>";
 
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('ecampus');
 
         if (!empty($theme->settings->googleanalytics)) {
             $output .= str_replace("GOOGLE-ANALYTICS-CODE", trim($theme->settings->googleanalytics), $googleanalyticscode);
@@ -827,10 +827,10 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
         $header->contextheader = $this->context_header();
         if ($this->page->pagelayout == 'mypublic') {
-            $header->contextheader = "<h2>". get_string('userprofile', 'theme_moove') ."</h2>";
+            $header->contextheader = "<h2>". get_string('userprofile', 'theme_ecampus') ."</h2>";
         }
 
-        return $this->render_from_template('theme_moove/breadcrumb', $header);
+        return $this->render_from_template('theme_ecampus/breadcrumb', $header);
     }
 
     /**
@@ -845,7 +845,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * @since Moodle 2.5.1 2.6
      */
     public function body_attributes($additionalclasses = array()) {
-        $hasaccessibilitybar = false; //get_user_preferences('thememoovesettings_enableaccessibilitytoolbar', '');
+        $hasaccessibilitybar = false; //get_user_preferences('themeecampussettings_enableaccessibilitytoolbar', '');
         if ($hasaccessibilitybar) {
             $additionalclasses[] = 'hasaccessibilitybar';
 
@@ -860,7 +860,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
             }
         }
 
-        $fonttype = get_user_preferences('thememoovesettings_fonttype', '');
+        $fonttype = get_user_preferences('themeecampussettings_fonttype', '');
         if ($fonttype) {
             $additionalclasses[] = $fonttype;
         }
@@ -907,13 +907,13 @@ class core_renderer extends \theme_boost\output\core_renderer {
             $hasteacherdash = has_capability('moodle/course:viewhiddenactivities', $context);
             $hasstudentdash = !has_capability('moodle/course:viewhiddenactivities', $context);
             if (has_capability('moodle/course:viewhiddenactivities', $context)) {
-                $togglebutton = get_string('coursemanagementbutton', 'theme_moove');
+                $togglebutton = get_string('coursemanagementbutton', 'theme_ecampus');
             }
             else {
-                $togglebuttonstudent = get_string('studentdashbutton', 'theme_moove');
+                $togglebuttonstudent = get_string('studentdashbutton', 'theme_ecampus');
             }
         }
-        $siteadmintitle = get_string('siteadminquicklink', 'theme_moove');
+        $siteadmintitle = get_string('siteadminquicklink', 'theme_ecampus');
         $siteadminurl = new moodle_url('/admin/search.php');
         $hasadminlink = has_capability('moodle/site:configview', $context);
         $course = $this->page->course;
@@ -927,7 +927,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
                 'url' => $easycodelink
             );
         }
-        return $this->render_from_template('theme_moove/teacherdashmenu', $dashmenu);
+        return $this->render_from_template('theme_ecampus/teacherdashmenu', $dashmenu);
     }
     public function edit_button_fhs() {
         global $SITE, $PAGE, $USER, $CFG, $COURSE;

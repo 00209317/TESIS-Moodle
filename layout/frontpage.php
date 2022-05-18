@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Frontpage layout for the moove theme.
+ * Frontpage layout for the ecampus theme.
  *
- * @package   theme_moove
+ * @package   theme_ecampus
  * @copyright 2017 Willian Mano - http://conecti.me
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -31,7 +31,7 @@ require_once($CFG->libdir . '/behat/lib.php');
 
 $extraclasses = [];
 
-$themesettings = new \theme_moove\util\theme_settings();
+$themesettings = new \theme_ecampus\util\theme_settings();
 
 if (isloggedin()) {
     $blockshtml = $OUTPUT->blocks('side-pre');
@@ -48,7 +48,7 @@ if (isloggedin()) {
         $extraclasses[] = 'drawer-open-right';
     }
 
-    $alertmsg = theme_moove_get_setting('alertmsg');
+    $alertmsg = theme_ecampus_get_setting('alertmsg');
     $alertcontent = (empty($alertmsg)) ? false : format_text($alertmsg, FORMAT_HTML, ['noclean' => true]);
 
     $bodyattributes = $OUTPUT->body_attributes($extraclasses);
@@ -68,52 +68,52 @@ if (isloggedin()) {
     ];
 
     // Improve boost navigation.
-    theme_moove_extend_flat_navigation($PAGE->flatnav);
+    theme_ecampus_extend_flat_navigation($PAGE->flatnav);
 
     $templatecontext['flatnavigation'] = $PAGE->flatnav;
 
     $templatecontext = array_merge($templatecontext, $themesettings->footer_items(), $themesettings->slideshow());
 
-    echo $OUTPUT->render_from_template('theme_moove/frontpage', $templatecontext);
+    echo $OUTPUT->render_from_template('theme_ecampus/frontpage', $templatecontext);
 } else {
     $sliderfrontpage = false;
-    if ((theme_moove_get_setting('sliderenabled', true) == true) && (theme_moove_get_setting('sliderfrontpage', true) == true)) {
+    if ((theme_ecampus_get_setting('sliderenabled', true) == true) && (theme_ecampus_get_setting('sliderfrontpage', true) == true)) {
         $sliderfrontpage = true;
         $extraclasses[] = 'slideshow';
     }
 
     $numbersfrontpage = false;
-    if (theme_moove_get_setting('numbersfrontpage', true) == true) {
+    if (theme_ecampus_get_setting('numbersfrontpage', true) == true) {
         $numbersfrontpage = true;
     }
 
     $sponsorsfrontpage = false;
-    if (theme_moove_get_setting('sponsorsfrontpage', true) == true) {
+    if (theme_ecampus_get_setting('sponsorsfrontpage', true) == true) {
         $sponsorsfrontpage = true;
     }
 
     $clientsfrontpage = false;
-    if (theme_moove_get_setting('clientsfrontpage', true) == true) {
+    if (theme_ecampus_get_setting('clientsfrontpage', true) == true) {
         $clientsfrontpage = true;
     }
 
     $bannerheading = '';
     if (!empty($PAGE->theme->settings->bannerheading)) {
-        $bannerheading = theme_moove_get_setting('bannerheading', true);
+        $bannerheading = theme_ecampus_get_setting('bannerheading', true);
     }
 
     $bannercontent = '';
     if (!empty($PAGE->theme->settings->bannercontent)) {
-        $bannercontent = theme_moove_get_setting('bannercontent', true);
+        $bannercontent = theme_ecampus_get_setting('bannercontent', true);
     }
 
     $shoulddisplaymarketing = false;
-    if (theme_moove_get_setting('displaymarketingbox', true) == true) {
+    if (theme_ecampus_get_setting('displaymarketingbox', true) == true) {
         $shoulddisplaymarketing = true;
     }
 
     $disablefrontpageloginbox = false;
-    if (theme_moove_get_setting('disablefrontpageloginbox', true) == true) {
+    if (theme_ecampus_get_setting('disablefrontpageloginbox', true) == true) {
         $disablefrontpageloginbox = true;
         $extraclasses[] = 'disablefrontpageloginbox';
     }
@@ -157,5 +157,5 @@ if (isloggedin()) {
         $templatecontext = array_merge($templatecontext, $themesettings->clients());
     }
 
-    echo $OUTPUT->render_from_template('theme_moove/frontpage_guest', $templatecontext);
+    echo $OUTPUT->render_from_template('theme_ecampus/frontpage_guest', $templatecontext);
 }

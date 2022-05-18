@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Theme moove certificates page.
+ * Theme ecampus certificates page.
  *
- * @package    theme_moove
+ * @package    theme_ecampus
  * @copyright  2020 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -28,33 +28,33 @@ $courseid = optional_param('id', 0, PARAM_INT);
 
 require_login();
 
-$title = get_string('certificatestitle', 'theme_moove');
+$title = get_string('certificatestitle', 'theme_ecampus');
 if (!$courseid) {
     $PAGE->set_context(context_system::instance());
     $PAGE->set_pagelayout('standard');
     $PAGE->set_heading($SITE->fullname);
-    $PAGE->set_url('/theme/moove/certificates.php');
+    $PAGE->set_url('/theme/ecampus/certificates.php');
 } else {
     $course = $DB->get_record('course', ['id' => $courseid], '*', MUST_EXIST);
 
     require_login($course);
 
     $coursename = format_string($course->fullname, true, ['context' => context_course::instance($course->id)]);
-    $title = $coursename . ': ' . get_string('certificatestitle', 'theme_moove');
+    $title = $coursename . ': ' . get_string('certificatestitle', 'theme_ecampus');
 
     $PAGE->set_context(context_course::instance($course->id));
     $PAGE->set_pagelayout('incourse');
     $PAGE->set_heading($coursename);
-    $PAGE->set_url('/theme/moove/certificates.php', ['id' => $course->id]);
+    $PAGE->set_url('/theme/ecampus/certificates.php', ['id' => $course->id]);
 }
 
 $PAGE->set_title($title);
 
-$PAGE->navbar->add(get_string('certificates', 'theme_moove'));
+$PAGE->navbar->add(get_string('certificates', 'theme_ecampus'));
 
-$viewrenderable = new theme_moove\output\certificates($courseid);
+$viewrenderable = new theme_ecampus\output\certificates($courseid);
 
-$output = $PAGE->get_renderer('theme_moove');
+$output = $PAGE->get_renderer('theme_ecampus');
 
 $output->heading($title);
 

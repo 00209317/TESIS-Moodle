@@ -16,7 +16,7 @@
 /**
  * Theme settings modal js.
  *
- * @package    theme_moove
+ * @package    theme_ecampus
  * @copyright  2020 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -38,7 +38,7 @@ define(['jquery', 'core/notification', 'core/custom_interaction_events', 'core/m
             Modal.call(this, root);
 
             var request = Ajax.call([{
-                methodname: 'theme_moove_getthemesettings',
+                methodname: 'theme_ecampus_getthemesettings',
                 args: {}
             }]);
 
@@ -51,7 +51,7 @@ define(['jquery', 'core/notification', 'core/custom_interaction_events', 'core/m
             });
         };
 
-        ThemeSettingsModal.TYPE = 'theme_moove-themesettings_modal';
+        ThemeSettingsModal.TYPE = 'theme_ecampus-themesettings_modal';
         ThemeSettingsModal.prototype = Object.create(Modal.prototype);
         ThemeSettingsModal.prototype.constructor = ThemeSettingsModal;
 
@@ -66,7 +66,7 @@ define(['jquery', 'core/notification', 'core/custom_interaction_events', 'core/m
 
             this.getModal().on(CustomEvents.events.activate, SELECTORS.SAVE_BUTTON, function() {
                 var request = Ajax.call([{
-                    methodname: 'theme_moove_savethemesettings',
+                    methodname: 'theme_ecampus_savethemesettings',
                     args: {
                         formdata: this.getFormData()
                     }
@@ -121,7 +121,7 @@ define(['jquery', 'core/notification', 'core/custom_interaction_events', 'core/m
         // Automatically register with the modal registry the first time this module is imported so that you can create modals
         // of this type using the modal factory.
         if (!registered) {
-            ModalRegistry.register(ThemeSettingsModal.TYPE, ThemeSettingsModal, 'theme_moove/themesettings_modal');
+            ModalRegistry.register(ThemeSettingsModal.TYPE, ThemeSettingsModal, 'theme_ecampus/themesettings_modal');
             registered = true;
         }
 

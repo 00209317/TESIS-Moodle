@@ -17,12 +17,12 @@
 /**
  * Accessibility API endpoints
  *
- * @package    theme_moove
+ * @package    theme_ecampus
  * @copyright  2020 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_moove\api;
+namespace theme_ecampus\api;
 
 defined('MOODLE_INTERNAL') || die;
 
@@ -34,7 +34,7 @@ use external_value;
 /**
  * Accessibility API endpoints class
  *
- * @package    theme_moove
+ * @package    theme_ecampus
  * @copyright  2020 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -246,7 +246,7 @@ class accessibility extends external_api {
                 $fonttype = 'odafont';
             }
 
-            set_user_preference('thememoovesettings_fonttype', $fonttype);
+            set_user_preference('themeecampussettings_fonttype', $fonttype);
         }
 
         /*$enableaccessibilitytoolbar = null;
@@ -254,10 +254,10 @@ class accessibility extends external_api {
             //$enableaccessibilitytoolbar = true;
         }
 
-        set_user_preference('thememoovesettings_enableaccessibilitytoolbar', $enableaccessibilitytoolbar);
+        set_user_preference('themeecampussettings_enableaccessibilitytoolbar', $enableaccessibilitytoolbar);
         */
 
-        \core\notification::success(get_string('themesettinggsavedsuccessfully', 'theme_moove'));
+        \core\notification::success(get_string('themesettinggsavedsuccessfully', 'theme_ecampus'));
 
         return ['success' => true];
     }
@@ -291,8 +291,8 @@ class accessibility extends external_api {
      */
     public static function getthemesettings() {
         return [
-            'fonttype' => get_user_preferences('thememoovesettings_fonttype', 'default'),
-            //'enableaccessibilitytoolbar' => get_user_preferences('thememoovesettings_enableaccessibilitytoolbar', false)
+            'fonttype' => get_user_preferences('themeecampussettings_fonttype', 'default'),
+            //'enableaccessibilitytoolbar' => get_user_preferences('themeecampussettings_enableaccessibilitytoolbar', false)
         ];
     }
 
@@ -315,7 +315,7 @@ class accessibility extends external_api {
 
     public static function getthemesettingsfont() {
         return [
-            'fonttype' => get_user_preferences('thememoovesettings_fonttype', 'default'),
+            'fonttype' => get_user_preferences('themeecampussettings_fonttype', 'default'),
         ];
     }
     
@@ -349,7 +349,7 @@ class accessibility extends external_api {
  
         $fonttype = $params['action'];
  
-        set_user_preference('thememoovesettings_fonttype', $fonttype);
+        set_user_preference('themeecampussettings_fonttype', $fonttype);
  
          return ['success' => true];
      }

@@ -15,11 +15,11 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template theme_moove/columns2
+    @template theme_ecampus/columns2
 
     Admin time setting template.
 
-    Moove 2 column layout template.
+    ECampus 2 column layout template.
 
     Context variables required for this template:
     * sitename - The name of the site
@@ -49,7 +49,7 @@
         "hasregionmainsettingsmenu": false
     }
 }}
-{{>theme_moove/inc_start}}
+{{>theme_ecampus/inc_start}}
 
 <div id="page" class="container-fluid">
     <div id="page-content" class="row">
@@ -115,11 +115,11 @@
                                             {{/ hascourses }}
                                             {{# hascompetencyplans }}
                                                 <li class="nav-item">
-                                                    <a class="nav-link" id="competencyplans-tab" data-toggle="tab" href="#planos" role="tab" aria-controls="planos" aria-selected="false">{{#str}}competencyplans, theme_moove{{/str}}</a>
+                                                    <a class="nav-link" id="competencyplans-tab" data-toggle="tab" href="#planos" role="tab" aria-controls="planos" aria-selected="false">{{#str}}competencyplans, theme_ecampus{{/str}}</a>
                                                 </li>
                                             {{/ hascompetencyplans }}
                                             <li class="nav-item">
-                                                <a class="nav-link {{^hascourses}}active{{/hascourses}}" id="details-tab" data-toggle="tab" href="#details" role="tab" aria-controls="details" aria-selected="{{^hascourses}}true{{/hascourses}}{{#hascourses}}false{{/hascourses}}">{{#str}}details, theme_moove{{/str}}</a>
+                                                <a class="nav-link {{^hascourses}}active{{/hascourses}}" id="details-tab" data-toggle="tab" href="#details" role="tab" aria-controls="details" aria-selected="{{^hascourses}}true{{/hascourses}}{{#hascourses}}false{{/hascourses}}">{{#str}}details, theme_ecampus{{/str}}</a>
                                             </li>
                                         </ul>
                                         <div class="tab-content" id="mypublic-tab">
@@ -134,7 +134,7 @@
 
                                                                 <div class="media-body col-md-9 col-sm-6">
                                                                     <a href="{{ link }}"><h5 class="mt-0">{{{ fullname }}}</h5></a>
-                                                                    {{# startdate }}<small>{{#str}}startedon, theme_moove{{/str}}: {{#userdate}} {{startdate}}, %A, %d %B %Y {{/userdate}}</small>{{/ startdate }}
+                                                                    {{# startdate }}<small>{{#str}}startedon, theme_ecampus{{/str}}: {{#userdate}} {{startdate}}, %A, %d %B %Y {{/userdate}}</small>{{/ startdate }}
 
                                                                     <div class="mt-1">
                                                                         {{{ summary }}}
@@ -186,4 +186,4 @@
     </div>
 </div>
 
-{{>theme_moove/inc_end}}
+{{>theme_ecampus/inc_end}}

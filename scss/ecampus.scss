@@ -1,0 +1,42 @@
+// Import all scss ecampus files
+@import "extras/transitions";
+@import "extras/simple-line-icons";
+@import "extras/animate";
+@import "extras/metismenu";
+@import "extras/progress";
+@import "extras/opendyslexic";
+@import "ecampus/general";
+@import "ecampus/navbar";
+@import "ecampus/blocks";
+@import "ecampus/nav-drawer";
+@import "ecampus/breadcrumb";
+@import "ecampus/frontpage";
+@import "ecampus/login";
+@import "ecampus/register";
+@import "ecampus/footer";
+@import "ecampus/mydashboard";
+@import "ecampus/course";
+@import "ecampus/mypublic";
+@import "ecampus/grade";
+@import "ecampus/btnapp";
+@import "ecampus/calendar";
+@import "ecampus/enrol";
+@import "ecampus/responsive";
+@import "ecampus/accessibilitybar";
+@import "ecampus/mixins/accessibilityfontsize";
+@import "ecampus/accessibilitystyles";
+
+@import "ecampus/accesibilitybutton";
+@import "ecampus/header.scss";
+@import "ecampus/flat_navigation.scss";
+
+
+.conversationcontainer{
+    flex: 0 0 100%;
+	max-width: 100%;
+}
+
+.flex-column{
+    flex: 0 100 100%;
+	max-width: 100%;
+}

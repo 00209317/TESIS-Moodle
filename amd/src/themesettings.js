@@ -16,11 +16,11 @@
 /**
  * Theme settings js logic.
  *
- * @package    theme_moove
+ * @package    theme_ecampus
  * @copyright  2020 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-define(['jquery', 'core/modal_factory', 'theme_moove/themesettings_modal'],
+define(['jquery', 'core/modal_factory', 'theme_ecampus/themesettings_modal'],
     function($, ModalFactory, ThemeSettingsModal) {
 
         var SELECTORS = {
