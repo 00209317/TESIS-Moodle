@@ -5,7 +5,6 @@
     padding-bottom: 20px;
     overflow-y: auto;
     transition: all 0.5s ease;
-    border-right: 5px solid #f29450;
 
     &::-webkit-scrollbar {
         width: 7px;
@@ -47,11 +46,11 @@
                 display: inherit;
                 border-radius: 0;
                 transition: all 0.5s;
+                display:flex;
                 &:hover {
                     transition: all 0.5s;
                     background-color: white;
                     color: rgb(56, 56, 56);
-                    border-right: 5px solid #f29450;
                 }
 
                 &:focus {
@@ -61,7 +60,7 @@
                 }
 
                 &:before {
-                    font-family: 'simple-line-icons';
+                    font-family: 'uicons-regular-rounded';
                     speak: none;
                     font-style: normal;
                     font-weight: normal;
@@ -72,6 +71,7 @@
                     -moz-osx-font-smoothing: grayscale;
                     content: "\e089";
                     font-size: 19px;
+                    padding-right: 0.5em;
                 }
 
                 .m-l-0::before {
@@ -102,47 +102,47 @@
 
             &[data-key="participants"] a:before,
             &[data-key="studentreport"] a:before {
-                content: "\e001";
+                content: "\f44a";
             }
 
             &[data-key="badgesview"] a:before {
-                content: "\e028";
+                content: "\f163";
             }
 
             &[data-key="competencies"] a:before {
-                content: "\e09b";
+                content: "\f433";
             }
 
             &[data-key="grades"] a:before {
-                content: "\e04c";
+                content: "\f406";
             }
 
             &[data-key="myhome"] a:before {
-                content: "\e007";
+                content: "\f203";
             }
 
             &[data-key="home"] a:before {
-                content: "\e069";
+                content: "\f2ba";
             }
 
             &[data-key="calendar"] a:before {
-                content: "\e075";
+                content: "\f195";
             }
 
             &[data-key="privatefiles"] a:before {
-                content: "\e040";
+                content: "\f263";
             }
 
             &[data-key="sitesettings"] a:before {
-                content: "\e09a";
+                content: "\f38f";
             }
 
             &[data-key="certificates"] a:before {
-                content: "\e034";
+                content: "\f236";
             }
 
             &[data-key="contentbank"] a:before {
-                content: "\e04f";
+                content: "\f223";
             }
         }
     }

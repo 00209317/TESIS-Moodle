@@ -389,7 +389,7 @@ class icon_system extends icon_system_fontawesome {
             'core:t/locktime' => 'fa-lock',
             'core:t/markasread' => 'slicon-check',
             'core:t/messages' => 'slicon-bubbles',
-            'core:t/message' => 'slicon-bubble',
+            'core:t/message' => 'fi fi-rr-comment',
             'core:t/more' => 'fa-caret-down',
             'core:t/move' => 'fa-arrows-v',
             'core:t/online' => 'fa-circle',

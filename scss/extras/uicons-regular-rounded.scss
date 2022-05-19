@@ -1,0 +1,2830 @@
+$uicons-regular-rounded-family: "uicons-regular-rounded" !default;
+$uicons-regular-rounded-prefix: "fi fi-rr-" !default;
+
+
+@if $uicons-regular-rounded-family == "uicons-regular-rounded"{
+    @font-face {
+        font-family: '#{uicons-regular-rounded}';
+        src: url("[[font:theme|uicons-regular-rounded.eot]]?#iefix") format("embedded-opentype"),
+        url("[[font:theme|uicons-regular-rounded.woff2]]") format("woff2"),
+        url("[[font:theme|uicons-regular-rounded.woff]]") format("woff");
+        } 
+        font-style: normal;
+        font-weight: normal;
+}
+    
+.#{$uicons-regular-rounded-prefix} {
+    &user,
+    &people,
+    &user-female,
+    &user-follow,
+    &user-following,
+    &user-unfollow,
+    &login,
+    &logout,
+    &emotsmile,
+    &phone,
+    &call-end,
+    &call-in,
+    &call-out,
+    &map,
+    &location-pin,
+    &direction,
+    &directions,
+    &compass,
+    &layers,
+    &menu,
+    &list,
+    &options-vertical,
+    &options,
+    &arrow-down,
+    &arrow-left,
+    &arrow-right,
+    &arrow-up,
+    &arrow-up-circle,
+    &arrow-left-circle,
+    &arrow-right-circle,
+    &arrow-down-circle,
+    &check,
+    &clock,
+    &plus,
+    &minus,
+    &close,
+    &event,
+    &exclamation,
+    &organization,
+    &trophy,
+    &screen-smartphone,
+    &screen-desktop,
+    &plane,
+    &notebook,
+    &mustache,
+    &mouse,
+    &magnet,
+    &energy,
+    &disc,
+    &cursor,
+    &cursor-move,
+    &crop,
+    &chemistry,
+    &speedometer,
+    &shield,
+    &screen-tablet,
+    &magic-wand,
+    &hourglass,
+    &graduation,
+    &ghost,
+    &game-controller,
+    &fire,
+    &eyeglass,
+    &envelope-open,
+    &envelope-letter,
+    &bell,
+    &badge,
+    &anchor,
+    &wallet,
+    &vector,
+    &speech,
+    &puzzle,
+    &printer,
+    &present,
+    &playlist,
+    &pin,
+    &picture,
+    &handbag,
+    &globe-alt,
+    &globe,
+    &folder-alt,
+    &folder,
+    &film,
+    &feed,
+    &drop,
+    &drawer,
+    &docs,
+    &doc,
+    &diamond,
+    &cup,
+    &calculator,
+    &bubbles,
+    &briefcase,
+    &book-open,
+    &basket-loaded,
+    &basket,
+    &bag,
+    &action-undo,
+    &action-redo,
+    &wrench,
+    &umbrella,
+    &trash,
+    &tag,
+    &support,
+    &frame,
+    &size-fullscreen,
+    &size-actual,
+    &shuffle,
+    &share-alt,
+    &share,
+    &rocket,
+    &question,
+    &pie-chart,
+    &pencil,
+    &note,
+    &loop,
+    &home,
+    &grid,
+    &graph,
+    &microphone,
+    &music-tone-alt,
+    &music-tone,
+    &earphones-alt,
+    &earphones,
+    &equalizer,
+    &like,
+    &dislike,
+    &control-start,
+    &control-rewind,
+    &control-play,
+    &control-pause,
+    &control-forward,
+    &control-end,
+    &volume-1,
+    &volume-2,
+    &volume-off,
+    &calendar,
+    &bulb,
+    &chart,
+    &ban,
+    &bubble,
+    &camrecorder,
+    &camera,
+    &cloud-download,
+    &cloud-upload,
+    &envelope,
+    &eye,
+    &flag,
+    &heart,
+    &info,
+    &key,
+    &link,
+    &lock,
+    &lock-open,
+    &magnifier,
+    &magnifier-add,
+    &magnifier-remove,
+    &paper-clip,
+    &paper-plane,
+    &power,
+    &refresh,
+    &reload,
+    &settings,
+    &star,
+    &symbol-female,
+    &symbol-male,
+    &target,
+    &credit-card,
+    &paypal,
+    &social-tumblr,
+    &social-twitter,
+    &social-facebook,
+    &social-instagram,
+    &social-linkedin,
+    &social-pinterest,
+    &social-github,
+    &social-google,
+    &social-reddit,
+    &social-skype,
+    &social-dribbble,
+    &social-behance,
+    &social-foursqare,
+    &social-soundcloud,
+    &social-spotify,
+    &social-stumbleupon,
+    &social-youtube,
+    &social-dropbox,
+    &social-vkontakte,
+    &social-steam {
+        font-family: '#{$uicons-regular-rounded-family}';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        
+        
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+.#{$uicons-regular-rounded-prefix}add-document:before {
+    content: "\f101";
+    }
+        .#{$uicons-regular-rounded-prefix}add-folder:before {
+    content: "\f102";
+    }
+        .#{$uicons-regular-rounded-prefix}add:before {
+    content: "\f103";
+    }
+        .#{$uicons-regular-rounded-prefix}address-book:before {
+    content: "\f104";
+    }
+        .#{$uicons-regular-rounded-prefix}alarm-clock:before {
+    content: "\f105";
+    }
+        .#{$uicons-regular-rounded-prefix}align-center:before {
+    content: "\f106";
+    }
+        .#{$uicons-regular-rounded-prefix}align-justify:before {
+    content: "\f107";
+    }
+        .#{$uicons-regular-rounded-prefix}align-left:before {
+    content: "\f108";
+    }
+        .#{$uicons-regular-rounded-prefix}align-right:before {
+    content: "\f109";
+    }
+        .#{$uicons-regular-rounded-prefix}ambulance:before {
+    content: "\f10a";
+    }
+        .#{$uicons-regular-rounded-prefix}angle-circle-down:before {
+    content: "\f10b";
+    }
+        .#{$uicons-regular-rounded-prefix}angle-circle-left:before {
+    content: "\f10c";
+    }
+        .#{$uicons-regular-rounded-prefix}angle-circle-right:before {
+    content: "\f10d";
+    }
+        .#{$uicons-regular-rounded-prefix}angle-circle-up:before {
+    content: "\f10e";
+    }
+        .#{$uicons-regular-rounded-prefix}angle-double-left:before {
+    content: "\f10f";
+    }
+        .#{$uicons-regular-rounded-prefix}angle-double-right:before {
+    content: "\f110";
+    }
+        .#{$uicons-regular-rounded-prefix}angle-double-small-down:before {
+    content: "\f111";
+    }
+        .#{$uicons-regular-rounded-prefix}angle-double-small-left:before {
+    content: "\f112";
+    }
+        .#{$uicons-regular-rounded-prefix}angle-double-small-right:before {
+    content: "\f113";
+    }
+        .#{$uicons-regular-rounded-prefix}angle-double-small-up:before {
+    content: "\f114";
+    }
+        .#{$uicons-regular-rounded-prefix}angle-down:before {
+    content: "\f115";
+    }
+        .#{$uicons-regular-rounded-prefix}angle-left:before {
+    content: "\f116";
+    }
+        .#{$uicons-regular-rounded-prefix}angle-right:before {
+    content: "\f117";
+    }
+        .#{$uicons-regular-rounded-prefix}angle-small-down:before {
+    content: "\f118";
+    }
+        .#{$uicons-regular-rounded-prefix}angle-small-left:before {
+    content: "\f119";
+    }
+        .#{$uicons-regular-rounded-prefix}angle-small-right:before {
+    content: "\f11a";
+    }
+        .#{$uicons-regular-rounded-prefix}angle-small-up:before {
+    content: "\f11b";
+    }
+        .#{$uicons-regular-rounded-prefix}angle-square-down:before {
+    content: "\f11c";
+    }
+        .#{$uicons-regular-rounded-prefix}angle-square-left:before {
+    content: "\f11d";
+    }
+        .#{$uicons-regular-rounded-prefix}angle-square-right:before {
+    content: "\f11e";
+    }
+        .#{$uicons-regular-rounded-prefix}angle-square-up:before {
+    content: "\f11f";
+    }
+        .#{$uicons-regular-rounded-prefix}angle-up:before {
+    content: "\f120";
+    }
+        .#{$uicons-regular-rounded-prefix}angry:before {
+    content: "\f121";
+    }
+        .#{$uicons-regular-rounded-prefix}apple-whole:before {
+    content: "\f122";
+    }
+        .#{$uicons-regular-rounded-prefix}apps-add:before {
+    content: "\f123";
+    }
+        .#{$uicons-regular-rounded-prefix}apps-delete:before {
+    content: "\f124";
+    }
+        .#{$uicons-regular-rounded-prefix}apps-sort:before {
+    content: "\f125";
+    }
+        .#{$uicons-regular-rounded-prefix}apps:before {
+    content: "\f126";
+    }
+        .#{$uicons-regular-rounded-prefix}archive:before {
+    content: "\f127";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-alt-circle-down:before {
+    content: "\f128";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-alt-circle-left:before {
+    content: "\f129";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-alt-circle-right:before {
+    content: "\f12a";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-alt-circle-up:before {
+    content: "\f12b";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-alt-down:before {
+    content: "\f12c";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-alt-from-bottom:before {
+    content: "\f12d";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-alt-from-left:before {
+    content: "\f12e";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-alt-from-right:before {
+    content: "\f12f";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-alt-from-top:before {
+    content: "\f130";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-alt-left:before {
+    content: "\f131";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-alt-right:before {
+    content: "\f132";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-alt-square-down:before {
+    content: "\f133";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-alt-square-left:before {
+    content: "\f134";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-alt-square-right:before {
+    content: "\f135";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-alt-square-up:before {
+    content: "\f136";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-alt-to-bottom:before {
+    content: "\f137";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-alt-to-left:before {
+    content: "\f138";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-alt-to-right:before {
+    content: "\f139";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-alt-to-top:before {
+    content: "\f13a";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-alt-up:before {
+    content: "\f13b";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-circle-down:before {
+    content: "\f13c";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-circle-left:before {
+    content: "\f13d";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-circle-right:before {
+    content: "\f13e";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-circle-up:before {
+    content: "\f13f";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-down:before {
+    content: "\f140";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-from-bottom:before {
+    content: "\f141";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-from-left:before {
+    content: "\f142";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-from-right:before {
+    content: "\f143";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-from-top:before {
+    content: "\f144";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-left:before {
+    content: "\f145";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-right:before {
+    content: "\f146";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-small-down:before {
+    content: "\f147";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-small-left:before {
+    content: "\f148";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-small-right:before {
+    content: "\f149";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-small-up:before {
+    content: "\f14a";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-square-down:before {
+    content: "\f14b";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-square-left:before {
+    content: "\f14c";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-square-right:before {
+    content: "\f14d";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-square-up:before {
+    content: "\f14e";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-to-bottom:before {
+    content: "\f14f";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-to-left:before {
+    content: "\f150";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-to-right:before {
+    content: "\f151";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-to-top:before {
+    content: "\f152";
+    }
+        .#{$uicons-regular-rounded-prefix}arrow-up:before {
+    content: "\f153";
+    }
+        .#{$uicons-regular-rounded-prefix}arrows-alt-h:before {
+    content: "\f154";
+    }
+        .#{$uicons-regular-rounded-prefix}arrows-alt-v:before {
+    content: "\f155";
+    }
+        .#{$uicons-regular-rounded-prefix}arrows-alt:before {
+    content: "\f156";
+    }
+        .#{$uicons-regular-rounded-prefix}arrows-h-copy:before {
+    content: "\f157";
+    }
+        .#{$uicons-regular-rounded-prefix}arrows-h:before {
+    content: "\f158";
+    }
+        .#{$uicons-regular-rounded-prefix}arrows:before {
+    content: "\f159";
+    }
+        .#{$uicons-regular-rounded-prefix}assept-document:before {
+    content: "\f15a";
+    }
+        .#{$uicons-regular-rounded-prefix}assistive-listening-systems:before {
+    content: "\f15b";
+    }
+        .#{$uicons-regular-rounded-prefix}asterik:before {
+    content: "\f15c";
+    }
+        .#{$uicons-regular-rounded-prefix}at:before {
+    content: "\f15d";
+    }
+        .#{$uicons-regular-rounded-prefix}aubergine:before {
+    content: "\f15e";
+    }
+        .#{$uicons-regular-rounded-prefix}avocado:before {
+    content: "\f15f";
+    }
+        .#{$uicons-regular-rounded-prefix}baby-carriage:before {
+    content: "\f160";
+    }
+        .#{$uicons-regular-rounded-prefix}backpack:before {
+    content: "\f161";
+    }
+        .#{$uicons-regular-rounded-prefix}bacon:before {
+    content: "\f162";
+    }
+        .#{$uicons-regular-rounded-prefix}badge:before {
+    content: "\f163";
+    }
+        .#{$uicons-regular-rounded-prefix}balloons:before {
+    content: "\f164";
+    }
+        .#{$uicons-regular-rounded-prefix}ban:before {
+    content: "\f165";
+    }
+        .#{$uicons-regular-rounded-prefix}band-aid:before {
+    content: "\f166";
+    }
+        .#{$uicons-regular-rounded-prefix}bank:before {
+    content: "\f167";
+    }
+        .#{$uicons-regular-rounded-prefix}barber-shop:before {
+    content: "\f168";
+    }
+        .#{$uicons-regular-rounded-prefix}baseball-alt:before {
+    content: "\f169";
+    }
+        .#{$uicons-regular-rounded-prefix}baseball:before {
+    content: "\f16a";
+    }
+        .#{$uicons-regular-rounded-prefix}basketball-hoop:before {
+    content: "\f16b";
+    }
+        .#{$uicons-regular-rounded-prefix}basketball:before {
+    content: "\f16c";
+    }
+        .#{$uicons-regular-rounded-prefix}bed:before {
+    content: "\f16d";
+    }
+        .#{$uicons-regular-rounded-prefix}beer:before {
+    content: "\f16e";
+    }
+        .#{$uicons-regular-rounded-prefix}bell-ring:before {
+    content: "\f16f";
+    }
+        .#{$uicons-regular-rounded-prefix}bell-school:before {
+    content: "\f170";
+    }
+        .#{$uicons-regular-rounded-prefix}bell:before {
+    content: "\f171";
+    }
+        .#{$uicons-regular-rounded-prefix}bike:before {
+    content: "\f172";
+    }
+        .#{$uicons-regular-rounded-prefix}biking-mountain:before {
+    content: "\f173";
+    }
+        .#{$uicons-regular-rounded-prefix}biking:before {
+    content: "\f174";
+    }
+        .#{$uicons-regular-rounded-prefix}billiard:before {
+    content: "\f175";
+    }
+        .#{$uicons-regular-rounded-prefix}bold:before {
+    content: "\f176";
+    }
+        .#{$uicons-regular-rounded-prefix}bolt:before {
+    content: "\f177";
+    }
+        .#{$uicons-regular-rounded-prefix}book-alt:before {
+    content: "\f178";
+    }
+        .#{$uicons-regular-rounded-prefix}book:before {
+    content: "\f179";
+    }
+        .#{$uicons-regular-rounded-prefix}bookmark:before {
+    content: "\f17a";
+    }
+        .#{$uicons-regular-rounded-prefix}bottle:before {
+    content: "\f17b";
+    }
+        .#{$uicons-regular-rounded-prefix}bow-arrow:before {
+    content: "\f17c";
+    }
+        .#{$uicons-regular-rounded-prefix}bowling-ball:before {
+    content: "\f17d";
+    }
+        .#{$uicons-regular-rounded-prefix}bowling-pins:before {
+    content: "\f17e";
+    }
+        .#{$uicons-regular-rounded-prefix}bowling:before {
+    content: "\f17f";
+    }
+        .#{$uicons-regular-rounded-prefix}box-alt:before {
+    content: "\f180";
+    }
+        .#{$uicons-regular-rounded-prefix}box:before {
+    content: "\f181";
+    }
+        .#{$uicons-regular-rounded-prefix}boxing-glove:before {
+    content: "\f182";
+    }
+        .#{$uicons-regular-rounded-prefix}braille:before {
+    content: "\f183";
+    }
+        .#{$uicons-regular-rounded-prefix}bread-slice:before {
+    content: "\f184";
+    }
+        .#{$uicons-regular-rounded-prefix}bread:before {
+    content: "\f185";
+    }
+        .#{$uicons-regular-rounded-prefix}briefcase:before {
+    content: "\f186";
+    }
+        .#{$uicons-regular-rounded-prefix}broccoli:before {
+    content: "\f187";
+    }
+        .#{$uicons-regular-rounded-prefix}broom:before {
+    content: "\f188";
+    }
+        .#{$uicons-regular-rounded-prefix}browser:before {
+    content: "\f189";
+    }
+        .#{$uicons-regular-rounded-prefix}brush:before {
+    content: "\f18a";
+    }
+        .#{$uicons-regular-rounded-prefix}bug:before {
+    content: "\f18b";
+    }
+        .#{$uicons-regular-rounded-prefix}building:before {
+    content: "\f18c";
+    }
+        .#{$uicons-regular-rounded-prefix}bulb:before {
+    content: "\f18d";
+    }
+        .#{$uicons-regular-rounded-prefix}burrito:before {
+    content: "\f18e";
+    }
+        .#{$uicons-regular-rounded-prefix}bus-alt:before {
+    content: "\f18f";
+    }
+        .#{$uicons-regular-rounded-prefix}bus:before {
+    content: "\f190";
+    }
+        .#{$uicons-regular-rounded-prefix}butterfly:before {
+    content: "\f191";
+    }
+        .#{$uicons-regular-rounded-prefix}cake-birthday:before {
+    content: "\f192";
+    }
+        .#{$uicons-regular-rounded-prefix}cake-wedding:before {
+    content: "\f193";
+    }
+        .#{$uicons-regular-rounded-prefix}calculator:before {
+    content: "\f194";
+    }
+        .#{$uicons-regular-rounded-prefix}calendar:before {
+    content: "\f195";
+    }
+        .#{$uicons-regular-rounded-prefix}call-history:before {
+    content: "\f196";
+    }
+        .#{$uicons-regular-rounded-prefix}call-incoming:before {
+    content: "\f197";
+    }
+        .#{$uicons-regular-rounded-prefix}call-missed:before {
+    content: "\f198";
+    }
+        .#{$uicons-regular-rounded-prefix}call-outgoing:before {
+    content: "\f199";
+    }
+        .#{$uicons-regular-rounded-prefix}camera:before {
+    content: "\f19a";
+    }
+        .#{$uicons-regular-rounded-prefix}camping:before {
+    content: "\f19b";
+    }
+        .#{$uicons-regular-rounded-prefix}candy-alt:before {
+    content: "\f19c";
+    }
+        .#{$uicons-regular-rounded-prefix}candy:before {
+    content: "\f19d";
+    }
+        .#{$uicons-regular-rounded-prefix}canned-food:before {
+    content: "\f19e";
+    }
+        .#{$uicons-regular-rounded-prefix}car-alt:before {
+    content: "\f19f";
+    }
+        .#{$uicons-regular-rounded-prefix}car-battery:before {
+    content: "\f1a0";
+    }
+        .#{$uicons-regular-rounded-prefix}car-building:before {
+    content: "\f1a1";
+    }
+        .#{$uicons-regular-rounded-prefix}car-bump:before {
+    content: "\f1a2";
+    }
+        .#{$uicons-regular-rounded-prefix}car-bus:before {
+    content: "\f1a3";
+    }
+        .#{$uicons-regular-rounded-prefix}car-crash:before {
+    content: "\f1a4";
+    }
+        .#{$uicons-regular-rounded-prefix}car-garage:before {
+    content: "\f1a5";
+    }
+        .#{$uicons-regular-rounded-prefix}car-mechanic:before {
+    content: "\f1a6";
+    }
+        .#{$uicons-regular-rounded-prefix}car-side:before {
+    content: "\f1a7";
+    }
+        .#{$uicons-regular-rounded-prefix}car-tilt:before {
+    content: "\f1a8";
+    }
+        .#{$uicons-regular-rounded-prefix}car-wash:before {
+    content: "\f1a9";
+    }
+        .#{$uicons-regular-rounded-prefix}car:before {
+    content: "\f1aa";
+    }
+        .#{$uicons-regular-rounded-prefix}caravan-alt:before {
+    content: "\f1ab";
+    }
+        .#{$uicons-regular-rounded-prefix}caravan:before {
+    content: "\f1ac";
+    }
+        .#{$uicons-regular-rounded-prefix}caret-circle-down:before {
+    content: "\f1ad";
+    }
+        .#{$uicons-regular-rounded-prefix}caret-circle-right:before {
+    content: "\f1ae";
+    }
+        .#{$uicons-regular-rounded-prefix}caret-circle-up:before {
+    content: "\f1af";
+    }
+        .#{$uicons-regular-rounded-prefix}caret-down:before {
+    content: "\f1b0";
+    }
+        .#{$uicons-regular-rounded-prefix}caret-left:before {
+    content: "\f1b1";
+    }
+        .#{$uicons-regular-rounded-prefix}caret-quare-up:before {
+    content: "\f1b2";
+    }
+        .#{$uicons-regular-rounded-prefix}caret-right:before {
+    content: "\f1b3";
+    }
+        .#{$uicons-regular-rounded-prefix}caret-square-down:before {
+    content: "\f1b4";
+    }
+        .#{$uicons-regular-rounded-prefix}caret-square-left_1:before {
+    content: "\f1b5";
+    }
+        .#{$uicons-regular-rounded-prefix}caret-square-left:before {
+    content: "\f1b6";
+    }
+        .#{$uicons-regular-rounded-prefix}caret-square-right:before {
+    content: "\f1b7";
+    }
+        .#{$uicons-regular-rounded-prefix}caret-up:before {
+    content: "\f1b8";
+    }
+        .#{$uicons-regular-rounded-prefix}carrot:before {
+    content: "\f1b9";
+    }
+        .#{$uicons-regular-rounded-prefix}cars:before {
+    content: "\f1ba";
+    }
+        .#{$uicons-regular-rounded-prefix}charging-station:before {
+    content: "\f1bb";
+    }
+        .#{$uicons-regular-rounded-prefix}chart-connected:before {
+    content: "\f1bc";
+    }
+        .#{$uicons-regular-rounded-prefix}chart-histogram:before {
+    content: "\f1bd";
+    }
+        .#{$uicons-regular-rounded-prefix}chart-network:before {
+    content: "\f1be";
+    }
+        .#{$uicons-regular-rounded-prefix}chart-pie-alt:before {
+    content: "\f1bf";
+    }
+        .#{$uicons-regular-rounded-prefix}chart-pie:before {
+    content: "\f1c0";
+    }
+        .#{$uicons-regular-rounded-prefix}chart-pyramid:before {
+    content: "\f1c1";
+    }
+        .#{$uicons-regular-rounded-prefix}chart-set-theory:before {
+    content: "\f1c2";
+    }
+        .#{$uicons-regular-rounded-prefix}chart-tree:before {
+    content: "\f1c3";
+    }
+        .#{$uicons-regular-rounded-prefix}chat-arrow-down:before {
+    content: "\f1c4";
+    }
+        .#{$uicons-regular-rounded-prefix}chat-arrow-grow:before {
+    content: "\f1c5";
+    }
+        .#{$uicons-regular-rounded-prefix}check:before {
+    content: "\f1c6";
+    }
+        .#{$uicons-regular-rounded-prefix}checkbox:before {
+    content: "\f1c7";
+    }
+        .#{$uicons-regular-rounded-prefix}cheese:before {
+    content: "\f1c8";
+    }
+        .#{$uicons-regular-rounded-prefix}cherry:before {
+    content: "\f1c9";
+    }
+        .#{$uicons-regular-rounded-prefix}chess-piece:before {
+    content: "\f1ca";
+    }
+        .#{$uicons-regular-rounded-prefix}chess-bishop:before {
+    content: "\f1cb";
+    }
+        .#{$uicons-regular-rounded-prefix}chess-board:before {
+    content: "\f1cc";
+    }
+        .#{$uicons-regular-rounded-prefix}chess-clock-alt:before {
+    content: "\f1cd";
+    }
+        .#{$uicons-regular-rounded-prefix}chess-clock:before {
+    content: "\f1ce";
+    }
+        .#{$uicons-regular-rounded-prefix}chess-king-alt:before {
+    content: "\f1cf";
+    }
+        .#{$uicons-regular-rounded-prefix}chess-king:before {
+    content: "\f1d0";
+    }
+        .#{$uicons-regular-rounded-prefix}chess-knight-alt:before {
+    content: "\f1d1";
+    }
+        .#{$uicons-regular-rounded-prefix}chess-knight:before {
+    content: "\f1d2";
+    }
+        .#{$uicons-regular-rounded-prefix}chess-pawn-alt:before {
+    content: "\f1d3";
+    }
+        .#{$uicons-regular-rounded-prefix}chess-pawn:before {
+    content: "\f1d4";
+    }
+        .#{$uicons-regular-rounded-prefix}chess-queen-alt:before {
+    content: "\f1d5";
+    }
+        .#{$uicons-regular-rounded-prefix}chess-queen:before {
+    content: "\f1d6";
+    }
+        .#{$uicons-regular-rounded-prefix}chess-rook-alt:before {
+    content: "\f1d7";
+    }
+        .#{$uicons-regular-rounded-prefix}chess-rook:before {
+    content: "\f1d8";
+    }
+        .#{$uicons-regular-rounded-prefix}chess:before {
+    content: "\f1d9";
+    }
+        .#{$uicons-regular-rounded-prefix}chevron-double-down:before {
+    content: "\f1da";
+    }
+        .#{$uicons-regular-rounded-prefix}chevron-double-up:before {
+    content: "\f1db";
+    }
+        .#{$uicons-regular-rounded-prefix}child-head:before {
+    content: "\f1dc";
+    }
+        .#{$uicons-regular-rounded-prefix}chocolate:before {
+    content: "\f1dd";
+    }
+        .#{$uicons-regular-rounded-prefix}circle-small:before {
+    content: "\f1de";
+    }
+        .#{$uicons-regular-rounded-prefix}circle:before {
+    content: "\f1df";
+    }
+        .#{$uicons-regular-rounded-prefix}clip:before {
+    content: "\f1e0";
+    }
+        .#{$uicons-regular-rounded-prefix}clock:before {
+    content: "\f1e1";
+    }
+        .#{$uicons-regular-rounded-prefix}cloud-upload:before {
+    content: "\f1e2";
+    }
+        .#{$uicons-regular-rounded-prefix}cloud-check:before {
+    content: "\f1e3";
+    }
+        .#{$uicons-regular-rounded-prefix}cloud-disabled:before {
+    content: "\f1e4";
+    }
+        .#{$uicons-regular-rounded-prefix}cloud-download-alt:before {
+    content: "\f1e5";
+    }
+        .#{$uicons-regular-rounded-prefix}cloud-download:before {
+    content: "\f1e6";
+    }
+        .#{$uicons-regular-rounded-prefix}cloud-drizzle:before {
+    content: "\f1e7";
+    }
+        .#{$uicons-regular-rounded-prefix}cloud-hail-mixed:before {
+    content: "\f1e8";
+    }
+        .#{$uicons-regular-rounded-prefix}cloud-hail:before {
+    content: "\f1e9";
+    }
+        .#{$uicons-regular-rounded-prefix}cloud-moon-rain:before {
+    content: "\f1ea";
+    }
+        .#{$uicons-regular-rounded-prefix}cloud-moon:before {
+    content: "\f1eb";
+    }
+        .#{$uicons-regular-rounded-prefix}cloud-rain:before {
+    content: "\f1ec";
+    }
+        .#{$uicons-regular-rounded-prefix}cloud-rainbow:before {
+    content: "\f1ed";
+    }
+        .#{$uicons-regular-rounded-prefix}cloud-share:before {
+    content: "\f1ee";
+    }
+        .#{$uicons-regular-rounded-prefix}cloud-showers-heavy:before {
+    content: "\f1ef";
+    }
+        .#{$uicons-regular-rounded-prefix}cloud-showers:before {
+    content: "\f1f0";
+    }
+        .#{$uicons-regular-rounded-prefix}cloud-sleet:before {
+    content: "\f1f1";
+    }
+        .#{$uicons-regular-rounded-prefix}cloud-snow:before {
+    content: "\f1f2";
+    }
+        .#{$uicons-regular-rounded-prefix}cloud-sun-rain:before {
+    content: "\f1f3";
+    }
+        .#{$uicons-regular-rounded-prefix}cloud-sun:before {
+    content: "\f1f4";
+    }
+        .#{$uicons-regular-rounded-prefix}cloud-upload-alt:before {
+    content: "\f1f5";
+    }
+        .#{$uicons-regular-rounded-prefix}cloud:before {
+    content: "\f1f6";
+    }
+        .#{$uicons-regular-rounded-prefix}clouds-moon:before {
+    content: "\f1f7";
+    }
+        .#{$uicons-regular-rounded-prefix}clouds-sun:before {
+    content: "\f1f8";
+    }
+        .#{$uicons-regular-rounded-prefix}clouds:before {
+    content: "\f1f9";
+    }
+        .#{$uicons-regular-rounded-prefix}club:before {
+    content: "\f1fa";
+    }
+        .#{$uicons-regular-rounded-prefix}cocktail-alt:before {
+    content: "\f1fb";
+    }
+        .#{$uicons-regular-rounded-prefix}cocktail:before {
+    content: "\f1fc";
+    }
+        .#{$uicons-regular-rounded-prefix}coffee-pot:before {
+    content: "\f1fd";
+    }
+        .#{$uicons-regular-rounded-prefix}coffee:before {
+    content: "\f1fe";
+    }
+        .#{$uicons-regular-rounded-prefix}comment-alt:before {
+    content: "\f1ff";
+    }
+        .#{$uicons-regular-rounded-prefix}comment-check:before {
+    content: "\f200";
+    }
+        .#{$uicons-regular-rounded-prefix}comment-heart:before {
+    content: "\f201";
+    }
+        .#{$uicons-regular-rounded-prefix}comment-info:before {
+    content: "\f202";
+    }
+        .#{$uicons-regular-rounded-prefix}comment-user:before {
+    content: "\f203";
+    }
+        .#{$uicons-regular-rounded-prefix}comment:before {
+    content: "\f204";
+    }
+        .#{$uicons-regular-rounded-prefix}comments:before {
+    content: "\f205";
+    }
+        .#{$uicons-regular-rounded-prefix}compress-alt:before {
+    content: "\f206";
+    }
+        .#{$uicons-regular-rounded-prefix}compress:before {
+    content: "\f207";
+    }
+        .#{$uicons-regular-rounded-prefix}computer:before {
+    content: "\f208";
+    }
+        .#{$uicons-regular-rounded-prefix}confetti:before {
+    content: "\f209";
+    }
+        .#{$uicons-regular-rounded-prefix}cookie:before {
+    content: "\f20a";
+    }
+        .#{$uicons-regular-rounded-prefix}copy-alt:before {
+    content: "\f20b";
+    }
+        .#{$uicons-regular-rounded-prefix}copy:before {
+    content: "\f20c";
+    }
+        .#{$uicons-regular-rounded-prefix}copyright:before {
+    content: "\f20d";
+    }
+        .#{$uicons-regular-rounded-prefix}corn:before {
+    content: "\f20e";
+    }
+        .#{$uicons-regular-rounded-prefix}cow:before {
+    content: "\f20f";
+    }
+        .#{$uicons-regular-rounded-prefix}cream:before {
+    content: "\f210";
+    }
+        .#{$uicons-regular-rounded-prefix}credit-card:before {
+    content: "\f211";
+    }
+        .#{$uicons-regular-rounded-prefix}cricket:before {
+    content: "\f212";
+    }
+        .#{$uicons-regular-rounded-prefix}croissant:before {
+    content: "\f213";
+    }
+        .#{$uicons-regular-rounded-prefix}cross-circle:before {
+    content: "\f214";
+    }
+        .#{$uicons-regular-rounded-prefix}cross-small:before {
+    content: "\f215";
+    }
+        .#{$uicons-regular-rounded-prefix}cross:before {
+    content: "\f216";
+    }
+        .#{$uicons-regular-rounded-prefix}crown:before {
+    content: "\f217";
+    }
+        .#{$uicons-regular-rounded-prefix}cube:before {
+    content: "\f218";
+    }
+        .#{$uicons-regular-rounded-prefix}cupcake:before {
+    content: "\f219";
+    }
+        .#{$uicons-regular-rounded-prefix}curling:before {
+    content: "\f21a";
+    }
+        .#{$uicons-regular-rounded-prefix}cursor-finger:before {
+    content: "\f21b";
+    }
+        .#{$uicons-regular-rounded-prefix}cursor-plus:before {
+    content: "\f21c";
+    }
+        .#{$uicons-regular-rounded-prefix}cursor-text-alt:before {
+    content: "\f21d";
+    }
+        .#{$uicons-regular-rounded-prefix}cursor-text:before {
+    content: "\f21e";
+    }
+        .#{$uicons-regular-rounded-prefix}cursor:before {
+    content: "\f21f";
+    }
+        .#{$uicons-regular-rounded-prefix}dart:before {
+    content: "\f220";
+    }
+        .#{$uicons-regular-rounded-prefix}dashboard:before {
+    content: "\f221";
+    }
+        .#{$uicons-regular-rounded-prefix}data-transfer:before {
+    content: "\f222";
+    }
+        .#{$uicons-regular-rounded-prefix}database:before {
+    content: "\f223";
+    }
+        .#{$uicons-regular-rounded-prefix}delete-document:before {
+    content: "\f224";
+    }
+        .#{$uicons-regular-rounded-prefix}delete-user:before {
+    content: "\f225";
+    }
+        .#{$uicons-regular-rounded-prefix}delete:before {
+    content: "\f226";
+    }
+        .#{$uicons-regular-rounded-prefix}dewpoint:before {
+    content: "\f227";
+    }
+        .#{$uicons-regular-rounded-prefix}diamond:before {
+    content: "\f228";
+    }
+        .#{$uicons-regular-rounded-prefix}dice-alt:before {
+    content: "\f229";
+    }
+        .#{$uicons-regular-rounded-prefix}dice-d10:before {
+    content: "\f22a";
+    }
+        .#{$uicons-regular-rounded-prefix}dice-d12:before {
+    content: "\f22b";
+    }
+        .#{$uicons-regular-rounded-prefix}dice-d20:before {
+    content: "\f22c";
+    }
+        .#{$uicons-regular-rounded-prefix}dice-d4:before {
+    content: "\f22d";
+    }
+        .#{$uicons-regular-rounded-prefix}dice-d6:before {
+    content: "\f22e";
+    }
+        .#{$uicons-regular-rounded-prefix}dice-d8:before {
+    content: "\f22f";
+    }
+        .#{$uicons-regular-rounded-prefix}dice-four:before {
+    content: "\f230";
+    }
+        .#{$uicons-regular-rounded-prefix}dice-one:before {
+    content: "\f231";
+    }
+        .#{$uicons-regular-rounded-prefix}dice-six:before {
+    content: "\f232";
+    }
+        .#{$uicons-regular-rounded-prefix}dice-three:before {
+    content: "\f233";
+    }
+        .#{$uicons-regular-rounded-prefix}dice-two:before {
+    content: "\f234";
+    }
+        .#{$uicons-regular-rounded-prefix}dice:before {
+    content: "\f235";
+    }
+        .#{$uicons-regular-rounded-prefix}diploma:before {
+    content: "\f236";
+    }
+        .#{$uicons-regular-rounded-prefix}disco-ball:before {
+    content: "\f237";
+    }
+        .#{$uicons-regular-rounded-prefix}disk:before {
+    content: "\f238";
+    }
+        .#{$uicons-regular-rounded-prefix}dizzy:before {
+    content: "\f239";
+    }
+        .#{$uicons-regular-rounded-prefix}doctor:before {
+    content: "\f23a";
+    }
+        .#{$uicons-regular-rounded-prefix}document-signed:before {
+    content: "\f23b";
+    }
+        .#{$uicons-regular-rounded-prefix}document:before {
+    content: "\f23c";
+    }
+        .#{$uicons-regular-rounded-prefix}dollar:before {
+    content: "\f23d";
+    }
+        .#{$uicons-regular-rounded-prefix}download:before {
+    content: "\f23e";
+    }
+        .#{$uicons-regular-rounded-prefix}dreidel:before {
+    content: "\f23f";
+    }
+        .#{$uicons-regular-rounded-prefix}drink-alt:before {
+    content: "\f240";
+    }
+        .#{$uicons-regular-rounded-prefix}drumstick:before {
+    content: "\f241";
+    }
+        .#{$uicons-regular-rounded-prefix}duplicate:before {
+    content: "\f242";
+    }
+        .#{$uicons-regular-rounded-prefix}e-learning:before {
+    content: "\f243";
+    }
+        .#{$uicons-regular-rounded-prefix}earnings:before {
+    content: "\f244";
+    }
+        .#{$uicons-regular-rounded-prefix}eclipse-alt:before {
+    content: "\f245";
+    }
+        .#{$uicons-regular-rounded-prefix}eclipse:before {
+    content: "\f246";
+    }
+        .#{$uicons-regular-rounded-prefix}edit-alt:before {
+    content: "\f247";
+    }
+        .#{$uicons-regular-rounded-prefix}edit:before {
+    content: "\f248";
+    }
+        .#{$uicons-regular-rounded-prefix}egg-fried:before {
+    content: "\f249";
+    }
+        .#{$uicons-regular-rounded-prefix}egg:before {
+    content: "\f24a";
+    }
+        .#{$uicons-regular-rounded-prefix}engine-warning:before {
+    content: "\f24b";
+    }
+        .#{$uicons-regular-rounded-prefix}envelope-ban:before {
+    content: "\f24c";
+    }
+        .#{$uicons-regular-rounded-prefix}envelope-download:before {
+    content: "\f24d";
+    }
+        .#{$uicons-regular-rounded-prefix}envelope-marker:before {
+    content: "\f24e";
+    }
+        .#{$uicons-regular-rounded-prefix}envelope-open:before {
+    content: "\f24f";
+    }
+        .#{$uicons-regular-rounded-prefix}envelope-plus:before {
+    content: "\f250";
+    }
+        .#{$uicons-regular-rounded-prefix}envelope:before {
+    content: "\f251";
+    }
+        .#{$uicons-regular-rounded-prefix}euro:before {
+    content: "\f252";
+    }
+        .#{$uicons-regular-rounded-prefix}exchange-alt:before {
+    content: "\f253";
+    }
+        .#{$uicons-regular-rounded-prefix}exchange:before {
+    content: "\f254";
+    }
+        .#{$uicons-regular-rounded-prefix}exclamation:before {
+    content: "\f255";
+    }
+        .#{$uicons-regular-rounded-prefix}expand-arrows-alt:before {
+    content: "\f256";
+    }
+        .#{$uicons-regular-rounded-prefix}expand-arrows:before {
+    content: "\f257";
+    }
+        .#{$uicons-regular-rounded-prefix}expand:before {
+    content: "\f258";
+    }
+        .#{$uicons-regular-rounded-prefix}eye-crossed:before {
+    content: "\f259";
+    }
+        .#{$uicons-regular-rounded-prefix}eye-dropper:before {
+    content: "\f25a";
+    }
+        .#{$uicons-regular-rounded-prefix}eye:before {
+    content: "\f25b";
+    }
+        .#{$uicons-regular-rounded-prefix}feather:before {
+    content: "\f25c";
+    }
+        .#{$uicons-regular-rounded-prefix}ferris-wheel:before {
+    content: "\f25d";
+    }
+        .#{$uicons-regular-rounded-prefix}field-hockey:before {
+    content: "\f25e";
+    }
+        .#{$uicons-regular-rounded-prefix}fighter-jet:before {
+    content: "\f25f";
+    }
+        .#{$uicons-regular-rounded-prefix}file-ai:before {
+    content: "\f260";
+    }
+        .#{$uicons-regular-rounded-prefix}file-eps:before {
+    content: "\f261";
+    }
+        .#{$uicons-regular-rounded-prefix}file-psd:before {
+    content: "\f262";
+    }
+        .#{$uicons-regular-rounded-prefix}file:before {
+    content: "\f263";
+    }
+        .#{$uicons-regular-rounded-prefix}fill:before {
+    content: "\f264";
+    }
+        .#{$uicons-regular-rounded-prefix}film:before {
+    content: "\f265";
+    }
+        .#{$uicons-regular-rounded-prefix}filter:before {
+    content: "\f266";
+    }
+        .#{$uicons-regular-rounded-prefix}fingerprint:before {
+    content: "\f267";
+    }
+        .#{$uicons-regular-rounded-prefix}fish:before {
+    content: "\f268";
+    }
+        .#{$uicons-regular-rounded-prefix}flag:before {
+    content: "\f269";
+    }
+        .#{$uicons-regular-rounded-prefix}flame:before {
+    content: "\f26a";
+    }
+        .#{$uicons-regular-rounded-prefix}flip-horizontal:before {
+    content: "\f26b";
+    }
+        .#{$uicons-regular-rounded-prefix}flower-bouquet:before {
+    content: "\f26c";
+    }
+        .#{$uicons-regular-rounded-prefix}flower-tulip:before {
+    content: "\f26d";
+    }
+        .#{$uicons-regular-rounded-prefix}flower:before {
+    content: "\f26e";
+    }
+        .#{$uicons-regular-rounded-prefix}flushed:before {
+    content: "\f26f";
+    }
+        .#{$uicons-regular-rounded-prefix}fog:before {
+    content: "\f270";
+    }
+        .#{$uicons-regular-rounded-prefix}folder:before {
+    content: "\f271";
+    }
+        .#{$uicons-regular-rounded-prefix}following:before {
+    content: "\f272";
+    }
+        .#{$uicons-regular-rounded-prefix}football:before {
+    content: "\f273";
+    }
+        .#{$uicons-regular-rounded-prefix}fork:before {
+    content: "\f274";
+    }
+        .#{$uicons-regular-rounded-prefix}form:before {
+    content: "\f275";
+    }
+        .#{$uicons-regular-rounded-prefix}forward:before {
+    content: "\f276";
+    }
+        .#{$uicons-regular-rounded-prefix}fox:before {
+    content: "\f277";
+    }
+        .#{$uicons-regular-rounded-prefix}french-fries:before {
+    content: "\f278";
+    }
+        .#{$uicons-regular-rounded-prefix}frown:before {
+    content: "\f279";
+    }
+        .#{$uicons-regular-rounded-prefix}ftp:before {
+    content: "\f27a";
+    }
+        .#{$uicons-regular-rounded-prefix}gallery:before {
+    content: "\f27b";
+    }
+        .#{$uicons-regular-rounded-prefix}game-board-alt:before {
+    content: "\f27c";
+    }
+        .#{$uicons-regular-rounded-prefix}gamepad:before {
+    content: "\f27d";
+    }
+        .#{$uicons-regular-rounded-prefix}garage-car:before {
+    content: "\f27e";
+    }
+        .#{$uicons-regular-rounded-prefix}garage-open:before {
+    content: "\f27f";
+    }
+        .#{$uicons-regular-rounded-prefix}garage:before {
+    content: "\f280";
+    }
+        .#{$uicons-regular-rounded-prefix}garlic:before {
+    content: "\f281";
+    }
+        .#{$uicons-regular-rounded-prefix}gas-pump-alt:before {
+    content: "\f282";
+    }
+        .#{$uicons-regular-rounded-prefix}gas-pump-slash:before {
+    content: "\f283";
+    }
+        .#{$uicons-regular-rounded-prefix}gas-pump:before {
+    content: "\f284";
+    }
+        .#{$uicons-regular-rounded-prefix}gem:before {
+    content: "\f285";
+    }
+        .#{$uicons-regular-rounded-prefix}gif:before {
+    content: "\f286";
+    }
+        .#{$uicons-regular-rounded-prefix}gift:before {
+    content: "\f287";
+    }
+        .#{$uicons-regular-rounded-prefix}gingerbread-man:before {
+    content: "\f288";
+    }
+        .#{$uicons-regular-rounded-prefix}glass-cheers:before {
+    content: "\f289";
+    }
+        .#{$uicons-regular-rounded-prefix}glass:before {
+    content: "\f28a";
+    }
+        .#{$uicons-regular-rounded-prefix}glasses:before {
+    content: "\f28b";
+    }
+        .#{$uicons-regular-rounded-prefix}globe-alt:before {
+    content: "\f28c";
+    }
+        .#{$uicons-regular-rounded-prefix}globe:before {
+    content: "\f28d";
+    }
+        .#{$uicons-regular-rounded-prefix}golf-ball:before {
+    content: "\f28e";
+    }
+        .#{$uicons-regular-rounded-prefix}golf-club:before {
+    content: "\f28f";
+    }
+        .#{$uicons-regular-rounded-prefix}golf:before {
+    content: "\f290";
+    }
+        .#{$uicons-regular-rounded-prefix}graduation-cap:before {
+    content: "\f291";
+    }
+        .#{$uicons-regular-rounded-prefix}grape:before {
+    content: "\f292";
+    }
+        .#{$uicons-regular-rounded-prefix}graphic-tablet:before {
+    content: "\f293";
+    }
+        .#{$uicons-regular-rounded-prefix}grid-alt:before {
+    content: "\f294";
+    }
+        .#{$uicons-regular-rounded-prefix}grid:before {
+    content: "\f295";
+    }
+        .#{$uicons-regular-rounded-prefix}grill:before {
+    content: "\f296";
+    }
+        .#{$uicons-regular-rounded-prefix}grimace:before {
+    content: "\f297";
+    }
+        .#{$uicons-regular-rounded-prefix}grin-alt:before {
+    content: "\f298";
+    }
+        .#{$uicons-regular-rounded-prefix}grin-beam-sweat:before {
+    content: "\f299";
+    }
+        .#{$uicons-regular-rounded-prefix}grin-beam:before {
+    content: "\f29a";
+    }
+        .#{$uicons-regular-rounded-prefix}grin-hearts:before {
+    content: "\f29b";
+    }
+        .#{$uicons-regular-rounded-prefix}grin-squint-tears:before {
+    content: "\f29c";
+    }
+        .#{$uicons-regular-rounded-prefix}grin-squint:before {
+    content: "\f29d";
+    }
+        .#{$uicons-regular-rounded-prefix}grin-stars:before {
+    content: "\f29e";
+    }
+        .#{$uicons-regular-rounded-prefix}grin-tears:before {
+    content: "\f29f";
+    }
+        .#{$uicons-regular-rounded-prefix}grin-tongue-squint:before {
+    content: "\f2a0";
+    }
+        .#{$uicons-regular-rounded-prefix}grin-tongue-wink:before {
+    content: "\f2a1";
+    }
+        .#{$uicons-regular-rounded-prefix}grin-tongue:before {
+    content: "\f2a2";
+    }
+        .#{$uicons-regular-rounded-prefix}grin-wink:before {
+    content: "\f2a3";
+    }
+        .#{$uicons-regular-rounded-prefix}grin:before {
+    content: "\f2a4";
+    }
+        .#{$uicons-regular-rounded-prefix}guitar:before {
+    content: "\f2a5";
+    }
+        .#{$uicons-regular-rounded-prefix}gym:before {
+    content: "\f2a6";
+    }
+        .#{$uicons-regular-rounded-prefix}hamburger-soda:before {
+    content: "\f2a7";
+    }
+        .#{$uicons-regular-rounded-prefix}hamburger:before {
+    content: "\f2a8";
+    }
+        .#{$uicons-regular-rounded-prefix}hand-holding-heart:before {
+    content: "\f2a9";
+    }
+        .#{$uicons-regular-rounded-prefix}hastag:before {
+    content: "\f2aa";
+    }
+        .#{$uicons-regular-rounded-prefix}hat-birthday:before {
+    content: "\f2ab";
+    }
+        .#{$uicons-regular-rounded-prefix}hat-chef:before {
+    content: "\f2ac";
+    }
+        .#{$uicons-regular-rounded-prefix}head-side-thinking:before {
+    content: "\f2ad";
+    }
+        .#{$uicons-regular-rounded-prefix}headphones:before {
+    content: "\f2ae";
+    }
+        .#{$uicons-regular-rounded-prefix}headset:before {
+    content: "\f2af";
+    }
+        .#{$uicons-regular-rounded-prefix}heart-arrow:before {
+    content: "\f2b0";
+    }
+        .#{$uicons-regular-rounded-prefix}heart:before {
+    content: "\f2b1";
+    }
+        .#{$uicons-regular-rounded-prefix}heat:before {
+    content: "\f2b2";
+    }
+        .#{$uicons-regular-rounded-prefix}helicopter-side:before {
+    content: "\f2b3";
+    }
+        .#{$uicons-regular-rounded-prefix}hiking:before {
+    content: "\f2b4";
+    }
+        .#{$uicons-regular-rounded-prefix}hockey-mask:before {
+    content: "\f2b5";
+    }
+        .#{$uicons-regular-rounded-prefix}hockey-puck:before {
+    content: "\f2b6";
+    }
+        .#{$uicons-regular-rounded-prefix}hockey-sticks:before {
+    content: "\f2b7";
+    }
+        .#{$uicons-regular-rounded-prefix}home-location-alt:before {
+    content: "\f2b8";
+    }
+        .#{$uicons-regular-rounded-prefix}home-location:before {
+    content: "\f2b9";
+    }
+        .#{$uicons-regular-rounded-prefix}home:before {
+    content: "\f2ba";
+    }
+        .#{$uicons-regular-rounded-prefix}hotdog:before {
+    content: "\f2bb";
+    }
+        .#{$uicons-regular-rounded-prefix}hourglass-end:before {
+    content: "\f2bc";
+    }
+        .#{$uicons-regular-rounded-prefix}hourglass:before {
+    content: "\f2bd";
+    }
+        .#{$uicons-regular-rounded-prefix}house-flood:before {
+    content: "\f2be";
+    }
+        .#{$uicons-regular-rounded-prefix}humidity:before {
+    content: "\f2bf";
+    }
+        .#{$uicons-regular-rounded-prefix}hurricane:before {
+    content: "\f2c0";
+    }
+        .#{$uicons-regular-rounded-prefix}ice-cream:before {
+    content: "\f2c1";
+    }
+        .#{$uicons-regular-rounded-prefix}ice-skate:before {
+    content: "\f2c2";
+    }
+        .#{$uicons-regular-rounded-prefix}id-badge:before {
+    content: "\f2c3";
+    }
+        .#{$uicons-regular-rounded-prefix}inbox-in:before {
+    content: "\f2c4";
+    }
+        .#{$uicons-regular-rounded-prefix}inbox-out:before {
+    content: "\f2c5";
+    }
+        .#{$uicons-regular-rounded-prefix}inbox:before {
+    content: "\f2c6";
+    }
+        .#{$uicons-regular-rounded-prefix}incognito:before {
+    content: "\f2c7";
+    }
+        .#{$uicons-regular-rounded-prefix}indent:before {
+    content: "\f2c8";
+    }
+        .#{$uicons-regular-rounded-prefix}infinity:before {
+    content: "\f2c9";
+    }
+        .#{$uicons-regular-rounded-prefix}info:before {
+    content: "\f2ca";
+    }
+        .#{$uicons-regular-rounded-prefix}interactive:before {
+    content: "\f2cb";
+    }
+        .#{$uicons-regular-rounded-prefix}interlining:before {
+    content: "\f2cc";
+    }
+        .#{$uicons-regular-rounded-prefix}interrogation:before {
+    content: "\f2cd";
+    }
+        .#{$uicons-regular-rounded-prefix}italic:before {
+    content: "\f2ce";
+    }
+        .#{$uicons-regular-rounded-prefix}jam:before {
+    content: "\f2cf";
+    }
+        .#{$uicons-regular-rounded-prefix}jpg:before {
+    content: "\f2d0";
+    }
+        .#{$uicons-regular-rounded-prefix}key:before {
+    content: "\f2d1";
+    }
+        .#{$uicons-regular-rounded-prefix}keyboard:before {
+    content: "\f2d2";
+    }
+        .#{$uicons-regular-rounded-prefix}kiss-beam:before {
+    content: "\f2d3";
+    }
+        .#{$uicons-regular-rounded-prefix}kiss-wink-heart:before {
+    content: "\f2d4";
+    }
+        .#{$uicons-regular-rounded-prefix}kiss:before {
+    content: "\f2d5";
+    }
+        .#{$uicons-regular-rounded-prefix}kite:before {
+    content: "\f2d6";
+    }
+        .#{$uicons-regular-rounded-prefix}knife:before {
+    content: "\f2d7";
+    }
+        .#{$uicons-regular-rounded-prefix}label:before {
+    content: "\f2d8";
+    }
+        .#{$uicons-regular-rounded-prefix}laptop:before {
+    content: "\f2d9";
+    }
+        .#{$uicons-regular-rounded-prefix}lasso:before {
+    content: "\f2da";
+    }
+        .#{$uicons-regular-rounded-prefix}laugh-beam:before {
+    content: "\f2db";
+    }
+        .#{$uicons-regular-rounded-prefix}laugh-squint:before {
+    content: "\f2dc";
+    }
+        .#{$uicons-regular-rounded-prefix}laugh-wink:before {
+    content: "\f2dd";
+    }
+        .#{$uicons-regular-rounded-prefix}laugh:before {
+    content: "\f2de";
+    }
+        .#{$uicons-regular-rounded-prefix}layers:before {
+    content: "\f2df";
+    }
+        .#{$uicons-regular-rounded-prefix}layout-fluid:before {
+    content: "\f2e0";
+    }
+        .#{$uicons-regular-rounded-prefix}leaf:before {
+    content: "\f2e1";
+    }
+        .#{$uicons-regular-rounded-prefix}lemon:before {
+    content: "\f2e2";
+    }
+        .#{$uicons-regular-rounded-prefix}letter-case:before {
+    content: "\f2e3";
+    }
+        .#{$uicons-regular-rounded-prefix}lettuce:before {
+    content: "\f2e4";
+    }
+        .#{$uicons-regular-rounded-prefix}level-down-alt:before {
+    content: "\f2e5";
+    }
+        .#{$uicons-regular-rounded-prefix}level-down:before {
+    content: "\f2e6";
+    }
+        .#{$uicons-regular-rounded-prefix}level-up-alt:before {
+    content: "\f2e7";
+    }
+        .#{$uicons-regular-rounded-prefix}level-up:before {
+    content: "\f2e8";
+    }
+        .#{$uicons-regular-rounded-prefix}life-ring:before {
+    content: "\f2e9";
+    }
+        .#{$uicons-regular-rounded-prefix}line-width:before {
+    content: "\f2ea";
+    }
+        .#{$uicons-regular-rounded-prefix}link:before {
+    content: "\f2eb";
+    }
+        .#{$uicons-regular-rounded-prefix}lipstick:before {
+    content: "\f2ec";
+    }
+        .#{$uicons-regular-rounded-prefix}list-check:before {
+    content: "\f2ed";
+    }
+        .#{$uicons-regular-rounded-prefix}list:before {
+    content: "\f2ee";
+    }
+        .#{$uicons-regular-rounded-prefix}loading:before {
+    content: "\f2ef";
+    }
+        .#{$uicons-regular-rounded-prefix}location-alt:before {
+    content: "\f2f0";
+    }
+        .#{$uicons-regular-rounded-prefix}lock-alt:before {
+    content: "\f2f1";
+    }
+        .#{$uicons-regular-rounded-prefix}lock:before {
+    content: "\f2f2";
+    }
+        .#{$uicons-regular-rounded-prefix}luchador:before {
+    content: "\f2f3";
+    }
+        .#{$uicons-regular-rounded-prefix}luggage-rolling:before {
+    content: "\f2f4";
+    }
+        .#{$uicons-regular-rounded-prefix}magic-wand:before {
+    content: "\f2f5";
+    }
+        .#{$uicons-regular-rounded-prefix}makeup-brush:before {
+    content: "\f2f6";
+    }
+        .#{$uicons-regular-rounded-prefix}man-head:before {
+    content: "\f2f7";
+    }
+        .#{$uicons-regular-rounded-prefix}map-marker-cross:before {
+    content: "\f2f8";
+    }
+        .#{$uicons-regular-rounded-prefix}map-marker-home:before {
+    content: "\f2f9";
+    }
+        .#{$uicons-regular-rounded-prefix}map-marker-minus:before {
+    content: "\f2fa";
+    }
+        .#{$uicons-regular-rounded-prefix}map-marker-plus:before {
+    content: "\f2fb";
+    }
+        .#{$uicons-regular-rounded-prefix}map-marker:before {
+    content: "\f2fc";
+    }
+        .#{$uicons-regular-rounded-prefix}map:before {
+    content: "\f2fd";
+    }
+        .#{$uicons-regular-rounded-prefix}marker-time:before {
+    content: "\f2fe";
+    }
+        .#{$uicons-regular-rounded-prefix}marker:before {
+    content: "\f2ff";
+    }
+        .#{$uicons-regular-rounded-prefix}mars-double:before {
+    content: "\f300";
+    }
+        .#{$uicons-regular-rounded-prefix}mars:before {
+    content: "\f301";
+    }
+        .#{$uicons-regular-rounded-prefix}mask-carnival:before {
+    content: "\f302";
+    }
+        .#{$uicons-regular-rounded-prefix}medicine:before {
+    content: "\f303";
+    }
+        .#{$uicons-regular-rounded-prefix}megaphone:before {
+    content: "\f304";
+    }
+        .#{$uicons-regular-rounded-prefix}meh-blank:before {
+    content: "\f305";
+    }
+        .#{$uicons-regular-rounded-prefix}meh-rolling-eyes:before {
+    content: "\f306";
+    }
+        .#{$uicons-regular-rounded-prefix}meh:before {
+    content: "\f307";
+    }
+        .#{$uicons-regular-rounded-prefix}melon:before {
+    content: "\f308";
+    }
+        .#{$uicons-regular-rounded-prefix}menu-burger:before {
+    content: "\f309";
+    }
+        .#{$uicons-regular-rounded-prefix}menu-dots-vertical:before {
+    content: "\f30a";
+    }
+        .#{$uicons-regular-rounded-prefix}menu-dots:before {
+    content: "\f30b";
+    }
+        .#{$uicons-regular-rounded-prefix}meteor:before {
+    content: "\f30c";
+    }
+        .#{$uicons-regular-rounded-prefix}microphone-alt:before {
+    content: "\f30d";
+    }
+        .#{$uicons-regular-rounded-prefix}microphone:before {
+    content: "\f30e";
+    }
+        .#{$uicons-regular-rounded-prefix}minus-small:before {
+    content: "\f30f";
+    }
+        .#{$uicons-regular-rounded-prefix}minus:before {
+    content: "\f310";
+    }
+        .#{$uicons-regular-rounded-prefix}mobile:before {
+    content: "\f311";
+    }
+        .#{$uicons-regular-rounded-prefix}mode-landscape:before {
+    content: "\f312";
+    }
+        .#{$uicons-regular-rounded-prefix}mode-portrait:before {
+    content: "\f313";
+    }
+        .#{$uicons-regular-rounded-prefix}money:before {
+    content: "\f314";
+    }
+        .#{$uicons-regular-rounded-prefix}moon-stars:before {
+    content: "\f315";
+    }
+        .#{$uicons-regular-rounded-prefix}moon:before {
+    content: "\f316";
+    }
+        .#{$uicons-regular-rounded-prefix}motorcycle:before {
+    content: "\f317";
+    }
+        .#{$uicons-regular-rounded-prefix}mountains:before {
+    content: "\f318";
+    }
+        .#{$uicons-regular-rounded-prefix}mouse:before {
+    content: "\f319";
+    }
+        .#{$uicons-regular-rounded-prefix}mug-alt:before {
+    content: "\f31a";
+    }
+        .#{$uicons-regular-rounded-prefix}mug-hot-alt:before {
+    content: "\f31b";
+    }
+        .#{$uicons-regular-rounded-prefix}mug-hot:before {
+    content: "\f31c";
+    }
+        .#{$uicons-regular-rounded-prefix}mug-tea:before {
+    content: "\f31d";
+    }
+        .#{$uicons-regular-rounded-prefix}mug:before {
+    content: "\f31e";
+    }
+        .#{$uicons-regular-rounded-prefix}mushroom:before {
+    content: "\f31f";
+    }
+        .#{$uicons-regular-rounded-prefix}music-file:before {
+    content: "\f320";
+    }
+        .#{$uicons-regular-rounded-prefix}music-alt:before {
+    content: "\f321";
+    }
+        .#{$uicons-regular-rounded-prefix}music:before {
+    content: "\f322";
+    }
+        .#{$uicons-regular-rounded-prefix}navigation:before {
+    content: "\f323";
+    }
+        .#{$uicons-regular-rounded-prefix}network-cloud:before {
+    content: "\f324";
+    }
+        .#{$uicons-regular-rounded-prefix}network:before {
+    content: "\f325";
+    }
+        .#{$uicons-regular-rounded-prefix}noodles:before {
+    content: "\f326";
+    }
+        .#{$uicons-regular-rounded-prefix}notebook:before {
+    content: "\f327";
+    }
+        .#{$uicons-regular-rounded-prefix}oil-can:before {
+    content: "\f328";
+    }
+        .#{$uicons-regular-rounded-prefix}oil-temp:before {
+    content: "\f329";
+    }
+        .#{$uicons-regular-rounded-prefix}olive-oil:before {
+    content: "\f32a";
+    }
+        .#{$uicons-regular-rounded-prefix}olives:before {
+    content: "\f32b";
+    }
+        .#{$uicons-regular-rounded-prefix}onion:before {
+    content: "\f32c";
+    }
+        .#{$uicons-regular-rounded-prefix}opacity:before {
+    content: "\f32d";
+    }
+        .#{$uicons-regular-rounded-prefix}package:before {
+    content: "\f32e";
+    }
+        .#{$uicons-regular-rounded-prefix}paint-brush:before {
+    content: "\f32f";
+    }
+        .#{$uicons-regular-rounded-prefix}palette:before {
+    content: "\f330";
+    }
+        .#{$uicons-regular-rounded-prefix}pan:before {
+    content: "\f331";
+    }
+        .#{$uicons-regular-rounded-prefix}paper-plane:before {
+    content: "\f332";
+    }
+        .#{$uicons-regular-rounded-prefix}password:before {
+    content: "\f333";
+    }
+        .#{$uicons-regular-rounded-prefix}pause:before {
+    content: "\f334";
+    }
+        .#{$uicons-regular-rounded-prefix}paw:before {
+    content: "\f335";
+    }
+        .#{$uicons-regular-rounded-prefix}peach:before {
+    content: "\f336";
+    }
+        .#{$uicons-regular-rounded-prefix}pencil:before {
+    content: "\f337";
+    }
+        .#{$uicons-regular-rounded-prefix}pennant:before {
+    content: "\f338";
+    }
+        .#{$uicons-regular-rounded-prefix}pepper-hot:before {
+    content: "\f339";
+    }
+        .#{$uicons-regular-rounded-prefix}pepper:before {
+    content: "\f33a";
+    }
+        .#{$uicons-regular-rounded-prefix}pharmacy:before {
+    content: "\f33b";
+    }
+        .#{$uicons-regular-rounded-prefix}phone-call:before {
+    content: "\f33c";
+    }
+        .#{$uicons-regular-rounded-prefix}phone-cross:before {
+    content: "\f33d";
+    }
+        .#{$uicons-regular-rounded-prefix}phone-pause:before {
+    content: "\f33e";
+    }
+        .#{$uicons-regular-rounded-prefix}phone-slash:before {
+    content: "\f33f";
+    }
+        .#{$uicons-regular-rounded-prefix}physics:before {
+    content: "\f340";
+    }
+        .#{$uicons-regular-rounded-prefix}picnic:before {
+    content: "\f341";
+    }
+        .#{$uicons-regular-rounded-prefix}picture:before {
+    content: "\f342";
+    }
+        .#{$uicons-regular-rounded-prefix}pie:before {
+    content: "\f343";
+    }
+        .#{$uicons-regular-rounded-prefix}pineapple:before {
+    content: "\f344";
+    }
+        .#{$uicons-regular-rounded-prefix}ping-pong:before {
+    content: "\f345";
+    }
+        .#{$uicons-regular-rounded-prefix}pizza-slice:before {
+    content: "\f346";
+    }
+        .#{$uicons-regular-rounded-prefix}plane-alt:before {
+    content: "\f347";
+    }
+        .#{$uicons-regular-rounded-prefix}plane:before {
+    content: "\f348";
+    }
+        .#{$uicons-regular-rounded-prefix}plate:before {
+    content: "\f349";
+    }
+        .#{$uicons-regular-rounded-prefix}play-alt:before {
+    content: "\f34a";
+    }
+        .#{$uicons-regular-rounded-prefix}play:before {
+    content: "\f34b";
+    }
+        .#{$uicons-regular-rounded-prefix}playing-cards:before {
+    content: "\f34c";
+    }
+        .#{$uicons-regular-rounded-prefix}plus-small:before {
+    content: "\f34d";
+    }
+        .#{$uicons-regular-rounded-prefix}plus:before {
+    content: "\f34e";
+    }
+        .#{$uicons-regular-rounded-prefix}poker-chip:before {
+    content: "\f34f";
+    }
+        .#{$uicons-regular-rounded-prefix}poo:before {
+    content: "\f350";
+    }
+        .#{$uicons-regular-rounded-prefix}popcorn:before {
+    content: "\f351";
+    }
+        .#{$uicons-regular-rounded-prefix}portrait:before {
+    content: "\f352";
+    }
+        .#{$uicons-regular-rounded-prefix}pot:before {
+    content: "\f353";
+    }
+        .#{$uicons-regular-rounded-prefix}pound:before {
+    content: "\f354";
+    }
+        .#{$uicons-regular-rounded-prefix}power:before {
+    content: "\f355";
+    }
+        .#{$uicons-regular-rounded-prefix}presentation:before {
+    content: "\f356";
+    }
+        .#{$uicons-regular-rounded-prefix}print:before {
+    content: "\f357";
+    }
+        .#{$uicons-regular-rounded-prefix}protractor:before {
+    content: "\f358";
+    }
+        .#{$uicons-regular-rounded-prefix}pulse:before {
+    content: "\f359";
+    }
+        .#{$uicons-regular-rounded-prefix}pumpkin:before {
+    content: "\f35a";
+    }
+        .#{$uicons-regular-rounded-prefix}puzzle-piece:before {
+    content: "\f35b";
+    }
+        .#{$uicons-regular-rounded-prefix}pyramid:before {
+    content: "\f35c";
+    }
+        .#{$uicons-regular-rounded-prefix}quote-right:before {
+    content: "\f35d";
+    }
+        .#{$uicons-regular-rounded-prefix}radish:before {
+    content: "\f35e";
+    }
+        .#{$uicons-regular-rounded-prefix}rainbow:before {
+    content: "\f35f";
+    }
+        .#{$uicons-regular-rounded-prefix}raindrops:before {
+    content: "\f360";
+    }
+        .#{$uicons-regular-rounded-prefix}raquet:before {
+    content: "\f361";
+    }
+        .#{$uicons-regular-rounded-prefix}rec:before {
+    content: "\f362";
+    }
+        .#{$uicons-regular-rounded-prefix}receipt:before {
+    content: "\f363";
+    }
+        .#{$uicons-regular-rounded-prefix}record-vinyl:before {
+    content: "\f364";
+    }
+        .#{$uicons-regular-rounded-prefix}rectabgle-vertical:before {
+    content: "\f365";
+    }
+        .#{$uicons-regular-rounded-prefix}rectangle-horizontal:before {
+    content: "\f366";
+    }
+        .#{$uicons-regular-rounded-prefix}rectangle-panoramic:before {
+    content: "\f367";
+    }
+        .#{$uicons-regular-rounded-prefix}recycle:before {
+    content: "\f368";
+    }
+        .#{$uicons-regular-rounded-prefix}redo-alt:before {
+    content: "\f369";
+    }
+        .#{$uicons-regular-rounded-prefix}redo:before {
+    content: "\f36a";
+    }
+        .#{$uicons-regular-rounded-prefix}reflect:before {
+    content: "\f36b";
+    }
+        .#{$uicons-regular-rounded-prefix}refresh:before {
+    content: "\f36c";
+    }
+        .#{$uicons-regular-rounded-prefix}remove-user:before {
+    content: "\f36d";
+    }
+        .#{$uicons-regular-rounded-prefix}reply-all:before {
+    content: "\f36e";
+    }
+        .#{$uicons-regular-rounded-prefix}resize:before {
+    content: "\f36f";
+    }
+        .#{$uicons-regular-rounded-prefix}resources:before {
+    content: "\f370";
+    }
+        .#{$uicons-regular-rounded-prefix}restaurant:before {
+    content: "\f371";
+    }
+        .#{$uicons-regular-rounded-prefix}rewind:before {
+    content: "\f372";
+    }
+        .#{$uicons-regular-rounded-prefix}rhombus:before {
+    content: "\f373";
+    }
+        .#{$uicons-regular-rounded-prefix}rings-wedding:before {
+    content: "\f374";
+    }
+        .#{$uicons-regular-rounded-prefix}road:before {
+    content: "\f375";
+    }
+        .#{$uicons-regular-rounded-prefix}rocket-lunch:before {
+    content: "\f376";
+    }
+        .#{$uicons-regular-rounded-prefix}rocket:before {
+    content: "\f377";
+    }
+        .#{$uicons-regular-rounded-prefix}room-service:before {
+    content: "\f378";
+    }
+        .#{$uicons-regular-rounded-prefix}rotate-right:before {
+    content: "\f379";
+    }
+        .#{$uicons-regular-rounded-prefix}rugby-helmet:before {
+    content: "\f37a";
+    }
+        .#{$uicons-regular-rounded-prefix}rugby:before {
+    content: "\f37b";
+    }
+        .#{$uicons-regular-rounded-prefix}running:before {
+    content: "\f37c";
+    }
+        .#{$uicons-regular-rounded-prefix}rv:before {
+    content: "\f37d";
+    }
+        .#{$uicons-regular-rounded-prefix}sad-cry:before {
+    content: "\f37e";
+    }
+        .#{$uicons-regular-rounded-prefix}sad-tear:before {
+    content: "\f37f";
+    }
+        .#{$uicons-regular-rounded-prefix}sad:before {
+    content: "\f380";
+    }
+        .#{$uicons-regular-rounded-prefix}salad:before {
+    content: "\f381";
+    }
+        .#{$uicons-regular-rounded-prefix}salt-pepper:before {
+    content: "\f382";
+    }
+        .#{$uicons-regular-rounded-prefix}sandwich:before {
+    content: "\f383";
+    }
+        .#{$uicons-regular-rounded-prefix}sauce:before {
+    content: "\f384";
+    }
+        .#{$uicons-regular-rounded-prefix}sausage:before {
+    content: "\f385";
+    }
+        .#{$uicons-regular-rounded-prefix}scale:before {
+    content: "\f386";
+    }
+        .#{$uicons-regular-rounded-prefix}school-bus:before {
+    content: "\f387";
+    }
+        .#{$uicons-regular-rounded-prefix}school:before {
+    content: "\f388";
+    }
+        .#{$uicons-regular-rounded-prefix}scissors:before {
+    content: "\f389";
+    }
+        .#{$uicons-regular-rounded-prefix}screen:before {
+    content: "\f38a";
+    }
+        .#{$uicons-regular-rounded-prefix}search-alt:before {
+    content: "\f38b";
+    }
+        .#{$uicons-regular-rounded-prefix}search-heart:before {
+    content: "\f38c";
+    }
+        .#{$uicons-regular-rounded-prefix}search:before {
+    content: "\f38d";
+    }
+        .#{$uicons-regular-rounded-prefix}settings-sliders:before {
+    content: "\f38e";
+    }
+        .#{$uicons-regular-rounded-prefix}settings:before {
+    content: "\f38f";
+    }
+        .#{$uicons-regular-rounded-prefix}share:before {
+    content: "\f390";
+    }
+        .#{$uicons-regular-rounded-prefix}shield-check:before {
+    content: "\f391";
+    }
+        .#{$uicons-regular-rounded-prefix}shield-exclamation:before {
+    content: "\f392";
+    }
+        .#{$uicons-regular-rounded-prefix}shield-interrogation:before {
+    content: "\f393";
+    }
+        .#{$uicons-regular-rounded-prefix}shield-plus:before {
+    content: "\f394";
+    }
+        .#{$uicons-regular-rounded-prefix}shield:before {
+    content: "\f395";
+    }
+        .#{$uicons-regular-rounded-prefix}ship-side:before {
+    content: "\f396";
+    }
+        .#{$uicons-regular-rounded-prefix}ship:before {
+    content: "\f397";
+    }
+        .#{$uicons-regular-rounded-prefix}shop:before {
+    content: "\f398";
+    }
+        .#{$uicons-regular-rounded-prefix}shopping-bag-add:before {
+    content: "\f399";
+    }
+        .#{$uicons-regular-rounded-prefix}shopping-bag:before {
+    content: "\f39a";
+    }
+        .#{$uicons-regular-rounded-prefix}shopping-cart-add:before {
+    content: "\f39b";
+    }
+        .#{$uicons-regular-rounded-prefix}shopping-cart-check:before {
+    content: "\f39c";
+    }
+        .#{$uicons-regular-rounded-prefix}shopping-cart:before {
+    content: "\f39d";
+    }
+        .#{$uicons-regular-rounded-prefix}shrimp:before {
+    content: "\f39e";
+    }
+        .#{$uicons-regular-rounded-prefix}shuffle:before {
+    content: "\f39f";
+    }
+        .#{$uicons-regular-rounded-prefix}shuttle-van:before {
+    content: "\f3a0";
+    }
+        .#{$uicons-regular-rounded-prefix}shuttlecock:before {
+    content: "\f3a1";
+    }
+        .#{$uicons-regular-rounded-prefix}sign-in-alt:before {
+    content: "\f3a2";
+    }
+        .#{$uicons-regular-rounded-prefix}sign-in:before {
+    content: "\f3a3";
+    }
+        .#{$uicons-regular-rounded-prefix}sign-out-alt:before {
+    content: "\f3a4";
+    }
+        .#{$uicons-regular-rounded-prefix}sign-out:before {
+    content: "\f3a5";
+    }
+        .#{$uicons-regular-rounded-prefix}signal-alt-1:before {
+    content: "\f3a6";
+    }
+        .#{$uicons-regular-rounded-prefix}signal-alt-2:before {
+    content: "\f3a7";
+    }
+        .#{$uicons-regular-rounded-prefix}signal-alt:before {
+    content: "\f3a8";
+    }
+        .#{$uicons-regular-rounded-prefix}skateboard:before {
+    content: "\f3a9";
+    }
+        .#{$uicons-regular-rounded-prefix}skating:before {
+    content: "\f3aa";
+    }
+        .#{$uicons-regular-rounded-prefix}skewer:before {
+    content: "\f3ab";
+    }
+        .#{$uicons-regular-rounded-prefix}ski-jump:before {
+    content: "\f3ac";
+    }
+        .#{$uicons-regular-rounded-prefix}ski-lift:before {
+    content: "\f3ad";
+    }
+        .#{$uicons-regular-rounded-prefix}skiing-nordic:before {
+    content: "\f3ae";
+    }
+        .#{$uicons-regular-rounded-prefix}skiing:before {
+    content: "\f3af";
+    }
+        .#{$uicons-regular-rounded-prefix}sledding:before {
+    content: "\f3b0";
+    }
+        .#{$uicons-regular-rounded-prefix}sleigh:before {
+    content: "\f3b1";
+    }
+        .#{$uicons-regular-rounded-prefix}smartphone:before {
+    content: "\f3b2";
+    }
+        .#{$uicons-regular-rounded-prefix}smile-beam:before {
+    content: "\f3b3";
+    }
+        .#{$uicons-regular-rounded-prefix}smile-wink:before {
+    content: "\f3b4";
+    }
+        .#{$uicons-regular-rounded-prefix}smile:before {
+    content: "\f3b5";
+    }
+        .#{$uicons-regular-rounded-prefix}smog:before {
+    content: "\f3b6";
+    }
+        .#{$uicons-regular-rounded-prefix}smoke:before {
+    content: "\f3b7";
+    }
+        .#{$uicons-regular-rounded-prefix}snow-blowing:before {
+    content: "\f3b8";
+    }
+        .#{$uicons-regular-rounded-prefix}snowboarding:before {
+    content: "\f3b9";
+    }
+        .#{$uicons-regular-rounded-prefix}snowflake:before {
+    content: "\f3ba";
+    }
+        .#{$uicons-regular-rounded-prefix}snowflakes:before {
+    content: "\f3bb";
+    }
+        .#{$uicons-regular-rounded-prefix}snowmobile:before {
+    content: "\f3bc";
+    }
+        .#{$uicons-regular-rounded-prefix}snowplow:before {
+    content: "\f3bd";
+    }
+        .#{$uicons-regular-rounded-prefix}soap:before {
+    content: "\f3be";
+    }
+        .#{$uicons-regular-rounded-prefix}sort-alpha-down-alt:before {
+    content: "\f3bf";
+    }
+        .#{$uicons-regular-rounded-prefix}sort-alpha-down:before {
+    content: "\f3c0";
+    }
+        .#{$uicons-regular-rounded-prefix}sort-alpha-up-alt:before {
+    content: "\f3c1";
+    }
+        .#{$uicons-regular-rounded-prefix}sort-alpha-up:before {
+    content: "\f3c2";
+    }
+        .#{$uicons-regular-rounded-prefix}sort-alt:before {
+    content: "\f3c3";
+    }
+        .#{$uicons-regular-rounded-prefix}sort-amount-down-alt:before {
+    content: "\f3c4";
+    }
+        .#{$uicons-regular-rounded-prefix}sort-amount-down:before {
+    content: "\f3c5";
+    }
+        .#{$uicons-regular-rounded-prefix}sort-amount-up-alt:before {
+    content: "\f3c6";
+    }
+        .#{$uicons-regular-rounded-prefix}sort-amount-up:before {
+    content: "\f3c7";
+    }
+        .#{$uicons-regular-rounded-prefix}sort-down:before {
+    content: "\f3c8";
+    }
+        .#{$uicons-regular-rounded-prefix}sort-numeric-down-alt:before {
+    content: "\f3c9";
+    }
+        .#{$uicons-regular-rounded-prefix}sort-numeric-down:before {
+    content: "\f3ca";
+    }
+        .#{$uicons-regular-rounded-prefix}sort:before {
+    content: "\f3cb";
+    }
+        .#{$uicons-regular-rounded-prefix}soup:before {
+    content: "\f3cc";
+    }
+        .#{$uicons-regular-rounded-prefix}spa:before {
+    content: "\f3cd";
+    }
+        .#{$uicons-regular-rounded-prefix}space-shuttle:before {
+    content: "\f3ce";
+    }
+        .#{$uicons-regular-rounded-prefix}spade:before {
+    content: "\f3cf";
+    }
+        .#{$uicons-regular-rounded-prefix}sparkles:before {
+    content: "\f3d0";
+    }
+        .#{$uicons-regular-rounded-prefix}speaker:before {
+    content: "\f3d1";
+    }
+        .#{$uicons-regular-rounded-prefix}sphere:before {
+    content: "\f3d2";
+    }
+        .#{$uicons-regular-rounded-prefix}spinner:before {
+    content: "\f3d3";
+    }
+        .#{$uicons-regular-rounded-prefix}spoon:before {
+    content: "\f3d4";
+    }
+        .#{$uicons-regular-rounded-prefix}square-root:before {
+    content: "\f3d5";
+    }
+        .#{$uicons-regular-rounded-prefix}square:before {
+    content: "\f3d6";
+    }
+        .#{$uicons-regular-rounded-prefix}star-octogram:before {
+    content: "\f3d7";
+    }
+        .#{$uicons-regular-rounded-prefix}star:before {
+    content: "\f3d8";
+    }
+        .#{$uicons-regular-rounded-prefix}starfighter:before {
+    content: "\f3d9";
+    }
+        .#{$uicons-regular-rounded-prefix}stars:before {
+    content: "\f3da";
+    }
+        .#{$uicons-regular-rounded-prefix}stats:before {
+    content: "\f3db";
+    }
+        .#{$uicons-regular-rounded-prefix}steak:before {
+    content: "\f3dc";
+    }
+        .#{$uicons-regular-rounded-prefix}steering-wheel:before {
+    content: "\f3dd";
+    }
+        .#{$uicons-regular-rounded-prefix}stethoscope:before {
+    content: "\f3de";
+    }
+        .#{$uicons-regular-rounded-prefix}sticker:before {
+    content: "\f3df";
+    }
+        .#{$uicons-regular-rounded-prefix}stop:before {
+    content: "\f3e0";
+    }
+        .#{$uicons-regular-rounded-prefix}stopwatch:before {
+    content: "\f3e1";
+    }
+        .#{$uicons-regular-rounded-prefix}strawberry:before {
+    content: "\f3e2";
+    }
+        .#{$uicons-regular-rounded-prefix}subtitles:before {
+    content: "\f3e3";
+    }
+        .#{$uicons-regular-rounded-prefix}subway:before {
+    content: "\f3e4";
+    }
+        .#{$uicons-regular-rounded-prefix}sun:before {
+    content: "\f3e5";
+    }
+        .#{$uicons-regular-rounded-prefix}sunrise-alt:before {
+    content: "\f3e6";
+    }
+        .#{$uicons-regular-rounded-prefix}sunrise:before {
+    content: "\f3e7";
+    }
+        .#{$uicons-regular-rounded-prefix}sunset:before {
+    content: "\f3e8";
+    }
+        .#{$uicons-regular-rounded-prefix}surfing:before {
+    content: "\f3e9";
+    }
+        .#{$uicons-regular-rounded-prefix}surprise:before {
+    content: "\f3ea";
+    }
+        .#{$uicons-regular-rounded-prefix}sushi:before {
+    content: "\f3eb";
+    }
+        .#{$uicons-regular-rounded-prefix}swimmer:before {
+    content: "\f3ec";
+    }
+        .#{$uicons-regular-rounded-prefix}sword:before {
+    content: "\f3ed";
+    }
+        .#{$uicons-regular-rounded-prefix}syringe:before {
+    content: "\f3ee";
+    }
+        .#{$uicons-regular-rounded-prefix}tablet:before {
+    content: "\f3ef";
+    }
+        .#{$uicons-regular-rounded-prefix}tachometer-alt-average:before {
+    content: "\f3f0";
+    }
+        .#{$uicons-regular-rounded-prefix}tachometer-alt-fastest:before {
+    content: "\f3f1";
+    }
+        .#{$uicons-regular-rounded-prefix}tachometer-alt-slow:before {
+    content: "\f3f2";
+    }
+        .#{$uicons-regular-rounded-prefix}tachometer-alt-slowest:before {
+    content: "\f3f3";
+    }
+        .#{$uicons-regular-rounded-prefix}tachometer-average:before {
+    content: "\f3f4";
+    }
+        .#{$uicons-regular-rounded-prefix}tachometer-fast:before {
+    content: "\f3f5";
+    }
+        .#{$uicons-regular-rounded-prefix}tachometer-fastest:before {
+    content: "\f3f6";
+    }
+        .#{$uicons-regular-rounded-prefix}tachometer-slow:before {
+    content: "\f3f7";
+    }
+        .#{$uicons-regular-rounded-prefix}tachometer-slowest:before {
+    content: "\f3f8";
+    }
+        .#{$uicons-regular-rounded-prefix}tachometer:before {
+    content: "\f3f9";
+    }
+        .#{$uicons-regular-rounded-prefix}taco:before {
+    content: "\f3fa";
+    }
+        .#{$uicons-regular-rounded-prefix}target:before {
+    content: "\f3fb";
+    }
+        .#{$uicons-regular-rounded-prefix}taxi:before {
+    content: "\f3fc";
+    }
+        .#{$uicons-regular-rounded-prefix}temperature-down:before {
+    content: "\f3fd";
+    }
+        .#{$uicons-regular-rounded-prefix}temperature-frigid:before {
+    content: "\f3fe";
+    }
+        .#{$uicons-regular-rounded-prefix}temperature-high:before {
+    content: "\f3ff";
+    }
+        .#{$uicons-regular-rounded-prefix}temperature-hot:before {
+    content: "\f400";
+    }
+        .#{$uicons-regular-rounded-prefix}temperature-low:before {
+    content: "\f401";
+    }
+        .#{$uicons-regular-rounded-prefix}temperature-up:before {
+    content: "\f402";
+    }
+        .#{$uicons-regular-rounded-prefix}tennis:before {
+    content: "\f403";
+    }
+        .#{$uicons-regular-rounded-prefix}terrace:before {
+    content: "\f404";
+    }
+        .#{$uicons-regular-rounded-prefix}test-tube:before {
+    content: "\f405";
+    }
+        .#{$uicons-regular-rounded-prefix}test:before {
+    content: "\f406";
+    }
+        .#{$uicons-regular-rounded-prefix}text-check:before {
+    content: "\f407";
+    }
+        .#{$uicons-regular-rounded-prefix}text:before {
+    content: "\f408";
+    }
+        .#{$uicons-regular-rounded-prefix}thermometer-half:before {
+    content: "\f409";
+    }
+        .#{$uicons-regular-rounded-prefix}thumbs-down:before {
+    content: "\f40a";
+    }
+        .#{$uicons-regular-rounded-prefix}thumbs-up:before {
+    content: "\f40b";
+    }
+        .#{$uicons-regular-rounded-prefix}thumbtack:before {
+    content: "\f40c";
+    }
+        .#{$uicons-regular-rounded-prefix}thunderstorm-moon:before {
+    content: "\f40d";
+    }
+        .#{$uicons-regular-rounded-prefix}thunderstorm-sun:before {
+    content: "\f40e";
+    }
+        .#{$uicons-regular-rounded-prefix}thunderstorm:before {
+    content: "\f40f";
+    }
+        .#{$uicons-regular-rounded-prefix}ticket:before {
+    content: "\f410";
+    }
+        .#{$uicons-regular-rounded-prefix}time-add:before {
+    content: "\f411";
+    }
+        .#{$uicons-regular-rounded-prefix}time-check:before {
+    content: "\f412";
+    }
+        .#{$uicons-regular-rounded-prefix}time-delete:before {
+    content: "\f413";
+    }
+        .#{$uicons-regular-rounded-prefix}time-fast:before {
+    content: "\f414";
+    }
+        .#{$uicons-regular-rounded-prefix}time-forward-sixty:before {
+    content: "\f415";
+    }
+        .#{$uicons-regular-rounded-prefix}time-forward-ten:before {
+    content: "\f416";
+    }
+        .#{$uicons-regular-rounded-prefix}time-forward:before {
+    content: "\f417";
+    }
+        .#{$uicons-regular-rounded-prefix}time-half-past:before {
+    content: "\f418";
+    }
+        .#{$uicons-regular-rounded-prefix}time-oclock:before {
+    content: "\f419";
+    }
+        .#{$uicons-regular-rounded-prefix}time-past:before {
+    content: "\f41a";
+    }
+        .#{$uicons-regular-rounded-prefix}time-quarter-to:before {
+    content: "\f41b";
+    }
+        .#{$uicons-regular-rounded-prefix}time-quarter-past:before {
+    content: "\f41c";
+    }
+        .#{$uicons-regular-rounded-prefix}time-twenty-four:before {
+    content: "\f41d";
+    }
+        .#{$uicons-regular-rounded-prefix}tire-flat:before {
+    content: "\f41e";
+    }
+        .#{$uicons-regular-rounded-prefix}tire-pressure-warning:before {
+    content: "\f41f";
+    }
+        .#{$uicons-regular-rounded-prefix}tire-rugged:before {
+    content: "\f420";
+    }
+        .#{$uicons-regular-rounded-prefix}tire:before {
+    content: "\f421";
+    }
+        .#{$uicons-regular-rounded-prefix}tired:before {
+    content: "\f422";
+    }
+        .#{$uicons-regular-rounded-prefix}tomato:before {
+    content: "\f423";
+    }
+        .#{$uicons-regular-rounded-prefix}tool-crop:before {
+    content: "\f424";
+    }
+        .#{$uicons-regular-rounded-prefix}tool-marquee:before {
+    content: "\f425";
+    }
+        .#{$uicons-regular-rounded-prefix}tooth:before {
+    content: "\f426";
+    }
+        .#{$uicons-regular-rounded-prefix}tornado:before {
+    content: "\f427";
+    }
+        .#{$uicons-regular-rounded-prefix}tractor:before {
+    content: "\f428";
+    }
+        .#{$uicons-regular-rounded-prefix}trailer:before {
+    content: "\f429";
+    }
+        .#{$uicons-regular-rounded-prefix}train-side:before {
+    content: "\f42a";
+    }
+        .#{$uicons-regular-rounded-prefix}train:before {
+    content: "\f42b";
+    }
+        .#{$uicons-regular-rounded-prefix}tram:before {
+    content: "\f42c";
+    }
+        .#{$uicons-regular-rounded-prefix}transform:before {
+    content: "\f42d";
+    }
+        .#{$uicons-regular-rounded-prefix}trash:before {
+    content: "\f42e";
+    }
+        .#{$uicons-regular-rounded-prefix}treatment:before {
+    content: "\f42f";
+    }
+        .#{$uicons-regular-rounded-prefix}tree-christmas:before {
+    content: "\f430";
+    }
+        .#{$uicons-regular-rounded-prefix}tree:before {
+    content: "\f431";
+    }
+        .#{$uicons-regular-rounded-prefix}triangle:before {
+    content: "\f432";
+    }
+        .#{$uicons-regular-rounded-prefix}trophy:before {
+    content: "\f433";
+    }
+        .#{$uicons-regular-rounded-prefix}truck-container:before {
+    content: "\f434";
+    }
+        .#{$uicons-regular-rounded-prefix}truck-couch:before {
+    content: "\f435";
+    }
+        .#{$uicons-regular-rounded-prefix}truck-loading:before {
+    content: "\f436";
+    }
+        .#{$uicons-regular-rounded-prefix}truck-monster:before {
+    content: "\f437";
+    }
+        .#{$uicons-regular-rounded-prefix}truck-moving:before {
+    content: "\f438";
+    }
+        .#{$uicons-regular-rounded-prefix}truck-pickup:before {
+    content: "\f439";
+    }
+        .#{$uicons-regular-rounded-prefix}truck-plow:before {
+    content: "\f43a";
+    }
+        .#{$uicons-regular-rounded-prefix}truck-ramp:before {
+    content: "\f43b";
+    }
+        .#{$uicons-regular-rounded-prefix}truck-side:before {
+    content: "\f43c";
+    }
+        .#{$uicons-regular-rounded-prefix}tty:before {
+    content: "\f43d";
+    }
+        .#{$uicons-regular-rounded-prefix}turkey:before {
+    content: "\f43e";
+    }
+        .#{$uicons-regular-rounded-prefix}umbrella:before {
+    content: "\f43f";
+    }
+        .#{$uicons-regular-rounded-prefix}underline:before {
+    content: "\f440";
+    }
+        .#{$uicons-regular-rounded-prefix}undo-alt:before {
+    content: "\f441";
+    }
+        .#{$uicons-regular-rounded-prefix}undo:before {
+    content: "\f442";
+    }
+        .#{$uicons-regular-rounded-prefix}unlock:before {
+    content: "\f443";
+    }
+        .#{$uicons-regular-rounded-prefix}upload:before {
+    content: "\f444";
+    }
+        .#{$uicons-regular-rounded-prefix}usb-pendrive:before {
+    content: "\f445";
+    }
+        .#{$uicons-regular-rounded-prefix}user-add:before {
+    content: "\f446";
+    }
+        .#{$uicons-regular-rounded-prefix}user-time:before {
+    content: "\f447";
+    }
+        .#{$uicons-regular-rounded-prefix}user:before {
+    content: "\f448";
+    }
+        .#{$uicons-regular-rounded-prefix}users-alt:before {
+    content: "\f449";
+    }
+        .#{$uicons-regular-rounded-prefix}users:before {
+    content: "\f44a";
+    }
+        .#{$uicons-regular-rounded-prefix}utensils:before {
+    content: "\f44b";
+    }
+        .#{$uicons-regular-rounded-prefix}vector-alt:before {
+    content: "\f44c";
+    }
+        .#{$uicons-regular-rounded-prefix}vector:before {
+    content: "\f44d";
+    }
+        .#{$uicons-regular-rounded-prefix}venus-double:before {
+    content: "\f44e";
+    }
+        .#{$uicons-regular-rounded-prefix}venus-mars:before {
+    content: "\f44f";
+    }
+        .#{$uicons-regular-rounded-prefix}venus:before {
+    content: "\f450";
+    }
+        .#{$uicons-regular-rounded-prefix}video-camera:before {
+    content: "\f451";
+    }
+        .#{$uicons-regular-rounded-prefix}volcano:before {
+    content: "\f452";
+    }
+        .#{$uicons-regular-rounded-prefix}volleyball:before {
+    content: "\f453";
+    }
+        .#{$uicons-regular-rounded-prefix}volume:before {
+    content: "\f454";
+    }
+        .#{$uicons-regular-rounded-prefix}wagon-covered:before {
+    content: "\f455";
+    }
+        .#{$uicons-regular-rounded-prefix}water-bottle:before {
+    content: "\f456";
+    }
+        .#{$uicons-regular-rounded-prefix}water-lower:before {
+    content: "\f457";
+    }
+        .#{$uicons-regular-rounded-prefix}water-rise:before {
+    content: "\f458";
+    }
+        .#{$uicons-regular-rounded-prefix}water:before {
+    content: "\f459";
+    }
+        .#{$uicons-regular-rounded-prefix}watermelon:before {
+    content: "\f45a";
+    }
+        .#{$uicons-regular-rounded-prefix}wheat:before {
+    content: "\f45b";
+    }
+        .#{$uicons-regular-rounded-prefix}wheelchair:before {
+    content: "\f45c";
+    }
+        .#{$uicons-regular-rounded-prefix}whistle:before {
+    content: "\f45d";
+    }
+        .#{$uicons-regular-rounded-prefix}wifi-alt:before {
+    content: "\f45e";
+    }
+        .#{$uicons-regular-rounded-prefix}wind-warning:before {
+    content: "\f45f";
+    }
+        .#{$uicons-regular-rounded-prefix}wind:before {
+    content: "\f460";
+    }
+        .#{$uicons-regular-rounded-prefix}windsock:before {
+    content: "\f461";
+    }
+        .#{$uicons-regular-rounded-prefix}woman-head:before {
+    content: "\f462";
+    }
+        .#{$uicons-regular-rounded-prefix}world:before {
+    content: "\f463";
+    }
+        .#{$uicons-regular-rounded-prefix}yen:before {
+    content: "\f464";
+    }
+        .#{$uicons-regular-rounded-prefix}zoom-in:before {
+    content: "\f465";
+    }
+        .#{$uicons-regular-rounded-prefix}zoom-out:before {
+    content: "\f466";
+    }
+
