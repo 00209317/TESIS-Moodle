@@ -40,3 +40,21 @@
     flex: 0 100 100%;
 	max-width: 100%;
 }
+
+.modal-backdrop.show {
+    display: none;
+}
+
+.modal-content {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        align-items: center;
+        text-align: center;
+        background-color: #222325;
+        color: #fff;
+        padding: 1.5rem;
+        border-radius: 1em;
+
+  }
+  
