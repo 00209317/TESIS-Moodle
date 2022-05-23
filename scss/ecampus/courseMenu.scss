@@ -6,7 +6,7 @@
     font-size: 10px;
     border: none;
     cursor: pointer;
-    border-radius: 50%;
+    border-radius: 60%;
   }
   
   /* Dropdown button on hover & focus */
@@ -26,9 +26,9 @@
     display: none;
     position: absolute;
     background-color: #f1f1f1;
-    min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    width: 4.5em;
   }
   
   /* Links inside the dropdown */
