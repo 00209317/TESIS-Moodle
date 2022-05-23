@@ -1,12 +1,11 @@
 <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <button onclick="myFunction()" class="dropbtn">Opciones</button>
   <div id="myDropdown" class="dropdown-content">
     <div class="teacherdash nav-item nav-link">
-        <button type="button" class="btn btn-secondary fa fa-cogs" data-toggle="modal" data-target="#exampleModal">
-        </button>
+        <a role="button" data-tooltip="tooltip" data-placement= "bottom" title="{{{togglebutton}}}" data-toggle="modal" href="#teacherdashslider" class="btn btn-secondary fhs-tooltip" data-target="#exampleModal">  <i class="fa fa-cogs" aria-hidden="true"></i></a>
     </div>
     <div class="siteadminlink nav-item nav-link">
-        <a href="{{{siteadminurl}}}" data-tooltip="tooltip" data-placement= "bottom" title="{{{siteadmintitle}}}" class="btn btn-secondary fhs-tooltip"><i class="fa fa-sitemap" aria-hidden="true"></i></a>
+        <a href="../admin/search.php" data-tooltip="tooltip" data-placement= "bottom" title="{{{siteadmintitle}}}" class="btn btn-secondary fhs-tooltip"><i class="fa fa-sitemap" aria-hidden="true"></i></a>
     </div>
     <div class="nav-item nav-link">
         {{{ output.edit_button_fhs }}}
