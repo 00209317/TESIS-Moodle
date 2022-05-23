@@ -1,0 +1,39 @@
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <div class="teacherdash nav-item nav-link">
+        <button type="button" class="btn btn-secondary fa fa-cogs" data-toggle="modal" data-target="#exampleModal">
+        </button>
+    </div>
+    <div class="siteadminlink nav-item nav-link">
+        <a href="{{{siteadminurl}}}" data-tooltip="tooltip" data-placement= "bottom" title="{{{siteadmintitle}}}" class="btn btn-secondary fhs-tooltip"><i class="fa fa-sitemap" aria-hidden="true"></i></a>
+    </div>
+    <div class="nav-item nav-link">
+        {{{ output.edit_button_fhs }}}
+    </div>    
+  </div>
+</div>
+
+ <!--#region main  -->
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+<!--#endregion -->
