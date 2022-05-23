@@ -280,6 +280,11 @@
 
 .card {
   border-radius: 0.75em;
+  overflow-x:auto;
+}
+
+#page-header .card {
+  overflow-x: revert !important;
 }
 
 .card-deck .card .card-footer {
@@ -308,9 +313,29 @@
   }
 }
 
+.tableAutoFlex{
+  overflow: auto !important;
+}
+
 
 @media (max-width: 1000px) {
   .card-deck{
     display: block;
   }
+}
+
+.mod-indent-outer{
+  display: block;
+  overflow-wrap: anywhere;
+  padding: 1em 1.5em 1em 1em;
+}
+
+.btn.btn-link.btn-icon{
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+
+.dropdown-menu.dropdown-menu-right.menu.align-tr-br{
+  border-radius: 1em;
 }

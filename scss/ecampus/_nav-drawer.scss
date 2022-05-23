@@ -69,7 +69,7 @@
                     line-height: 1;
                     -webkit-font-smoothing: antialiased;
                     -moz-osx-font-smoothing: grayscale;
-                    content: "\e089";
+                    content: "\f271";
                     font-size: 19px;
                     padding-right: 0.5em;
                 }
@@ -80,22 +80,22 @@
             }
 
             &[data-key="coursehome"] a:before {
-                content: "\e06a";
+                content: "\f2ba";
             }
 
             &[data-key="mycourses"] a:before {
-                content: "\e019";
+                content: "\f291";
             }
 
             &[data-key="course-sections"] {
                 a {
                     &:before {
-                        content: "\e067";
+                        content: "\f2ee";
                     }
                 }
 
                 .list-group-item a:before {
-                    content: "\e606";
+                    content: "\f11a";
                     font-size: 11px;
                 }
             }

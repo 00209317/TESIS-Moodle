@@ -251,6 +251,13 @@
     }
 }
 
+.btn.btn-link.emoji-button{
+    padding: 0 !important;
+    background-color: transparent !important;
+    margin-left: 0 !important;
+    color: black;
+}
+
 .btn.btn-link.p-0{
     margin-left: 1.25em !important;
 }
@@ -277,3 +284,72 @@ a.nav-link{
     margin:auto;
 }
 
+
+.btn-icon {
+    padding:0 !important;
+    
+    i.icon{
+        height: 1em!important;
+        width: 1em!important;
+        font-size: 1em!important;
+    }
+}
+
+
+.emoji-picker {
+    height: 350px;
+    .category-button{
+        border: 0 !important;
+        padding: 0 !important;
+        
+        &:hover{
+            background-color: #7b7b7b !important;
+            transition: background 0.7s;
+        }
+        
+        &.selected{
+            background-color: #003c71;
+            color: #fff;
+        }
+    }
+}
+
+.input-group {
+    .input-group-prepend:first-child{
+        .input-group-text{
+            background-color: #003c71 !important;
+            color: #fff !important;
+            padding-right: 0.75rem !important;
+            border-radius: 1em 0 0 1em !important;
+        }
+    }
+    
+    .input-group-prepend:last-child{
+        .input-group-text{
+            background-color: #003c71 !important;
+            color: #fff !important;
+            padding-right: 0.75rem !important;
+            border-radius: 0 1em 1em 0 !important;
+        }
+    } 
+    
+    
+    input{
+        border-radius: 0;
+        
+        &:first-child{
+            border-radius: 1em 0 0 1em !important;
+        }
+        
+        &:last-child{
+            border-radius: 0 1em 1em 0 !important;
+        }
+    }
+}
+
+.closewidget{
+    height: 3em;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}

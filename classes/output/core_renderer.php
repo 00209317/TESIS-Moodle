@@ -781,7 +781,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
         if ($showsummary) {
             $url = new moodle_url('/admin/tool/dataprivacy/summary.php');
             $output = html_writer::link($url,
-                "<i class='slicon-folder-alt'></i> " . get_string('dataretentionsummary', 'tool_dataprivacy'),
+                "<i class='fi fi-rr-folder'></i> " . get_string('dataretentionsummary', 'tool_dataprivacy'),
                 ['class' => 'btn btn-default']
             );
 
@@ -803,7 +803,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $output = '';
         if (!empty($CFG->enablemobilewebservice) && $url = tool_mobile_create_app_download_url()) {
             $url = html_writer::link($url,
-                                "<i class='slicon-screen-smartphone'></i> ".get_string('getmoodleonyourmobile', 'tool_mobile'),
+                                "<i class='fi fi-rr-smartphone'></i> ".get_string('getmoodleonyourmobile', 'tool_mobile'),
                                      ['class' => 'btn btn-primary']);
 
             $output .= html_writer::div($url, 'mobilefooter mb-2');

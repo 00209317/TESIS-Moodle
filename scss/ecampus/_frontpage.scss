@@ -537,6 +537,12 @@ body.notloggedin {
             margin:0;
             padding: .375rem .75rem;
             border-radius: 0 0.75em 0.75em 0;
+            z-index: 0 !important;
+            background-color:#003c71;
+            
+            i{
+                color:#fff;
+            }
         }
     }
 }

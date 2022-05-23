@@ -246,12 +246,12 @@ class extras {
             $iscontact = !empty(\core_message\api::get_contact($USER->id, $user->id)) ? 1 : 0;
             $contacttitle = $iscontact ? 'removecontact' : 'addcontact';
             $contacturlaction = $iscontact ? 'removecontact' : 'addcontact';
-            $contactimage = $iscontact ? 'slicon-user-unfollow' : 'slicon-user-follow';
+            $contactimage = $iscontact ? 'fi fi-rr-user-add' : 'fi fi-rr-delete-user';
             $headerbuttons = [
                 [
                     'title' => get_string('sendmessage', 'core_message'),
                     'url' => new \moodle_url('/message/index.php', array('id' => $user->id)),
-                    'icon' => 'fa fa-comment-o',
+                    'icon' => 'fi fi-rr-comment',
                     'class' => 'btn btn-block btn-outline-primary'
                 ],
                 [
