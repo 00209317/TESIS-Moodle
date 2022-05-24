@@ -1,11 +1,13 @@
-#top-footer {
+.top-footer {
     background-repeat: repeat-x;
     background-position: center bottom;
-    padding: 40px 15px;
-    color: $headings-color;
+    padding: auto;
+    color: white;
+    background-color: #003c71;
     
-    h3 {
-        color: $brand-primary;
+    h4 {
+        color: rgb(255, 255, 255);
+        margin-top: 1.0em;
     }
 
     ul {
@@ -14,7 +16,10 @@
 
     .contact ul li {
         font-size: 1.2rem;
-        margin-bottom: 4px;
+        margin-bottom: 1.0em;
+        display: inline;
+        margin-left: auto;
+        margin-right: auto;
 
         i {
             margin-right: 3px;
@@ -24,6 +29,7 @@
         a, i {
             display: inline-block;
             vertical-align: middle;
+            color: white;
         }
     }
 
@@ -95,7 +101,7 @@
     }
 }
 
-#page-footer {
+.page-footer {
     background-color: $m-moodle-color;
     text-align: center;
     min-height: inherit;
