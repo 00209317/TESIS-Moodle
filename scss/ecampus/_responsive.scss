@@ -280,6 +280,11 @@
 
 .card {
   border-radius: 0.75em;
+  overflow-x:hidden;
+}
+
+#page-header .card {
+  overflow-x: revert !important;
 }
 
 .card-deck .card .card-footer {
@@ -288,7 +293,15 @@
 }
 
 .card a img {
-  border-radius: 0 0 0;
+  border-radius: 50%;
+}
+
+.optionicon img{
+  border-radius: 0 !important;
+}
+
+div.activityinstance a img {
+  border-radius: 0;
 }
 
 .card-deck {
@@ -296,6 +309,7 @@
     text-align: center;
   }
 }
+
 
 .card-deck {
   .card-body {
@@ -308,9 +322,58 @@
   }
 }
 
+.tableAutoFlex{
+  overflow: auto !important;
+}
+
 
 @media (max-width: 1000px) {
   .card-deck{
     display: block;
   }
+}
+
+.mod-indent-outer{
+  display: block;
+  overflow-wrap: anywhere;
+  padding: 1em 1.5em 1em 1em;
+}
+
+.btn.btn-link.btn-icon{
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+
+.dropdown-menu.dropdown-menu-right.menu.align-tr-br{
+  border-radius: 1em;
+}
+
+
+.felement{
+  overflow: auto;
+}
+
+.contentTableOverflow{
+  overflow: auto;
+  width: 100%;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+#region-main-box #region-main .card.mymaincontent{
+  margin:0;
+}
+
+.text-reset{
+  color:#fff !important;
+}
+
+#completionprogressid{
+  margin-bottom: 2em;
+  height: auto;
+}
+
+li.activity{
+  padding: 1em !important;
 }

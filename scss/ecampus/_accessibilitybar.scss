@@ -101,7 +101,7 @@
 @media (max-width: 768px) {
     #accessibilitybar {
         width: 100vw;
-        bottom: 34vh;
+        top: 10vh;
         left: 0;
         margin-top: 0;
         height: 0vh;
@@ -146,3 +146,4 @@ body.hasaccessibilitybar {
         top: 0px;
     }
 }
+
