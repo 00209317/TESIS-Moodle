@@ -26,7 +26,7 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
 
     var SELECTORS = {
         FONT_SIZE: '#fontsize_dec, #fontsize_reset, #fontsize_inc',
-        SITE_COLOR: '#sitecolor_color1, #sitecolor_color2, #sitecolor_color3, #sitecolor_color4',
+        SITE_COLOR: '#sitecolor_color1, #sitecolor_color2, #sitecolor_color3, #sitecolor_color4, #sitecolor_colordark',
         SITE_FONT: '#fontsite_odafont, #fontsite_default'
     };
 
@@ -303,7 +303,7 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
             return (className.match(/(^|\s)sitecolor-color-\S+/g) || []).join(' ');
         });
 
-        console.log("cahnge color reloadSitecolorClass")
+        console.log("cahnge color reloadSitecolorClass" + sitecolorCurrentAction)
 
         if (sitecolorCurrentAction !== 'reset') {
             jQuery('body').addClass(sitecolorCurrentAction);
