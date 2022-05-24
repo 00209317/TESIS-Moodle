@@ -280,7 +280,7 @@
 
 .card {
   border-radius: 0.75em;
-  overflow-x:auto;
+  overflow-x:hidden;
 }
 
 #page-header .card {
@@ -293,7 +293,15 @@
 }
 
 .card a img {
-  border-radius: 0 0 0;
+  border-radius: 50%;
+}
+
+.optionicon img{
+  border-radius: 0 !important;
+}
+
+div.activityinstance a img {
+  border-radius: 0;
 }
 
 .card-deck {
@@ -301,6 +309,7 @@
     text-align: center;
   }
 }
+
 
 .card-deck {
   .card-body {
@@ -338,4 +347,33 @@
 
 .dropdown-menu.dropdown-menu-right.menu.align-tr-br{
   border-radius: 1em;
+}
+
+
+.felement{
+  overflow: auto;
+}
+
+.contentTableOverflow{
+  overflow: auto;
+  width: 100%;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+#region-main-box #region-main .card.mymaincontent{
+  margin:0;
+}
+
+.text-reset{
+  color:#fff !important;
+}
+
+#completionprogressid{
+  margin-bottom: 2em;
+  height: auto;
+}
+
+li.activity{
+  padding: 1em !important;
 }

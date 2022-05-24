@@ -219,8 +219,12 @@
     border: 0;
     padding: 8px 12px;
     border-radius:2em;
-    margin-bottom: 0.5em;
-    margin-top: 0.5em;
+}
+
+a.btn{
+    margin-right: 0.25em;
+    margin-left: 0.25em;
+    
 }
 .btn.btn-secondary {
     color: white;
@@ -300,7 +304,7 @@ a.nav-link{
     height: 350px;
     .category-button{
         border: 0 !important;
-        padding: 0 !important;
+        padding: 0.1em !important;
         
         &:hover{
             background-color: #7b7b7b !important;
