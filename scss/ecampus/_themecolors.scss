@@ -1,0 +1,64 @@
+
+
+.sitecolor-color-dark {
+
+    $primary: #121212;
+    $secondary: #000000d6;
+    //$fondo: #000000ba;
+    $background: #000000ba;
+    $text_primary: white;
+
+    background-color: $background;
+
+    #nav-drawer{
+        background-color: $primary;
+    }
+
+    .drawer-toggle{
+        background-color: $primary !important;
+    }
+
+    button{
+        background-color: $primary !important;
+    }
+
+    .card-body{
+        background-color: $secondary;
+        border-radius: inherit;
+        p{
+            color: $text_primary;
+        }
+        span{
+            color: $text_primary;
+        }
+    }
+
+    .mymaincontent > .card-body{
+            background-color: transparent;
+    }
+
+    #region-main{
+        background-color: transparent;
+    }
+
+    .navbar{
+        background-color: $secondary;
+    }
+
+    #page-wrapper{
+        background-color: $background !important;
+    }
+
+    #block-region-content{
+        background-color: transparent;
+    }
+
+    select {
+        background-color: $primary !important;
+    }
+
+    .fp-navbar,
+    .filemanager-container {
+        background-color: $secondary;
+    }
+}
