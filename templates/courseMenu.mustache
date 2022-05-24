@@ -1,14 +1,14 @@
 <div class="dropdown">
 
-  <button onclick="myFunction()" class="dropbtn fa fa-arrow-down"></button>
+  <button onclick="myFunction()" class="dropbtn fa fa-arrow-down btnMenuAdministrador"></button>
   <div id="myDropdown" class="dropdown-content">
-    <div class="teacherdash nav-item nav-link">
+    <div class="teacherdash nav-item nav-link itemMenuAdministrador">
         <a role="button" data-toggle="modal" class="btn btn-secondary fhs-tooltip" data-target="#exampleModal">  <i class="fa fa-cogs" aria-hidden="true"></i></a>
     </div>
-    <div class="siteadminlink nav-item nav-link">
+    <div class="siteadminlink nav-item nav-link itemMenuAdministrador">
         <a href="../admin/search.php" data-tooltip="tooltip" data-placement= "bottom" title="{{{siteadmintitle}}}" class="btn btn-secondary fhs-tooltip"><i class="fa fa-sitemap" aria-hidden="true"></i></a>
     </div>
-    <div class="nav-item nav-link">
+    <div class="nav-item nav-link itemMenuAdministrador">
         {{{ output.edit_button_fhs }}}
     </div>    
   </div>
@@ -17,26 +17,3 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 {{> theme_ecampus/modalHelp }}
 </div>
- <!--#region main  -->
-<script>
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-</script>
-<!--#endregion -->
