@@ -2,34 +2,73 @@
 
 .sitecolor-color-dark {
 
-    $primary: #121212;
-    $secondary: #000000d6;
+    $color_primary: #121212;
+    $color_one: #3a3434d6;
+    $color_two: #1f1e1e;
     //$fondo: #000000ba;
-    $background: #000000ba;
-    $text_primary: white;
+    $color_three: #262b3bba;
+    $text_one: white;
+    $text_two: rgba(123, 118, 118, 0.856);
+    $text_table: lavender;
+    $text_gold: gold;
+    $text_link: rgba(210, 208, 251, 0.51);
 
-    background-color: $background;
+    h2, h1, .sectionname{
+        color: $text_two;
+    }
+
+    
+
+    .card{
+        background-color: $color_three !important;
+    }
+
+    .activity, .sectionname{
+        background-color: $color_two !important;
+    }
+
+    .pagination a {
+        background-color: $color_one;
+        color: $text_link;
+    }
+
+    th.header{
+        color: $text_table;
+    }
+
+    td.cell, .site-name{
+        color: $text_one;
+    }
 
     #nav-drawer{
-        background-color: $primary;
+        background-color: $color_primary;
     }
 
     .drawer-toggle{
-        background-color: $primary !important;
+        background-color: $color_primary !important;
     }
 
-    button{
-        background-color: $primary !important;
+    button, input.btn{
+        background-color: $color_primary !important;
+    }
+
+    select, .card-title a{
+        color: $text_gold;
+    }
+
+    .filter-group{
+        color: $text_one !important;
+        background-color: $color_primary !important;
     }
 
     .card-body{
-        background-color: $secondary;
+        background-color: $color_one;
         border-radius: inherit;
         p{
-            color: $text_primary;
+            color: $text_one;
         }
         span{
-            color: $text_primary;
+            color: $text_one;
         }
     }
 
@@ -42,11 +81,11 @@
     }
 
     .navbar{
-        background-color: $secondary;
+        background-color: $color_one;
     }
 
     #page-wrapper{
-        background-color: $background !important;
+        background-color: $color_three !important;
     }
 
     #block-region-content{
@@ -54,11 +93,106 @@
     }
 
     select {
-        background-color: $primary !important;
+        background-color: $color_primary !important;
     }
 
     .fp-navbar,
     .filemanager-container {
-        background-color: $secondary;
+        background-color: $color_one;
+    }
+
+    .page-link{
+        color: $text_one !important;
+    }
+
+    div.bg-white{
+        background-color: $color_two !important;
+    }
+
+    input.form-control, ul.form-autocomplete-suggestions{
+        background-color: $color_three;
+        color: $text_one;
+    }
+    
+    ul.form-autocomplete-suggestions li, .form-group label, .list-unstyled li, .dndupload-message, .fdescription {
+        color: $text_one;
+    }
+
+    //Tablas
+    .contentTableOverflow th {
+        background-color: $color_primary !important;
+    }
+    .contentTableOverflow th.column-itemname{
+        color: $text_two;
+    }
+    .contentTableOverflow td{
+        color: $text_table;
+    }
+
+    //dropdownmenu
+    .dropdown-menu {
+        background-color: $color_primary;
+
+        a{
+            color: $text_one;
+        }
+    }
+
+    //message bar
+    .message-app{
+        background-color: $color_primary;
+        p, h6{
+            color: $text_table;
+        }
+        .list-group-item{
+            background-color: $text_two;
+        }
+        .message p{
+            color: black;
+        }
+        textarea{
+            background-color: $color_one !important;
+            color: $color_one;
+        }
+    }
+    .container-fluid{
+        background-color: $color_primary;
+        textarea{
+            background-color: $color_one !important;
+            color: $color_one;
+        }
+        .list-group-item{
+            background-color: $text_two;
+        }
+    }
+
+
+    //heder bank
+    .cb-navbar{
+        background-color: $color_primary !important;
+        .cb-navbar-breadbrumb{
+            background-color: $color_primary;
+            color: $text_one;
+        }
+    }
+
+
+    //up file 
+    .moodle-dialogue-wrap{
+        background-color: $color_primary;
+        .closebutton{
+            color: $text_one;
+        }
+    }
+
+
+    //navbar 
+    .nav-item, .nav-link i{
+        color: $text_one;
+    }
+
+    //footer
+    #top-footer{
+        background-color: $color_one;
     }
 }
