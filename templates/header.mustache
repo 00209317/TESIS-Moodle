@@ -53,12 +53,8 @@
             <span class="site-name d-none d-md-inline">{{{ sitename }}}</span>
         {{/ output.get_logo }}
     </a>
-    <div class="coursecontrols nav-item d-flex justify-content-center align-items-center">
-
-        {{> theme_ecampus/courseMenu }}
-       
-    </div>
     {{{output.dropdown_menu_button}}}
+     {{> theme_ecampus/accessibilitybar }}
     <ul class="navbar-nav d-none d-md-flex custom-menus ">
         <!-- custom_menu -->
         {{{ output.custom_menu }}}
