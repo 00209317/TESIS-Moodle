@@ -2,11 +2,11 @@
 
 .sitecolor-color-dark {
 
-    $color_primary: #121212;
-    $color_one: #3a3434d6;
+    $color_primary: #1c1b1b;
+    $color_one: #1f1f1f;
     $color_two: #1f1e1e;
-    //$fondo: #000000ba;
-    $color_three: #262b3bba;
+    $color_three: #27282c;
+    $color_background: #121212;
     $text_one: white;
     $text_two: rgba(123, 118, 118, 0.856);
     $text_table: lavender;
@@ -24,7 +24,7 @@
     }
 
     .activity, .sectionname{
-        background-color: $color_two !important;
+        background-color: $color_primary!important;
     }
 
     .pagination a {
@@ -49,7 +49,7 @@
     }
 
     button, input.btn{
-        background-color: $color_primary !important;
+        background-color: $color_background !important;
     }
 
     select, .card-title a{
@@ -81,7 +81,13 @@
     }
 
     .navbar{
-        background-color: $color_one;
+        background-color: $color_primary;
+        button, .course-section a{
+            background-color: $color_one !important;
+            color: $text_one !important;
+            border-color: $text_one !important;
+
+        }
     }
 
     #page-wrapper{
@@ -156,7 +162,7 @@
         }
     }
     .container-fluid{
-        background-color: $color_primary;
+        background-color: $color_background;
         textarea{
             background-color: $color_one !important;
             color: $color_one;
@@ -204,8 +210,37 @@
     //tiles addon
     ul.tiles, .single-section{
         .main{
-            background-color: $color_two !important;
+            background-color: $color_one !important;
         }
+        li.tile{
+            box-shadow: none !important;
+            .tile-link{
+                border-radius: inherit;
+                background-color: $color_primary !important;
+               
+            }
+
+        } 
 
     }
+
+    .form-group{
+        .form-control {
+            background-color: $color_primary !important;
+        }
+    
+        .editor_atto_toolbar{
+            background-color: $color_one;
+        }
+    } 
+    
+    .buttonhidesec0{
+        background-color: $color_one !important;
+        color: $text_one !important;
+    }
+    
+    .breadcrumb li::after{
+        border-left-color: $color_one !important;
+    }
+
 }
