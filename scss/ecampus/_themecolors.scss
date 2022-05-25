@@ -243,4 +243,18 @@
         border-left-color: $color_one !important;
     }
 
+
+    .popover-region{
+        .popover-region-container, .popover-region-footer-container{
+            background-color: $color_primary !important;
+            color: $text_two !important;
+        }
+    }
+
+    #accessibilitybar .bars {
+        border-color: white;
+        border: double;
+    }
+    
+
 }
