@@ -48,8 +48,13 @@
 
             .dropdown {
                 height: fit-content;
+                padding: 0;
                 .dropdown-toggle{
                     height: 2rem;
+                }
+                
+                .nav-link{
+                    padding: 0;
                 }
             }
 
@@ -145,5 +150,9 @@ body.hasaccessibilitybar {
     .message-app .footer-container {
         top: 0px;
     }
+}
+
+ul.nav.navbar-nav div.popover-regionbar, ul.nav.navbar-nav div.popover-region{
+    margin-top: 1em;
 }
 

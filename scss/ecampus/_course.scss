@@ -392,6 +392,10 @@ body.pagelayout-course {
 }
 
 .activity{
+    margin: 1em !important;
+}
+
+.activity,.tile.tile-clickable{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -404,8 +408,7 @@ body.pagelayout-course {
     background-color:#fbfbfb !important;
     border-left: 4px solid #f29550 !important;
     transition: all 1s;
-    margin: 1em !important;
-    
+    width: auto !important;
     
     a{
         text-decoration: none !important;
@@ -440,6 +443,7 @@ body.pagelayout-course {
         padding-left: 2em;
     }
     .activityinstance{
+        padding-right: 0 !important;
         .aalink{
             padding-left: 2em !important;
         }

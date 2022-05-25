@@ -101,7 +101,12 @@
 }
 
 .card.mymaincontent, #page-header, #page-content{
-    margin: 1em 0;
+    margin: 1em 0 0.2em;
+    
+    & > div:first-child{
+        padding-left: 0.5em !important;
+        padding-right: 0.5em !important;
+    }
 }
 
 @media (min-width: 768px){
@@ -111,7 +116,12 @@
     }
     
     .card.mymaincontent, #page-header, #page-content{
-        margin: 1em 2em;
+        margin: 1em 2em 0.2em;
+        
+        & > div:first-child{
+            padding-left: 0.7em !important;
+            padding-right: 0.7em !important;
+        }
     }
     
     #page {
@@ -135,7 +145,11 @@
     }
     
     .card.mymaincontent, #page-header, #page-content{
-        margin: 1em 3em;
+        margin: 1em 3em 0.2em;
+        & > div:first-child{
+            padding-left: 1em !important;
+            padding-right: 1em !important;
+        }
     }
     
     #page {

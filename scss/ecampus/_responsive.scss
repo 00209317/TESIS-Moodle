@@ -280,6 +280,7 @@
 
 .card {
   border-radius: 0.75em;
+  //padding: 1em !important;
   overflow-x:hidden;
 }
 
@@ -350,9 +351,9 @@ div.activityinstance a img {
 }
 
 
-.felement{
+/* .felement{
   overflow: auto;
-}
+} */
 
 .contentTableOverflow{
   overflow: auto;
@@ -377,3 +378,132 @@ div.activityinstance a img {
 li.activity{
   padding: 1em !important;
 }
+
+.format-tiles .modal-backdrop.fade.in {
+  opacity: .4 !important;
+}
+
+.modal-backdrop.show {
+  display: none;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  align-items: center;
+  text-align: center;
+  background-color: #222325;
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 1em;
+  
+  .modal-header{
+    border-bottom: 0;
+    
+    h5{
+      color: #fff;
+    }
+    .close{
+      color: #f29450;
+      text-shadow:none;
+    }
+  }
+  
+  .modal-footer{
+    border-top: 0;
+  }
+  
+  .modal-body a{
+    background-color: #222325;
+    border: 0;
+    color: #fff;
+  }
+}
+
+.format-tiles .course-content ul li.section.main{
+  border-radius: 1.25em;
+}
+
+.course-section > a{
+  background-color: #ffffff!important;
+  color: #003C71!important;
+  border: 2px solid #245885!important;
+  padding: 0.3em 2.2em;
+  font-weight: bold;
+  transition: all 0.5s;
+  
+  &:hover{
+    background-color: #003C71 !important;
+    color: #ffffff !important;
+    border-color: #003C71 !important;
+    transition: all 0.5s;
+  }
+}
+
+.course-section li {
+  display: block;
+  transition-duration: 0.5s;
+  border: 0;
+  border-left: solid #f29450 7px;
+  background-color: #eef5f9;
+  
+  .list-group-item{
+    background-color: transparent;
+    color: #003C71;
+    border: 0;
+}
+
+  &.list-group-item.active,.list-group-item.active{
+      background-color: #003C71;
+      color: #fff;
+      border: 0;
+  }
+  
+}
+
+.course-section  li:hover {
+  cursor: pointer;
+  border: 0;
+  background-color:#004e93;
+  .list-group-item{
+      background-color: transparent;
+      color: #fff;
+  }    
+}
+
+.course-section ul {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  display: none;
+  padding: 0;
+  padding-top: 0.5em;
+  background-color: transparent;
+  border-radius: 1.25em;
+  
+}
+
+.course-section a:hover + ul,
+.course-section ul:hover {
+  transition: all 0.5s;
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+.course-section ul li {
+  clear: both;
+  width: 100%;
+  padding:0;
+  
+  .list-group-item {
+      padding: 0.5rem 1rem;
+  }
+}
+
+.headerabovetiles{
+  margin-top:1em !important;
+}
+
