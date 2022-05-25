@@ -236,7 +236,27 @@ a.btn{
     }
 }
 
-.btn.btn-link{
+.btn-danger {
+    color: white !important;
+    background-color: #710000 !important;
+    transition: all 1s;
+    &:hover{
+        transition: all 0.5s;
+        background-color: #440000
+    }
+}
+
+.btn-success {
+    color: white !important;
+    background-color: #097100 !important;
+    transition: all 1s;
+    &:hover{
+        transition: all 0.5s;
+        background-color: #004405
+    }
+}
+
+.btn-link{
     background-color: #003c71 !important;
     color: white;
     padding: 0.5em 0.8em !important;

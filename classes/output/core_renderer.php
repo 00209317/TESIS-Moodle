@@ -940,20 +940,17 @@ class core_renderer extends \theme_boost\output\core_renderer {
             if ($PAGE->user_is_editing()) {
                 $url->param('edit', 'off');
                 $btn = 'btn-danger editingbutton btnCircles';
-                $title = get_string('editoff', 'theme_fordson');
-                $icon = 'fa-power-off';
+                $title = 'Editar';
+                
             }
             else {
                 $url->param('edit', 'on');
                 $btn = 'btn-success editingbutton btnCircles';
-                $title = get_string('editon', 'theme_fordson');
-                $icon = 'fa-edit';
+                $title = 'Editar';
             }
-            return html_writer::tag('a', html_writer::start_tag('i', array(
-                'class' => $icon . ' fa fa-fw'
-            )) . html_writer::end_tag('i') , array(
+            return html_writer::tag('a', "Editar" , array(
                 'href' => $url,
-                'class' => 'btn edit-btn ' . $btn,
+                'class' => 'edit-btn ' . $btn,
                 'data-tooltip' => "tooltip",
                 'data-placement' => "bottom",
                 'title' => $title,

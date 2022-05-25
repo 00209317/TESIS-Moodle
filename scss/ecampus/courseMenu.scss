@@ -1,51 +1,54 @@
 /* Dropdown Button */
 .dropbtn {
-    background-color: #003c71;
-    color: white;
-    padding: 10px;
-    font-size: 10px;
-    border: none;
-    cursor: pointer;
-    width: 4.5em;
-    border-radius: 5em;
-  }
-  
-  /* Dropdown button on hover & focus */
-  .dropbtn:hover, .dropbtn:focus {
-    background-color: #003c71ab;
+    background-color: #ffffff!important;
+    color: #003C71!important;
+    border: 2px solid #245885!important;
+    padding: 0.3em 2.2em;
+    font-weight: 700;
+    transition: all 0.5s;
+    
+    &:hover{
+      background-color: #003C71 !important;
+      color: #ffffff !important;
+      border-color: #003C71 !important;
+      transition: all 0.5s;
+    }
+    
   }
   
   /* The container <div> - needed to position the dropdown content */
   .dropdown {
     position: relative;
     display: inline-block;
-    padding: 1em;
   }
   
   /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    width: 4.5em;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  z-index: 1; 
+  padding-top: 0.3em;
+  a {
     display: block;
+    transition-duration: 0.5s;
+    border: 0;
+    border-left: solid #f29450 7px;
+    background-color: #eef5f9;
+    color: #003C71;
+    
+    &:hover {
+      background-color: #ddd
+      }
+    }
+    
+  .nav-item{
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #eef5f9;
   }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd}
+}
   
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {display:block;}
-
-
-
-  

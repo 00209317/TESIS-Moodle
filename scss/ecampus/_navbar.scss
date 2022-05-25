@@ -495,11 +495,10 @@ nav.navbar {
     }
 }
 .coursecontrols .nav-item.nav-link {
-    padding: 10px;
     justify-content:center;
     align-items:center;
 }
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .popover-region{
         display: none;
     }

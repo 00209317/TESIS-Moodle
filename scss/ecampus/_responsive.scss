@@ -1,8 +1,29 @@
+#page-header .context-header-settings-menu {
+  display: none !important;
+} 
+
+#page-header .singlebutton{
+  display: none !important;
+}
+
 @media (max-width: 575px) {
   #page-site-index.notloggedin .frontpage-sponsors .row .item {
     display: block;
     width: 100%;
   }
+  
+  #page-header .context-header-settings-menu {
+    display: block !important;
+  } 
+  
+  #page-header .singlebutton{
+    display: inline-block !important;
+  }
+  
+  .coursecontrols{
+    display: none !important;
+  }
+  
 }
 
 @media (max-width: 767px) {
@@ -278,6 +299,12 @@
   }
 }
 
+@media (max-width: 1000px) {
+  .card-deck{
+    display: block;
+  }
+}
+
 .card {
   border-radius: 0.75em;
   //padding: 1em !important;
@@ -328,11 +355,7 @@ div.activityinstance a img {
 }
 
 
-@media (max-width: 1000px) {
-  .card-deck{
-    display: block;
-  }
-}
+
 
 .mod-indent-outer{
   display: block;
@@ -506,4 +529,16 @@ li.activity{
 .headerabovetiles{
   margin-top:1em !important;
 }
+
+@media (max-width: 767.98px){
+  .form-inline #formactionid{
+    width: 80% !important;
+    margin-bottom: 1em;
+  }
+}
+
+#region-main > div.card, #page-header > div > div.card{
+  padding: 0.7em;
+}
+
 
