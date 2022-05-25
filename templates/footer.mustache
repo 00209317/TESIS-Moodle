@@ -22,61 +22,46 @@
     Example context (json): {}
 }}
 
-<div id="top-footer" class="">
+<div id="" class="top-footer">
   <div class="container-fluid" id="footer-contact">
-    <div class="row">
-        <div class="col-md-7 contact">
-            <h4>Universidad Centroamericana José Simeón Cañas</h4>
-            <ul>
+    <div class="row justify-content-center">
+        <div class="col-md-5 contact justify-content-center">
+            <h4 class="text-center">Universidad Centroamericana José Simeón Cañas</h4>
+            <ul class="list-group list-group-horizontal">
                 {{#website}} 
                     <li>
-                        <i class="fi-rr-world"></i>
-                        <a href="{{{website}}}" target="_blank">{{{website}}}</a>
+                        <a href="{{{website}}}" target="_blank" data-toggle="tooltip" data-placement="top" title="Website"><i class="fi-rr-world"></i></a>
                     </li>
                 {{/website}}
                 
                     <li>
-                        <i class="slicon-map"></i>
-                        <a href="https://goo.gl/maps/PDn7GnmWRT4wHffW7" target="_blank">Blvr. Los Próceres, Antiguo Cuscatlán, La Libertad, ESA</a>                       
+                        <a href="https://goo.gl/maps/PDn7GnmWRT4wHffW7" target="_blank" data-toggle="tooltip" data-placement="top" title="Ubicación"><i class="fi fi-rr-map-marker"></i></a>                       
                     </li>
                     <li>
-                        <i class="slicon-clock"></i>
-                        <a href="" target="_blank">Lunes a viernes, de 8:00 a.m. a 12 del mediodía y de 1:00 a 5:45 p.m</a>                       
+                        <a href="https://uca.edu.sv/atencion-administrativa/" target="_blank" data-toggle="tooltip" data-placement="top" title="Atencion administrativa"><i class="fi fi-rr-time-check"></i></a>                       
                     </li>
                     {{#mobile}}
-                    <li>
+                    <!--<li>
                         <i class="slicon-phone"></i>
                         <a href="tel:{{{mobile}}}" target="_blank">{{{mobile}}}</a>
-                    </li>
+                    </li>-->
                 {{/mobile}}
+                    <li>
+                        <a href="https://www.facebook.com/UCA.ElSalvador" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>                       
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/UCA_ES" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>                       
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/uca_elsalvador/?hl=es" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>                       
+                    </li>
+                    <li>
+                        <a href="https://docs.moodle.org/all/es/Moodle_app" target="_blank" data-toggle="tooltip" data-placement="top" title="Download app"><i class="fi fi-rr-download"></i></a>
+                    </li>
                     
             </ul>
         </div>
-        <div class="col-md-5 contact">
-            <h4>Conéctate con nosotros</h4>
-            <ul>
-                    <!--<li>
-                        <i class="slicon-envelope"></i>
-                        <a href="#" target="_blank">direccion.comunicaciones@uca.edu.sv</a>                       
-                    </li>-->
-                    <li>
-                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
-                        <a href="https://www.facebook.com/UCA.ElSalvador" target="_blank">Siguenos en Facebook</a>                       
-                    </li>
-                    <li>
-                        <i class="fa fa-twitter-square" aria-hidden="true"></i>
-                        <a href="https://twitter.com/UCA_ES" target="_blank">Siguenos en Twitter</a>                       
-                    </li>
-                    <li>
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                        <a href="https://www.instagram.com/uca_elsalvador/?hl=es" target="_blank">Siguenos en Instagram</a>                       
-                    </li>
-                    <li>
-                        <i class="fa fa-mobile"></i>
-                        <a href="{{{telegram}}}" target="_blank">Descarga la versión Móvil</a>
-                    </li>
-            </ul>
-        </div>
+        
         <!--<div class="col-md-2 contact">
           
           {{!{{{ output.standard_footer_html }}
