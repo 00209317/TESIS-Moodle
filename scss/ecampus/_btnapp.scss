@@ -258,7 +258,7 @@ a.btn{
 
 .btn-link{
     background-color: #003c71 !important;
-    color: white;
+    color: white !important;
     padding: 0.5em 0.8em !important;
     transition: all 0.7s;
     
@@ -272,6 +272,14 @@ a.btn{
     i.icon{
         margin: 0 !important;
         color: white !important;
+    }
+}
+
+.closewidget > .btn-link{
+    background-color: transparent !important;
+    
+    i{
+        color: rgb(0, 0, 0) !important;
     }
 }
 
