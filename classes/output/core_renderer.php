@@ -958,4 +958,20 @@ class core_renderer extends \theme_boost\output\core_renderer {
             return $output;
         }
     }
+
+    public function dropdown_menu_button() {
+    global $SITE, $PAGE, $USER, $CFG, $COURSE,$isteacher,$context;
+    $context = context_course::instance($COURSE->id);
+    $isteacher = has_capability('moodle/course:viewhiddenactivities', $context);
+    if (!$PAGE->user_allowed_editing() || $COURSE->id <= 1) {
+        return '';
+    }
+    if ($PAGE->pagelayout == 'course' ) {
+        if(has_capability('moodle/course:viewhiddenactivities', $context)){
+            return $this->render_from_template('theme_ecampus/courseMenu', $isteacher);
+            return $output;
+        }
+
+    }
+}
 }
