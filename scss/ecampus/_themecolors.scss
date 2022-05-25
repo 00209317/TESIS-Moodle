@@ -195,4 +195,17 @@
     #top-footer{
         background-color: $color_one;
     }
+
+    //
+    .activity a{
+        color: $text_one;
+    }
+
+    //tiles addon
+    ul.tiles, .single-section{
+        .main{
+            background-color: $color_two !important;
+        }
+
+    }
 }
