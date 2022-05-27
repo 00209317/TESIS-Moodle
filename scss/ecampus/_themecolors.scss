@@ -1,22 +1,77 @@
 
 
 .sitecolor-color-dark {
-
+    //MODO OSCURO
     $color_primary: #1c1b1b;
     $color_one: #1f1f1f;
     $color_two: #1f1e1e;
     $color_three: #27282c;
     $color_background: #121212;
     $text_one: white;
-    $text_two: rgba(123, 118, 118, 0.856);
-    $text_table: lavender;
+    $text_two: rgba(193, 193, 193, 0.856);
+    $text_table: rgb(94, 94, 101);
     $text_gold: gold;
     $text_link: rgba(210, 208, 251, 0.51);
-
-    h2, h1, .sectionname{
-        color: $text_two;
+    $filter_navbrand: grayscale(1);
+    
+    //MODO TRITANOPIA
+    /* $color_primary: #3b676e;
+    $color_one: #f29ea8;
+    $color_two: #a63733;
+    $color_three: #eda0a4;
+    $color_background: #f9e2ec;
+    $text_one: #000000;
+    $text_two: #ffffff;
+    $text_table: #000000;
+    $text_gold: #000000;
+    $text_link: #000000;
+    $filter_navbrand:  grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8); */
+    
+    //MODO PROTANOPIA
+    /* $color_primary: #3f3f4d;
+    $color_one: #f0edd8;
+    $color_two: #7a7943;
+    $color_three: #a5a491;
+    $color_background: #f0efe7;
+    $text_one: #000000;
+    $text_two: #ffffff;
+    $text_table: #000000;
+    $text_gold: #000000;
+    $text_link: #000000;
+    $filter_navbrand: sepia(100%); */
+    
+    //MODO DEUTERANOPIA
+    /* $color_primary: #444549;
+    $color_one: #f0edd8;
+    $color_two: #7a7943;
+    $color_three: #a5a491;
+    $color_background: #f0efe7;
+    $text_one: #000000;
+    $text_two: #ffffff;
+    $text_table: #000000;
+    $text_gold: #000000;
+    $text_link: #000000;
+    $filter_navbrand: sepia(100%); */
+    
+    .btn{
+        background-color: $color_two !important;
+        color: $text_two !important;
     }
 
+    h2, h1, .sectionname, .progress-indic-label{
+        color: $text_one !important;
+    }
+    
+    a{
+        color: $text_one;
+    }
+
+    .menu-action-text, .dropdown-item.menu-action i, .popover-region i, 
+    .popover-regionbar i, .dropdown-item a, .dropdown-item i,.custom-select,
+    .badge.badge-info{
+        color: $text_two !important;
+    }
+    
     
 
     .card{
@@ -24,7 +79,10 @@
     }
 
     .activity, .sectionname{
-        background-color: $color_primary!important;
+        background-color: $color_three!important;
+        span{
+            color: $text_two !important;
+        }
     }
 
     .pagination a {
@@ -39,6 +97,12 @@
     td.cell, .site-name{
         color: $text_one;
     }
+    
+    .list-unstyled{
+        li:hover{
+            background-color: $color_two;
+        }
+    }
 
     #nav-drawer{
         background-color: $color_primary;
@@ -49,7 +113,7 @@
     }
 
     button, input.btn{
-        background-color: $color_background !important;
+        background-color: $color_two !important;
     }
 
     select, .card-title a{
@@ -60,16 +124,48 @@
         color: $text_one !important;
         background-color: $color_primary !important;
     }
+    
+    ul.section{
+        background-color: transparent !important;
+    }
+    
+    .tile.tile-clickable{
+        background-color: $color_primary !important;
+    }
+    
 
     .card-body{
-        background-color: $color_one;
+        background-color: transparent !important;
         border-radius: inherit;
         p{
-            color: $text_one;
+            color: $text_two;
         }
         span{
-            color: $text_one;
+            color: $text_two !important;
+
+            h3{
+                color: $text_two !important;
+            }
         }
+    }
+    
+    .gradereport-grader-table, .pagination{
+        a{
+            color: $text_two !important;
+            background-color: $color_two !important;
+            border-color: $color_two !important;
+        }
+    }
+    
+    .gradereport-grader-table th, table th{
+        a{
+            background-color: transparent !important;
+            border-color: transparent !important;
+        }
+    }
+    
+    .navbar-brand.has-logo img{
+        -webkit-filter: $filter_navbrand;
     }
 
     .mymaincontent > .card-body{
@@ -127,12 +223,21 @@
     //Tablas
     .contentTableOverflow th {
         background-color: $color_primary !important;
+        color: $text_two !important;
     }
     .contentTableOverflow th.column-itemname{
         color: $text_two;
     }
     .contentTableOverflow td{
         color: $text_table;
+    }
+    
+    [data-region="blocks-column"]{
+        background-color: $color_primary !important;
+    }
+    
+    #sidepreopen-control{
+        background-color: $color_three !important;
     }
 
     //dropdownmenu
@@ -168,7 +273,7 @@
             color: $color_one;
         }
         .list-group-item{
-            background-color: $text_two;
+            background-color: $color_one;
         }
     }
 
@@ -199,7 +304,7 @@
 
     //footer
     #top-footer{
-        background-color: $color_one;
+        background-color: $color_three !important;
     }
 
     //
@@ -210,7 +315,7 @@
     //tiles addon
     ul.tiles, .single-section{
         .main{
-            background-color: $color_one !important;
+            background-color: $color_background !important;
         }
         li.tile{
             box-shadow: none !important;
@@ -222,6 +327,13 @@
 
         } 
 
+    }
+    .section.main.clearfix{
+        background-color: $color_three !important;
+    }
+    
+    .section > .activity{
+        background-color: $color_primary !important;
     }
 
     .form-group{
@@ -257,4 +369,34 @@
     }
     
 
+    #footer-contact{
+        background-color: $color_three !important;
+    }
+    
+    #page-navbar .breadcrumb li>* {
+        background-color: $color_primary !important;
+        border-color: $color_primary !important;
+    }
+    
+    .input-group .input-group-append .btn,.input-group .input-group-prepend:first-child .input-group-text,.input-group .input-group-prepend:last-child .input-group-text{
+        background-color: $color_two !important;
+    }
+    
+    .icon{
+        color:$text_one;
+    }
+    
+    .top-footer h4{
+        color:$text_one;
+    }
+    
+    .custom-control-input:checked~.custom-control-label::before {
+        color: #fff;
+        border-color: $color_two;
+        background-color: $color_primary;
+    }
+    
+    .top-footer .contact ul li a, .top-footer .contact ul li i{
+        color: $text_one;
+    }
 }
