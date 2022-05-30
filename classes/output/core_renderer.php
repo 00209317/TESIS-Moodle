@@ -974,4 +974,18 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
     }
 }
+public function link_to_bancoPreguntas()
+{
+    global $PAGE, $COURSE, $CFG, $DB, $OUTPUT,$context, $url;
+    $context = context_course::instance($COURSE->id);
+    $url = "../question/edit.php?courseid=";
+    if ($PAGE->pagelayout == 'course') {
+        $url = $url . $COURSE->id ;
+        return html_writer::tag('a', "Banco de preguntas", array(
+            'href' => $url,
+           ));
+           return $output;     
+    }
+    return $output;
+}
 }
