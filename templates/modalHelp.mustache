@@ -5,13 +5,12 @@
 
       </div>
       <div class="modal-body modalQuestion">
-
         <ul class="list-unstyled">
-            <li><a href="http://localhost/course/view.php?id=1&amp;sesskey=wMZwLFHrgA&amp;edit=on">Activar edición</a></li>
-            <li><a href="http://localhost/admin/settings.php?section=frontpagesettings">Editar ajustes</a></li>
-            <li><a href="http://localhost/filter/manage.php?contextid=2">Filtros</a></li>
-            <li><a href="http://localhost/backup/backup.php?id=1">Copia de respaldo</a></li>
-            <li><a href="http://localhost/backup/restorefile.php?contextid=2">Restaurar</a></li>
+            <li><a href={{activarEdicion}}>Activar edición</a></li>
+            <li><a href={{activarEdicion}}>Editar ajustes</a></li>
+            <li><a href={{filtros}}>Filtros</a></li>
+            <li><a href={{respaldo}}>Copia de respaldo</a></li>
+            <li><a href={{restaurar}}>Restaurar</a></li>
             <hr style="border: 0.1px solid gray";>
 
             <h4 style="color:white";>Reportes</h4>        
@@ -25,7 +24,7 @@
 
             <h4><a href="http://localhost/question/edit.php?courseid=1" style="color:white";>Banco de preguntas</a></h4>
             <li><a href="http://localhost/question/edit.php?courseid=1">Preguntas</a></li>
-            <li><a href="http://localhost/question/category.php?courseid=1">Categorías</a></li>
+            <li><a href={{url}}>Categorías</a></li>
             <li><a href="http://localhost/question/import.php?courseid=1">Importar</a></li>
             <li><a href="http://localhost/question/export.php?courseid=1">Exportar</a></li>
             <hr style="border: 0.1px solid gray";>

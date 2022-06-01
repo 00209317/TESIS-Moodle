@@ -977,4 +977,59 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
     }
 }
+public function link_to_bancoPreguntas()
+{
+    global $PAGE, $COURSE, $CFG, $DB, $OUTPUT,$context, $url;
+    $context = context_course::instance($COURSE->id);
+    $url = "../question/edit.php?courseid=";
+    if ($PAGE->pagelayout == 'course') {
+        $url = $url . $COURSE->id ;
+        return html_writer::tag('a', "Banco de preguntas", array(
+            'href' => $url,
+           ));
+           return $output;     
+    }
+    return $output;
+}
+public function link_a_Preguntas()
+{
+    global $PAGE, $COURSE, $CFG, $DB, $OUTPUT,$context, $url;
+    $context = context_course::instance($COURSE->id);
+    $url = "/question/edit.php?courseid=";
+    if ($PAGE->pagelayout == 'course') {
+        $url = $url . $COURSE->id ;
+        return html_writer::tag('a', "Preguntas", array(
+            'href' => $url,
+           ));
+           return $output;     
+    }
+    return $output;
+}
+public function modalHelp_links()
+{
+    global $PAGE, $COURSE, $CFG, $DB, $OUTPUT,$context, $contextid, $url, $id,$userid,$activarEdicion,$editarAjustes,$filtros,$respaldo,$restaurar,$file;
+    //$file = $COURSE->get_course_overviewfiles();
+    //$contextid = $file->get_contextid();
+    $userid = $user->id;
+    $context = context_course::instance($COURSE->id);
+    $url = "/question/edit.php?courseid=";
+    $id = $COURSE->id ;
+    //1er Bloque
+    $activarEdicion = "../course/view.php?id=1&amp;sesskey=wMZwLFHrgA&amp;edit=on";
+    $editarAjustes = "../admin/settings.php?section=frontpagesettings";
+    $filtros  = "../filter/manage.php?contextid=".$id;
+    $respaldo = "../backup/backup.php?id=". $id;
+    $restaurar = "../backup/restorefile.php?contextid=".$id;
+
+    //Reportes
+    $links=['url' => $url,'id' =>$id,'activarEdicion' => $activarEdicion, 'editarAjustes'=>$editarAjustes, 
+            'filtros' => $filtros, 'respaldo' => $respaldo, 'restaurar' => $restaurar];
+    if ($PAGE->pagelayout == 'course') {
+        $url = $url . $id ;
+        
+        return $this->render_from_template('theme_ecampus/modalHelp', $links);
+           return $output;     
+    }
+    return $output;
+}
 }
