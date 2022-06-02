@@ -1007,23 +1007,51 @@ public function link_a_Preguntas()
 }
 public function modalHelp_links()
 {
-    global $PAGE, $COURSE, $CFG, $DB, $OUTPUT,$context, $contextid, $url, $id,$userid,$activarEdicion,$editarAjustes,$filtros,$respaldo,$restaurar,$file;
-    //$file = $COURSE->get_course_overviewfiles();
-    //$contextid = $file->get_contextid();
+    global $PAGE, $COURSE, $CFG, $DB, $OUTPUT,$context, $contextid, 
+    $url, $id,$userid,$activarEdicion,$editarAjustes,$filtros,$respaldo,$restaurar,
+    $desglose,$bitacora, $bitacoraLive, $reporteActividad,$participacionCurso,$reglasMonitorioEvento,
+    $bancoPreguntas, $categorias, $importar, $exportar,
+    $grupos, $permisos,$rolesAsignados, $permisosComprobar;
+    
     $userid = $user->id;
     $context = context_course::instance($COURSE->id);
     $url = "/question/edit.php?courseid=";
     $id = $COURSE->id ;
+
     //1er Bloque
-    $activarEdicion = "../course/view.php?id=1&amp;sesskey=wMZwLFHrgA&amp;edit=on";
+    $activarEdicion = "../course/view.php?id=" . $id ."&amp;sesskey=wMZwLFHrgA&amp;edit=on";
     $editarAjustes = "../admin/settings.php?section=frontpagesettings";
     $filtros  = "../filter/manage.php?contextid=".$id;
     $respaldo = "../backup/backup.php?id=". $id;
     $restaurar = "../backup/restorefile.php?contextid=".$id;
 
     //Reportes
-    $links=['url' => $url,'id' =>$id,'activarEdicion' => $activarEdicion, 'editarAjustes'=>$editarAjustes, 
-            'filtros' => $filtros, 'respaldo' => $respaldo, 'restaurar' => $restaurar];
+    $desglose = "../report/competency/index.php?id=".$id;
+    $bitacora = "../report/log/index.php?id=".$id;
+    $bitacoraLive ="../report/loglive/index.php?id=".$id;
+    $reporteActividad = "../report/outline/index.php?id=".$id;
+    $participacionCurso = "../report/participation/index.php?id=".$id;
+    $reglasMonitorioEvento = "../admin/tool/monitor/managerules.php?courseid=".$id;
+
+    //BancoDePreguntas
+    $bancoPreguntas = "../question/edit.php?courseid=".$id;
+    $categorias = "../question/category.php?courseid=".$id;
+    $importar ="../question/import.php?courseid=".$id;
+    $exportar = "../question/export.php?courseid=".$id;
+
+    //Usuarios
+    $grupos = "../group/index.php?id=".$id;
+    //Permisos
+    $permisos = "../admin/roles/permissions.php?contextid=".$id;
+    $rolesAsignados = "../admin/roles/assign.php?contextid=".$id;
+    $permisosComprobar = "../admin/roles/check.php?contextid=".$id;
+
+    //Array de URL's
+    $links=['url' => $url,'id' =>$id,
+            'activarEdicion' => $activarEdicion, 'editarAjustes'=>$editarAjustes,'filtros' => $filtros, 'respaldo' => $respaldo, 'restaurar' => $restaurar,
+            'desglose' => $desglose, 'bitacora'=>$bitacora, 'bitacoraLive' =>$bitacoraLive, 'reporteActividad'=>$reporteActividad, 'participacionCurso' => $participacionCurso, 'reglasMonitorioEvento'=>$reglasMonitorioEvento,
+            'bancoPreguntas' => $bancoPreguntas, 'categorias'=> $categorias, 'importar'=>$importar, 'exportar'=>$exportar,
+            'grupos'=>$grupos, 'permisos'=>$permisos, 'rolesAsignados'=>$rolesAsignados,  'permisosComprobar'=>$permisosComprobar];
     if ($PAGE->pagelayout == 'course') {
         $url = $url . $id ;
         
