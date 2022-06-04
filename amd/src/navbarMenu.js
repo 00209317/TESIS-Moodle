@@ -1,9 +1,10 @@
 var sidebar = document.getElementById("nav-drawer")
 var navbar = document.getElementById("accessibilitybar_container")
 
-//tool
+//tool-------------
 var toolbutton = document.getElementById("tool_navbar_control")
 var navbarcontainer = document.getElementById("navbar_content_control")
+//-----------------
 
 if(sidebar.children[0].children[0].getAttribute("data-key") == 'course-sections'){
     var course_section = sidebar.children[0].children[0];
@@ -25,7 +26,7 @@ if(sidebar.children[0].children[0].getAttribute("data-key") == 'course-sections'
     navbar.appendChild(divNavBar);
 }
 
-//tool
+//tool-------------
 toolbutton.onclick = function(){
     if(navbarcontainer.classList.contains('show_navbar_tool')){
         navbarcontainer.classList.remove('show_navbar_tool');
@@ -33,4 +34,5 @@ toolbutton.onclick = function(){
         navbarcontainer.classList.add('show_navbar_tool');
     }
 }
+//-----------------
 
