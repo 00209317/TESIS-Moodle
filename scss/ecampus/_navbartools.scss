@@ -2,6 +2,9 @@
     display: flex;
     flex-direction: row;
 }
+#tool_navbar_control_content{
+    display: none;
+}
 
 @media (max-width: 900px) {
     #navbar_content_control{
@@ -13,6 +16,9 @@
         top: 90px;
         right: 20px;
         flex-direction: column-reverse;
+    }
+    #tool_navbar_control_content{
+        display: block;
     }
 }
 
