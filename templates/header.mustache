@@ -64,42 +64,42 @@
         {{{ output.page_heading_menu }}}
     </ul>
     <ul class="nav navbar-nav ml-auto mr-3">
-        <div class="d-none d-lg-block">
-
+        
+        <div class="accessibility-menu-panel">
+            {{> theme_ecampus/accessibilitybar }}
+        </div>
+        <div id="navbar_content_control">
+            
+            <div class="popover-regionbar collapsed accesibilitybutton">
+                <div class="popover-regionbar-toggle nav-link icon-no-margin">
+                    <li class="nav-item accessibility-menu-btn-mod">
+                        <span id="themesettings-control-mod">
+                            <i title="{{#str}}themesettingstitle, theme_ecampus{{/str}}"
+                                class="fi fi-rr-brush">
+                            </i>
+                        </span>
+                        
+                    </li>
+                </div>
+                
+            </div> 
+            
+            {{{ output.navbar_plugin_output }}}
+    
+            {{{ output.user_menu }}}
         </div>
 
-        <li class="nav-item accessibility-menu-panel">
-            {{> theme_ecampus/accessibilitybar }}
-        </li>
-        <div class="popover-regionbar collapsed accesibilitybutton">
+        <div class="popover-regionbar">
             <div class="popover-regionbar-toggle nav-link icon-no-margin">
-                <li class="nav-item accessibility-menu-btn-mod">
-                    <span id="themesettings-control-mod">
-                        <i title="{{#str}}themesettingstitle, theme_ecampus{{/str}}"
+                <li class="nav-item">
+                    <span id="tool_navbar_control">
+                        <i title="Herramientas"
                             class="fi fi-rr-settings-sliders">
                         </i>
                     </span>
                 </li>
             </div>
         </div>
-        <div class="popover-regionbar collapsed accesibilitybutton">
-            <div class="popover-regionbar-toggle nav-link icon-no-margin">
-                <li class="nav-item accessibility-menu-btn-mod">
-                    <span id="themesettings-control-mod">
-                        <i title="{{#str}}themesettingstitle, theme_ecampus{{/str}}"
-                            class="fi fi-rr-brush">
-                        </i>
-                    </span>
-                </li>
-            </div>
-        </div>
-            
-
-        
-        
-        {{{ output.navbar_plugin_output }}}
-
-        {{{ output.user_menu }}}
         
     </ul>
 </nav>

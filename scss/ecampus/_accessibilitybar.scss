@@ -119,6 +119,7 @@
 
 #accessibilitybar {
     position: fixed;
+    z-index: 100;
     right: 1vw;
     margin-top: calc(#{$navbar-height});
 }
