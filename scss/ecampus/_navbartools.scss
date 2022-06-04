@@ -16,6 +16,11 @@
         top: 90px;
         right: 20px;
         flex-direction: column-reverse;
+
+        background-color: white;
+        border: 1px solid #6b5b5bdb;
+        border-radius: 0.5em;
+        align-items: center;
     }
     #tool_navbar_control_content{
         display: block;
