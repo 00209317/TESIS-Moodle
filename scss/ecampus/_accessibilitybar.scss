@@ -7,9 +7,6 @@
         max-height: 33vh;
     }
     
-
-    
-
     .bars {
         display: flex;
         flex-direction: column;
@@ -65,40 +62,64 @@
 
         .sitecolor {
             display: flex;
+            flex-direction: column;
+            align-items: center;
             border: #000000;
             li {
                 margin: 0.5em 0;
             }
-        }
-        
-        #sitecolor_color1 {
-            background-color: #003c71;
-            color: #ffffff;
-            border-bottom-left-radius: 0.5em;
-            border-top-left-radius: 0.5em;
-        }
 
-        #sitecolor_color2 {
-            background-color: #ffffcc;
-            color: #272c33;
-        }
+            #sitecolor_color1{
+                background-color: #033868 !important;
+                color: #ffffcc !important;
+                border-top-left-radius: 0.5em;
+            }
+            #sitecolor_colordark{
+                background-color: #1f1e1e!important;
+                color: rgba(193,193,193,.856)!important;
+                border-top-right-radius: 0.5em
+            }
 
-        #sitecolor_color3 {
-            background-color: #99ccff;
-            color: #272c33;
-        }
-
-        #sitecolor_color4 {
-            color: #ffff00;
-            background-color: #000000;
-            border-top-right-radius: 0.5em;
-            border-bottom-right-radius: 0.5em;
+            #sitecolor_colortri {
+                background-color: #385f65 !important;
+                color: #d69195 !important;
+                border-top-left-radius: 0.5em;
+                border-bottom-left-radius: 0.5em;
+            }
+            #sitecolor_colorpto {
+                background-color: #7a7943 !important;
+                color: #ffffff !important;
+            }
+            #sitecolor_colordeu {
+                background-color: #404044 !important;
+                color: #969584 !important;
+                border-top-right-radius: 0.5em;
+                border-bottom-right-radius: 0.5em;
+            }
+    
+            #sitecolor_color2 {
+                background-color: #ffffcc !important;
+                color: #272c33 !important;
+                border-bottom-left-radius: 0.5em;
+            }
+    
+            #sitecolor_color3 {
+                background-color: #99ccff !important;
+                color: #272c33 !important;
+            }
+    
+            #sitecolor_color4 {
+                color: #ffff00 !important;
+                background-color: #000000 !important;
+                border-bottom-right-radius: 0.5em;
+            }
         }
     }
 }
 
 #accessibilitybar {
     position: fixed;
+    z-index: 100;
     right: 1vw;
     margin-top: calc(#{$navbar-height});
 }
@@ -115,6 +136,10 @@
 
         .bars {
             width: 100%;
+            
+            .ul-daltonico{
+                flex-direction: column;
+            }
         }
 
         
@@ -141,8 +166,6 @@ body.hasaccessibilitybar:not(.notloggedin) {
 }
 
 body.hasaccessibilitybar {
-    
-
     #nav-drawer {
         height: calc(100% - #{$navbar-height} - 80px);
     }

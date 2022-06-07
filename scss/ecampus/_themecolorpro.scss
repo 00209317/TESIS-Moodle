@@ -1,34 +1,9 @@
 
 
-.sitecolor-color-dark {
-    //MODO OSCURO
-    $color_primary: #1c1b1b;
-    $color_one: #1f1f1f;
-    $color_two: #1f1e1e;
-    $color_three: #27282c;
-    $color_background: #121212;
-    $text_one: white;
-    $text_two: rgba(193, 193, 193, 0.856);
-    $text_table: rgb(94, 94, 101);
-    $text_gold: gold;
-    $text_link: rgba(210, 208, 251, 0.51);
-    $filter_navbrand: grayscale(1);
-    
-    //MODO TRITANOPIA
-    /* $color_primary: #3b676e;
-    $color_one: #f29ea8;
-    $color_two: #a63733;
-    $color_three: #eda0a4;
-    $color_background: #f9e2ec;
-    $text_one: #000000;
-    $text_two: #ffffff;
-    $text_table: #000000;
-    $text_gold: #000000;
-    $text_link: #000000;
-    $filter_navbrand:  grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8); */
+.sitecolor-color-pro {
     
     //MODO PROTANOPIA
-    /* $color_primary: #3f3f4d;
+    $color_primary: #3f3f4d;
     $color_one: #f0edd8;
     $color_two: #7a7943;
     $color_three: #a5a491;
@@ -38,20 +13,7 @@
     $text_table: #000000;
     $text_gold: #000000;
     $text_link: #000000;
-    $filter_navbrand: sepia(100%); */
-    
-    //MODO DEUTERANOPIA
-    /* $color_primary: #444549;
-    $color_one: #f0edd8;
-    $color_two: #7a7943;
-    $color_three: #a5a491;
-    $color_background: #f0efe7;
-    $text_one: #000000;
-    $text_two: #ffffff;
-    $text_table: #000000;
-    $text_gold: #000000;
-    $text_link: #000000;
-    $filter_navbrand: sepia(100%); */
+    $filter_navbrand: sepia(100%); 
     
     .btn{
         background-color: $color_two !important;
@@ -176,8 +138,8 @@
         background-color: transparent;
     }
 
-    .navbar{
-        background-color: $color_primary;
+    .navbar, #navbar_content_control{
+        background-color: $color_primary !important;
         button, .course-section a{
             background-color: $color_one !important;
             color: $text_one !important;

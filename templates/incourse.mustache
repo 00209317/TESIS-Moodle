@@ -48,28 +48,7 @@
         "hasregionmainsettingsmenu": false
     }
 }}
-{{{ output.doctype }}}
-<html {{{ output.htmlattributes }}}>
-<head>
-    <title>{{{ output.page_title }}}</title>
-    <link rel="shortcut icon" href="{{{ output.favicon }}}" />
-    {{{ output.standard_head_html }}}
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-</head>
-
-<body {{{ bodyattributes }}}>
-{{> core/local/toast/wrapper}}
-
-<div id="page-wrapper">
-
-    {{{ output.standard_top_of_body_html }}}
-
-    {{>theme_ecampus/header}}
-
+{{>theme_ecampus/inc_start}}
     <div id="page" class="container-fluid">
         {{{ output.full_header }}}
 
@@ -95,25 +74,7 @@
                     {{{ output.activity_navigation }}}
                 </section>
             </div>
-            {{#hasblocks}}
-                <div class="col-md-3 col-sm-12 col-xs-12">
-                    {{{ sidepreblocks }}}
-                </div>
-            {{/hasblocks}}
         </div>
     </div>
 
-    {{> theme_ecampus/nav-drawer }}
-
-</div>
-
-{{> theme_ecampus/footer }}
-
-</body>
-</html>
-{{#js}}
-require(['theme_boost/loader']);
-require(['theme_boost/drawer'], function(mod) {
-    mod.init();
-});
-{{/js}}
+    {{>theme_ecampus/inc_end}}  
