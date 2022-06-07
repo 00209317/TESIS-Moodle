@@ -176,8 +176,8 @@
         background-color: transparent;
     }
 
-    .navbar{
-        background-color: $color_primary;
+    .navbar, #navbar_content_control{
+        background-color: $color_primary !important;
         button, .course-section a{
             background-color: $color_one !important;
             color: $text_one !important;

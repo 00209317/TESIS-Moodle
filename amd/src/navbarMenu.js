@@ -4,6 +4,7 @@ var navbar = document.getElementById("accessibilitybar_container")
 //tool-------------
 var toolbutton = document.getElementById("tool_navbar_control")
 var navbarcontainer = document.getElementById("navbar_content_control")
+var toolmodal = document.getElementById("navbartoolsmodal")
 //-----------------
 
 if(sidebar.children[0].children[0].getAttribute("data-key") == 'course-sections'){
@@ -32,7 +33,15 @@ toolbutton.onclick = function(){
         navbarcontainer.classList.remove('show_navbar_tool');
     } else {
         navbarcontainer.classList.add('show_navbar_tool');
+        toolmodal.classList.add('show-display-flex')
+        console.log("push tools button")
     }
+}
+
+toolmodal.onclick = function(){
+    navbarcontainer.classList.remove('show_navbar_tool');
+    toolmodal.classList.remove('show-display-flex')
+    console.log("push tools modal")
 }
 //-----------------
 

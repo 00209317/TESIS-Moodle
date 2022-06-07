@@ -166,8 +166,6 @@ body.hasaccessibilitybar:not(.notloggedin) {
 }
 
 body.hasaccessibilitybar {
-    
-
     #nav-drawer {
         height: calc(100% - #{$navbar-height} - 80px);
     }
