@@ -990,17 +990,19 @@ public function link_to_bancoPreguntas()
 }
 public function link_a_Preguntas()
 {
-    global $PAGE, $COURSE, $CFG, $DB, $OUTPUT,$context, $url;
+    global $SITE, $PAGE, $USER, $CFG, $COURSE,$isteacher,$context;
     $context = context_course::instance($COURSE->id);
-    $url = "/question/edit.php?courseid=";
-    if ($PAGE->pagelayout == 'course') {
-        $url = $url . $COURSE->id ;
-        return html_writer::tag('a', "Preguntas", array(
-            'href' => $url,
-           ));
-           return $output;     
+    $isteacher = has_capability('moodle/course:viewhiddenactivities', $context);
+    if (!$PAGE->user_allowed_editing() || $COURSE->id <= 1) {
+        return '';
     }
-    return $output;
+    if ($PAGE->pagelayout == 'course' ) {
+        if(has_capability('moodle/course:viewhiddenactivities', $context)){
+            return $this->render_from_template('theme_ecampus/courseMenu2', $isteacher);
+            return $output;
+        }
+
+    }
 }
 public function modalHelp_links()
 {
