@@ -1,20 +1,22 @@
 <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h2 class="modal-title" id="exampleModalLabel" style="color:white";>Ajustes de portada</h2>
+        <h5 class="modal-title" id="exampleModalLabel" style="color:white";>Ajustes de portada <i class="fi fi-rr-e-learning"></i></h5>
 
       </div>
       <div class="modal-body modalQuestion">
 
-        <ul class="list-unstyled">
-            <li><a href="http://localhost/course/view.php?id=1&amp;sesskey=wMZwLFHrgA&amp;edit=on">Activar edición</a></li>
+      <div class="row justify-content-start">
+        <div class="col-md-6">
+            <ul class="list-unstyled">
+            <li><a class="fontpequeno" href="http://localhost/course/view.php?id=1&amp;sesskey=wMZwLFHrgA&amp;edit=on">Activar edición</a></li>
             <li><a href="http://localhost/admin/settings.php?section=frontpagesettings">Editar ajustes</a></li>
             <li><a href="http://localhost/filter/manage.php?contextid=2">Filtros</a></li>
             <li><a href="http://localhost/backup/backup.php?id=1">Copia de respaldo</a></li>
             <li><a href="http://localhost/backup/restorefile.php?contextid=2">Restaurar</a></li>
             <hr style="border: 0.1px solid gray";>
 
-            <h4 style="color:white";>Reportes</h4>        
+            <h5 style="color:white";>Reportes <i class="fi fi-rr-mobile"></i></h5>        
             <li><a href="http://localhost/report/competency/index.php?id=1">Desglose de competencia</a></li>
             <li><a href="http://localhost/report/log/index.php?id=1">Bitácoras</a></li>
             <li><a href="http://localhost/report/loglive/index.php?id=1">Bitácoras en vivo</a></li>
@@ -23,24 +25,31 @@
             <li><a href="http://localhost/admin/tool/monitor/managerules.php?courseid=1">Reglas para monitoreo de eventos</a></li>
             <hr style="border: 0.1px solid gray";>
 
-            <h4><a href="http://localhost/question/edit.php?courseid=1" style="color:white";>Banco de preguntas</a></h4>
+        </ul>
+        </div>
+        <div class="col-md-6">
+          <ul class="list-unstyled">
+
+            <h5><a href="http://localhost/question/edit.php?courseid=1" style="color:white";>Banco de preguntas <i class="fi fi-rr-comment-alt"></i></a></h5>
             <li><a href="http://localhost/question/edit.php?courseid=1">Preguntas</a></li>
             <li><a href="http://localhost/question/category.php?courseid=1">Categorías</a></li>
             <li><a href="http://localhost/question/import.php?courseid=1">Importar</a></li>
             <li><a href="http://localhost/question/export.php?courseid=1">Exportar</a></li>
             <hr style="border: 0.1px solid gray";>
 
-            <h4 style="color:white";>Usuarios</h4>
+            <h5 style="color:white";>Usuarios <i class="fi fi-rr-users"></i></h5>
             <li><a href="http://localhost/group/index.php?id=1">Grupos</a></li>
             <hr style="border: 0.1px solid gray";>
 
-            <h4 ><a href="http://localhost/admin/roles/permissions.php?contextid=2" style="color:white";>Permisos</a></h4>
+            <h5><a href="http://localhost/admin/roles/permissions.php?contextid=2" style="color:white";>Permisos <i class="fi fi-rr-lock"></i></a></h5>
             <li><a href="http://localhost/admin/roles/assign.php?contextid=2">Roles asignados</a></li>
             <li><a href="http://localhost/admin/roles/check.php?contextid=2">Comprobar los permisos</a></li>
 
         </ul>
+        </div>
+      </div>
 
-
+        
 
       </div>
       <div class="modal-footer">
