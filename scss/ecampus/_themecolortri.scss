@@ -12,37 +12,57 @@
     $text_table: #000000;
     $text_gold: #000000;
     $text_link: #000000;
+    $text_contrast: #3b3b3b;
     $filter_navbrand:  grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
     
     
-    .btn{
+    
+    .btn {
         background-color: $color_two !important;
         color: $text_two !important;
     }
 
-    h2, h1, .sectionname, .progress-indic-label{
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .sectionname,
+    .progress-indic-label {
         color: $text_one !important;
     }
-    
-    a{
+
+    a {
         color: $text_one;
     }
 
-    .menu-action-text, .dropdown-item.menu-action i, .popover-region i, 
-    .popover-regionbar i, .dropdown-item a, .dropdown-item i,.custom-select,
-    .badge.badge-info{
+    div {
+        color: $text_one;
+    }
+
+    .menu-action-text,
+    .dropdown-item.menu-action i,
+    .popover-region i,
+    .popover-regionbar i,
+    .dropdown-item a,
+    .dropdown-item i,
+    .custom-select,
+    .badge.badge-info {
         color: $text_two !important;
     }
-    
-    
 
-    .card{
+
+
+    .card {
         background-color: $color_three !important;
     }
 
-    .activity, .sectionname{
-        background-color: $color_three!important;
-        span{
+    .activity,
+    .sectionname {
+        background-color: $color_three !important;
+
+        span {
             color: $text_two !important;
         }
     }
@@ -52,95 +72,105 @@
         color: $text_link;
     }
 
-    th.header{
+    th.header {
         color: $text_table;
     }
 
-    td.cell, .site-name{
+    td.cell,
+    .site-name {
         color: $text_one;
     }
-    
-    .list-unstyled{
-        li:hover{
+
+    .list-unstyled {
+        li:hover {
             background-color: $color_two;
         }
     }
 
-    #nav-drawer{
+    #nav-drawer {
         background-color: $color_primary;
     }
 
-    .drawer-toggle{
+    .drawer-toggle {
         background-color: $color_primary !important;
     }
 
-    button, input.btn{
+    button,
+    input.btn {
         background-color: $color_two !important;
     }
 
-    select, .card-title a{
+    select,
+    .card-title a {
         color: $text_gold;
     }
 
-    .filter-group{
+    .filter-group {
         color: $text_one !important;
         background-color: $color_primary !important;
     }
-    
-    ul.section{
+
+    ul.section {
         background-color: transparent !important;
     }
-    
-    .tile.tile-clickable{
+
+    .tile.tile-clickable {
         background-color: $color_primary !important;
     }
-    
 
-    .card-body{
+
+    .card-body {
         background-color: transparent !important;
         border-radius: inherit;
-        p{
+
+        p {
             color: $text_two;
         }
-        span{
+
+        span {
             color: $text_two !important;
 
-            h3{
+            h3 {
                 color: $text_two !important;
             }
         }
     }
-    
-    .gradereport-grader-table, .pagination{
-        a{
+
+    .gradereport-grader-table,
+    .pagination {
+        a {
             color: $text_two !important;
             background-color: $color_two !important;
             border-color: $color_two !important;
         }
     }
-    
-    .gradereport-grader-table th, table th{
-        a{
+
+    .gradereport-grader-table th,
+    table th {
+        a {
             background-color: transparent !important;
             border-color: transparent !important;
         }
     }
-    
-    .navbar-brand.has-logo img{
+
+    .navbar-brand.has-logo img {
         -webkit-filter: $filter_navbrand;
     }
 
-    .mymaincontent > .card-body{
-            background-color: transparent;
-    }
-
-    #region-main{
+    .mymaincontent>.card-body {
         background-color: transparent;
     }
 
-    .navbar, #navbar_content_control{
+    #region-main {
+        background-color: transparent;
+    }
+
+    .navbar,
+    #navbar_content_control {
         background-color: $color_primary !important;
-        button, .course-section a{
+
+        button,
+        .course-section a {
             background-color: $color_one !important;
             color: $text_one !important;
             border-color: $text_one !important;
@@ -148,11 +178,11 @@
         }
     }
 
-    #page-wrapper{
+    #page-wrapper {
         background-color: $color_three !important;
     }
 
-    #block-region-content{
+    #block-region-content {
         background-color: transparent;
     }
 
@@ -165,20 +195,25 @@
         background-color: $color_one;
     }
 
-    .page-link{
+    .page-link {
         color: $text_one !important;
     }
 
-    div.bg-white{
+    div.bg-white {
         background-color: $color_two !important;
     }
 
-    input.form-control, ul.form-autocomplete-suggestions{
+    input.form-control,
+    ul.form-autocomplete-suggestions {
         background-color: $color_three;
         color: $text_one;
     }
-    
-    ul.form-autocomplete-suggestions li, .form-group label, .list-unstyled li, .dndupload-message, .fdescription {
+
+    ul.form-autocomplete-suggestions li,
+    .form-group label,
+    .list-unstyled li,
+    .dndupload-message,
+    .fdescription {
         color: $text_one;
     }
 
@@ -187,18 +222,20 @@
         background-color: $color_primary !important;
         color: $text_two !important;
     }
-    .contentTableOverflow th.column-itemname{
+
+    .contentTableOverflow th.column-itemname {
         color: $text_two;
     }
-    .contentTableOverflow td{
+
+    .contentTableOverflow td {
         color: $text_table;
     }
-    
-    [data-region="blocks-column"]{
+
+    [data-region="blocks-column"] {
         background-color: $color_primary !important;
     }
-    
-    #sidepreopen-control{
+
+    #sidepreopen-control {
         background-color: $color_three !important;
     }
 
@@ -206,44 +243,53 @@
     .dropdown-menu {
         background-color: $color_primary;
 
-        a{
+        a {
             color: $text_one;
         }
     }
 
     //message bar
-    .message-app{
+    .message-app {
         background-color: $color_primary;
-        p, h6{
+
+        p,
+        h6 {
             color: $text_table;
         }
-        .list-group-item{
+
+        .list-group-item {
             background-color: $text_two;
         }
-        .message p{
+
+        .message p {
             color: black;
         }
-        textarea{
+
+        textarea {
             background-color: $color_one !important;
             color: $color_one;
         }
     }
-    .container-fluid{
+
+    .container-fluid {
         background-color: $color_background;
-        textarea{
+
+        textarea {
             background-color: $color_one !important;
             color: $color_one;
         }
-        .list-group-item{
+
+        .list-group-item {
             background-color: $color_one;
         }
     }
 
 
     //heder bank
-    .cb-navbar{
+    .cb-navbar {
         background-color: $color_primary !important;
-        .cb-navbar-breadbrumb{
+
+        .cb-navbar-breadbrumb {
             background-color: $color_primary;
             color: $text_one;
         }
@@ -251,75 +297,94 @@
 
 
     //up file 
-    .moodle-dialogue-wrap{
-        background-color: $color_primary;
-        .closebutton{
+    .moodle-dialogue {
+        top: 615px;
+    }
+
+    .moodle-dialogue-wrap {
+        background-color: $color_one;
+        border: none;
+        border-radius: 1em;
+        padding: 0.5em;
+
+        .closebutton {
             color: $text_one;
         }
     }
 
 
     //navbar 
-    .nav-item, .nav-link i{
+    .nav-item,
+    .nav-link i {
         color: $text_one;
     }
 
     //footer
-    #top-footer{
+    #top-footer {
         background-color: $color_three !important;
     }
 
     //
-    .activity a{
+    .activity a {
         color: $text_one;
     }
 
     //tiles addon
-    ul.tiles, .single-section{
-        .main{
+    ul.tiles,
+    .single-section {
+        .main {
             background-color: $color_background !important;
         }
-        li.tile{
+
+        li.tile {
             box-shadow: none !important;
-            .tile-link{
+
+            .tile-link {
                 border-radius: inherit;
                 background-color: $color_primary !important;
-               
+
             }
 
-        } 
+        }
 
     }
-    .section.main.clearfix{
+
+    .section.main.clearfix {
         background-color: $color_three !important;
     }
-    
-    .section > .activity{
+
+    .section>.activity {
         background-color: $color_primary !important;
     }
 
-    .form-group{
+    .form-group {
         .form-control {
             background-color: $color_primary !important;
         }
-    
-        .editor_atto_toolbar{
+
+        .editor_atto_toolbar {
             background-color: $color_one;
+
+            .atto_group {
+                background-color: transparent !important;
+            }
         }
-    } 
-    
-    .buttonhidesec0{
+    }
+
+    .buttonhidesec0 {
         background-color: $color_one !important;
         color: $text_one !important;
     }
-    
-    .breadcrumb li::after{
+
+    .breadcrumb li::after {
         border-left-color: $color_one !important;
     }
 
 
-    .popover-region{
-        .popover-region-container, .popover-region-footer-container{
+    .popover-region {
+
+        .popover-region-container,
+        .popover-region-footer-container {
             background-color: $color_primary !important;
             color: $text_two !important;
         }
@@ -329,36 +394,69 @@
         border-color: white;
         border: double;
     }
-    
 
-    #footer-contact{
+
+    #footer-contact {
         background-color: $color_three !important;
     }
-    
+
     #page-navbar .breadcrumb li>* {
         background-color: $color_primary !important;
         border-color: $color_primary !important;
     }
-    
-    .input-group .input-group-append .btn,.input-group .input-group-prepend:first-child .input-group-text,.input-group .input-group-prepend:last-child .input-group-text{
+
+    .input-group .input-group-append .btn,
+    .input-group .input-group-prepend:first-child .input-group-text,
+    .input-group .input-group-prepend:last-child .input-group-text {
         background-color: $color_two !important;
     }
-    
-    .icon{
-        color:$text_one;
+
+    .icon {
+        color: $text_one;
     }
-    
-    .top-footer h4{
-        color:$text_one;
+
+    .top-footer h4 {
+        color: $text_one;
     }
-    
+
     .custom-control-input:checked~.custom-control-label::before {
         color: #fff;
         border-color: $color_two;
         background-color: $color_primary;
     }
-    
-    .top-footer .contact ul li a, .top-footer .contact ul li i{
+
+    .top-footer .contact ul li a,
+    .top-footer .contact ul li i {
         color: $text_one;
     }
+
+    .formulation.clearfix {
+        border: 0;
+        background-color: transparent;
+    }
+
+    .que .info {
+        color: $text_one;
+        padding: 1em;
+        margin-bottom: 1.8em;
+        border-radius: 1.25em;
+        background-color: $color_primary;
+        border: none;
+    }
+
+    .closewidget>.btn-link i {
+        color: $text_one !important;
+    }
+
+    
+    .no-overflow {
+        p {
+            color: $text_contrast !important;
+        }
+    }
+    
+    .hover-tooltip{
+        color: $text_contrast !important;
+    }
+
 }

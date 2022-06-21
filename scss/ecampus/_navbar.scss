@@ -499,6 +499,18 @@ nav.navbar {
     align-items:center;
 }
 
+
+nav.navbar{
+    z-index: 900 !important;
+}
+
+.drawer .message-app{
+    z-index: 1000;
+}
+
+#navbar_content_control.show_navbar_tool{
+    z-index: 950;
+}
 /*
 @media (max-width: 900px) {
     .popover-region{
