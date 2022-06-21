@@ -541,4 +541,45 @@ li.activity{
   padding: 0.7em;
 }
 
+.review_option_item{
+  width: 100% !important;
+  height: 2.4em !important;
+  display: flex !important;
+  
+  .form-check {
+    width: 85% !important;
+    justify-content: flex-start !important;
+    overflow-wrap: normal !important;
+  }
+  
+  .btn-link {
+    line-height: 1.5 !important;
+    vertical-align: bottom !important;
+    width: 15% !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}
 
+.form-group .fitem {
+  width: 100%;
+} 
+
+.fdate_time_selector{
+  flex-wrap: nowrap !important;
+  overflow: scroll !important;
+} 
+
+.preferences-container .preference-table tr td:not(:first-child){
+  width: auto !important;
+}
+
+.table.preference-table{
+  tbody td div{ 
+    background-color: transparent !important;
+    .row .col-6{
+      flex: auto !important;
+      max-width: none !important;
+    }
+  }
+}

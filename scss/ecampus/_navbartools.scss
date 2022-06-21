@@ -25,6 +25,10 @@
         border-radius: 0.5em;
         align-items: center;
         z-index: 81;
+        
+        .dropdown-toggle::after{
+            content: none;
+        }
     }
     #tool_navbar_control_content{
         display: block;
