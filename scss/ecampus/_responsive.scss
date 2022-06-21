@@ -415,7 +415,7 @@ li.activity{
   flex-direction: column;
   margin-left: auto;
   align-items: center;
-  text-align: center;
+  text-align: left;
   background-color: #222325;
   color: #fff;
   padding: 1.5rem;
@@ -441,6 +441,7 @@ li.activity{
     background-color: #222325;
     border: 0;
     color: #fff;
+    font-size: small;
   }
 }
 
