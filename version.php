@@ -30,10 +30,10 @@ defined('MOODLE_INTERNAL') || die();
 $plugin->component = 'theme_ecampus';
 
 // This is the version of the plugin.
-$plugin->version = 0000000053;
+$plugin->version = 0000000055;
 
 // This is the named version.
-$plugin->release = '0.0.5.3';
+$plugin->release = '0.0.5.5';
 
 // This is a stable release.
 $plugin->maturity = MATURITY_STABLE;
