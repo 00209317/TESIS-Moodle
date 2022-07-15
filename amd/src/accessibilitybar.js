@@ -44,18 +44,9 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
 
         //this.setFontSize(classList);
 
-        
+        this.getUserSession();
 
-        this.getColor();
-
-        this.reloadFontSite();
-
-        this.toggleFontsizeButtons();
-
-        this.registerEventListeners();
-
-        this.getFontSize();
-        
+        //this.registerEventListeners();
         
     };
 
@@ -175,6 +166,33 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
         request[0].done(function() {
             this.reloadFontsizeClass();
         }.bind(this));
+    };
+    
+    AccessibilityBar.prototype.getUserSession = function() {
+        var request = Ajax.call([{
+            methodname: 'theme_ecampus_getUserSession',
+            args: {}
+        }]);
+        console.log("ABAJO VA EL REQUEST")
+        console.log(request)
+        request[0].done(function(result) {
+            console.log("SOY EL MEGA RESULTADO" + result.isLogedin)
+            if(result.isLogedin == "ok"){
+                console.log("isLoggedIn Ok: charging...")
+
+                myClass.getColor();
+                myClass.reloadFontSite();
+                myClass.toggleFontsizeButtons();
+                myClass.getFontSize();
+                console.log("isLoggedIn Ok: charging... complete! ;v")
+            } else {
+                console.log("isLoggedIn no Ok: F...")
+            }
+            
+        }).fail(function(error){
+            console.log("isLoggedIn Error:" + error)
+        });
+        console.log("isLoggedIn End")
     };
 
     AccessibilityBar.prototype.reloadFontsizeClass = function() {

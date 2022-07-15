@@ -84,5 +84,13 @@ $functions = array(
         'description' => 'Get the user theme settings font size.',
         'type' => 'read',
         'ajax' => true
+    ),
+    'theme_ecampus_getUserSession' => array(
+        'classname' => 'theme_ecampus\api\accessibility',
+        'classpath' => 'theme_ecampus\classes\api\accessibility.php',
+        'methodname' => 'getUserSession',
+        'description' => 'Get is Session User.',
+        'type' => 'read',
+        'ajax' => true
     )
 );

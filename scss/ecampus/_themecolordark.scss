@@ -52,7 +52,9 @@
     $text_link: #000000;
     $filter_navbrand: sepia(100%); */
 
-    @import "./themes.scss";
+    //@import "./themes.scss";
     
-    
+    *{
+        background-color: $color_primary;
+    }
 }

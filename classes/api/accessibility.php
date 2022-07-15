@@ -382,5 +382,24 @@ class accessibility extends external_api {
             'sitefontsize' => new external_value(PARAM_TEXT, 'the user selected color'),
         ]);
     }
+
+
+
+    public static function getUserSession_returns() {
+        return new external_single_structure([
+            'isLogedin' => new external_value(PARAM_TEXT, 'the user selected session'),
+        ]);
+    }
+
+    public static function getUserSession_parameters() {
+        return new external_function_parameters([]);
+    }
+    
+    public static function getUserSession() {
+        if (isloggedin()) {
+            return ['isLogedin' => 'ok'];
+        }
+        return ['isLogedin' => 'error'];
+    }
     
 }
