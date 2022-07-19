@@ -1,4 +1,8 @@
-#accessibilitybar {
+#accessibilitybar{
+    display: none;
+}
+
+#accessibilitybar.allvisible {
     padding: .2rem;
     height: 30px;
     
@@ -117,7 +121,7 @@
     }
 }
 
-#accessibilitybar {
+#accessibilitybar.allvisible {
     position: fixed;
     z-index: 100;
     right: 1vw;
@@ -125,7 +129,7 @@
 }
 
 @media (max-width: 768px) {
-    #accessibilitybar {
+    #accessibilitybar.allvisible {
         width: 100vw;
         top: 10vh;
         left: 0;

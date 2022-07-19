@@ -1,4 +1,4 @@
-#navbar_content_control{
+#navbar_content_control.allvisible{
     display: flex;
     flex-direction: row;
 }
@@ -10,10 +10,10 @@
 }
 
 @media (max-width: 500px) {
-    #navbar_content_control{
+    #navbar_content_control.allvisible{
         display: none;
     }
-    #navbar_content_control.show_navbar_tool{
+    #navbar_content_control.allvisible.show_navbar_tool{
         display: flex;
         position: fixed;
         top: 90px;
@@ -30,7 +30,7 @@
             content: none;
         }
     }
-    #tool_navbar_control_content{
+    #tool_navbar_control_content.allvisible{
         display: block;
     }
     #navbartoolsmodal.show-display-flex{

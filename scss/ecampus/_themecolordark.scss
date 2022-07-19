@@ -55,6 +55,56 @@
     //@import "./themes.scss";
     
     *{
-        background-color: $color_primary;
+        background-color: $color_background !important;
+        color: $text_one !important;
     }
+    
+    body{
+        background-color: $color_background !important;
+    }
+    
+    .navbar-brand.has-logo img, .img-fluid{
+        -webkit-filter: $filter_navbrand;
+    }
+    
+    #nav-drawer {
+        background-color: $color_primary !important;
+        *{
+            background-color: $color_primary !important;
+        }
+    }
+    
+    .card.card3, .activity, .tile.tile-clickable{
+        box-shadow: none !important;
+        background-color: $color_one !important;
+        *{
+            background-color: transparent !important;
+        }
+        &:hover{
+            background-color: $color_three !important;
+            
+            a{
+                background-color: transparent !important;
+            }
+        }
+    }
+    
+    .btn{
+        background-color: $color_three !important;
+    }
+    
+    .navbar, #navbar_content_control {
+        background-color: $color_primary !important;
+        * {
+            background-color: $color_primary !important;
+        }
+    }
+    
+    .popover-region-toggle,.popover-regionbar-toggle{
+        height: 100%;
+        .nav-item{
+            height: 100%;
+        }
+    }
+
 }

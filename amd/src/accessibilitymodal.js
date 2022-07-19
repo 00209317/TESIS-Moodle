@@ -16,7 +16,7 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
         console.log('render onclick')
         jQuery(SELECTORS.ACCESS_BTN).click(function (element) {
             console.log('my, onclick push')
-            this.start(jQuery(SELECTORS.MODAL).hasClass( "hidden-display" ))
+            this.start(jQuery(SELECTORS.MODAL).hasClass( "show-display-flex" ))
         }.bind(this));
         
         jQuery(SELECTORS.BACKGROUND).click(function (element) {
@@ -26,15 +26,15 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
     }
 
     AccessibilityModal.prototype.start = function(flag) {
-        if(flag){
+        if(!flag){
             jQuery(SELECTORS.MODAL).addClass('show-display-flex');
-            jQuery(SELECTORS.MODAL).removeClass('hidden-display');
+            //jQuery(SELECTORS.MODAL).removeClass('hidden-display');
 
             jQuery(SELECTORS.BACKGROUND).addClass('show-display-flex');
             jQuery(SELECTORS.BACKGROUND).removeClass('hidden-display');
         } else {
             jQuery(SELECTORS.MODAL).removeClass('show-display-flex');
-            jQuery(SELECTORS.MODAL).addClass('hidden-display');
+            //jQuery(SELECTORS.MODAL).addClass('hidden-display');
 
             jQuery(SELECTORS.BACKGROUND).removeClass('show-display-flex');
             jQuery(SELECTORS.BACKGROUND).addClass('hidden-display');

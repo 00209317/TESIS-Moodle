@@ -40,14 +40,32 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
 
     var AccessibilityBar = function() {
         myClass = this
+
+        var exist = document.querySelector("#action-menu-toggle-1");
+        var mybar = document.querySelector("#accessibilitybar");
+        var mybarButton = document.querySelector("#themesettings-control-mod");
+        var navbarcontent = document.querySelector("#navbar_content_control");
+        var toolbutton = document.querySelector("#tool_navbar_control_content");
+        
+        
+        if(exist != null){
+            mybar.classList.add('allvisible');
+            navbarcontent.classList.add('allvisible');
+            toolbutton.classList.add('allvisible');
+            this.registerEventListeners();
+            this.getFontSize();
+            this.getColor();
+            this.reloadFontSite();
+        } else {
+            mybarButton.classList.add('hidden-display');
+            navbartoolsmodal
+        }
+
+        
+        //this.toggleFontsizeButtons();
         
 
-        //this.setFontSize(classList);
-
-        this.getUserSession();
-
-        //this.registerEventListeners();
-        
+        //this.getUserSession();
     };
 
     AccessibilityBar.prototype.registerEventListeners = function() {
@@ -127,7 +145,7 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
         fontsizeClass = item;
         fontsizeClassOp = itemarr[1];
         fontsizeClassSize = itemarr[2];
-        this.reloadFontsizeClass();
+        myClass.reloadFontsizeClass();
     
     }
 
@@ -164,7 +182,7 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
         }]);
 
         request[0].done(function() {
-            this.reloadFontsizeClass();
+            myClass.reloadFontsizeClass();
         }.bind(this));
     };
     
@@ -206,7 +224,7 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
             fontsizeClassOp = null;
             fontsizeClassSize = null;
 
-            this.toggleFontsizeButtons();
+            myClass.toggleFontsizeButtons();
 
             return;
         }
@@ -247,7 +265,7 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
             jQuery('body').addClass(fontsizeClass);
         }
 
-        this.toggleFontsizeButtons();
+        myClass.toggleFontsizeButtons();
     };
 
     AccessibilityBar.prototype.toggleFontsizeButtons = function() {
@@ -291,7 +309,7 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
         }]);
 
         request[0].done(function() {
-            this.reloadSitecolorClass();
+            myClass.reloadSitecolorClass();
         }.bind(this));
     };
 
