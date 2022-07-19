@@ -939,13 +939,13 @@ class core_renderer extends \theme_boost\output\core_renderer {
             $url->param('sesskey', sesskey());
             if ($PAGE->user_is_editing()) {
                 $url->param('edit', 'off');
-                $btn = 'btn-danger editingbutton btnCircles';
+                $btn = 'btn-danger editingbutton btnCircles displayNone';
                 $title = 'Editar';
                 
             }
             else {
                 $url->param('edit', 'on');
-                $btn = 'btn-success editingbutton btnCircles';
+                $btn = 'btn-success editingbutton btnCircles displayNone';
                 $title = 'Editar';
             }
             return html_writer::tag('a', "Editar" , array(
