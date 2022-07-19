@@ -3,11 +3,12 @@ var link = document.URL
 var courseId = link.split("")[link.length - 1]
 
 //Activar Edicion
-var activarEdicion = document.getElementById("activarEdicion")
-activarEdicion.href="../backup/restorefile.php?contextid="+courseId
+/*var activarEdicion = document.getElementById("activarEdicion")
+activarEdicion.href="../course/view.php?id=" + courseId +"&amp;sesskey=wMZwLFHrgA&amp;edit=on";
+*/
 //Editar ajustes
 var editarAjustes = document.getElementById("editarAjustes")
-editarAjustes.href="../admin/settings.php?section=frontpagesettings"+courseId
+editarAjustes.href="../admin/settings.php?section=frontpagesettings"
 //filtros
 var filtros = document.getElementById("filtros")
 filtros.href="../filter/manage.php?contextid="+courseId
