@@ -58,7 +58,7 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
             this.reloadFontSite();
         } else {
             mybarButton.classList.add('hidden-display');
-            navbartoolsmodal
+            //navbartoolsmodal
         }
 
         
@@ -74,7 +74,7 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
 
             fontsizeCurrentAction = btn.data('action');
 
-            this.fontSize();
+            myClass.fontSize();
         }.bind(this)); 
 
         jQuery(SELECTORS.SITE_COLOR).click(function(element) {
@@ -82,7 +82,7 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
 
             sitecolorCurrentAction = btn.data('action');
 
-            this.siteColor();
+            myClass.siteColor();
         }.bind(this));
 
         jQuery(SELECTORS.SITE_FONT).click(function(element) {
@@ -90,7 +90,7 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
 
             sitefontCurrentAction = btn.data('action');
 
-            this.siteFont();
+            myClass.siteFont();
         }.bind(this));
     };
 
@@ -181,9 +181,7 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
             }
         }]);
 
-        request[0].done(function() {
-            myClass.reloadFontsizeClass();
-        }.bind(this));
+        myClass.reloadFontsizeClass();
     };
     
     AccessibilityBar.prototype.getUserSession = function() {

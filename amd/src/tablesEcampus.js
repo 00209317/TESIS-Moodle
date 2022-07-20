@@ -1,6 +1,6 @@
 function tablesOverFlow(){
     var tables = document.querySelectorAll("table");
-    
+    console.log("ESTOY DENTRO DE LA FUNCION DE TABLAS")
     tables.forEach(function(element) {
         var parent = element.parentElement;
         if(!parent.classList.contains("contentTableOverflow")){
@@ -13,4 +13,6 @@ function tablesOverFlow(){
     });
 }
 
-window.onload = tablesOverFlow();
+console.log("ESTOY AFUERA DE LA FUNCION DE TABLAS")
+windows.onload = tablesOverFlow();
+

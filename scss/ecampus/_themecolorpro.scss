@@ -3,10 +3,10 @@
 .sitecolor-color-pro {
     
     //MODO PROTANOPIA
-    $color_primary: #3f3f4d;
+    $color_primary: #a9a9b2;
     $color_one: #f0edd8;
-    $color_two: #7a7943;
-    $color_three: #a5a491;
+    $color_two: #b8b66a;
+    $color_three: #fbf698;
     $color_background: #f0efe7;
     $text_one: #000000;
     $text_two: #ffffff;
@@ -16,6 +16,7 @@
     $text_contrast: #3b3b3b;
     $filter_navbrand: sepia(100%); 
     
+    background-color: $color_background !important;
     
     @import "./themes.scss";
 

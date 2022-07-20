@@ -1,5 +1,9 @@
-#accessibilitybar{
+#accessibilitybar.hidden-display{
     display: none;
+}
+
+#accessibilitybar.show-display-flex{
+    display: flex;
 }
 
 #accessibilitybar.allvisible {

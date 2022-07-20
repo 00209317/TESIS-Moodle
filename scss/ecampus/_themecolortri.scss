@@ -2,11 +2,11 @@
 
 .sitecolor-color-tri {
     //MODO TRITANOPIA
-    $color_primary: #3b676e;
-    $color_one: #f29ea8;
-    $color_two: #804947;
-    $color_three: #eda0a4;
-    $color_background: #f9e2ec;
+    $color_primary: #6e8488;
+    $color_one: #ffd5da;
+    $color_two: #e77282;
+    $color_three: #ffeff1;
+    $color_background: #b5b5b5;
     $text_one: #000000;
     $text_two: #ffffff;
     $text_table: #000000;
@@ -14,6 +14,8 @@
     $text_link: #000000;
     $text_contrast: #3b3b3b;
     $filter_navbrand:  grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+    
+    background-color: $color_background !important;
     
     @import "./themes.scss";
 }

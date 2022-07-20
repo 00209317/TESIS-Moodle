@@ -1,4 +1,4 @@
-.btn {
+/* .btn {
     background-color: $color_two !important;
     color: $text_two !important;
 }
@@ -455,4 +455,135 @@ ul.tiles,
 
 .fitem{
     background-color: transparent !important;
+}
+ */
+*{
+    background-color: $color_one !important;
+    color: $text_one !important;
+}
+
+#page-wrapper , #page, #page-content,#page-content *, #page-header,#page-header *,#accessibilitybar .container_accessibilitybar, #accessibilitybar{
+    background-color: transparent !important;
+}
+
+.navbar-brand.has-logo img, div>.img-fluid{
+    background-color: transparent !important;
+    -webkit-filter: $filter_navbrand;
+}
+
+#nav-drawer{
+    background-color: $color_primary !important;
+    *{
+        background-color: $color_primary !important;
+    }
+}
+.top-footer {
+    background-color: $color_background !important;
+    *{
+        background-color: $color_background !important;
+    }
+}
+
+#page .card{
+    box-shadow: none !important;
+    background-color: $color_one !important;
+    *{
+        background-color: transparent !important;
+    }
+}
+
+#page .card.card3, #page .activity, #page .tile.tile-clickable{
+    box-shadow: none !important;
+    background-color: $color_three !important;
+    *{
+        background-color: transparent !important;
+    }
+    &:hover{
+        background-color: $color_two !important;
+        color: $text_two !important;
+        a{
+            background-color: transparent !important;
+        }
+    }
+}
+
+#page .btn, .btn, .btn.btn-link{
+    background-color: $color_three !important;
+    *, i.icon{
+        background-color: transparent !important;
+        color: $text_one !important;
+    }
+    &:hover{
+        background-color: $color_two !important;
+        color: $text_two !important;
+        i.icon{
+            color: $text_two !important;
+        }
+    }
+}
+
+.btn.btnMenuAdministrador, .course-section>a{
+    border-color: $color_background !important;
+    color: $text_one !important;
+    *{
+        background-color: transparent !important;
+    }
+}
+
+.itemMenuAdministrador{
+    a{
+        &:hover{
+            background-color: $color_background !important;
+        }
+    }
+}
+
+.navbar, #navbar_content_control {
+    background-color: $color_primary !important;
+    * {
+        background-color: $color_primary !important;
+    }
+}
+
+.popover-region-toggle,.popover-regionbar-toggle{
+    height: 100%;
+    .nav-item{
+        height: 100%;
+    }
+}
+
+.modal-backdrop.fade.in{
+    background-color:#000 !important;
+}
+
+#page .icon, #page i{
+    color: $text_one !important;
+}
+
+#page .section.main.moveablesection.state-visible{
+    background-color: $color_one !important;
+}
+
+.message-app{
+    background-color: $color_background !important;
+    *{
+        background-color: $color_background !important;
+    }
+}
+
+div.message{
+    background-color: $color_three !important;
+    *{
+        background-color: $color_three !important;
+    }
+}
+
+#page-content .list-unstyled li{
+    &:hover {
+        background-color: $color_three !important;
+        a{
+            background-color: $color_three !important;
+            color: $text_one !important;
+        }
+    }
 }
