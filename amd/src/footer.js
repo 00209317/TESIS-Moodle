@@ -18,7 +18,6 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
     
     hiddenFooter.prototype.registerEventListeners = function() {
         jQuery(SELECTORS.BTN_CONTAC).click(function (element){
-            console.log(jQuery(SELECTORS.FOOTER_CONTAC));
             this.start(jQuery(SELECTORS.FOOTER_CONTAC).hasClass("d-none"))
         }.bind(this))
     }

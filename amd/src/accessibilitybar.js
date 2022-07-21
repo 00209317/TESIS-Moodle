@@ -32,31 +32,42 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
 
     var fontsizeClass = null;
     var fontsizeClassOp = null;
-    var fontsizeClassSize = null;
+    var fontsizeClassPrev = null;
+    //var fontsizeClassSize = null;
     var fontsizeCurrentAction = null;
+
     var sitecolorCurrentAction = null;
     var sitefontCurrentAction = null;
     var myClass = null
 
     var AccessibilityBar = function() {
         myClass = this
-        
 
-        //this.setFontSize(classList);
-
-        
-
-        this.getColor();
-
-        this.reloadFontSite();
-
-        this.toggleFontsizeButtons();
-
-        this.registerEventListeners();
-
-        this.getFontSize();
+        var exist = document.querySelector("#action-menu-toggle-1");
+        var mybar = document.querySelector("#accessibilitybar");
+        var mybarButton = document.querySelector("#themesettings-control-mod");
+        var navbarcontent = document.querySelector("#navbar_content_control");
+        var toolbutton = document.querySelector("#tool_navbar_control_content");
         
         
+        if(exist != null){
+            mybar.classList.add('allvisible');
+            navbarcontent.classList.add('allvisible');
+            toolbutton.classList.add('allvisible');
+            this.registerEventListeners();
+            this.getFontSize();
+            this.getColor();
+            this.reloadFontSite();
+        } else {
+            mybarButton.classList.add('hidden-display');
+            //navbartoolsmodal
+        }
+
+        
+        //this.toggleFontsizeButtons();
+        
+
+        //this.getUserSession();
     };
 
     AccessibilityBar.prototype.registerEventListeners = function() {
@@ -64,8 +75,10 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
             var btn = jQuery(element.currentTarget);
 
             fontsizeCurrentAction = btn.data('action');
+            myClass.fontSize();
+            //myClass.setFontSize(fontsizeCurrentAction);
 
-            this.fontSize();
+            
         }.bind(this)); 
 
         jQuery(SELECTORS.SITE_COLOR).click(function(element) {
@@ -73,7 +86,7 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
 
             sitecolorCurrentAction = btn.data('action');
 
-            this.siteColor();
+            myClass.siteColor();
         }.bind(this));
 
         jQuery(SELECTORS.SITE_FONT).click(function(element) {
@@ -81,7 +94,7 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
 
             sitefontCurrentAction = btn.data('action');
 
-            this.siteFont();
+            myClass.siteFont();
         }.bind(this));
     };
 
@@ -92,13 +105,11 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
         }]);
 
         request[0].done(function(result) {
-            console.log("color 1 is: " + result.sitecolor);
             //document.getElementById('fonttype').value = result.fonttype;
             sitecolorCurrentAction = result.sitecolor;  
             myClass.reloadSitecolorClass();              
             
         }).fail(function(error){
-            console.log("color 1 is: fail")
         }) 
     }
 
@@ -109,35 +120,37 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
         }]);
 
         request[0].done(function(result) {
-            console.log("size 1 is: " + result.sitefontsize);
             //document.getElementById('fonttype').value = result.fonttype;
             myClass.setFontSize(result.sitefontsize)
 
             
-            myClass.reloadSitecolorClass();              
+            //myClass.reloadSitecolorClass();              
             
         }).fail(function(error){
-            console.log("size 1 is: fail")
         }) 
     }
 
     AccessibilityBar.prototype.setFontSize = function(item){
-        console.log('setfont')
 
-        if (item.includes('fontsize-inc-')){
-            fontsizeCurrentAction = 'increase'
-        } 
-        if (item.includes('fontsize-dec-')){
-            fontsizeCurrentAction = 'decrease'
-        }
-
-        console.log('setfont' + item)
-        var itemarr = item.split('-');
-        fontsizeClass = item;
-        fontsizeClassOp = itemarr[1];
-        fontsizeClassSize = itemarr[2];
-        this.reloadFontsizeClass();
+        if(item === null || item === 'default'){
+            fontsizeCurrentAction = 'reset'
+            fontsizeClassOp = null;
+        } else {
+            if (item.includes('fontsize-inc-')){
+                fontsizeCurrentAction = 'increase'
+                fontsizeClassOp = "dec"
+            } 
+            if (item.includes('fontsize-dec-')){
+                fontsizeCurrentAction = 'decrease'
+                fontsizeClassOp = "inc"
+            }
     
+            //var itemarr = item.split('-');
+            fontsizeClass = item;
+            //fontsizeClassOp = itemarr[1];
+            //fontsizeClassSize = itemarr[2];
+        }
+        myClass.reloadFontsizeClass();
     }
 
     AccessibilityBar.prototype.reloadFontSite = function() {
@@ -148,7 +161,6 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
 
 
         request[0].done(function(result) {
-            console.log("font 1 is: " + result.fonttype)
             //document.getElementById('fonttype').value = result.fonttype;
             if(result.fonttype != 'odafont') {
                 jQuery('#fontsite_default').addClass('disabled');
@@ -159,7 +171,6 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
             }
             
         }).fail(function(error){
-            console.log("font 1 is: fail")
         }) 
         
     };
@@ -172,93 +183,83 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
             }
         }]);
 
-        request[0].done(function() {
-            this.reloadFontsizeClass();
-        }.bind(this));
+        request[0].done(function(result) {
+            //document.getElementById('fonttype').value = result.fonttype;
+            myClass.setFontSize(result.newfontsizeclass)
+            //console.log("responce size" + result.newfontsizeclass)
+            //myClass.reloadSitecolorClass();              
+            
+        }).fail(function(error){
+        }) 
+
+        //console.log("finish size")
+            //myClass.reloadSitecolorClass();   
+
+        
+    };
+    
+    AccessibilityBar.prototype.getUserSession = function() {
+        var request = Ajax.call([{
+            methodname: 'theme_ecampus_getUserSession',
+            args: {}
+        }]);
+        request[0].done(function(result) {
+            if(result.isLogedin == "ok"){
+
+                myClass.getColor();
+                myClass.reloadFontSite();
+                myClass.toggleFontsizeButtons();
+                myClass.getFontSize();
+            } else {
+            }
+            
+        }).fail(function(error){
+        });
     };
 
     AccessibilityBar.prototype.reloadFontsizeClass = function() {
-        console.log("reload size");
-        if (fontsizeCurrentAction === 'reset'
-            || (fontsizeCurrentAction === 'increase' && fontsizeClass === 'fontsize-dec-1')
-            || (fontsizeCurrentAction === 'decrease' && fontsizeClass === 'fontsize-inc-1')
-        ) {
-            jQuery('body').removeClass(fontsizeClass);
-            fontsizeClass = null;
-            fontsizeClassOp = null;
-            fontsizeClassSize = null;
-
-            this.toggleFontsizeButtons();
-
-            return;
+        if(fontsizeClassPrev !== null && fontsizeClassPrev !== 'default'){
+            console.log("remuevo" + fontsizeClassPrev)
+            jQuery('body').removeClass(fontsizeClassPrev);
+        } else {
+            console.log("no remuevo" + fontsizeClassPrev)
         }
-
-        if (fontsizeCurrentAction === 'increase') {
-            if (fontsizeClassSize === null) {
-                fontsizeClass = 'fontsize-inc-1';
-                fontsizeClassOp = 'inc';
-                fontsizeClassSize = 1;
-            } else if (fontsizeClassOp === 'inc' && fontsizeClassSize < 6) {
-                jQuery('body').removeClass(fontsizeClass);
-                fontsizeClassSize++;
-                fontsizeClass = 'fontsize-inc-' + fontsizeClassSize;
-            } else if (fontsizeClassOp === 'dec') {
-                jQuery('body').removeClass(fontsizeClass);
-                fontsizeClassSize--;
-                fontsizeClass = 'fontsize-dec-' + fontsizeClassSize;
-            }
-
+        //myClass.toggleFontsizeButtons();
+        if(fontsizeClass !== null && fontsizeClass !== 'default'){
+            console.log("seteo" + fontsizeClass)
             jQuery('body').addClass(fontsizeClass);
+        } else {
+            console.log("no seteo" + fontsizeClass)
+            //jQuery('body').addClass('default');
         }
+        fontsizeClassPrev = fontsizeClass;
 
-        if (fontsizeCurrentAction === 'decrease') {
-            if (fontsizeClassSize === null) {
-                fontsizeClass = 'fontsize-dec-1';
-                fontsizeClassOp = 'dec';
-                fontsizeClassSize = 1;
-            } else if (fontsizeClassOp === 'dec' && fontsizeClassSize < 6) {
-                jQuery('body').removeClass(fontsizeClass);
-                fontsizeClassSize++;
-                fontsizeClass = 'fontsize-dec-' + fontsizeClassSize;
-            } else if (fontsizeClassOp === 'inc') {
-                jQuery('body').removeClass(fontsizeClass);
-                fontsizeClassSize--;
-                fontsizeClass = 'fontsize-inc-' + fontsizeClassSize;
-            }
-
-            jQuery('body').addClass(fontsizeClass);
-        }
-
-        this.toggleFontsizeButtons();
+        myClass.toggleFontsizeButtons();
     };
 
     AccessibilityBar.prototype.toggleFontsizeButtons = function() {
-        if (fontsizeClass === null) {
+        if (fontsizeClass === null || fontsizeClass === 'default') {
             jQuery('#fontsize_reset').addClass('disabled');
             jQuery('#fontsize_inc').removeClass('disabled');
             jQuery('#fontsize_dec').removeClass('disabled');
         }
 
-        if (fontsizeClass !== null) {
+        if (fontsizeClass !== null && fontsizeClass === 'default') {
             jQuery('#fontsize_reset').removeClass('disabled');
         }
 
         if (fontsizeClassOp === 'inc') {
-            if (fontsizeClassSize == 6) {
+            if (fontsizeClass == "fontsize-inc-5" || fontsizeClass == "fontsize-inc-6") {
                 jQuery('#fontsize_inc').addClass('disabled');
-            }
-
-            if (fontsizeClassSize < 6) {
+            } else {
                 jQuery('#fontsize_inc').removeClass('disabled');
             }
         }
 
         if (fontsizeClassOp === 'dec') {
-            if (fontsizeClassSize == 6) {
+            if (fontsizeClass == "fontsize-dec-5" || fontsizeClass == "fontsize-dec-6") {
                 jQuery('#fontsize_dec').addClass('disabled');
-            }
-
-            if (fontsizeClassSize < 6) {
+            } else {
                 jQuery('#fontsize_dec').removeClass('disabled');
             }
         }
@@ -273,12 +274,11 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
         }]);
 
         request[0].done(function() {
-            this.reloadSitecolorClass();
+            myClass.reloadSitecolorClass();
         }.bind(this));
     };
 
     AccessibilityBar.prototype.siteFont = function() {
-        console.log("change font: " + sitefontCurrentAction);
 
         var request = Ajax.call([{
             methodname: 'theme_ecampus_sitefont',
@@ -288,14 +288,11 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
         }]); 
 
         request[0].then(function(responce) {
-            console.log("change font success");
             document.location.reload(true);
         }).fail(function(error){
             var message = error.message;
-            console.log("change font error " + message);
         });
 
-        console.log("change font exit");
     };
 
     AccessibilityBar.prototype.reloadSitecolorClass = function() {
@@ -303,12 +300,10 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
             return (className.match(/(^|\s)sitecolor-color-\S+/g) || []).join(' ');
         });
 
-        console.log("cahnge color reloadSitecolorClass" + sitecolorCurrentAction)
 
         if (sitecolorCurrentAction !== 'reset') {
             jQuery('body').addClass(sitecolorCurrentAction);
             
-            console.log("change color reloadSitecolorClass" + sitecolorCurrentAction)
         }
     };
 

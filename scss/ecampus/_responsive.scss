@@ -423,6 +423,7 @@ li.activity{
   
   .modal-header{
     border-bottom: 0;
+    width: 100%;
     
     h5{
       color: #fff;
@@ -434,7 +435,11 @@ li.activity{
   }
   
   .modal-footer{
+    width: 100%;
     border-top: 0;
+  }
+  .modal-body{
+    width: 100%;
   }
   
   .modal-body a{
@@ -562,9 +567,9 @@ li.activity{
   }
 }
 
-.form-group .fitem {
+/* .form-group .fitem {
   width: 100%;
-} 
+}  */
 
 .fdate_time_selector{
   flex-wrap: nowrap !important;
@@ -587,4 +592,8 @@ li.activity{
 
 .ablock.no-overflow{
   overflow: visible;
+}
+
+#region-main{
+  padding: 0.1rem !important;
 }

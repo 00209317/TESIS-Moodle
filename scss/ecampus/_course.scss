@@ -224,7 +224,7 @@ body#page-mod-quiz-attempt.pagelayout-secure {
     }
 
     #region-main {
-        padding: 1.25rem;
+        padding: 0.1rem;
     }
 
     [data-region="blocks-column"] {
@@ -409,7 +409,7 @@ body.pagelayout-course {
     border-left: 4px solid #f29550 !important;
     transition: all 1s;
     width: auto !important;
-    
+    box-shadow: 0 3px 1px -2px #0003, 0 2px 2px #00000024, 0 1px 5px #0000001f;
     a{
         text-decoration: none !important;
         color: #000;

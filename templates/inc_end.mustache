@@ -17,58 +17,60 @@
         {{> theme_ecampus/nav-drawer }}
     {{/hasdrawertoggle}}
 </div><!-- Ends .page-wrapper -->
-
 {{> theme_ecampus/footer }}
 
 </body>
 </html>
 {{#js}}
-require(['theme_boost/loader']);
+    
 
-require(['theme_boost/drawer'], function(mod) {
-    mod.init();
-});
+    require(['theme_ecampus/courseMenu']);
 
-require(['theme_ecampus/metismenu', 'jquery'], function(metisMenu, $) {
-    $(".metismenu").metisMenu();
-});
+    require(['theme_ecampus/navbarMenu']);
 
-require([], function() {
-    var iconsearch = document.querySelector('.ecampus-search-input .slicon-magnifier');
-    var btnclosesearch = document.querySelector('.search-input-form .close-search');
-    var searchinputform = document.querySelector('.ecampus-search-input');
+    require(['theme_ecampus/editButton']);
 
-    if (iconsearch) {
+    require(['theme_ecampus/modalHelp']);
+    
+    require(['theme_boost/loader']);
 
-        var togglesearchinputform = function() {
-            searchinputform.classList.toggle('expanded');
+    require(['theme_boost/drawer'], function(mod) {
+        mod.init();
+    });
+
+    require(['theme_ecampus/metismenu', 'jquery'], function(metisMenu, $) {
+        $(".metismenu").metisMenu();
+    });
+
+    require([], function() {
+        var iconsearch = document.querySelector('.ecampus-search-input .slicon-magnifier');
+        var btnclosesearch = document.querySelector('.search-input-form .close-search');
+        var searchinputform = document.querySelector('.ecampus-search-input');
+
+        if (iconsearch) {
+
+            var togglesearchinputform = function() {
+                searchinputform.classList.toggle('expanded');
+            }
+
+            iconsearch.onclick = togglesearchinputform;
+            btnclosesearch.onclick = togglesearchinputform;
         }
+    });
 
-        iconsearch.onclick = togglesearchinputform;
-        btnclosesearch.onclick = togglesearchinputform;
-    }
-});
+    require(['theme_ecampus/accessibilitybar'], function(bar) {
+        bar.init();
+    });
 
-require(['theme_ecampus/accessibilitybar'], function(bar) {
-    bar.init();
-});
+    require(['theme_ecampus/accessibilitymodal'], function(bar) {
+        bar.init();
+    });
 
-require(['theme_ecampus/accessibilitymodal'], function(bar) {
-    bar.init();
-});
+    require(['theme_ecampus/footer'], function(bar) {
+        bar.init();
+    });
 
-require(['theme_ecampus/footer'], function(bar) {
-    bar.init();
-});
+    require(['theme_ecampus/tablesEcampus']);
 
-require(['theme_ecampus/tables'])
-
-require(['theme_ecampus/courseMenu'])
-
-require(['theme_ecampus/navbarMenu'])
-
-require(['theme_ecampus/editButton'])
-
-require(['theme_ecampus/modalHelp'])
 
 {{/js}}

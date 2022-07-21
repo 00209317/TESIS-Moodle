@@ -1,458 +1,265 @@
-.btn {
-    background-color: $color_two !important;
-    color: $text_two !important;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.sectionname,
-.progress-indic-label {
-    color: $text_one !important;
-}
-
-a {
-    color: $text_one;
-}
-
-div {
-    color: $text_one;
-}
-
-.menu-action-text,
-.dropdown-item.menu-action i,
-.popover-region i,
-.popover-regionbar i,
-.dropdown-item a,
-.dropdown-item i,
-.custom-select,
-.badge.badge-info {
-    color: $text_two !important;
-}
-
-
-
-.card {
-    background-color: $color_three !important;
-}
-
-.activity,
-.sectionname {
-    background-color: $color_three !important;
-
-    span {
-        color: $text_two !important;
-    }
-}
-
-.pagination a {
-    background-color: $color_one;
-    color: $text_link;
-}
-
-th.header {
-    color: $text_table;
-}
-
-td.cell,
-.site-name {
-    color: $text_one;
-}
-
-.list-unstyled {
-    li:hover {
-        background-color: $color_two;
-    }
-}
-
-#nav-drawer {
-    background-color: $color_primary;
-}
-
-.drawer-toggle {
-    background-color: $color_primary !important;
-}
-
-button,
-input.btn {
-    background-color: $color_two !important;
-}
-
-select,
-.card-title a {
-    color: $text_gold;
-}
-
-.filter-group {
-    color: $text_one !important;
-    background-color: $color_primary !important;
-}
-
-ul.section {
+#page-wrapper , #page, #page-content,#page-content *, #page-header,#page-header *,#accessibilitybar .container_accessibilitybar, #accessibilitybar{
     background-color: transparent !important;
 }
 
-.tile.tile-clickable {
+#nav-drawer{
     background-color: $color_primary !important;
-}
-
-
-.card-body {
-    background-color: transparent !important;
-    border-radius: inherit;
-
-    p {
-        color: $text_two;
-    }
-
-    span {
-        color: $text_two !important;
-
-        h3 {
-            color: $text_two !important;
-        }
-    }
-}
-
-.gradereport-grader-table,
-.pagination {
-    a {
-        color: $text_two !important;
-        background-color: $color_two !important;
-        border-color: $color_two !important;
-    }
-}
-
-.gradereport-grader-table th,
-table th {
-    a {
-        background-color: transparent !important;
-        border-color: transparent !important;
-    }
-}
-
-.navbar-brand.has-logo img {
-    -webkit-filter: $filter_navbrand;
-}
-
-.mymaincontent>.card-body {
-    background-color: transparent;
-}
-
-#region-main {
-    background-color: transparent;
-}
-
-.navbar,
-#navbar_content_control {
-    background-color: $color_primary !important;
-
-    button,
-    .course-section a {
-        background-color: $color_one !important;
-        color: $text_one !important;
-        border-color: $text_one !important;
-
-    }
-}
-
-#page-wrapper {
-    background-color: $color_three !important;
-}
-
-#block-region-content {
-    background-color: transparent;
-}
-
-select {
-    background-color: $color_primary !important;
-}
-
-.fp-navbar,
-.filemanager-container {
-    background-color: $color_one;
-}
-
-.page-link {
-    color: $text_one !important;
-}
-
-div.bg-white {
-    background-color: $color_two !important;
-}
-
-input.form-control,
-ul.form-autocomplete-suggestions {
-    background-color: $color_three;
-    color: $text_one;
-}
-
-ul.form-autocomplete-suggestions li,
-.form-group label,
-.list-unstyled li,
-.dndupload-message,
-.fdescription {
-    color: $text_one;
-}
-
-//Tablas
-.contentTableOverflow th {
-    background-color: $color_primary !important;
-    color: $text_two !important;
-}
-
-.contentTableOverflow th.column-itemname {
-    color: $text_two;
-}
-
-.contentTableOverflow td {
-    color: $text_table;
-}
-
-[data-region="blocks-column"] {
-    background-color: $color_primary !important;
-}
-
-#sidepreopen-control {
-    background-color: $color_three !important;
-}
-
-//dropdownmenu
-.dropdown-menu {
-    background-color: $color_primary;
-
-    a {
-        color: $text_one;
-    }
-}
-
-//message bar
-.message-app {
-    background-color: $color_primary;
-
-    p,
-    h6 {
-        color: $text_table;
-    }
-
-    .list-group-item {
-        background-color: $text_two;
-    }
-
-    .message p {
-        color: black;
-    }
-
-    textarea {
-        background-color: $color_one !important;
-        color: $color_one;
-    }
-}
-
-.container-fluid {
-    background-color: $color_background;
-
-    textarea {
-        background-color: $color_one !important;
-        color: $color_one;
-    }
-
-    .list-group-item {
-        background-color: $color_one;
-    }
-}
-
-
-//heder bank
-.cb-navbar {
-    background-color: $color_primary !important;
-
-    .cb-navbar-breadbrumb {
-        background-color: $color_primary;
-        color: $text_one;
-    }
-}
-
-
-//up file 
-.moodle-dialogue {
-    top: 615px;
-}
-
-.moodle-dialogue-wrap {
-    background-color: $color_one;
-    border: none;
-    border-radius: 1em;
-    padding: 0.5em;
-
-    .closebutton {
-        color: $text_one;
-    }
-}
-
-
-//navbar 
-.nav-item,
-.nav-link i {
-    color: $text_one;
-}
-
-//footer
-#top-footer {
-    background-color: $color_three !important;
-}
-
-//
-.activity a {
-    color: $text_one;
-}
-
-//tiles addon
-ul.tiles,
-.single-section {
-    .main {
-        background-color: $color_background !important;
-    }
-
-    li.tile {
-        box-shadow: none !important;
-
-        .tile-link {
-            border-radius: inherit;
-            background-color: $color_primary !important;
-
-        }
-
-    }
-
-}
-
-.section.main.clearfix {
-    background-color: $color_three !important;
-}
-
-.section>.activity {
-    background-color: $color_primary !important;
-}
-
-.form-group {
-    .form-control {
+    *{
         background-color: $color_primary !important;
     }
+}
+.top-footer {
+    background-color: $color_three !important;
+    *{
+        background-color: $color_three !important;
+    }
+}
 
-    .editor_atto_toolbar {
-        background-color: $color_one;
+#page .card{
+    background-color: $color_one !important;
+    *{
+        background-color: transparent !important;
+    }
+}
 
-        .atto_group {
+#page .card.card3, #page .activity, #page .tile.tile-clickable{
+    background-color: $color_two !important;
+    border-color: $color_three !important;
+    *{
+        background-color: transparent !important;
+    }
+    &:hover{
+        background-color: $color_background !important;
+        color: $text_two !important;
+        a{
             background-color: transparent !important;
         }
     }
 }
 
-.buttonhidesec0 {
+
+.itemMenuAdministrador{
+    a{
+        &:hover{
+            background-color: $color_background !important;
+        }
+    }
+}
+
+.navbar, #navbar_content_control {
     background-color: $color_one !important;
+    * {
+        background-color: $color_one !important;
+    }
+}
+
+#page .btn, .btn, .btn.btn-link{
+    background-color: $color_primary !important;
+    color: $text_two !important;
+    *, i.icon, span{
+        background-color: transparent !important;
+        color: $text_two !important;
+    }
+    &:hover{
+        background-color: $color_two !important;
+        color: $text_one !important;
+        *, i.icon, span{
+            color: $text_one !important;
+        }
+    }
+}
+.btn.btn-link.btn-icon.emoji-button{
+    background-color: transparent !important;
+    box-shadow: none !important;
+} 
+
+.btn.btnMenuAdministrador, .course-section>a{
+    border-color: $color_primary !important;
+    color: $text_two !important;
+    *{
+        background-color: transparent !important;
+    }
+    &:hover{
+        color: $text_one !important;
+    }
+}
+
+.icon-no-margin.category-button i{
     color: $text_one !important;
 }
 
-.breadcrumb li::after {
-    border-left-color: $color_one !important;
-}
-
-
-.popover-region {
-
-    .popover-region-container,
-    .popover-region-footer-container {
-        background-color: $color_primary !important;
+.icon-no-margin.category-button.selected{
+    background-color: $color_primary !important;
+    color: $text_two !important;
+    i{
         color: $text_two !important;
     }
 }
 
-
-
-#footer-contact {
-    background-color: $color_three !important;
-}
-
-#page-navbar .breadcrumb li>* {
-    background-color: $color_primary !important;
-    border-color: $color_primary !important;
-}
-
-.input-group .input-group-append .btn,
-.input-group .input-group-prepend:first-child .input-group-text,
-.input-group .input-group-prepend:last-child .input-group-text {
-    background-color: $color_two !important;
-}
-
-.icon {
-    color: $text_one;
-}
-
-.top-footer h4 {
-    color: $text_one;
-}
-
-.custom-control-input:checked~.custom-control-label::before {
-    color: #fff;
-    border-color: $color_two;
-    background-color: $color_primary;
-}
-
-.top-footer .contact ul li a,
-.top-footer .contact ul li i {
-    color: $text_one;
-}
-
-.formulation.clearfix {
-    border: 0;
-    background-color: transparent;
-}
-
-.que .info {
-    color: $text_one;
-    padding: 1em;
-    margin-bottom: 1.8em;
-    border-radius: 1.25em;
-    background-color: $color_primary;
-    border: none;
-}
-
-.closewidget>.btn-link i {
-    color: $text_one !important;
-}
-
-
-.no-overflow {
-    p {
-        color: $text_contrast !important;
+.popover-region-toggle,.popover-regionbar-toggle, .popover-regionbar.allvisible{
+    height: 100%;
+    .nav-item{
+        height: 100%;
     }
 }
 
-.hover-tooltip{
-    color: $text_contrast !important;
+.modal-backdrop.fade.in{
+    background-color:#000 !important;
 }
 
-.optionname{
-    color: $text_two !important;
-}
-
-.alert-warning, .environmenttable .warn, #page-mod-quiz-edit, ul.slots, li.section, .content,.editor_atto_notification,.atto_info{
-    background-color: $color_primary !important;
-}
-
-.selected{
-    color: $text_contrast !important;
-}
-
-.typesummary, .alloptions, .submitbuttons, .instruction{
-    background-color: $color_two !important;
+#page .icon, #page i{
     color: $text_one !important;
 }
 
-.fitem{
+#page .section.main.moveablesection.state-visible{
+    background-color: $color_one !important;
+}
+
+.message-app{
+    background-color: $color_background !important;
+    *{
+        background-color: $color_background !important;
+    }
+}
+
+div.message{
+    background-color: $color_one !important;
+    *{
+        background-color: transparent !important;
+        border-bottom-color: $color_one !important;
+    }
+}
+
+#page-content .list-unstyled li{
+    &:hover {
+        background-color: $color_three !important;
+        a{
+            background-color: $color_three !important;
+            color: $text_one !important;
+        }
+    }
+}
+
+#page-navbar .breadcrumb li {
+    & > *{
+        background-color: $color_primary !important;
+        border-color: $color_primary !important;
+    }
+    
+    &:after {
+        border-left-color: $color_one !important;
+    }
+    &:before {
+        content: '';
+        padding: 0;
+    }
+}
+
+#page table{
+    border-color: $text_one !important;
+}
+
+#page .dropdown-menu{
+    background-color: $color_one !important;
+}
+
+
+
+.course-section li .list-group-item{
+    background-color: $color_primary !important;
+    *{
+        background-color: transparent !important;
+        color: $text_two !important;
+    }
+}
+
+.course-section li .list-group-item.active{
+    background-color: $color_three !important;
+    *{
+        color: $text_one !important;
+    }
+}
+
+.edit-btn.btn-success {
+    color: white!important;
+    background-color: $success!important;
+    transition: all 1s;
+    &:hover{
+        background-color: $color_primary !important;
+    }
+}
+
+.edit-btn.btn-danger {
+    color: white!important;
+    background-color: $fail !important;
+    transition: all 1s;
+    &:hover{
+        background-color: $color_primary !important;
+    }
+}
+
+.dropdown-item{
+    a{
+        color: $text_one !important;
+        &:hover{
+            color: $text_contrast_2 !important;
+        }
+    }
+}
+
+.bars{
+    background-color: $menu !important;
+    span {
+        background-color: $menu !important;
+        *{
+            background-color: $menu !important;
+        }
+    }
+    div{
+        background-color: $menu !important;
+        ul{
+            background-color: $menu !important;
+            li{
+                background-color: $menu !important;
+            }
+        }
+        a.nav-link {
+            background-color: $menu !important;
+            i{
+                background-color: $menu !important;
+            }
+        }
+    }
+}
+
+.modal-dialog{
     background-color: transparent !important;
+}
+.modal{
+    background-color: rgba(0, 0, 0, 0.281) !important;
+    .modal-content{
+        background-color: $menu !important;
+        color: $text_one !important;
+        *{
+            background-color: $menu !important;
+            color: $text_two !important;
+        }
+    }
+}
+
+#page .card iframe{
+    border-radius: 0.5em;
+    background-color: $text_contrast !important;
+}
+
+#page .card select{
+    option{
+        background-color: $color_background !important;
+    }
+}
+
+#page .alert.alert-danger{
+    background-color: $fail !important;
+    opacity: 0.8;
+    color: $text_contrast !important;
 }

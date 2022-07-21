@@ -13,20 +13,17 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
     }
 
     AccessibilityModal.prototype.registerEventListeners = function() {
-        console.log('render onclick')
         jQuery(SELECTORS.ACCESS_BTN).click(function (element) {
-            console.log('my, onclick push')
-            this.start(jQuery(SELECTORS.MODAL).hasClass( "hidden-display" ))
+            this.start(jQuery(SELECTORS.MODAL).hasClass( "show-display-flex" ));
         }.bind(this));
         
         jQuery(SELECTORS.BACKGROUND).click(function (element) {
-            console.log('my, onclick push')
-            this.start(false)
+            this.start(true);
         }.bind(this)); 
     }
 
     AccessibilityModal.prototype.start = function(flag) {
-        if(flag){
+        if(!flag){
             jQuery(SELECTORS.MODAL).addClass('show-display-flex');
             jQuery(SELECTORS.MODAL).removeClass('hidden-display');
 

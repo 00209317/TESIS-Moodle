@@ -61,16 +61,16 @@
             {{/sliderenabled}}
 
             {{^sliderenabled}}
-                <div class="row" id="loginbox">
-                    <div class="col-sm-12 hidden-sm-down {{#disablefrontpageloginbox}}col-md-12{{/disablefrontpageloginbox}}{{^disablefrontpageloginbox}}col-md-8{{/disablefrontpageloginbox}}" id="intro">
+                <div class="row d-flex p-0 m-0" id="loginbox">
+                    <div class="col-sm-12 hidden-sm-down {{#disablefrontpageloginbox}}col-md-12{{/disablefrontpageloginbox}}{{^disablefrontpageloginbox}}col-md-9{{/disablefrontpageloginbox}}" id="intro">
                         {{#bannerheading}}
                         {{/bannerheading}}
                     </div>
                     {{^disablefrontpageloginbox}}
-                        <div class="col-12 col-sm-12 col-md-4 card d-none d-lg-block rounded-0 border-right-0 border-top-0 border-bottom-0" style="border-left: 10px solid #f39550;" id="boxForm">
+                        <div class="col-12 col-sm-12 col-md-3 card d-none d-lg-block border-right-0 border-top-0 border-bottom-0" style="border-left: 10px solid #f39550;" id="boxForm">
                             {{>theme_ecampus/frontpage_login}}
                         </div><!-- end of .card-body -->
-                    {{/disablefrontpageloginbox}}
+                    {{/disablefrontpageloginbox}} 
                 </div> <!-- end of #boxForm -->
             {{/sliderenabled}}
         </div>

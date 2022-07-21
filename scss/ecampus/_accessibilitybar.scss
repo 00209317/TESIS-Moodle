@@ -1,4 +1,12 @@
-#accessibilitybar {
+#accessibilitybar.hidden-display{
+    display: none;
+}
+
+#accessibilitybar.show-display-flex{
+    display: flex;
+}
+
+#accessibilitybar.allvisible {
     padding: .2rem;
     height: 30px;
     
@@ -27,13 +35,14 @@
             li {
                 display: list-item;
                 text-align: -webkit-match-parent;
-                margin-left: .5rem;
+                margin: .5rem .1em !important;
 
                 .btn {
                     padding: 0.4rem 1.25em;
-                    border-radius: 0px;
+                    border-radius: 0.5em;
                     color: white;
                     cursor: pointer;
+                    margin: 0 !important;
                 }
             }
         }
@@ -72,35 +81,28 @@
             #sitecolor_color1{
                 background-color: #033868 !important;
                 color: #ffffcc !important;
-                border-top-left-radius: 0.5em;
             }
             #sitecolor_colordark{
                 background-color: #1f1e1e!important;
                 color: rgba(193,193,193,.856)!important;
-                border-top-right-radius: 0.5em
             }
 
-            #sitecolor_colortri {
+            #sitecolor_colortri1 {
                 background-color: #385f65 !important;
                 color: #d69195 !important;
-                border-top-left-radius: 0.5em;
-                border-bottom-left-radius: 0.5em;
             }
-            #sitecolor_colorpto {
+            #sitecolor_colorpto1 {
                 background-color: #7a7943 !important;
                 color: #ffffff !important;
             }
-            #sitecolor_colordeu {
+            #sitecolor_colordeu1 {
                 background-color: #404044 !important;
                 color: #969584 !important;
-                border-top-right-radius: 0.5em;
-                border-bottom-right-radius: 0.5em;
             }
     
             #sitecolor_color2 {
                 background-color: #ffffcc !important;
                 color: #272c33 !important;
-                border-bottom-left-radius: 0.5em;
             }
     
             #sitecolor_color3 {
@@ -111,13 +113,12 @@
             #sitecolor_color4 {
                 color: #ffff00 !important;
                 background-color: #000000 !important;
-                border-bottom-right-radius: 0.5em;
             }
         }
     }
 }
 
-#accessibilitybar {
+#accessibilitybar.allvisible {
     position: fixed;
     z-index: 100;
     right: 1vw;
@@ -125,7 +126,7 @@
 }
 
 @media (max-width: 768px) {
-    #accessibilitybar {
+    #accessibilitybar.allvisible {
         width: 100vw;
         top: 10vh;
         left: 0;
@@ -174,4 +175,3 @@ body.hasaccessibilitybar {
         top: 0px;
     }
 }
-

@@ -1,7 +1,7 @@
 nav.navbar {
     min-height: $navbar-height;
     -webkit-box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     background-color:$navbar-bg;
     position: fixed;
     top: 0;
@@ -14,12 +14,12 @@ nav.navbar {
         width: 70px;
         margin-left: -16px;
         padding: 16px 9px 0 9px;
-        background-color: $sidebar-bg;
+        background-color: transparent;
 
         .nav-link {
             color: #fff;
             border: none;
-            background-color: initial;
+            background-color: $sidebar-bg;
         }
     }
 

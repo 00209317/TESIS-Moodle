@@ -51,6 +51,17 @@ class accessibility extends external_api {
     }
 
     /**
+     * Font size endpoint return definition
+     *
+     * @return external_single_structure
+     */
+    public static function fontsize_returns() {
+        return new external_single_structure([
+            'newfontsizeclass' => new external_value(PARAM_RAW, 'The new fontsize class')
+        ]);
+    }
+
+    /**
      * Font size endpoint implementation
      *
      * @param array $action
@@ -100,7 +111,7 @@ class accessibility extends external_api {
      * @return string|null
      */
     public static function fontsize_increase($currentfontsizeclass = '', $action = null, $value = null) {
-        $newfontsizeclass = null;
+        $newfontsizeclass = 'fontsize-inc-6';
 
         if ($currentfontsizeclass == '') {
             $newfontsizeclass = 'fontsize-inc-1';
@@ -131,7 +142,7 @@ class accessibility extends external_api {
      * @return string|null
      */
     public static function fontsize_decrease($currentfontsizeclass = '', $action = null, $value = null) {
-        $newfontsizeclass = null;
+        $newfontsizeclass = 'fontsize-dec-6';
 
         if ($currentfontsizeclass == '') {
             $newfontsizeclass = 'fontsize-dec-1';
@@ -152,16 +163,7 @@ class accessibility extends external_api {
         return $newfontsizeclass;
     }
 
-    /**
-     * Font size endpoint return definition
-     *
-     * @return external_single_structure
-     */
-    public static function fontsize_returns() {
-        return new external_single_structure([
-            'newfontsizeclass' => new external_value(PARAM_RAW, 'The new fontsize class')
-        ]);
-    }
+    
 
     /**
      * Site color endpoint parameters definition
@@ -381,6 +383,25 @@ class accessibility extends external_api {
         return new external_single_structure([
             'sitefontsize' => new external_value(PARAM_TEXT, 'the user selected color'),
         ]);
+    }
+
+
+
+    public static function getUserSession_returns() {
+        return new external_single_structure([
+            'isLogedin' => new external_value(PARAM_TEXT, 'the user selected session'),
+        ]);
+    }
+
+    public static function getUserSession_parameters() {
+        return new external_function_parameters([]);
+    }
+    
+    public static function getUserSession() {
+        if (isloggedin()) {
+            return ['isLogedin' => 'ok'];
+        }
+        return ['isLogedin' => 'error'];
     }
     
 }

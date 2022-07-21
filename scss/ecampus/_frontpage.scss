@@ -99,9 +99,8 @@
         background-position: left top;
         background-repeat: no-repeat;
         background-color: #fff;
-        min-height: 540px;
-        padding: 0 4rem;
-        height: 20vh;
+        min-height: 90vh;
+        padding: 0;
         margin-bottom: 3em;
         background-attachment: local;
         background-size: cover;
@@ -394,28 +393,26 @@ body.notloggedin {
         }
 
         label {
-            font-size: 1.3rem;
+            font-size: 0.9rem;
             margin-bottom: .1rem;
         }
 
         .input-group {
             margin-bottom: 10px;
 
-            input,
-            .input-group-addon {
-                -webkit-border-radius: 0;
-                -moz-border-radius: 0;
-                border-radius: 0;
-                border: none;
-                border-bottom: 3px solid #00000018;
+            input{
+                -webkit-border-radius: 0.5em !important;
+                -moz-border-radius: 0.5em !important;
+                border-radius: 0.5em !important;
+                border: 3px solid #00000018;
                 background-color: #ffffff00;
                 -webkit-transition: 0.5s;
                 transition: 0.5s;
                 outline: none;
                 box-shadow: none;
             }
-            input[type=text]:focus {
-                border-bottom: 3px solid rgb(213, 23, 23)
+            input[type=text]:focus, input[type=password]:focus {
+                border-bottom: 3px solid #f2944f
             }
             
             input {

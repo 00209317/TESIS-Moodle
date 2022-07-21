@@ -3,20 +3,29 @@
 .sitecolor-color-deu {
 
     //MODO DEUTERANOPIA
-    $color_primary: #444549;
-    $color_one: #f0edd8;
-    $color_two: #7a7943;
-    $color_three: #a5a491;
-    $color_background: #f0efe7;
+    $color_primary: #00397e;
+    $color_one: #fefdf9;
+    $color_two: #faf9f5;
+    $color_three: #ff9839;
+    $color_background: #e9f3f5;
     $text_one: #000000;
     $text_two: #ffffff;
-    $text_table: #000000;
-    $text_gold: #000000;
-    $text_link: #000000;
-    $text_contrast: #3b3b3b;
-    $filter_navbrand: sepia(100%);
+    $success: #005f11;
+    $fail: #ae0f00;
+    $menu: #1b1b1b;
+    $text_contrast: #ffffff;
+    $text_contrast_2: #6e6e6e;
+    $filter_navbrand: brightness(96%) contrast(85%) saturate(164%);
     
+    background-color: $color_background !important;
+    *{
+        background-color: $color_one !important;
+    }
     
+    .navbar-brand.has-logo img, div>.img-fluid, img{
+        background-color: transparent !important;
+        -webkit-filter: $filter_navbrand;
+    }
     
     @import "./themes.scss";
 }
