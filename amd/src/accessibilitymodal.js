@@ -13,14 +13,11 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
     }
 
     AccessibilityModal.prototype.registerEventListeners = function() {
-        console.log('render onclick');
         jQuery(SELECTORS.ACCESS_BTN).click(function (element) {
-            console.log('my, onclick push');
             this.start(jQuery(SELECTORS.MODAL).hasClass( "show-display-flex" ));
         }.bind(this));
         
         jQuery(SELECTORS.BACKGROUND).click(function (element) {
-            console.log('my, onclick push');
             this.start(true);
         }.bind(this)); 
     }

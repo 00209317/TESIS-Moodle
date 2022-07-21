@@ -73,8 +73,10 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
             var btn = jQuery(element.currentTarget);
 
             fontsizeCurrentAction = btn.data('action');
-
             myClass.fontSize();
+            //myClass.setFontSize(fontsizeCurrentAction);
+
+            
         }.bind(this)); 
 
         jQuery(SELECTORS.SITE_COLOR).click(function(element) {
@@ -101,13 +103,11 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
         }]);
 
         request[0].done(function(result) {
-            console.log("color 1 is: " + result.sitecolor);
             //document.getElementById('fonttype').value = result.fonttype;
             sitecolorCurrentAction = result.sitecolor;  
             myClass.reloadSitecolorClass();              
             
         }).fail(function(error){
-            console.log("color 1 is: fail")
         }) 
     }
 
@@ -118,7 +118,6 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
         }]);
 
         request[0].done(function(result) {
-            console.log("size 1 is: " + result.sitefontsize);
             //document.getElementById('fonttype').value = result.fonttype;
             myClass.setFontSize(result.sitefontsize)
 
@@ -126,27 +125,27 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
             myClass.reloadSitecolorClass();              
             
         }).fail(function(error){
-            console.log("size 1 is: fail")
         }) 
     }
 
     AccessibilityBar.prototype.setFontSize = function(item){
-        console.log('setfont')
 
-        if (item.includes('fontsize-inc-')){
-            fontsizeCurrentAction = 'increase'
-        } 
-        if (item.includes('fontsize-dec-')){
-            fontsizeCurrentAction = 'decrease'
-        }
-
-        console.log('setfont' + item)
-        var itemarr = item.split('-');
-        fontsizeClass = item;
-        fontsizeClassOp = itemarr[1];
-        fontsizeClassSize = itemarr[2];
-        myClass.reloadFontsizeClass();
+        if(item == null){
+            fontsizeCurrentAction = 'reset'
+        } else {
+            if (item.includes('fontsize-inc-')){
+                fontsizeCurrentAction = 'increase'
+            } 
+            if (item.includes('fontsize-dec-')){
+                fontsizeCurrentAction = 'decrease'
+            }
     
+            var itemarr = item.split('-');
+            fontsizeClass = item;
+            fontsizeClassOp = itemarr[1];
+            fontsizeClassSize = itemarr[2];
+        }
+        myClass.reloadFontsizeClass();
     }
 
     AccessibilityBar.prototype.reloadFontSite = function() {
@@ -157,7 +156,6 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
 
 
         request[0].done(function(result) {
-            console.log("font 1 is: " + result.fonttype)
             //document.getElementById('fonttype').value = result.fonttype;
             if(result.fonttype != 'odafont') {
                 jQuery('#fontsite_default').addClass('disabled');
@@ -168,7 +166,6 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
             }
             
         }).fail(function(error){
-            console.log("font 1 is: fail")
         }) 
         
     };
@@ -181,7 +178,19 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
             }
         }]);
 
-        myClass.reloadFontsizeClass();
+        request[0].done(function(result) {
+            //document.getElementById('fonttype').value = result.fonttype;
+            myClass.setFontSize(result.newfontsizeclass)
+            console.log("responce size" + result.newfontsizeclass)
+            myClass.reloadSitecolorClass();              
+            
+        }).fail(function(error){
+        }) 
+
+        console.log("finish size")
+            //myClass.reloadSitecolorClass();   
+
+        
     };
     
     AccessibilityBar.prototype.getUserSession = function() {
@@ -189,30 +198,21 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
             methodname: 'theme_ecampus_getUserSession',
             args: {}
         }]);
-        console.log("ABAJO VA EL REQUEST")
-        console.log(request)
         request[0].done(function(result) {
-            console.log("SOY EL MEGA RESULTADO" + result.isLogedin)
             if(result.isLogedin == "ok"){
-                console.log("isLoggedIn Ok: charging...")
 
                 myClass.getColor();
                 myClass.reloadFontSite();
                 myClass.toggleFontsizeButtons();
                 myClass.getFontSize();
-                console.log("isLoggedIn Ok: charging... complete! ;v")
             } else {
-                console.log("isLoggedIn no Ok: F...")
             }
             
         }).fail(function(error){
-            console.log("isLoggedIn Error:" + error)
         });
-        console.log("isLoggedIn End")
     };
 
     AccessibilityBar.prototype.reloadFontsizeClass = function() {
-        console.log("reload size");
         if (fontsizeCurrentAction === 'reset'
             || (fontsizeCurrentAction === 'increase' && fontsizeClass === 'fontsize-dec-1')
             || (fontsizeCurrentAction === 'decrease' && fontsizeClass === 'fontsize-inc-1')
@@ -312,7 +312,6 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
     };
 
     AccessibilityBar.prototype.siteFont = function() {
-        console.log("change font: " + sitefontCurrentAction);
 
         var request = Ajax.call([{
             methodname: 'theme_ecampus_sitefont',
@@ -322,14 +321,11 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
         }]); 
 
         request[0].then(function(responce) {
-            console.log("change font success");
             document.location.reload(true);
         }).fail(function(error){
             var message = error.message;
-            console.log("change font error " + message);
         });
 
-        console.log("change font exit");
     };
 
     AccessibilityBar.prototype.reloadSitecolorClass = function() {
@@ -337,12 +333,10 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
             return (className.match(/(^|\s)sitecolor-color-\S+/g) || []).join(' ');
         });
 
-        console.log("cahnge color reloadSitecolorClass" + sitecolorCurrentAction)
 
         if (sitecolorCurrentAction !== 'reset') {
             jQuery('body').addClass(sitecolorCurrentAction);
             
-            console.log("change color reloadSitecolorClass" + sitecolorCurrentAction)
         }
     };
 

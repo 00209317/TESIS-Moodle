@@ -51,6 +51,17 @@ class accessibility extends external_api {
     }
 
     /**
+     * Font size endpoint return definition
+     *
+     * @return external_single_structure
+     */
+    public static function fontsize_returns() {
+        return new external_single_structure([
+            'newfontsizeclass' => new external_value(PARAM_RAW, 'The new fontsize class')
+        ]);
+    }
+
+    /**
      * Font size endpoint implementation
      *
      * @param array $action
@@ -152,16 +163,7 @@ class accessibility extends external_api {
         return $newfontsizeclass;
     }
 
-    /**
-     * Font size endpoint return definition
-     *
-     * @return external_single_structure
-     */
-    public static function fontsize_returns() {
-        return new external_single_structure([
-            'newfontsizeclass' => new external_value(PARAM_RAW, 'The new fontsize class')
-        ]);
-    }
+    
 
     /**
      * Site color endpoint parameters definition

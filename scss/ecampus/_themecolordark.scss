@@ -1,19 +1,24 @@
 .sitecolor-color-dark {
     //MODO OSCURO
-    $color_primary: #1c1b1b;
+    $color_primary: #161616;
     $color_one: #1f1f1f;
     $color_two: #1f1e1e;
     $color_three: #27282c;
     $color_background: #121212;
     $text_one: #ffffff;
     $text_two: #e4e3e3;
-    $text_table: #d6d6d6;
-    $text_gold: #ccb52f;
+    $success: #103c0c;
+    $fail: #723535;
     $text_link: #bdbbdf;
     $text_contrast: #3b3b3b;
     $filter_navbrand: grayscale(1);
     
     background-color: $color_background !important;
+    
+    *{
+        background-color: $color_one !important;
+        color: $text_one !important;
+    }
 
     //MODO TRITANOPIA
     /* $color_primary: #3b676e;

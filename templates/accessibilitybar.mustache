@@ -33,18 +33,24 @@
                     {{{ output.render_lang_menu }}}
                 </div>
     
-                <span><b>{{#str}}accessibilitysitecolor, theme_ecampus{{/str}}</b></span>
+                <span><b>Colores de Sitio</b></span>
                 <div class="sitecolor">
                     <ul>
-                        <li><a class="btn btn-default rounded" data-action="reset" title="{{#str}}accessibilityresetsitecolor, theme_ecampus{{/str}}" id="sitecolor_color1">Default</a></li>
-                        <li><a class="btn btn-default rounded" data-action="sitecolor-color-dark" title="Dark" id="sitecolor_colordark">Dark</a></li>
+                        <li><a class="btn btn-default rounded" data-action="reset" title="{{#str}}accessibilityresetsitecolor, theme_ecampus{{/str}}" id="sitecolor_color1">Normal</a></li>
+                        <li><a class="btn btn-default rounded" data-action="sitecolor-color-dark" title="Dark" id="sitecolor_colordark">Oscuro</a></li>
                     </ul>
+                    <ul class="ul-daltonico1">
+                        <li class="w-100"><a class="btn btn-default rounded w-100" data-action="sitecolor-color-tri1" title="Alpha" id="sitecolor_colortri1">Alpha</a></li>
+                        <li class="w-100"><a class="btn btn-default rounded w-100" data-action="sitecolor-color-pro1" title="Beta" id="sitecolor_colorpto1">Beta</a></li>
+                        <li class="w-100"><a class="btn btn-default rounded w-100" data-action="sitecolor-color-deu1" title="Delta" id="sitecolor_colordeu1">Delta</a></li>
+                    </ul>
+                    <span><b>Filtros Daltonismo</b></span>
                     <ul class="ul-daltonico">
                         <li class="w-100"><a class="btn btn-default rounded w-100" data-action="sitecolor-color-tri" title="Tritanopia" id="sitecolor_colortri">Tritanopia</a></li>
                         <li class="w-100"><a class="btn btn-default rounded w-100" data-action="sitecolor-color-pro" title="Protonopia" id="sitecolor_colorpto">Protonopia</a></li>
                         <li class="w-100"><a class="btn btn-default rounded w-100" data-action="sitecolor-color-deu" title="Deuteranopia" id="sitecolor_colordeu">Deuteranopia</a></li>
-                        
                     </ul>
+                    <span><b>Colores de Alto Contraste</b></span>
                     <ul>
                         <li><a class="btn btn-default rounded" data-action="sitecolor-color-2" title="{{#str}}accessibilitysitecolor2, theme_ecampus{{/str}}" id="sitecolor_color2">A</a></li>
                         <li><a class="btn btn-default rounded" data-action="sitecolor-color-3" title="{{#str}}accessibilitysitecolor3, theme_ecampus{{/str}}" id="sitecolor_color3">A</a></li>
@@ -55,8 +61,8 @@
                 <span><b>Fuente</b></span>
                 <div class="sitefont">
                     <ul>
-                        <li><a class="btn btn-default" data-action="default" title="{{#str}}accessibilityresetfont, theme_ecampus{{/str}}" id="fontsite_default">Default</a></li>
-                        <li><a class="btn btn-default" data-action="odafont" title="{{#str}}accessibilityresetfont, theme_ecampus{{/str}}" id="fontsite_odafont">Dislexic</a></li>
+                        <li><a class="btn btn-default" data-action="default" title="{{#str}}accessibilityresetfont, theme_ecampus{{/str}}" id="fontsite_default">Normal</a></li>
+                        <li><a class="btn btn-default" data-action="odafont" title="{{#str}}accessibilityresetfont, theme_ecampus{{/str}}" id="fontsite_odafont">Dislexia</a></li>
                     </ul>
                 </div>
                 
@@ -66,7 +72,7 @@
                 <div class="fontsize">
                     <ul>
                         <li><a class="btn btn-default" data-action="decrease" title="{{#str}}accessibilitydecreasefont, theme_ecampus{{/str}}" id="fontsize_dec">A-</a></li>
-                        <li><a class="btn btn-default" data-action="reset" title="{{#str}}accessibilityresetfont, theme_ecampus{{/str}}" id="fontsize_reset">Default</a></li>
+                        <li><a class="btn btn-default" data-action="reset" title="{{#str}}accessibilityresetfont, theme_ecampus{{/str}}" id="fontsize_reset">Normal</a></li>
                         <li><a class="btn btn-default" data-action="increase" title="{{#str}}accessibilityincreasefont, theme_ecampus{{/str}}" id="fontsize_inc">A+</a></li>
                     </ul>
                 </div>

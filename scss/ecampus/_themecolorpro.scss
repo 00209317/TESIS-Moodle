@@ -3,21 +3,24 @@
 .sitecolor-color-pro {
     
     //MODO PROTANOPIA
-    $color_primary: #a9a9b2;
-    $color_one: #f0edd8;
-    $color_two: #b8b66a;
-    $color_three: #fbf698;
-    $color_background: #f0efe7;
+    $color_primary: #022052;
+    $color_one: #fefcff;
+    $color_two: #fbfbfb;
+    $color_three: #f4be80;
+    $color_background: #ecf0f3;
     $text_one: #000000;
-    $text_two: #ffffff;
-    $text_table: #000000;
-    $text_gold: #000000;
+    $text_two: #fefcff;
+    $success: #103c0c;
+    $fail: #723535;
     $text_link: #000000;
     $text_contrast: #3b3b3b;
     $filter_navbrand: sepia(100%); 
     
     background-color: $color_background !important;
+    *{
+        background-color: $color_one !important;
+    }
     
-    @import "./themes.scss";
+    @import "./themes.scss";  
 
 }
