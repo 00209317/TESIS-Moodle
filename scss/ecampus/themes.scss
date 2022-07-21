@@ -2,13 +2,6 @@
     background-color: transparent !important;
 }
 
-.navbar-brand.has-logo img, div>.img-fluid{
-    background-color: transparent !important;
-    -webkit-filter: $filter_navbrand;
-}
-
-
-
 #nav-drawer{
     background-color: $color_primary !important;
     *{
@@ -206,8 +199,67 @@ div.message{
 }
 
 .dropdown-item{
-    color: $text_one !important;
-    &:hover{
-        color: $text_contrast !important;
+    a{
+        color: $text_one !important;
+        &:hover{
+            color: $text_contrast_2 !important;
+        }
     }
+}
+
+.bars{
+    background-color: $menu !important;
+    span {
+        background-color: $menu !important;
+        *{
+            background-color: $menu !important;
+        }
+    }
+    div{
+        background-color: $menu !important;
+        ul{
+            background-color: $menu !important;
+            li{
+                background-color: $menu !important;
+            }
+        }
+        a.nav-link {
+            background-color: $menu !important;
+            i{
+                background-color: $menu !important;
+            }
+        }
+    }
+}
+
+.modal-dialog{
+    background-color: transparent !important;
+}
+.modal{
+    background-color: rgba(0, 0, 0, 0.281) !important;
+    .modal-content{
+        background-color: $menu !important;
+        color: $text_one !important;
+        *{
+            background-color: $menu !important;
+            color: $text_two !important;
+        }
+    }
+}
+
+#page .card iframe{
+    border-radius: 0.5em;
+    background-color: $text_contrast !important;
+}
+
+#page .card select{
+    option{
+        background-color: $color_background !important;
+    }
+}
+
+#page .alert.alert-danger{
+    background-color: $fail !important;
+    opacity: 0.8;
+    color: $text_contrast !important;
 }

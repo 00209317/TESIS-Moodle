@@ -111,7 +111,7 @@ class accessibility extends external_api {
      * @return string|null
      */
     public static function fontsize_increase($currentfontsizeclass = '', $action = null, $value = null) {
-        $newfontsizeclass = null;
+        $newfontsizeclass = 'fontsize-inc-6';
 
         if ($currentfontsizeclass == '') {
             $newfontsizeclass = 'fontsize-inc-1';
@@ -142,7 +142,7 @@ class accessibility extends external_api {
      * @return string|null
      */
     public static function fontsize_decrease($currentfontsizeclass = '', $action = null, $value = null) {
-        $newfontsizeclass = null;
+        $newfontsizeclass = 'fontsize-dec-6';
 
         if ($currentfontsizeclass == '') {
             $newfontsizeclass = 'fontsize-dec-1';

@@ -12,15 +12,20 @@
     $text_two: #ffffff;
     $success: #005f11;
     $fail: #ae0f00;
-    $text_link: #000000;
-    $text_contrast: #3b3b3b;
-    $filter_navbrand: sepia(100%);
+    $menu: #1b1b1b;
+    $text_contrast: #ffffff;
+    $text_contrast_2: #6e6e6e;
+    $filter_navbrand: brightness(96%) contrast(85%) saturate(164%);
     
     background-color: $color_background !important;
     *{
         background-color: $color_one !important;
     }
     
+    .navbar-brand.has-logo img, div>.img-fluid, img{
+        background-color: transparent !important;
+        -webkit-filter: $filter_navbrand;
+    }
     
     @import "./themes.scss";
 }

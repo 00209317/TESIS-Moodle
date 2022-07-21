@@ -11,13 +11,19 @@
     $text_two: #ffffff;
     $success: #003602;
     $fail: #5a0e00;
-    $text_link: #000000;
-    $text_contrast: #3b3b3b;
-    $filter_navbrand:  grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+    $menu: #1b1b1b;
+    $text_contrast: #ffffff;
+    $text_contrast_2: #6e6e6e;
+    $filter_navbrand: brightness(97%) contrast(92%) hue-rotate(11deg) saturate(94%) grayscale(7%);
     
     background-color: $color_background !important;
     *{
         background-color: $color_one !important;
+    }
+    
+    .navbar-brand.has-logo img, div>.img-fluid, img{
+        background-color: transparent !important;
+        -webkit-filter: $filter_navbrand;
     }
     
     @import "./themes.scss";

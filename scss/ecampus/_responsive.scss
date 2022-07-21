@@ -423,6 +423,7 @@ li.activity{
   
   .modal-header{
     border-bottom: 0;
+    width: 100%;
     
     h5{
       color: #fff;
@@ -434,7 +435,11 @@ li.activity{
   }
   
   .modal-footer{
+    width: 100%;
     border-top: 0;
+  }
+  .modal-body{
+    width: 100%;
   }
   
   .modal-body a{
