@@ -317,3 +317,19 @@ div.message{
     background-color: $color_primary !important;
     color: $text_contrast !important;
 }
+
+#page .calendar_event_course{
+    background-color: $color_three !important;
+}
+
+.path-calendar .maincalendar .calendar_event_course{
+    background-color: $color_three !important;
+}
+
+#nav-drawer .list-group+.list-group {
+    border-top-color: $color_three !important;
+}
+
+#navbar_content_control i{
+    color: $text_one !important;
+}

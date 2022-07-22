@@ -30,7 +30,9 @@
       right: 1.5em;
       transition: all 300ms ease 0ms;
       z-index: 99;
-      
+      &>a span{
+        font-size:1.3em;
+      }
       &>ul{
         bottom: 1em;
         padding-bottom: 1em !important;
