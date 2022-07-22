@@ -7,6 +7,16 @@
     *{
         background-color: $color_primary !important;
     }
+    .list-group .list-group-item a {
+        color: $text_two !important;
+        *{
+            background-color: transparent !important;
+        }
+        &:hover{
+            color: $text_one !important;
+            background-color: $color_two !important;
+        }
+    }
 }
 .top-footer {
     background-color: $color_three !important;
@@ -27,12 +37,15 @@
     border-color: $color_three !important;
     *{
         background-color: transparent !important;
+        color: $text_one !important;
     }
     &:hover{
         background-color: $color_background !important;
-        color: $text_two !important;
-        a{
-            background-color: transparent !important;
+        *{
+            color: $text_one !important;
+        }
+        a.btn{
+            background-color: $color_three !important;
         }
     }
 }
@@ -52,6 +65,8 @@
         background-color: $color_one !important;
     }
 }
+
+
 
 #page .btn, .btn, .btn.btn-link{
     background-color: $color_primary !important;
