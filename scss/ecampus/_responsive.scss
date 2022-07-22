@@ -24,6 +24,27 @@
     display: none !important;
   }
   
+  .course-section {
+      position: fixed;
+      bottom: 1em;
+      right: 1.5em;
+      transition: all 300ms ease 0ms;
+      z-index: 99;
+      
+      &>ul{
+        bottom: 1em;
+        padding-bottom: 1em !important;
+        right: 1em;
+        width: 50vw;
+        max-height: 50vh;
+        overflow-y: auto;
+        
+        li{
+          border-left: 0;
+          border-right: solid #f29450 7px;
+        }
+      }
+    }
 }
 
 @media (max-width: 767px) {
@@ -471,6 +492,7 @@ li.activity{
   }
 }
 
+
 .course-section li {
   display: block;
   transition-duration: 0.5s;
@@ -511,7 +533,6 @@ li.activity{
   padding: 0;
   padding-top: 0.5em;
   background-color: transparent;
-  border-radius: 1.25em;
   
 }
 

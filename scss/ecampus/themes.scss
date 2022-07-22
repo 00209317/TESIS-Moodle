@@ -278,3 +278,26 @@ div.message{
     opacity: 0.8;
     color: $text_contrast !important;
 }
+
+.course-section{
+    background-color: transparent !important;
+    ul{
+        background-color: transparent !important;
+        li{
+            border-color: $color_three !important;
+        }
+    }
+}
+
+#sidepreopen-control{
+    background-color: $color_primary !important;
+    color: $text_two !important;
+}
+
+#sidepre-blockss{
+    background-color: $color_background !important;
+    *:not(.btn){
+        background-color: transparent !important;
+    }
+}
+
