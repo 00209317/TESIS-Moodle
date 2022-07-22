@@ -214,11 +214,12 @@ div.message{
 }
 
 .dropdown-item{
-    a{
+    color: $text_one !important;
+    a,i{
         color: $text_one !important;
-        &:hover{
-            color: $text_contrast_2 !important;
-        }
+    }
+    &:hover *{
+        color: $text_contrast_2 !important;
     }
 }
 
@@ -295,7 +296,10 @@ div.message{
 }
 
 #sidepre-blockss{
-    background-color: $color_background !important;
+    background-color: $color_one !important;
+    box-shadow: -4px 0px 5px 0px rgba(0,0,0,0.2);
+    -webkit-box-shadow: -4px 0px 5px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: -4px 0px 5px 0px rgba(0,0,0,0.2);
     *:not(.btn){
         background-color: transparent !important;
     }
@@ -307,4 +311,9 @@ div.message{
 
 #page .qnbutton.incorrect .trafficlight{
     background-color: $fail !important;
+}
+
+#page span.badge-info{
+    background-color: $color_primary !important;
+    color: $text_contrast !important;
 }

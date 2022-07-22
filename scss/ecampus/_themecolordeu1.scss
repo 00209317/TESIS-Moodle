@@ -3,11 +3,11 @@
 .sitecolor-color-deu1 {
 
     //MODO DEUTERANOPIA
-    $color_primary: #00397e;
-    $color_one: #fefdf9;
-    $color_two: #faf9f5;
-    $color_three: #ff9839;
-    $color_background: #e9f3f5;
+    $color_primary: #0b486b;
+    $color_one: #a8dba8;
+    $color_two: #c3ffcb;
+    $color_three: #79bd9a;
+    $color_background: #3b8686;
     $text_one: #000000;
     $text_two: #ffffff;
     $success: #005f11;
@@ -20,11 +20,6 @@
     background-color: $color_background !important;
     *{
         background-color: $color_one !important;
-    }
-    
-    .navbar-brand.has-logo img, div>.img-fluid, img{
-        background-color: transparent !important;
-        -webkit-filter: $filter_navbrand;
     }
     
     @import "./themes.scss";

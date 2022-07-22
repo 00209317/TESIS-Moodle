@@ -1,17 +1,17 @@
 
 
-.sitecolor-color-pro {
+.sitecolor-color-pro1 {
     
     //MODO PROTANOPIA
-    $color_primary: #022052;
-    $color_one: #fefcff;
-    $color_two: #fbfbfb;
-    $color_three: #f4be80;
-    $color_background: #ecf0f3;
+    $color_primary: #cc2a49;
+    $color_one: #ffd8ec;
+    $color_two: #a44a79;
+    $color_three: #24101b;
+    $color_background: #582841;
     $text_one: #000000;
     $text_two: #fefcff;
-    $success: #103c0c;
-    $fail: #723535;
+    $success: #419e38;
+    $fail: #3b1111;
     $menu: #1b1b1b;
     $text_contrast: #ffffff;
     $text_contrast_2: #6e6e6e;
@@ -20,11 +20,6 @@
     background-color: $color_background !important;
     *{
         background-color: $color_one !important;
-    }
-    
-    .navbar-brand.has-logo img, div>.img-fluid, img{
-        background-color: transparent !important;
-        -webkit-filter: $filter_navbrand;
     }
     
     @import "./themes.scss";  

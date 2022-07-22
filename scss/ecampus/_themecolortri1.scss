@@ -1,16 +1,16 @@
 
 
-.sitecolor-color-tri {
+.sitecolor-color-tri1 {
     //MODO TRITANOPIA
-    $color_primary: #314872;
-    $color_one: #fefcff;
-    $color_two: #f9f9f9;
-    $color_three: #ae834c;
-    $color_background: #f0f4f7;
+    $color_primary: #525089;
+    $color_one: #ebeff3;
+    $color_two: #dde1e6;
+    $color_three: #8d8ac2;
+    $color_background: #b9bcc0;
     $text_one: #000000;
     $text_two: #ffffff;
-    $success: #003602;
-    $fail: #5a0e00;
+    $success: #00ac06;
+    $fail: #900202;
     $menu: #1b1b1b;
     $text_contrast: #ffffff;
     $text_contrast_2: #6e6e6e;
@@ -21,10 +21,6 @@
         background-color: $color_one !important;
     }
     
-    .navbar-brand.has-logo img, div>.img-fluid, img{
-        background-color: transparent !important;
-        -webkit-filter: $filter_navbrand;
-    }
     
     @import "./themes.scss";
 }
