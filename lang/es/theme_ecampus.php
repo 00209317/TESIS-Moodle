@@ -26,7 +26,7 @@ defined('MOODLE_INTERNAL') || die();
 
 $string['pluginname'] = 'ECampus';
 $string['configtitle'] = 'ECampus';
-$string['choosereadme'] = 'ECampus es un tema moderno altamente personalizable. Este tema está destinado a ser utilizado directamente o como tema principal al crear nuevos temas utilizando Bootstrap 4.';
+$string['choosereadme'] = 'Ecampus es un tema visual diseñado especialmente para la Universidad Centroamericana "Jose Simeon Cañas", basado en el el tema Moove, añadiendo mejoras a la UI, adaptabilidad y accesibilidad de los estudiantes UCA.';
 
 $string['currentinparentheses'] = '(current)';
 $string['region-side-pre'] = 'Derecha';

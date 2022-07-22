@@ -130,18 +130,29 @@
     background-color: $color_one !important;
 }
 
-.message-app{
-    background-color: $color_background !important;
+#page .message-app{
+    background-color: $color_one !important;
+    border:none;
     *{
-        background-color: $color_background !important;
+        background-color: $color_one !important;
+    }
+    .btn{
+        background-color: $color_primary !important;
+        color: $text_one !important;
+        *{
+            background-color: transparent !important;
+        }
     }
 }
 
-div.message{
-    background-color: $color_one !important;
+#page div.message,div.message{
+    background-color: $color_two !important;
+    box-shadow: -4px 0px 5px 0px rgba(0,0,0,0.2);
+    -webkit-box-shadow: -4px 0px 5px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: -4px 0px 5px 0px rgba(0,0,0,0.2);
     *{
         background-color: transparent !important;
-        border-bottom-color: $color_one !important;
+        border-bottom-color: $color_two !important;
     }
 }
 
@@ -274,7 +285,7 @@ div.message{
 
 #page .card select{
     option{
-        background-color: $color_background !important;
+        background-color: $color_one !important;
     }
 }
 
@@ -348,5 +359,9 @@ div.message{
     .btn i{
         background-color: transparent !important;
         color: $text_two !important;
+    }
+}#page .progress-circle{
+    &::before{
+        background-color: $color_one !important;
     }
 }
