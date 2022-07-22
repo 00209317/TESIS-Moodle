@@ -301,3 +301,10 @@ div.message{
     }
 }
 
+#page .qnbutton.correct .trafficlight{
+    background-color: $success !important;
+}
+
+#page .qnbutton.incorrect .trafficlight{
+    background-color: $fail !important;
+}

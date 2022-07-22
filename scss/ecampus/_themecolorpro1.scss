@@ -1,0 +1,32 @@
+
+
+.sitecolor-color-pro {
+    
+    //MODO PROTANOPIA
+    $color_primary: #022052;
+    $color_one: #fefcff;
+    $color_two: #fbfbfb;
+    $color_three: #f4be80;
+    $color_background: #ecf0f3;
+    $text_one: #000000;
+    $text_two: #fefcff;
+    $success: #103c0c;
+    $fail: #723535;
+    $menu: #1b1b1b;
+    $text_contrast: #ffffff;
+    $text_contrast_2: #6e6e6e;
+    $filter_navbrand: brightness(97%) contrast(92%) hue-rotate(11deg) saturate(69%) grayscale(16%); 
+    
+    background-color: $color_background !important;
+    *{
+        background-color: $color_one !important;
+    }
+    
+    .navbar-brand.has-logo img, div>.img-fluid, img{
+        background-color: transparent !important;
+        -webkit-filter: $filter_navbrand;
+    }
+    
+    @import "./themes.scss";  
+
+}
