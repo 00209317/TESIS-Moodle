@@ -12,7 +12,7 @@ function modalHelp(){
     //Editar ajustes
     var editarAjustes = document.getElementById("editarAjustes");
     if(editarAjustes){
-        editarAjustes.href="../admin/settings.php?section=frontpagesettings"+courseId
+        editarAjustes.href="../admin/settings.php?section=frontpagesettings"
     }
 
     //filtros

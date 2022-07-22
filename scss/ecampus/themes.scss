@@ -257,10 +257,14 @@ div.message{
         background-color: $menu !important;
         color: $text_one !important;
         *{
-            background-color: $menu !important;
+            background-color: transparent !important;
             color: $text_two !important;
         }
     }
+}
+
+.modal-content .modal-body a {
+    background-color: transparent !important;
 }
 
 #page .card iframe{
@@ -332,4 +336,17 @@ div.message{
 
 #navbar_content_control i{
     color: $text_one !important;
+}
+
+.moodle-dialogue-base .moodle-dialogue-wrap {
+    background-color: $menu !important;
+    color: $text_two !important;
+    *:not(.btn){
+        background-color: $menu !important;
+        color: $text_two !important;
+    }
+    .btn i{
+        background-color: transparent !important;
+        color: $text_two !important;
+    }
 }
