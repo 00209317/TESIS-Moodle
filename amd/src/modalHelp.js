@@ -6,7 +6,7 @@ function modalHelp(){
     //Activar Edicion
     var activarEdicion = document.getElementById("activarEdicion")
     if(activarEdicion){
-        activarEdicion.href="../backup/restorefile.php?contextid="+courseId
+        activarEdicion.href="../admin/settings.php?section=frontpagesettings"
     }
 
     //Editar ajustes

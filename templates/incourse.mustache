@@ -74,12 +74,87 @@
                     {{{ output.activity_navigation }}}
                 </section>
             </div>
-            <div class="{{#hasblocks}}col-md-3{{/hasblocks}}{{^hasblocks}}col-md-12{{/hasblocks}} col-sm-12 col-xs-12">
-                <section id="sidepre-blocks" data-region="blocks-column" class="hidden-print">
+            {{#hasblocks}}
+                <div class="col-md-3 col-sm-12 col-xs-12">
                     {{{ sidepreblocks }}}
-                </section>
-            </div>
+                </div>
+            {{/hasblocks}}
         </div>
     </div>
 
-    {{>theme_ecampus/inc_end}}  
+     {{#hasblocks}}
+        <i id="sidepreopen-control"
+            aria-expanded="{{#draweropenright}}true{{/draweropenright}}{{^draweropenright}}false{{/draweropenright}}"
+            aria-controls="sidepre-blocks"
+            data-action="toggle-drawer"
+            data-side="right"
+            data-preference="sidepre-open"
+            title="{{#str}} showhideblocks, theme_ecampus {{/str}}">
+        </i>
+
+
+    {{/hasblocks}}
+
+    {{{ output.standard_after_main_region_html }}}
+
+    {{#hasdrawertoggle}}
+        {{> theme_ecampus/nav-drawer }}
+    {{/hasdrawertoggle}}
+</div><!-- Ends .page-wrapper -->
+{{> theme_ecampus/footer }}
+
+</body>
+</html>
+{{#js}}
+    
+
+    require(['theme_ecampus/courseMenu']);
+
+    require(['theme_ecampus/navbarMenu']);
+
+    require(['theme_ecampus/editButton']);
+
+    require(['theme_ecampus/modalHelp']);
+    
+    require(['theme_boost/loader']);
+
+    require(['theme_boost/drawer'], function(mod) {
+        mod.init();
+    });
+
+    require(['theme_ecampus/metismenu', 'jquery'], function(metisMenu, $) {
+        $(".metismenu").metisMenu();
+    });
+
+    require([], function() {
+        var iconsearch = document.querySelector('.ecampus-search-input .slicon-magnifier');
+        var btnclosesearch = document.querySelector('.search-input-form .close-search');
+        var searchinputform = document.querySelector('.ecampus-search-input');
+
+        if (iconsearch) {
+
+            var togglesearchinputform = function() {
+                searchinputform.classList.toggle('expanded');
+            }
+
+            iconsearch.onclick = togglesearchinputform;
+            btnclosesearch.onclick = togglesearchinputform;
+        }
+    });
+
+    require(['theme_ecampus/accessibilitybar'], function(bar) {
+        bar.init();
+    });
+
+    require(['theme_ecampus/accessibilitymodal'], function(bar) {
+        bar.init();
+    });
+
+    require(['theme_ecampus/footer'], function(bar) {
+        bar.init();
+    });
+
+    require(['theme_ecampus/tablesEcampus']);
+
+
+{{/js}}
