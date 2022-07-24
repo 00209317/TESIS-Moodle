@@ -105,12 +105,10 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
         }]);
 
         request[0].done(function(result) {
-            //document.getElementById('fonttype').value = result.fonttype;
             sitecolorCurrentAction = result.sitecolor;  
             myClass.reloadSitecolorClass();              
             
-        }).fail(function(error){
-        }) 
+        });
     }
 
     AccessibilityBar.prototype.getFontSize = function() {
