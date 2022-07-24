@@ -845,19 +845,15 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * @since Moodle 2.5.1 2.6
      */
     public function body_attributes($additionalclasses = array()) {
-        $hasaccessibilitybar = false; //get_user_preferences('themeecampussettings_enableaccessibilitytoolbar', '');
-        if ($hasaccessibilitybar) {
-            $additionalclasses[] = 'hasaccessibilitybar';
 
-            $currentfontsizeclass = get_user_preferences('accessibilitystyles_fontsizeclass', '');
-            if ($currentfontsizeclass) {
-                $additionalclasses[] = $currentfontsizeclass;
-            }
+        $currentfontsizeclass = get_user_preferences('accessibilitystyles_fontsizeclass', '');
+        if ($currentfontsizeclass) {
+            $additionalclasses[] = $currentfontsizeclass;
+        }
 
-            $currentsitecolorclass = get_user_preferences('accessibilitystyles_sitecolorclass', '');
-            if ($currentsitecolorclass) {
-                $additionalclasses[] = $currentsitecolorclass;
-            }
+        $currentsitecolorclass = get_user_preferences('accessibilitystyles_sitecolorclass', '');
+        if ($currentsitecolorclass) {
+            $additionalclasses[] = $currentsitecolorclass;
         }
 
         $fonttype = get_user_preferences('themeecampussettings_fonttype', '');

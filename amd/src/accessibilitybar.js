@@ -55,9 +55,9 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
             navbarcontent.classList.add('allvisible');
             toolbutton.classList.add('allvisible');
             this.registerEventListeners();
-            this.getFontSize();
-            this.getColor();
-            this.reloadFontSite();
+            //this.getFontSize();
+            //this.getColor();
+            //this.reloadFontSite();
         } else {
             mybarButton.classList.add('hidden-display');
             //navbartoolsmodal
