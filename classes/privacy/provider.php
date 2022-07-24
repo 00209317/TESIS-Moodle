@@ -49,8 +49,6 @@ class provider implements
     const SITECOLOR = 'accessibilitystyles_sitecolorclass';
     /** The user preference for the font type. */
     const FONTTYPE = 'themeecampussettings_fonttype';
-    /** The user preference for the enable accessibility toolbar. */
-    const TOOLBAR = 'themeecampussettings_enableaccessibilitytoolbar';
 
     /**
      * Returns meta data about this system.
@@ -62,7 +60,6 @@ class provider implements
         $items->add_user_preference(self::FONTSIZE, 'privacy:metadata:preference:accessibilitystyles_fontsizeclass');
         $items->add_user_preference(self::SITECOLOR, 'privacy:metadata:preference:accessibilitystyles_sitecolorclass');
         $items->add_user_preference(self::FONTTYPE, 'privacy:metadata:preference:themeecampussettings_fonttype');
-        //$items->add_user_preference(self::TOOLBAR, 'privacy:metadata:preference:themeecampussettings_enableaccessibilitytoolbar');
         return $items;
     }
 
@@ -73,34 +70,24 @@ class provider implements
      * @throws \coding_exception
      */
     public static function export_user_preferences(int $userid) {
-        $toolbar = get_user_preferences(self::TOOLBAR, null, $userid);
-        if (isset($toolbar)) {
+        $fontsize = get_user_preferences(self::FONTSIZE, null, $userid);
+        if (isset($fontsize)) {
             writer::export_user_preference(
                 'theme_ecampus',
-                self::TOOLBAR,
-                $toolbar,
-                //get_string('privacy:themeecampussettings_enableaccessibilitytoolbar', 'theme_ecampus', $toolbar)
+                self::FONTSIZE,
+                $fontsize,
+                get_string('privacy:accessibilitystyles_fontsizeclass', 'theme_ecampus', $fontsize)
             );
+        }
 
-            $fontsize = get_user_preferences(self::FONTSIZE, null, $userid);
-            if (isset($fontsize)) {
-                writer::export_user_preference(
-                    'theme_ecampus',
-                    self::FONTSIZE,
-                    $fontsize,
-                    get_string('privacy:accessibilitystyles_fontsizeclass', 'theme_ecampus', $fontsize)
-                );
-            }
-
-            $sitecolor = get_user_preferences(self::SITECOLOR, null, $userid);
-            if (isset($sitecolor)) {
-                writer::export_user_preference(
-                    'theme_ecampus',
-                    self::SITECOLOR,
-                    $sitecolor,
-                    get_string('privacy:accessibilitystyles_sitecolorclass', 'theme_ecampus', $sitecolor)
-                );
-            }
+        $sitecolor = get_user_preferences(self::SITECOLOR, null, $userid);
+        if (isset($sitecolor)) {
+            writer::export_user_preference(
+                'theme_ecampus',
+                self::SITECOLOR,
+                $sitecolor,
+                get_string('privacy:accessibilitystyles_sitecolorclass', 'theme_ecampus', $sitecolor)
+            );
         }
 
         $fonttype = get_user_preferences(self::FONTTYPE, null, $userid);
