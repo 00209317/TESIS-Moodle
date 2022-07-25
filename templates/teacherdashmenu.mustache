@@ -1,0 +1,24 @@
+{{#showincourseonly}}
+    {{! Dirige a Gestión del Curso / Modal se levanta }}
+    {{#hasteacherdash}}
+    <div class="teacherdash nav-item nav-link">
+        <a role="button" data-toggle="modal" class="btn btn-secondary fhs-tooltip" data-target="#exampleModal">  <i class="fa fa-cogs" aria-hidden="true"></i></a>
+    </div>
+    {{/hasteacherdash}}
+   {{! Dirige a Gestión del Curso / Modal se levanta estudiante}}
+    {{#hasstudentdash}}
+    <div class="studentdash nav-item nav-link">
+        <h2>Soy Estudiante</h2>
+    </div>
+    {{/hasstudentdash}}
+    {{#hasadminlink}}
+    <div class="studentdash nav-item nav-link">
+        <a role="button" data-toggle="modal" class="btn btn-secondary fhs-tooltip" data-target="#exampleModal">  <i class="fa fa-cogs" aria-hidden="true"></i></a>
+    </div>
+    {{/hasadminlink}}
+{{/showincourseonly}}
+    {{#hasadminlink}}
+    <div class="studentdash nav-item nav-link">
+        <a role="button" data-toggle="modal" class="btn btn-secondary fhs-tooltip" data-target="#exampleModal">  <i class="fa fa-cogs" aria-hidden="true"></i></a>
+    </div>
+    {{/hasadminlink}}

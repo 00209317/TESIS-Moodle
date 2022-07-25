@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * A maintenance layout for the moove theme.
+ * A maintenance layout for the ecampus theme.
  *
- * @package   theme_moove
+ * @package   theme_ecampus
  * @copyright 2017 Willian Mano - http://conecti.me
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -34,4 +34,4 @@ $templatecontext = [
     'output' => $OUTPUT
 ];
 
-echo $OUTPUT->render_from_template('theme_moove/maintenance', $templatecontext);
+echo $OUTPUT->render_from_template('theme_ecampus/maintenance', $templatecontext);

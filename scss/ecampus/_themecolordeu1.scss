@@ -1,0 +1,26 @@
+
+
+.sitecolor-color-deu1 {
+
+    //MODO DEUTERANOPIA
+    $color_primary: #0b486b;
+    $color_one: #a8dba8;
+    $color_two: #c3ffcb;
+    $color_three: #79bd9a;
+    $color_background: #3b8686;
+    $text_one: #000000;
+    $text_two: #ffffff;
+    $success: #005f11;
+    $fail: #ae0f00;
+    $menu: #1b1b1b;
+    $text_contrast: #ffffff;
+    $text_contrast_2: #6e6e6e;
+    $filter_navbrand: brightness(96%) contrast(85%) saturate(164%);
+    
+    background-color: $color_background !important;
+    *{
+        background-color: $color_one !important;
+    }
+    
+    @import "./themes.scss";
+}

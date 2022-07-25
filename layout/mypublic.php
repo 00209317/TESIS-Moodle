@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * A two column layout for the moove theme.
+ * A two column layout for the ecampus theme.
  *
- * @package   theme_moove
+ * @package   theme_ecampus
  * @copyright 2017 Willian Mano - http://conecti.me
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -74,25 +74,25 @@ $templatecontext = [
 ];
 
 // Improve boost navigation.
-theme_moove_extend_flat_navigation($PAGE->flatnav);
+theme_ecampus_extend_flat_navigation($PAGE->flatnav);
 
 $templatecontext['flatnavigation'] = $PAGE->flatnav;
 
-$themesettings = new \theme_moove\util\theme_settings();
+$themesettings = new \theme_ecampus\util\theme_settings();
 
 $templatecontext = array_merge($templatecontext, $themesettings->footer_items());
 
-$usercourses = \theme_moove\util\extras::user_courses_with_progress($user);
+$usercourses = \theme_ecampus\util\extras::user_courses_with_progress($user);
 $templatecontext['hascourses'] = (count($usercourses)) ? true : false;
 $templatecontext['courses'] = array_values($usercourses);
 $templatecontext['user'] = $user;
-$templatecontext['user']->profilepicture = \theme_moove\util\extras::get_user_picture($user, 100);
+$templatecontext['user']->profilepicture = \theme_ecampus\util\extras::get_user_picture($user, 100);
 $templatecontext['user']->fullname = fullname($user);
 
-$competencyplans = \theme_moove\util\extras::get_user_competency_plans($user);
+$competencyplans = \theme_ecampus\util\extras::get_user_competency_plans($user);
 $templatecontext['hascompetencyplans'] = (count($competencyplans)) ? true : false;
 $templatecontext['competencyplans'] = $competencyplans;
 
-$templatecontext['headerbuttons'] = \theme_moove\util\extras::get_mypublic_headerbuttons($context, $user);
+$templatecontext['headerbuttons'] = \theme_ecampus\util\extras::get_mypublic_headerbuttons($context, $user);
 
-echo $OUTPUT->render_from_template('theme_moove/mypublic', $templatecontext);
+echo $OUTPUT->render_from_template('theme_ecampus/mypublic', $templatecontext);

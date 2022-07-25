@@ -17,12 +17,12 @@
 /**
  * Course renderer.
  *
- * @package    theme_moove
+ * @package    theme_ecampus
  * @copyright  2017 Willian Mano - conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_moove\output\core;
+namespace theme_ecampus\output\core;
 
 defined('MOODLE_INTERNAL') || die();
 
@@ -32,12 +32,13 @@ use core_course_category;
 use coursecat_helper;
 use stdClass;
 use core_course_list_element;
-use theme_moove\util\extras;
+use theme_ecampus\util\extras;
+use context_course;
 
 /**
- * Renderers to align Moove's course elements to what is expect
+ * Renderers to align ECampus's course elements to what is expect
  *
- * @package    theme_moove
+ * @package    theme_ecampus
  * @copyright  2017 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -66,7 +67,7 @@ class course_renderer extends \core_course_renderer {
     protected function coursecat_courses(coursecat_helper $chelper, $courses, $totalcount = null) {
         global $CFG;
 
-        $theme = \theme_config::load('moove');
+        $theme = \theme_config::load('ecampus');
 
         if (!empty($theme->settings->courselistview)) {
             return parent::coursecat_courses($chelper, $courses, $totalcount);
@@ -178,7 +179,7 @@ class course_renderer extends \core_course_renderer {
      * @throws \moodle_exception
      */
     protected function coursecat_coursebox(coursecat_helper $chelper, $course, $additionalclasses = '') {
-        $theme = \theme_config::load('moove');
+        $theme = \theme_config::load('ecampus');
 
         if (!empty($theme->settings->courselistview)) {
             return parent::coursecat_coursebox($chelper, $course, $additionalclasses);
@@ -203,7 +204,7 @@ class course_renderer extends \core_course_renderer {
 
         // End coursebox.
         $content = html_writer::start_tag('div', array(
-            'class' => $classes,
+            'class' => 'card card3',
             'data-courseid' => $course->id,
             'data-type' => self::COURSECAT_TYPE_COURSE,
         ));
@@ -230,7 +231,7 @@ class course_renderer extends \core_course_renderer {
      * @throws \moodle_exception
      */
     protected function coursecat_coursebox_content(coursecat_helper $chelper, $course) {
-        $theme = \theme_config::load('moove');
+        $theme = \theme_config::load('ecampus');
 
         if (!empty($theme->settings->courselistview)) {
             return parent::coursecat_coursebox_content($chelper, $course);
@@ -260,7 +261,7 @@ class course_renderer extends \core_course_renderer {
      * @return string
      */
     protected function course_summary(coursecat_helper $chelper, core_course_list_element $course): string {
-        $theme = \theme_config::load('moove');
+        $theme = \theme_config::load('ecampus');
 
         if (!empty($theme->settings->courselistview)) {
             return parent::course_summary($chelper, $course);
@@ -289,7 +290,7 @@ class course_renderer extends \core_course_renderer {
     protected function course_contacts(core_course_list_element $course) {
         global $CFG, $DB;
 
-        $theme = \theme_config::load('moove');
+        $theme = \theme_config::load('ecampus');
 
         if (!empty($theme->settings->courselistview)) {
             return parent::course_contacts($course);
@@ -352,7 +353,7 @@ class course_renderer extends \core_course_renderer {
      * @throws \moodle_exception
      */
     protected function course_category_name(coursecat_helper $chelper, core_course_list_element $course): string {
-        $theme = \theme_config::load('moove');
+        $theme = \theme_config::load('ecampus');
 
         if (!empty($theme->settings->courselistview)) {
             return parent::course_category_name($chelper, $course);
@@ -361,7 +362,7 @@ class course_renderer extends \core_course_renderer {
         $content = '';
 
         if ($cat = core_course_category::get($course->category, IGNORE_MISSING)) {
-            $content .= html_writer::start_tag('div', ['class' => 'coursecat badge badge-info']);
+            $content .= html_writer::start_tag('div', ['class' => 'coursecat badge badge-info d-none']);
             $content .= html_writer::link(new moodle_url('/course/index.php', ['categoryid' => $cat->id]),
                     $cat->get_formatted_name(), ['class' => $cat->visible ? 'text-white' : 'dimmed']);
             $content .= html_writer::end_tag('div');
@@ -392,7 +393,7 @@ class course_renderer extends \core_course_renderer {
 
             $content .= html_writer::start_tag('div', ['class' => 'pull-right']);
             $content .= html_writer::link(new moodle_url('/course/view.php', ['id' => $course->id]),
-                get_string('access', 'theme_moove'), ['class' => 'card-link btn btn-primary']);
+                get_string('access', 'theme_ecampus'), ['class' => 'card-link btn btn-primary']);
             $content .= html_writer::end_tag('div'); // End pull-right.
 
             $content .= html_writer::end_tag('div'); // End card-footer.
@@ -408,7 +409,7 @@ class course_renderer extends \core_course_renderer {
      * @return string
      */
     protected function course_custom_fields(core_course_list_element $course): string {
-        $theme = \theme_config::load('moove');
+        $theme = \theme_config::load('ecampus');
 
         if (!empty($theme->settings->courselistview)) {
             return parent::course_custom_fields($course);

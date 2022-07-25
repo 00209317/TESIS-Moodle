@@ -1,0 +1,177 @@
+#accessibilitybar.hidden-display{
+    display: none;
+}
+
+#accessibilitybar.show-display-flex{
+    display: flex;
+}
+
+#accessibilitybar.allvisible {
+    padding: .2rem;
+    height: 30px;
+    
+    .container_accessibilitybar{
+        width: 100%;
+        max-height: 33vh;
+    }
+    
+    .bars {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        align-items: center;
+        text-align: center;
+        background-color: #222325;
+        color: #fff;
+        padding: 1.5rem;
+        border-radius: 1em;
+
+        ul {
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+            display: flex;
+
+            li {
+                display: list-item;
+                text-align: -webkit-match-parent;
+                margin: .5rem .1em !important;
+
+                .btn {
+                    padding: 0.4rem 1.25em;
+                    border-radius: 0.5em;
+                    color: white;
+                    cursor: pointer;
+                    margin: 0 !important;
+                }
+            }
+        }
+
+        .lang-menu{
+            width: fit-content;
+            align-self: flex-end !important;
+            height: fit-content;
+
+            .dropdown {
+                height: fit-content;
+                padding: 0;
+                .dropdown-toggle{
+                    height: 2rem;
+                }
+                
+                .nav-link{
+                    padding: 0;
+                }
+            }
+
+            .slicon-globe{
+                display: inherit;
+            }
+        }
+
+        .sitecolor {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: #000000;
+            li {
+                margin: 0.5em 0;
+            }
+
+            #sitecolor_color1{
+                background-color: #033868 !important;
+                color: #ffffcc !important;
+            }
+            #sitecolor_colordark{
+                background-color: #1f1e1e!important;
+                color: rgba(193,193,193,.856)!important;
+            }
+
+            #sitecolor_colortri1 {
+                background-color: #525089 !important;
+                color: #ffffff !important;
+            }
+            #sitecolor_colorpto1 {
+                background-color: #582841 !important;
+                color: #ffffff !important;
+            }
+            #sitecolor_colordeu1 {
+                background-color: #79bd9a !important;
+                color: #ffffff !important;
+            }
+    
+            #sitecolor_color2 {
+                background-color: #ffffcc !important;
+                color: #272c33 !important;
+            }
+    
+            #sitecolor_color3 {
+                background-color: #99ccff !important;
+                color: #272c33 !important;
+            }
+    
+            #sitecolor_color4 {
+                color: #ffff00 !important;
+                background-color: #000000 !important;
+            }
+        }
+    }
+}
+
+#accessibilitybar.allvisible {
+    position: fixed;
+    z-index: 100;
+    right: 1vw;
+    margin-top: calc(#{$navbar-height});
+}
+
+@media (max-width: 768px) {
+    #accessibilitybar.allvisible {
+        width: 100vw;
+        top: 10vh;
+        left: 0;
+        margin-top: 0;
+        height: 0vh;
+
+        
+
+        .bars {
+            width: 100%;
+            
+            .ul-daltonico{
+                flex-direction: column;
+            }
+        }
+
+        
+    }
+}
+
+body.hasaccessibilitybar:not(.notloggedin) {
+    nav.navbar {
+        top: 0px;
+    }
+
+    #page {
+        margin-top: 70px;
+    }
+
+    [data-region="blocks-column"],
+    [data-region=right-hand-drawer].drawer {
+        top: 70px;
+    }
+
+    #nav-drawer {
+        top: 70px;
+    }
+}
+
+body.hasaccessibilitybar {
+    #nav-drawer {
+        height: calc(100% - #{$navbar-height} - 80px);
+    }
+
+    .message-app .footer-container {
+        top: 0px;
+    }
+}

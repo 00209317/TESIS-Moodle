@@ -1,0 +1,367 @@
+#page-wrapper , #page, #page-content,#page-content *, #page-header,#page-header *,#accessibilitybar .container_accessibilitybar, #accessibilitybar{
+    background-color: transparent !important;
+}
+
+#nav-drawer{
+    background-color: $color_primary !important;
+    *{
+        background-color: $color_primary !important;
+    }
+    .list-group .list-group-item a {
+        color: $text_two !important;
+        *{
+            background-color: transparent !important;
+        }
+        &:hover{
+            color: $text_one !important;
+            background-color: $color_two !important;
+        }
+    }
+}
+.top-footer {
+    background-color: $color_three !important;
+    *{
+        background-color: $color_three !important;
+    }
+}
+
+#page .card{
+    background-color: $color_one !important;
+    *{
+        background-color: transparent !important;
+    }
+}
+
+#page .card.card3, #page .activity, #page .tile.tile-clickable{
+    background-color: $color_two !important;
+    border-color: $color_three !important;
+    *{
+        background-color: transparent !important;
+        color: $text_one !important;
+    }
+    &:hover{
+        background-color: $color_background !important;
+        *{
+            color: $text_one !important;
+        }
+        a.btn{
+            background-color: $color_three !important;
+        }
+    }
+}
+
+
+.itemMenuAdministrador{
+    a{
+        &:hover{
+            background-color: $color_background !important;
+        }
+    }
+}
+
+.navbar, #navbar_content_control {
+    background-color: $color_one !important;
+    * {
+        background-color: $color_one !important;
+    }
+}
+
+
+
+#page .btn, .btn, .btn.btn-link{
+    background-color: $color_primary !important;
+    color: $text_two !important;
+    *, i.icon, span{
+        background-color: transparent !important;
+        color: $text_two !important;
+    }
+    &:hover{
+        background-color: $color_two !important;
+        color: $text_one !important;
+        *, i.icon, span{
+            color: $text_one !important;
+        }
+    }
+}
+.btn.btn-link.btn-icon.emoji-button{
+    background-color: transparent !important;
+    box-shadow: none !important;
+} 
+
+.btn.btnMenuAdministrador, .course-section>a{
+    border-color: $color_primary !important;
+    color: $text_two !important;
+    *{
+        background-color: transparent !important;
+    }
+    &:hover{
+        color: $text_one !important;
+    }
+}
+
+.icon-no-margin.category-button i{
+    color: $text_one !important;
+}
+
+.icon-no-margin.category-button.selected{
+    background-color: $color_primary !important;
+    color: $text_two !important;
+    i{
+        color: $text_two !important;
+    }
+}
+
+.popover-region-toggle,.popover-regionbar-toggle, .popover-regionbar.allvisible{
+    height: 100%;
+    .nav-item{
+        height: 100%;
+    }
+}
+
+.modal-backdrop.fade.in{
+    background-color:#000 !important;
+}
+
+#page .icon, #page i{
+    color: $text_one !important;
+}
+
+#page .section.main.moveablesection.state-visible{
+    background-color: $color_one !important;
+}
+
+#page .message-app{
+    background-color: $color_one !important;
+    border:none;
+    *{
+        background-color: $color_one !important;
+    }
+    .btn{
+        background-color: $color_primary !important;
+        color: $text_one !important;
+        *{
+            background-color: transparent !important;
+        }
+    }
+}
+
+#page div.message,div.message{
+    background-color: $color_two !important;
+    box-shadow: -4px 0px 5px 0px rgba(0,0,0,0.2);
+    -webkit-box-shadow: -4px 0px 5px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: -4px 0px 5px 0px rgba(0,0,0,0.2);
+    *{
+        background-color: transparent !important;
+        border-bottom-color: $color_two !important;
+    }
+}
+
+#page-content .list-unstyled li{
+    &:hover {
+        background-color: $color_three !important;
+        a{
+            background-color: $color_three !important;
+            color: $text_one !important;
+        }
+    }
+}
+
+#page-navbar .breadcrumb li {
+    & > *{
+        background-color: $color_primary !important;
+        border-color: $color_primary !important;
+    }
+    
+    &:after {
+        border-left-color: $color_one !important;
+    }
+    &:before {
+        content: '';
+        padding: 0;
+    }
+}
+
+#page table{
+    border-color: $text_one !important;
+}
+
+#page .dropdown-menu{
+    background-color: $color_one !important;
+}
+
+
+
+.course-section li .list-group-item{
+    background-color: $color_primary !important;
+    *{
+        background-color: transparent !important;
+        color: $text_two !important;
+    }
+}
+
+.course-section li .list-group-item.active{
+    background-color: $color_three !important;
+    *{
+        color: $text_one !important;
+    }
+}
+
+.edit-btn.btn-success {
+    color: white!important;
+    background-color: $success!important;
+    transition: all 1s;
+    &:hover{
+        background-color: $color_primary !important;
+    }
+}
+
+.edit-btn.btn-danger {
+    color: white!important;
+    background-color: $fail !important;
+    transition: all 1s;
+    &:hover{
+        background-color: $color_primary !important;
+    }
+}
+
+.dropdown-item{
+    color: $text_one !important;
+    a,i{
+        color: $text_one !important;
+    }
+    &:hover *{
+        color: $text_contrast_2 !important;
+    }
+}
+
+.bars{
+    background-color: $menu !important;
+    span {
+        background-color: $menu !important;
+        *{
+            background-color: $menu !important;
+        }
+    }
+    div{
+        background-color: $menu !important;
+        ul{
+            background-color: $menu !important;
+            li{
+                background-color: $menu !important;
+            }
+        }
+        a.nav-link {
+            background-color: $menu !important;
+            i{
+                background-color: $menu !important;
+            }
+        }
+    }
+}
+
+.modal-dialog{
+    background-color: transparent !important;
+}
+.modal{
+    background-color: rgba(0, 0, 0, 0.281) !important;
+    .modal-content{
+        background-color: $menu !important;
+        color: $text_one !important;
+        *{
+            background-color: transparent !important;
+            color: $text_two !important;
+        }
+    }
+}
+
+.modal-content .modal-body a {
+    background-color: transparent !important;
+}
+
+#page .card iframe{
+    border-radius: 0.5em;
+    background-color: $text_contrast !important;
+}
+
+#page .card select{
+    option{
+        background-color: $color_one !important;
+    }
+}
+
+#page .alert.alert-danger{
+    background-color: $fail !important;
+    opacity: 0.8;
+    color: $text_contrast !important;
+}
+
+.course-section{
+    background-color: transparent !important;
+    ul{
+        background-color: transparent !important;
+        li{
+            border-color: $color_three !important;
+        }
+    }
+}
+
+#sidepreopen-control{
+    background-color: $color_primary !important;
+    color: $text_two !important;
+}
+
+#sidepre-blockss{
+    background-color: $color_one !important;
+    box-shadow: -4px 0px 5px 0px rgba(0,0,0,0.2);
+    -webkit-box-shadow: -4px 0px 5px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: -4px 0px 5px 0px rgba(0,0,0,0.2);
+    *:not(.btn){
+        background-color: transparent !important;
+    }
+}
+
+#page .qnbutton.correct .trafficlight{
+    background-color: $success !important;
+}
+
+#page .qnbutton.incorrect .trafficlight{
+    background-color: $fail !important;
+}
+
+#page span.badge-info{
+    background-color: $color_primary !important;
+    color: $text_contrast !important;
+}
+
+#page .calendar_event_course{
+    background-color: $color_three !important;
+}
+
+.path-calendar .maincalendar .calendar_event_course{
+    background-color: $color_three !important;
+}
+
+#nav-drawer .list-group+.list-group {
+    border-top-color: $color_three !important;
+}
+
+#navbar_content_control i{
+    color: $text_one !important;
+}
+
+.moodle-dialogue-base .moodle-dialogue-wrap {
+    background-color: $menu !important;
+    color: $text_two !important;
+    *:not(.btn){
+        background-color: $menu !important;
+        color: $text_two !important;
+    }
+    .btn i{
+        background-color: transparent !important;
+        color: $text_two !important;
+    }
+}#page .progress-circle{
+    &::before{
+        background-color: $color_one !important;
+    }
+}

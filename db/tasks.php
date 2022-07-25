@@ -17,7 +17,7 @@
 /**
  * Defines the theme tasks
  *
- * @package   theme_moove
+ * @package   theme_ecampus
  * @copyright 2020 Willian Mano - http://conecti.me
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -27,7 +27,7 @@ defined('MOODLE_INTERNAL') || die();
 
 $tasks = [
     [
-        'classname' => 'theme_moove\task\diskusage',
+        'classname' => 'theme_ecampus\task\diskusage',
         'blocking' => 1,
         'minute' => '0',
         'hour' => '4',

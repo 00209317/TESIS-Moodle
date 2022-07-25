@@ -17,12 +17,12 @@
 /**
  * Accessibility API endpoints
  *
- * @package    theme_moove
+ * @package    theme_ecampus
  * @copyright  2020 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_moove\api;
+namespace theme_ecampus\api;
 
 defined('MOODLE_INTERNAL') || die;
 
@@ -34,7 +34,7 @@ use external_value;
 /**
  * Accessibility API endpoints class
  *
- * @package    theme_moove
+ * @package    theme_ecampus
  * @copyright  2020 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -47,6 +47,17 @@ class accessibility extends external_api {
     public static function fontsize_parameters() {
         return new external_function_parameters([
             'action' => new external_value(PARAM_RAW, 'The action value'),
+        ]);
+    }
+
+    /**
+     * Font size endpoint return definition
+     *
+     * @return external_single_structure
+     */
+    public static function fontsize_returns() {
+        return new external_single_structure([
+            'newfontsizeclass' => new external_value(PARAM_RAW, 'The new fontsize class')
         ]);
     }
 
@@ -100,7 +111,7 @@ class accessibility extends external_api {
      * @return string|null
      */
     public static function fontsize_increase($currentfontsizeclass = '', $action = null, $value = null) {
-        $newfontsizeclass = null;
+        $newfontsizeclass = 'fontsize-inc-6';
 
         if ($currentfontsizeclass == '') {
             $newfontsizeclass = 'fontsize-inc-1';
@@ -131,7 +142,7 @@ class accessibility extends external_api {
      * @return string|null
      */
     public static function fontsize_decrease($currentfontsizeclass = '', $action = null, $value = null) {
-        $newfontsizeclass = null;
+        $newfontsizeclass = 'fontsize-dec-6';
 
         if ($currentfontsizeclass == '') {
             $newfontsizeclass = 'fontsize-dec-1';
@@ -152,16 +163,7 @@ class accessibility extends external_api {
         return $newfontsizeclass;
     }
 
-    /**
-     * Font size endpoint return definition
-     *
-     * @return external_single_structure
-     */
-    public static function fontsize_returns() {
-        return new external_single_structure([
-            'newfontsizeclass' => new external_value(PARAM_RAW, 'The new fontsize class')
-        ]);
-    }
+    
 
     /**
      * Site color endpoint parameters definition
@@ -188,12 +190,8 @@ class accessibility extends external_api {
         $params = self::validate_parameters(self::fontsize_parameters(), ['action' => $action]);
 
         $newsitecolorclass = null;
-        switch ($params['action']) {
-            case 'sitecolor-color-2':
-            case 'sitecolor-color-3':
-            case 'sitecolor-color-4':
-                $newsitecolorclass = $params['action'];
-        }
+        
+        $newsitecolorclass = $params['action'];
 
         if (isloggedin() && !isguestuser()) {
             set_user_preference('accessibilitystyles_sitecolorclass', $newsitecolorclass);
@@ -201,6 +199,9 @@ class accessibility extends external_api {
 
         return ['success' => true];
     }
+
+
+    
 
     /**
      * Site color endpoint return definition
@@ -247,17 +248,18 @@ class accessibility extends external_api {
                 $fonttype = 'odafont';
             }
 
-            set_user_preference('thememoovesettings_fonttype', $fonttype);
+            set_user_preference('themeecampussettings_fonttype', $fonttype);
         }
 
-        $enableaccessibilitytoolbar = null;
+        /*$enableaccessibilitytoolbar = null;
         if ($data['enableaccessibilitytoolbar']) {
-            $enableaccessibilitytoolbar = true;
+            //$enableaccessibilitytoolbar = true;
         }
 
-        set_user_preference('thememoovesettings_enableaccessibilitytoolbar', $enableaccessibilitytoolbar);
+        set_user_preference('themeecampussettings_enableaccessibilitytoolbar', $enableaccessibilitytoolbar);
+        */
 
-        \core\notification::success(get_string('themesettinggsavedsuccessfully', 'theme_moove'));
+        \core\notification::success(get_string('themesettinggsavedsuccessfully', 'theme_ecampus'));
 
         return ['success' => true];
     }
@@ -291,8 +293,8 @@ class accessibility extends external_api {
      */
     public static function getthemesettings() {
         return [
-            'fonttype' => get_user_preferences('thememoovesettings_fonttype', 'default'),
-            'enableaccessibilitytoolbar' => get_user_preferences('thememoovesettings_enableaccessibilitytoolbar', false)
+            'fonttype' => get_user_preferences('themeecampussettings_fonttype', 'default'),
+            //'enableaccessibilitytoolbar' => get_user_preferences('themeecampussettings_enableaccessibilitytoolbar', false)
         ];
     }
 
@@ -304,7 +306,102 @@ class accessibility extends external_api {
     public static function getthemesettings_returns() {
         return new external_single_structure([
             'fonttype' => new external_value(PARAM_TEXT, 'the user selected font'),
-            'enableaccessibilitytoolbar' => new external_value(PARAM_BOOL, 'the user selected toolbar option')
+            //'enableaccessibilitytoolbar' => new external_value(PARAM_BOOL, 'the user selected toolbar option')
         ]);
     }
+
+
+    public static function getthemesettingsfont_parameters() {
+        return new external_function_parameters([]);
+    }
+
+    public static function getthemesettingsfont() {
+        return [
+            'fonttype' => get_user_preferences('themeecampussettings_fonttype', 'default'),
+        ];
+    }
+    
+    public static function getthemesettingsfont_returns() {
+        return new external_single_structure([
+            'fonttype' => new external_value(PARAM_TEXT, 'the user selected font'),
+        ]);
+    }
+
+
+    public static function getthemesettingscolor_parameters() {
+        return new external_function_parameters([]);
+    }
+
+    public static function getthemesettingscolor() {
+        return [
+            'sitecolor' => get_user_preferences('accessibilitystyles_sitecolorclass', 'reset'),
+        ];
+    }
+    
+    public static function getthemesettingscolor_returns() {
+        return new external_single_structure([
+            'sitecolor' => new external_value(PARAM_TEXT, 'the user selected color'),
+        ]);
+    }
+
+
+
+    public static function sitefont($action) {
+        $params = self::validate_parameters(self::fontsize_parameters(), ['action' => $action]);
+ 
+        $fonttype = $params['action'];
+ 
+        set_user_preference('themeecampussettings_fonttype', $fonttype);
+ 
+         return ['success' => true];
+     }
+
+     public static function sitefont_returns() {
+        return new external_single_structure([
+            'success' => new external_value(PARAM_BOOL, 'Operation response')
+        ]);
+    }
+
+    public static function sitefont_parameters() {
+        return new external_function_parameters([
+            'action' => new external_value(PARAM_RAW, 'The colorscheme value'),
+        ]);
+    }
+
+
+    public static function getthemesettingsfontsize_parameters() {
+        return new external_function_parameters([]);
+    }
+
+    public static function getthemesettingsfontsize() {
+        return [
+            'sitefontsize' => get_user_preferences('accessibilitystyles_fontsizeclass', 'default'),
+        ];
+    }
+    
+    public static function getthemesettingsfontsize_returns() {
+        return new external_single_structure([
+            'sitefontsize' => new external_value(PARAM_TEXT, 'the user selected color'),
+        ]);
+    }
+
+
+
+    public static function getUserSession_returns() {
+        return new external_single_structure([
+            'isLogedin' => new external_value(PARAM_TEXT, 'the user selected session'),
+        ]);
+    }
+
+    public static function getUserSession_parameters() {
+        return new external_function_parameters([]);
+    }
+    
+    public static function getUserSession() {
+        if (isloggedin()) {
+            return ['isLogedin' => 'ok'];
+        }
+        return ['isLogedin' => 'error'];
+    }
+    
 }

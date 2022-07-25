@@ -1,24 +1,20 @@
+
 {{!
     This file is part of Moodle - http://moodle.org/
-
     Moodle is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
-
     Moodle is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
-
     You should have received a copy of the GNU General Public License
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template theme_moove/frontpage_marketing
-
+    @template theme_ecampus/frontpage_marketing
     Blocks drawer template
-
     Example context (json): {
         "shoulddisplaymarketing": true,
         "marketing1icon": "https://iconurl...",
@@ -32,40 +28,40 @@
     <div class="frontpage-marketing">
         <div class="container">
             <div class="card-deck">
-                <div class="card">
-                    <div class="card-body">
+                <div class="card card2">
+                    <div class="card-body"> 
                         <img src="{{{ marketing1icon }}}" />
-                        <h2>{{{ marketing1heading }}}</h2>
-                        <h3>{{{ marketing1subheading }}}</h3>
-                        <p>{{{ marketing1content }}}</p>
-                        {{#marketing1url}}<a class="btn btn-primary" href="{{{ marketing1url }}}">{{#str}}readmore, theme_moove{{/str}}</a>{{/marketing1url}}
+                        <h3>Uso de Moodle para docentes</h3>
+                    </div>
+                    <div class="card-footer"> 
+                        <a class="btn btn-primary" href="https://view.genial.ly/60e4bd3d453e730d3475ca9d/presentation-manuales-para-docentes-ecampus">{{#str}}readmore, theme_ecampus{{/str}} <i class="fa fa-angle-right pl-3" aria-hidden="true"></i></a>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card card2">
                     <div class="card-body">
                         <img src="{{{ marketing2icon }}}" />
-                        <h2>{{{ marketing2heading }}}</h2>
-                        <h3>{{{ marketing2subheading }}}</h3>
-                        <p>{{{ marketing2content }}}</p>
-                        {{#marketing2url}}<a class="btn btn-primary" href="{{{ marketing2url }}}">{{#str}}readmore, theme_moove{{/str}}</a>{{/marketing2url}}
+                        <h3>Uso de Moodle para estudiantes</h3>
+                    </div>
+                    <div class="card-footer"> 
+                        <a class="btn btn-primary" href="https://view.genial.ly/60e712f2d8aaf20d6728dc89/presentation-manuales-para-estudiantes">{{#str}}readmore, theme_ecampus{{/str}} <i class="fa fa-angle-right pl-3" aria-hidden="true"></i></a>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card card2">
                     <div class="card-body">
                         <img src="{{{ marketing3icon }}}" />
-                        <h2>{{{ marketing3heading }}}</h2>
-                        <h3>{{{ marketing3subheading }}}</h3>
-                        <p>{{{ marketing3content }}}</p>
-                        {{#marketing3url}}<a class="btn btn-primary" href="{{{ marketing3url }}}">{{#str}}readmore, theme_moove{{/str}}</a>{{/marketing3url}}
+                        <h3>Biblioteca "P. Florentino Idoate, S.J.</h3>
+                    </div>
+                    <div class="card-footer"> 
+                        <a class="btn btn-primary" href="http://abaco.uca.edu.sv/bfi/">{{#str}}readmore, theme_ecampus{{/str}} <i class="fa fa-angle-right pl-3" aria-hidden="true"></i></a>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card card2">
                     <div class="card-body">
                         <img src="{{{ marketing4icon }}}" />
-                        <h2>{{{ marketing4heading }}}</h2>
-                        <h3>{{{ marketing4subheading }}}</h3>
-                        <p>{{{ marketing4content }}}</p>
-                        {{#marketing4url}}<a class="btn btn-primary" href="{{{ marketing4url }}}">{{#str}}readmore, theme_moove{{/str}}</a>{{/marketing4url}}
+                        <h3>Sitio Web UCA</h3>
+                    </div>
+                    <div class="card-footer"> 
+                        <a class="btn btn-primary" href="https://uca.edu.sv/">{{#str}}readmore, theme_ecampus{{/str}} <i class="fa fa-angle-right pl-3" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>

@@ -17,7 +17,7 @@
 /**
  * Theme functions.
  *
- * @package    theme_moove
+ * @package    theme_ecampus
  * @copyright 2017 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -30,14 +30,14 @@ defined('MOODLE_INTERNAL') || die();
  * @param theme_config $theme The theme config object.
  * @return string
  */
-function theme_moove_get_extra_scss($theme) {
+function theme_ecampus_get_extra_scss($theme) {
     $scss = $theme->settings->scss;
 
-    $scss .= theme_moove_set_headerimg($theme);
+    $scss .= theme_ecampus_set_headerimg($theme);
 
-    $scss .= theme_moove_set_topfooterimg($theme);
+    $scss .= theme_ecampus_set_topfooterimg($theme);
 
-    $scss .= theme_moove_set_loginbgimg($theme);
+    $scss .= theme_ecampus_set_loginbgimg($theme);
 
     return $scss;
 }
@@ -48,7 +48,7 @@ function theme_moove_get_extra_scss($theme) {
  * @param theme_config $theme The theme config object.
  * @return string
  */
-function theme_moove_set_headerimg($theme) {
+function theme_ecampus_set_headerimg($theme) {
     global $OUTPUT;
 
     $headerimg = $theme->setting_file_url('headerimg', 'headerimg');
@@ -68,7 +68,7 @@ function theme_moove_set_headerimg($theme) {
  * @param theme_config $theme The theme config object.
  * @return string
  */
-function theme_moove_set_topfooterimg($theme) {
+function theme_ecampus_set_topfooterimg($theme) {
     global $OUTPUT;
 
     $topfooterimg = $theme->setting_file_url('topfooterimg', 'topfooterimg');
@@ -88,7 +88,7 @@ function theme_moove_set_topfooterimg($theme) {
  * @param theme_config $theme The theme config object.
  * @return string
  */
-function theme_moove_set_loginbgimg($theme) {
+function theme_ecampus_set_loginbgimg($theme) {
     global $OUTPUT;
 
     $loginbgimg = $theme->setting_file_url('loginbgimg', 'loginbgimg');
@@ -97,7 +97,7 @@ function theme_moove_set_loginbgimg($theme) {
         $loginbgimg = $OUTPUT->image_url('login_bg', 'theme');
     }
 
-    $headercss = "#page-login-index.moove-login #page-wrapper #page {background-image: url('$loginbgimg');}";
+    $headercss = "#page-login-index.ecampus-login #page-wrapper #page {background-image: url('$loginbgimg');}";
 
     return $headercss;
 }
@@ -108,7 +108,7 @@ function theme_moove_set_loginbgimg($theme) {
  * @param theme_config $theme The theme config object.
  * @return string
  */
-function theme_moove_get_main_scss_content($theme) {
+function theme_ecampus_get_main_scss_content($theme) {
     global $CFG;
 
     $scss = '';
@@ -122,20 +122,20 @@ function theme_moove_get_main_scss_content($theme) {
     } else if ($filename == 'plain.scss') {
         // We still load the default preset files directly from the boost theme. No sense in duplicating them.
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost/scss/preset/plain.scss');
-    } else if ($filename && ($presetfile = $fs->get_file($context->id, 'theme_moove', 'preset', 0, '/', $filename))) {
-        // This preset file was fetched from the file area for theme_moove and not theme_boost (see the line above).
+    } else if ($filename && ($presetfile = $fs->get_file($context->id, 'theme_ecampus', 'preset', 0, '/', $filename))) {
+        // This preset file was fetched from the file area for theme_ecampus and not theme_boost (see the line above).
         $scss .= $presetfile->get_content();
     } else {
         // Safety fallback - maybe new installs etc.
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost/scss/preset/default.scss');
     }
 
-    // Moove scss.
-    $moovevariables = file_get_contents($CFG->dirroot . '/theme/moove/scss/moove/_variables.scss');
-    $moove = file_get_contents($CFG->dirroot . '/theme/moove/scss/moove.scss');
+    // ECampus scss.
+    $ecampusvariables = file_get_contents($CFG->dirroot . '/theme/ecampus/scss/ecampus/_variables.scss');
+    $ecampus = file_get_contents($CFG->dirroot . '/theme/ecampus/scss/ecampus.scss');
 
     // Combine them together.
-    $allscss = $moovevariables . "\n" . $scss . "\n" . $moove;
+    $allscss = $ecampusvariables . "\n" . $scss . "\n" . $ecampus;
 
     return $allscss;
 }
@@ -146,7 +146,7 @@ function theme_moove_get_main_scss_content($theme) {
  * @param theme_config $theme The theme config object.
  * @return string
  */
-function theme_moove_get_pre_scss($theme) {
+function theme_ecampus_get_pre_scss($theme) {
     $scss = '';
     $configurable = [
         // Config key => [variableName, ...].
@@ -187,8 +187,8 @@ function theme_moove_get_pre_scss($theme) {
  * @param array $options
  * @return mixed
  */
-function theme_moove_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = array()) {
-    $theme = theme_config::load('moove');
+function theme_ecampus_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = array()) {
+    $theme = theme_config::load('ecampus');
 
     if ($context->contextlevel == CONTEXT_SYSTEM and $filearea === 'logo') {
         return $theme->setting_file_serve('logo', $args, $forcedownload, $options);
@@ -248,8 +248,8 @@ function theme_moove_pluginfile($course, $cm, $context, $filearea, $args, $force
  * @param bool $format
  * @return string
  */
-function theme_moove_get_setting($setting, $format = false) {
-    $theme = theme_config::load('moove');
+function theme_ecampus_get_setting($setting, $format = false) {
+    $theme = theme_config::load('ecampus');
 
     if (empty($theme->settings->$setting)) {
         return false;
@@ -272,18 +272,18 @@ function theme_moove_get_setting($setting, $format = false) {
 
 
 /**
- * Extend the Moove navigation
+ * Extend the ECampus navigation
  *
  * @param flat_navigation $flatnav
  */
-function theme_moove_extend_flat_navigation(\flat_navigation $flatnav) {
-    theme_moove_add_certificatesmenuitem($flatnav);
+function theme_ecampus_extend_flat_navigation(\flat_navigation $flatnav) {
+    theme_ecampus_add_certificatesmenuitem($flatnav);
 
-    theme_moove_delete_menuitems($flatnav);
+    theme_ecampus_delete_menuitems($flatnav);
 
-    theme_moove_add_coursesections_to_navigation($flatnav);
+    theme_ecampus_add_coursesections_to_navigation($flatnav);
 
-    theme_moove_rename_menuitems($flatnav);
+    theme_ecampus_rename_menuitems($flatnav);
 }
 
 /**
@@ -292,15 +292,15 @@ function theme_moove_extend_flat_navigation(\flat_navigation $flatnav) {
  * @param flat_navigation $flatnav
  *
  */
-function theme_moove_add_certificatesmenuitem(\flat_navigation $flatnav) {
+function theme_ecampus_add_certificatesmenuitem(\flat_navigation $flatnav) {
     global $COURSE;
 
     try {
-        if (!theme_moove_has_certificates_plugin()) {
+        if (!theme_ecampus_has_certificates_plugin()) {
             return;
-        }
+        } 
 
-        $actionurl = new \moodle_url('/theme/moove/certificates.php');
+        $actionurl = new \moodle_url('/theme/ecampus/certificates.php');
 
         // Course page.
         if ($COURSE->id > 1) {
@@ -310,7 +310,7 @@ function theme_moove_add_certificatesmenuitem(\flat_navigation $flatnav) {
                 $parentitem = $flatnav->find('home', \navigation_node::TYPE_SETTING);
             }
 
-            $actionurl = new \moodle_url('/theme/moove/certificates.php', ['id' => $COURSE->id]);
+            $actionurl = new \moodle_url('/theme/ecampus/certificates.php', ['id' => $COURSE->id]);
         }
 
         if ($COURSE->id == 1) {
@@ -324,8 +324,8 @@ function theme_moove_add_certificatesmenuitem(\flat_navigation $flatnav) {
         if (!is_null($parentitem->parent)) {
             $certificatesitemoptions = [
                 'action' => $actionurl,
-                'text' => get_string('certificates', 'theme_moove'),
-                'shorttext' => get_string('certificates', 'theme_moove'),
+                'text' => get_string('certificates', 'theme_ecampus'),
+                'shorttext' => get_string('certificates', 'theme_ecampus'),
                 'icon' => new pix_icon('i/export', ''),
                 'type' => \navigation_node::TYPE_SETTING,
                 'key' => 'certificates',
@@ -348,7 +348,7 @@ function theme_moove_add_certificatesmenuitem(\flat_navigation $flatnav) {
  *
  * @param flat_navigation $flatnav
  */
-function theme_moove_delete_menuitems(\flat_navigation $flatnav) {
+function theme_ecampus_delete_menuitems(\flat_navigation $flatnav) {
 
     $itemstodelete = [
         'coursehome'
@@ -369,7 +369,7 @@ function theme_moove_delete_menuitems(\flat_navigation $flatnav) {
 
         if ($item->key === 'mycourses') {
             foreach ($item->children as $key => $child) {
-                if (!theme_moove_is_course_available_to_display_in_navbar($child->key)) {
+                if (!theme_ecampus_is_course_available_to_display_in_navbar($child->key)) {
                     $item->children->remove($child->key);
                 }
             }
@@ -384,7 +384,7 @@ function theme_moove_delete_menuitems(\flat_navigation $flatnav) {
  *
  * @return bool
  */
-function theme_moove_is_course_available_to_display_in_navbar($courseid) {
+function theme_ecampus_is_course_available_to_display_in_navbar($courseid) {
     global $DB, $USER;
 
     $course = $DB->get_record('course', ['id' => $courseid], '*');
@@ -421,12 +421,12 @@ function theme_moove_is_course_available_to_display_in_navbar($courseid) {
  *
  * @param flat_navigation $flatnav
  */
-function theme_moove_rename_menuitems(\flat_navigation $flatnav) {
+function theme_ecampus_rename_menuitems(\flat_navigation $flatnav) {
 
     $item = $flatnav->find('mycourses');
 
     if ($item) {
-        $item->text = get_string('myactivecourses', 'theme_moove');
+        $item->text = get_string('myactivecourses', 'theme_ecampus');
     }
 }
 
@@ -435,7 +435,7 @@ function theme_moove_rename_menuitems(\flat_navigation $flatnav) {
  *
  * @param flat_navigation $flatnav
  */
-function theme_moove_add_coursesections_to_navigation(\flat_navigation $flatnav) {
+function theme_ecampus_add_coursesections_to_navigation(\flat_navigation $flatnav) {
     global $PAGE;
 
     $participantsitem = $flatnav->find('participants', \navigation_node::TYPE_CONTAINER);
@@ -446,8 +446,8 @@ function theme_moove_add_coursesections_to_navigation(\flat_navigation $flatnav)
 
     if ($PAGE->course->format != 'singleactivity') {
         $coursesectionsoptions = [
-            'text' => get_string('coursesections', 'theme_moove'),
-            'shorttext' => get_string('coursesections', 'theme_moove'),
+            'text' => get_string('coursesections', 'theme_ecampus'),
+            'shorttext' => get_string('coursesections', 'theme_ecampus'),
             'icon' => new pix_icon('t/viewdetails', ''),
             'type' => \navigation_node::COURSE_CURRENT,
             'key' => 'course-sections',
@@ -479,7 +479,7 @@ function theme_moove_add_coursesections_to_navigation(\flat_navigation $flatnav)
  *
  * @return bool
  */
-function theme_moove_has_certificates_plugin() {
+function theme_ecampus_has_certificates_plugin() {
     $simplecertificate = \core_plugin_manager::instance()->get_plugin_info('mod_simplecertificate');
 
     $customcert = \core_plugin_manager::instance()->get_plugin_info('mod_customcert');

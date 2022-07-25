@@ -15,11 +15,11 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template theme_moove/columns2
+    @template theme_ecampus/columns2
 
     Admin time setting template.
 
-    Moove 2 column layout template.
+    ECampus 2 column layout template.
 
     Context variables required for this template:
     * sitename - The name of the site
@@ -48,12 +48,9 @@
         "hasregionmainsettingsmenu": false
     }
 }}
-    {{>theme_moove/inc_start}}
+    {{>theme_ecampus/inc_start}}
 
     <div id="page" class="container-fluid d-print-block">
-        {{#canviewadmininfos}}
-            {{>theme_moove/mydashboard_admin}}
-        {{/canviewadmininfos}}
         {{^canviewadmininfos}}
             {{{ output.full_header }}}
         {{/canviewadmininfos}}
@@ -84,10 +81,10 @@
                             {{{ output.main_content }}}
                             {{{ output.course_content_footer }}}
                         </div>
-                    </div>
+                    </div> 
                 </section>
             </div>
         </div>
     </div>
 
-    {{>theme_moove/inc_end}}
+    {{>theme_ecampus/inc_end}}

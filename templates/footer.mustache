@@ -15,116 +15,61 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template theme_moove/footer
+    @template theme_ecampus/footer
 
     Footer template
 
     Example context (json): {}
 }}
-<div id="top-footer">
-  <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-7 contact">
-            <h3>{{#str}}stayintouch, theme_moove{{/str}}</h3>
-            <h4>{{{getintouchcontent}}}</h4>
-            <ul>
-                {{#website}}
+
+<div id="" class="top-footer">
+  <div class="container-fluid" id="footer-contact">
+    <div class="row justify-content-center">
+        <div class="col-md-5 contact justify-content-center">
+            <h4 class="text-center">Universidad Centroamericana José Simeón Cañas</h4>
+            <ul class="list-group list-group-horizontal">
+                {{#website}} 
                     <li>
-                        <i class="slicon-globe"></i>
-                        <a href="{{{website}}}" target="_blank">{{{website}}}</a>
+                        <a href="{{{website}}}" target="_blank" data-toggle="tooltip" data-placement="top" title="Website"><i class="fi-rr-world"></i></a>
                     </li>
                 {{/website}}
-                {{#mobile}}
+                
                     <li>
+                        <a href="https://goo.gl/maps/PDn7GnmWRT4wHffW7" target="_blank" data-toggle="tooltip" data-placement="top" title="Ubicación"><i class="fi fi-rr-map-marker"></i></a>                       
+                    </li>
+                    <li>
+                        <a href="https://uca.edu.sv/atencion-administrativa/" target="_blank" data-toggle="tooltip" data-placement="top" title="Atencion administrativa"><i class="fi fi-rr-time-check"></i></a>                       
+                    </li>
+                    {{#mobile}}
+                    <!--<li>
                         <i class="slicon-phone"></i>
                         <a href="tel:{{{mobile}}}" target="_blank">{{{mobile}}}</a>
-                    </li>
+                    </li>-->
                 {{/mobile}}
-                {{#mail}}
                     <li>
-                        <i class="slicon-envelope"></i>
-                        <a href="mailto:{{{mail}}}" target="_blank">{{{mail}}}</a>
+                        <a href="https://www.facebook.com/UCA.ElSalvador" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>                       
                     </li>
-                {{/mail}}
+                    <li>
+                        <a href="https://twitter.com/UCA_ES" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>                       
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/uca_elsalvador/?hl=es" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>                       
+                    </li>
+                    <li>
+                        <a href="https://docs.moodle.org/all/es/Moodle_app" target="_blank" data-toggle="tooltip" data-placement="top" title="Download app"><i class="fi fi-rr-download"></i></a>
+                    </li>
+                    
             </ul>
         </div>
-        <div class="col-md-5 social">
-          <ul>
-              {{#facebook}}
-                <li>
-                  <a href="{{{facebook}}}" target="_blank" class="facebook btn">
-                    <i class="slicon-social-facebook"></i>
-                  </a>
-                </li>
-              {{/facebook}}
+        
+        <!--<div class="col-md-2 contact">
+          
+          {{!{{{ output.standard_footer_html }}
 
-              {{#twitter}}
-                <li>
-                  <a href="{{{twitter}}}" target="_blank" class="twitter btn">
-                    <i class="slicon-social-twitter"></i>
-                  </a>
-                </li>
-              {{/twitter}}
-
-              {{#linkedin}}
-                <li>
-                  <a href="{{{linkedin}}}" target="_blank" class="linkedin btn">
-                    <i class="slicon-social-linkedin"></i>
-                  </a>
-                </li>
-              {{/linkedin}}
-
-              {{#youtube}}
-                <li>
-                  <a href="{{{youtube}}}" target="_blank" class="youtube btn">
-                    <i class="slicon-social-youtube"></i>
-                  </a>
-                </li>
-              {{/youtube}}
-
-              {{#instagram}}
-                <li>
-                  <a href="{{{instagram}}}" target="_blank" class="instagram btn">
-                    <i class="slicon-social-instagram"></i>
-                  </a>
-                </li>
-              {{/instagram}}
-
-              {{#whatsapp}}
-                  <li>
-                      <a href="https://api.whatsapp.com/send?phone={{{whatsapp}}}" target="_blank" class="whatsapp btn">
-                          <i class="fa fa-whatsapp"></i>
-                      </a>
-                  </li>
-              {{/whatsapp}}
-
-              {{#telegram}}
-                  <li>
-                      <a href="{{{telegram}}}" target="_blank" class="telegram btn">
-                      <i class="fa fa-telegram"></i>
-                      </a>
-                  </li>
-              {{/telegram}}
-          </ul>
-
-          {{{ output.standard_footer_html }}}
-        </div>
+        </div>-->
     </div>
   </div>
 </div>
-<footer id="page-footer" class="p-y-1">
-  <div class="container-fluid">
-      <div id="course-footer">{{{ output.course_footer }}}</div>
 
-      <div class="madewithmoodle">
-          <p>{{#str}}madewitmoodle, theme_moove{{/str}}</p>
-          <a href="https://moodle.org"><img src="{{output.get_pix_image_url_base}}/moodle-logo-white.png" alt="Moodle logo"></a>
-      </div>
-
-      <div class="madeby">
-          <p>{{#str}}madeby, theme_moove{{/str}} <i class="text-danger fa fa-heart"></i> {{#str}}by, theme_moove{{/str}} <a href="http://conecti.me">conecti.me</a></p>
-      </div>
-  </div>
-</footer>
 
 {{{ output.standard_end_of_body_html }}}

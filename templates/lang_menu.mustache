@@ -15,7 +15,7 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template theme_moove/custom_menu_item
+    @template theme_ecampus/custom_menu_item
 
     Custom menu item template
 
@@ -23,11 +23,11 @@
 }}
 {{^divider}}
 {{#haschildren}}
-<div class="dropdown nav-item">
-    <a class="dropdown-toggle nav-link" id="drop-down-{{uniqid}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
-        <i class="slicon-globe"></i>
+<div class="dropdown nav-item d-flex justify-content-center align-items-center">
+    <a class="nav-link" id="drop-down-{{uniqid}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+        <i class="fi fi-rr-globe"></i>
     </a>
-    <div class="dropdown-menu" aria-labelledby="drop-down-{{uniqid}}">
+    <div class="dropdown-menu" aria-labelledby="drop-down-{{uniqid}}" style="left: -230px !important;">
         {{#children}}
             {{^divider}}
                 <a class="dropdown-item" href="{{{url}}}" {{#title}}title="{{{title}}}"{{/title}}>{{text}}</a>

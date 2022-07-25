@@ -16,7 +16,7 @@
 /**
  * Contain the logic for accessibility bar.
  *
- * @package    theme_moove
+ * @package    theme_ecampus
  * @copyright  2020 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -26,30 +26,48 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
 
     var SELECTORS = {
         FONT_SIZE: '#fontsize_dec, #fontsize_reset, #fontsize_inc',
-        SITE_COLOR: '#sitecolor_color1, #sitecolor_color2, #sitecolor_color3, #sitecolor_color4'
+        SITE_COLOR: '#sitecolor_color1, #sitecolor_color2, #sitecolor_color3, #sitecolor_color4, #sitecolor_colordark, #sitecolor_colortri, #sitecolor_colorpto, #sitecolor_colordeu, #sitecolor_colortri1, #sitecolor_colorpto1, #sitecolor_colordeu1',
+        SITE_FONT: '#fontsite_odafont, #fontsite_default'
     };
 
     var fontsizeClass = null;
     var fontsizeClassOp = null;
-    var fontsizeClassSize = null;
+    var fontsizeClassPrev = null;
+    //var fontsizeClassSize = null;
     var fontsizeCurrentAction = null;
+
     var sitecolorCurrentAction = null;
+    var sitefontCurrentAction = null;
+    var myClass = null
 
     var AccessibilityBar = function() {
-        var classList = jQuery('body').attr('class').split(/\s+/);
-        jQuery.each(classList, function(index, item) {
-            if (item.includes('fontsize-inc-') || item.includes('fontsize-dec-')) {
-                var itemarr = item.split('-');
+        myClass = this
 
-                fontsizeClass = item;
-                fontsizeClassOp = itemarr[1];
-                fontsizeClassSize = itemarr[2];
-            }
-        });
+        var exist = document.querySelector("#action-menu-toggle-1");
+        var mybar = document.querySelector("#accessibilitybar");
+        var mybarButton = document.querySelector("#themesettings-control-mod");
+        var navbarcontent = document.querySelector("#navbar_content_control");
+        var toolbutton = document.querySelector("#tool_navbar_control_content");
+        
+        
+        if(exist != null){
+            mybar.classList.add('allvisible');
+            navbarcontent.classList.add('allvisible');
+            toolbutton.classList.add('allvisible');
+            this.registerEventListeners();
+            //this.getFontSize();
+            //this.getColor();
+            //this.reloadFontSite();
+        } else {
+            mybarButton.classList.add('hidden-display');
+            //navbartoolsmodal
+        }
 
-        this.toggleFontsizeButtons();
+        
+        //this.toggleFontsizeButtons();
+        
 
-        this.registerEventListeners();
+        //this.getUserSession();
     };
 
     AccessibilityBar.prototype.registerEventListeners = function() {
@@ -57,113 +75,190 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
             var btn = jQuery(element.currentTarget);
 
             fontsizeCurrentAction = btn.data('action');
+            myClass.fontSize();
+            //myClass.setFontSize(fontsizeCurrentAction);
 
-            this.fontSize();
-        }.bind(this));
+            
+        }.bind(this)); 
 
         jQuery(SELECTORS.SITE_COLOR).click(function(element) {
             var btn = jQuery(element.currentTarget);
 
             sitecolorCurrentAction = btn.data('action');
 
-            this.siteColor();
+            myClass.siteColor();
         }.bind(this));
+
+        jQuery(SELECTORS.SITE_FONT).click(function(element) {
+            var btn = jQuery(element.currentTarget);
+
+            sitefontCurrentAction = btn.data('action');
+
+            myClass.siteFont();
+        }.bind(this));
+    };
+
+    AccessibilityBar.prototype.getColor = function() {
+        var request = Ajax.call([{
+            methodname: 'theme_ecampus_getthemesettingscolor',
+            args: {}
+        }]);
+
+        request[0].done(function(result) {
+            sitecolorCurrentAction = result.sitecolor;  
+            myClass.reloadSitecolorClass();              
+            
+        });
+    }
+
+    AccessibilityBar.prototype.getFontSize = function() {
+        var request = Ajax.call([{
+            methodname: 'theme_ecampus_getthemesettingsfontsize',
+            args: {}
+        }]);
+
+        request[0].done(function(result) {
+            //document.getElementById('fonttype').value = result.fonttype;
+            myClass.setFontSize(result.sitefontsize)
+
+            
+            //myClass.reloadSitecolorClass();              
+            
+        }).fail(function(error){
+        }) 
+    }
+
+    AccessibilityBar.prototype.setFontSize = function(item){
+        fontsizeClass = item;
+
+        if(item === null || item === 'default'){
+            fontsizeCurrentAction = 'reset'
+            fontsizeClassOp = null;
+        } else {
+            if (item.includes('fontsize-inc-')){
+                fontsizeCurrentAction = 'increase'
+                fontsizeClassOp = "dec"
+            } 
+            if (item.includes('fontsize-dec-')){
+                fontsizeCurrentAction = 'decrease'
+                fontsizeClassOp = "inc"
+            }
+    
+            //var itemarr = item.split('-');
+            
+            //fontsizeClassOp = itemarr[1];
+            //fontsizeClassSize = itemarr[2];
+        }
+        myClass.reloadFontsizeClass();
+    }
+
+    AccessibilityBar.prototype.reloadFontSite = function() {
+        var request = Ajax.call([{
+            methodname: 'theme_ecampus_getthemesettingsfont',
+            args: {}
+        }]);
+
+
+        request[0].done(function(result) {
+            //document.getElementById('fonttype').value = result.fonttype;
+            if(result.fonttype != 'odafont') {
+                jQuery('#fontsite_default').addClass('disabled');
+                jQuery('#fontsite_odafont').removeClass('disabled');
+            } else {
+                jQuery('#fontsite_default').removeClass('disabled');
+                jQuery('#fontsite_odafont').addClass('disabled');
+            }
+            
+        }).fail(function(error){
+        }) 
+        
     };
 
     AccessibilityBar.prototype.fontSize = function() {
         var request = Ajax.call([{
-            methodname: 'theme_moove_fontsize',
+            methodname: 'theme_ecampus_fontsize',
             args: {
                 action: fontsizeCurrentAction
             }
         }]);
 
-        request[0].done(function() {
-            this.reloadFontsizeClass();
-        }.bind(this));
+        request[0].done(function(result) {
+            //document.getElementById('fonttype').value = result.fonttype;
+            myClass.setFontSize(result.newfontsizeclass)
+            //console.log("responce size" + result.newfontsizeclass)
+            //myClass.reloadSitecolorClass();              
+            
+        }).fail(function(error){
+        }) 
+
+        //console.log("finish size")
+            //myClass.reloadSitecolorClass();   
+
+        
+    };
+    
+    AccessibilityBar.prototype.getUserSession = function() {
+        var request = Ajax.call([{
+            methodname: 'theme_ecampus_getUserSession',
+            args: {}
+        }]);
+        request[0].done(function(result) {
+            if(result.isLogedin == "ok"){
+
+                myClass.getColor();
+                myClass.reloadFontSite();
+                myClass.toggleFontsizeButtons();
+                myClass.getFontSize();
+            } else {
+            }
+            
+        }).fail(function(error){
+        });
     };
 
     AccessibilityBar.prototype.reloadFontsizeClass = function() {
-        if (fontsizeCurrentAction === 'reset'
-            || (fontsizeCurrentAction === 'increase' && fontsizeClass === 'fontsize-dec-1')
-            || (fontsizeCurrentAction === 'decrease' && fontsizeClass === 'fontsize-inc-1')
-        ) {
-            jQuery('body').removeClass(fontsizeClass);
-            fontsizeClass = null;
-            fontsizeClassOp = null;
-            fontsizeClassSize = null;
-
-            this.toggleFontsizeButtons();
-
-            return;
+        if(fontsizeClassPrev !== null && fontsizeClassPrev !== 'default'){
+            //console.log("remuevo" + fontsizeClassPrev)
+            jQuery('body').removeClass(fontsizeClassPrev);
+        } else {
+            //console.log("no remuevo" + fontsizeClassPrev)
         }
-
-        if (fontsizeCurrentAction === 'increase') {
-            if (fontsizeClassSize === null) {
-                fontsizeClass = 'fontsize-inc-1';
-                fontsizeClassOp = 'inc';
-                fontsizeClassSize = 1;
-            } else if (fontsizeClassOp === 'inc' && fontsizeClassSize < 6) {
-                jQuery('body').removeClass(fontsizeClass);
-                fontsizeClassSize++;
-                fontsizeClass = 'fontsize-inc-' + fontsizeClassSize;
-            } else if (fontsizeClassOp === 'dec') {
-                jQuery('body').removeClass(fontsizeClass);
-                fontsizeClassSize--;
-                fontsizeClass = 'fontsize-dec-' + fontsizeClassSize;
-            }
-
+        //myClass.toggleFontsizeButtons();
+        if(fontsizeClass !== null && fontsizeClass !== 'default'){
+            //console.log("seteo" + fontsizeClass)
             jQuery('body').addClass(fontsizeClass);
-        }
+        } /*else {
+            console.log("no seteo" + fontsizeClass)
+            //jQuery('body').addClass('default');
+        }*/
+        fontsizeClassPrev = fontsizeClass;
 
-        if (fontsizeCurrentAction === 'decrease') {
-            if (fontsizeClassSize === null) {
-                fontsizeClass = 'fontsize-dec-1';
-                fontsizeClassOp = 'dec';
-                fontsizeClassSize = 1;
-            } else if (fontsizeClassOp === 'dec' && fontsizeClassSize < 6) {
-                jQuery('body').removeClass(fontsizeClass);
-                fontsizeClassSize++;
-                fontsizeClass = 'fontsize-dec-' + fontsizeClassSize;
-            } else if (fontsizeClassOp === 'inc') {
-                jQuery('body').removeClass(fontsizeClass);
-                fontsizeClassSize--;
-                fontsizeClass = 'fontsize-inc-' + fontsizeClassSize;
-            }
-
-            jQuery('body').addClass(fontsizeClass);
-        }
-
-        this.toggleFontsizeButtons();
+        myClass.toggleFontsizeButtons();
     };
 
     AccessibilityBar.prototype.toggleFontsizeButtons = function() {
-        if (fontsizeClass === null) {
+        if (fontsizeClass === null || fontsizeClass === 'default') {
             jQuery('#fontsize_reset').addClass('disabled');
             jQuery('#fontsize_inc').removeClass('disabled');
             jQuery('#fontsize_dec').removeClass('disabled');
         }
 
-        if (fontsizeClass !== null) {
+        if (fontsizeClass !== null && fontsizeClass !== 'default') {
             jQuery('#fontsize_reset').removeClass('disabled');
         }
 
         if (fontsizeClassOp === 'inc') {
-            if (fontsizeClassSize == 6) {
+            if (fontsizeClass == "fontsize-inc-5" || fontsizeClass == "fontsize-inc-6") {
                 jQuery('#fontsize_inc').addClass('disabled');
-            }
-
-            if (fontsizeClassSize < 6) {
+            } else {
                 jQuery('#fontsize_inc').removeClass('disabled');
             }
         }
 
         if (fontsizeClassOp === 'dec') {
-            if (fontsizeClassSize == 6) {
+            if (fontsizeClass == "fontsize-dec-5" || fontsizeClass == "fontsize-dec-6") {
                 jQuery('#fontsize_dec').addClass('disabled');
-            }
-
-            if (fontsizeClassSize < 6) {
+            } else {
                 jQuery('#fontsize_dec').removeClass('disabled');
             }
         }
@@ -171,15 +266,32 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
 
     AccessibilityBar.prototype.siteColor = function() {
         var request = Ajax.call([{
-            methodname: 'theme_moove_sitecolor',
+            methodname: 'theme_ecampus_sitecolor',
             args: {
                 action: sitecolorCurrentAction
             }
         }]);
 
         request[0].done(function() {
-            this.reloadSitecolorClass();
+            myClass.reloadSitecolorClass();
         }.bind(this));
+    };
+
+    AccessibilityBar.prototype.siteFont = function() {
+
+        var request = Ajax.call([{
+            methodname: 'theme_ecampus_sitefont',
+            args: {
+                action: sitefontCurrentAction
+            }
+        }]); 
+
+        request[0].then(function(responce) {
+            document.location.reload(true);
+        }).fail(function(error){
+            var message = error.message;
+        });
+
     };
 
     AccessibilityBar.prototype.reloadSitecolorClass = function() {
@@ -187,8 +299,10 @@ define(['jquery', 'core/ajax'], function(jQuery, Ajax) {
             return (className.match(/(^|\s)sitecolor-color-\S+/g) || []).join(' ');
         });
 
+
         if (sitecolorCurrentAction !== 'reset') {
             jQuery('body').addClass(sitecolorCurrentAction);
+            
         }
     };
 

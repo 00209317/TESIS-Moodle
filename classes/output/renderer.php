@@ -17,11 +17,11 @@
 /**
  * Module renderer
  *
- * @package    theme_moove
+ * @package    theme_ecampus
  * @copyright  2020 Willian Mano {@link http://conecti.me}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-namespace theme_moove\output;
+namespace theme_ecampus\output;
 
 defined('MOODLE_INTERNAL') || die;
 
@@ -30,7 +30,7 @@ use plugin_renderer_base;
 /**
  * Theme renderer
  *
- * @package    theme_moove
+ * @package    theme_ecampus
  * @copyright  2020 Willian Mano {@link http://conecti.me}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -45,6 +45,6 @@ class renderer extends plugin_renderer_base {
      * @throws \moodle_exception
      */
     public function render_certificates(\renderable $main) {
-        return $this->render_from_template('theme_moove/certificates', $main->export_for_template($this));
+        return $this->render_from_template('theme_ecampus/certificates', $main->export_for_template($this));
     }
 }

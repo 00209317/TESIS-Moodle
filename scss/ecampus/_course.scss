@@ -1,0 +1,451 @@
+// stylelint-disable declaration-no-important
+body.coursepresentation-cover {
+    #page {
+        padding-top: 280px;
+    }
+    .headerbkg {
+        margin-top: 48px;
+        height: 340px;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
+#page-course-view-topics,
+#page-course-view-preview {
+    &.editing {
+        .course-content .topics .section,
+        .course-content .preview .section {
+            width: calc(100% - 20px);
+        }
+    }
+
+    .section .activity .contentwithoutlink > a,
+    .section .activity .activityinstance > a {
+        display: initial;
+    }
+
+    .course-content {
+        .topics,
+        .preview {
+            #section-0 {
+                border: none;
+            }
+
+            .section {
+                border: none;
+
+                .activity.label {
+                    margin: 0;
+
+                    .mod-indent-outer {
+                        padding-left: 0;
+                        display: block;
+                    }
+                }
+
+                &:last-child {
+                    border-bottom: 1px;
+                }
+
+                .card {
+                    display: block;
+
+                    .pgr-img {
+                        margin: 0;
+                        width: 90px;
+                        height: 90px;
+                        background-color: $brand-primary;
+                        border-radius: 100%;
+                        text-align: center;
+                        padding: 20px;
+                        display: inline-block;
+                        vertical-align: top;
+
+                        i {
+                            font-size: 48px;
+                            color: #fff;
+                        }
+                    }
+
+                    .pgr-content {
+                        display: inline-block;
+                        width: calc(100% - 90px);
+
+                        .left.side {
+                            padding: 0;
+                        }
+
+                        .section-title {
+                            margin-left: 12px;
+                        }
+                    }
+                }
+
+                .activity-count {
+                    margin-left: 12px;
+                }
+            }
+        }
+
+        .single-section .sectionname,
+        .section .sectionname {
+            background: #fff;
+            margin: 0;
+            padding: .75rem;
+            letter-spacing: .1em;
+            color: $brand-primary;
+            font-weight: 700;
+            text-align: center;
+        }
+    }
+
+    .section-navigation.mdl-bottom {
+        .larrow,
+        .rarrow {
+            font-size: 2em;
+            padding: .3em;
+            text-align: center;
+        }
+
+        .larrow .icon-arrow-left,
+        .rarrow .icon-arrow-right {
+            display: block;
+            height: 1em;
+            width: 1em;
+            margin: .1em auto;
+        }
+
+        .larrow {
+            float: left;
+            border-right: 1px solid #eee;
+            margin-right: .3em;
+
+            .icon-arrow-left {
+                background: transparent url('[[pix:theme|left-arrow]]') no-repeat 50% 50%;
+            }
+        }
+
+        .rarrow {
+            float: right;
+            border-left: 1px solid #eee;
+            margin-left: .3em;
+
+            .icon-arrow-right {
+                background: transparent url('[[pix:theme|right-arrow]]') no-repeat 50% 50%;
+            }
+        }
+
+        .mdl-left .text .nav_guide,
+        .mdl-right .text .nav_guide {
+            letter-spacing: .1em;
+            font-style: normal;
+            color: #565656;
+        }
+
+        .mdl-left .text {
+            float: right;
+        }
+
+        .mdl-right .text {
+            float: left;
+        }
+    }
+}
+
+body.pagelayout-incourse {
+    .activity-navigation {
+        margin-top: 1.2em !important;
+
+        .nav-guide {
+            display: block;
+            letter-spacing: .1em;
+            font-style: normal;
+        }
+
+        #next-activity .nav-guide {
+            text-align: right;
+        }
+
+        #prev-activity-link,
+        #next-activity-link {
+            text-decoration: none;
+            padding-left: 0;
+
+            &:hover {
+                color: darken($brand-primary, 20%);
+                text-decoration: underline;
+            }
+        }
+
+        #prev-activity-link {
+            padding-left: 0;
+        }
+
+        #next-activity-link {
+            padding-right: 0;
+        }
+    }
+
+    &#page-mod-book-view {
+        .bookprev,
+        .booknext {
+            padding: .375rem .75rem;
+            background-color: $brand-primary;
+            text-decoration: none !important;
+            color: #fff;
+
+            &:hover {
+                background-color: darken($brand-primary, 10%);
+            }
+
+            .icon {
+                margin: 0;
+            }
+        }
+
+        .bookprev {
+            margin-right: .5rem;
+        }
+    }
+}
+
+body#page-mod-quiz-attempt.pagelayout-secure {
+    nav.navbar {
+        top: 0;
+    }
+
+    #page {
+        margin-top: 40px;
+    }
+
+    #region-main {
+        padding: 0.1rem;
+    }
+
+    [data-region="blocks-column"] {
+        width: 360px;
+        float: right;
+        top: 0;
+        right: 0;
+        position: relative;
+        height: 100%;
+        overflow-y: inherit;
+        background-color: initial;
+    }
+
+    #page-footer {
+        display: none;
+    }
+}
+
+#page-mod-quiz-review [data-region="blocks-column"] {
+    width: 360px;
+    float: right;
+    top: 0;
+    right: 0;
+    position: relative;
+    height: 100%;
+    overflow-y: inherit;
+    background-color: initial;
+}
+
+@include media-breakpoint-down(md) {
+    body.pagelayout-incourse {
+        .activity-navigation {
+            .col-md-4 {
+                margin-bottom: 1rem;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                > div {
+                    float: initial !important;
+                    text-align: center;
+                }
+            }
+
+            #next-activity .nav-guide {
+                text-align: center;
+            }
+        }
+    }
+
+    body#page-course-view-topics,
+    body#page-course-view-preview {
+        .course-content .topics .section,
+        .course-content .preview .section {
+            padding-bottom: 0;
+
+            ul.section {
+                margin: 1rem 0;
+                padding-left: 0;
+
+                .activity .contentwithoutlink > a,
+                .activity .activityinstance > a {
+                    padding-left: 0;
+                    text-indent: 0;
+                }
+
+            }
+        }
+    }
+}
+
+body.pagelayout-course {
+    .availabilityinfo.isrestricted .badge a {
+        color: #fff;
+        text-decoration: underline;
+    }
+
+    .section .badge {
+        white-space: initial;
+    }
+}
+
+.contentwithoutlink {
+    padding-right: 0;
+
+    .labelbar {
+        margin: 1em 0;
+        padding: 0.5em 0 0.2em 0.5em;
+        border: 1px solid #dadada;
+        border-top-width: .2em;
+        letter-spacing: .1em;
+        font-style: normal;
+        font-size: 1.4rem;
+
+        i {
+            margin-right: 10px;
+        }
+    }
+
+    .labelbar.primary {
+        border-top-color: $brand-primary;
+        color: $brand-primary;
+    }
+
+    .labelbar.green {
+        border-top-color: #8bc34a;
+        color: #8bc34a;
+    }
+
+    .labelbar.orange {
+        border-top-color: #f39c12;
+        color: #f39c12;
+    }
+
+    .labelbar.red {
+        border-top-color: #c0392b;
+        color: #c0392b;
+    }
+
+    .labelbar.purple {
+        border-top-color: #9b59b6;
+        color: #9b59b6;
+    }
+
+    .labelbar.asphalt {
+        border-top-color: #34495e;
+        color: #34495e;
+    }
+
+    .labelbar.turquoise {
+        border-top-color: #1abc9c;
+        color: #1abc9c;
+    }
+
+    .labelbar.emerald {
+        border-top-color: #2ecc71;
+        color: #2ecc71;
+    }
+
+    .labelbar.peterriver {
+        border-top-color: #3498db;
+        color: #3498db;
+    }
+
+    .labelbar.amethyst {
+        border-top-color: #9b59b6;
+        color: #9b59b6;
+    }
+
+    .labelbar.carrot {
+        border-top-color: #e67e22;
+        color: #e67e22;
+    }
+
+    .labelbar.alizarin {
+        background-color: #e74c3c;
+        color: #e74c3c;
+    }
+
+    .labelbar.concrete {
+        background-color: #95a5a6;
+        color: #95a5a6;
+    }
+}
+
+.activity{
+    margin: 1em !important;
+}
+
+.activity,.tile.tile-clickable{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 !important;
+    border-radius:1.25em !important;
+    background-color:#fbfbfb !important;
+    border-left: 4px solid #f29550 !important;
+    transition: all 1s;
+    width: auto !important;
+    box-shadow: 0 3px 1px -2px #0003, 0 2px 2px #00000024, 0 1px 5px #0000001f !important;
+    a{
+        text-decoration: none !important;
+        color: #000;
+    }    
+    &:hover {
+        transition: all 0.5s;
+        background-color: #dff1f7 !important;
+        border-left: 4px solid #f29550 !important;
+        .card-body {
+            a{ 
+                transition: all 0.5s;
+                color: rgb(255, 255, 255);
+            }
+            p{
+                transition: all 0.5s;
+                color: rgb(255, 255, 255);
+            }
+        }
+        
+        .card-footer .btn{
+            background-color:rgba(255, 255, 255, 0.877) !important;
+            &:hover{
+                background-color:#ac6b3a !important;
+                color: rgb(255, 255, 255);
+                transition: all 0.5s;
+            }
+        }
+    }
+    
+    .activity-information{
+        padding-left: 2em;
+    }
+    .activityinstance{
+        padding-right: 0 !important;
+        .aalink{
+            padding-left: 2em !important;
+        }
+    }
+}

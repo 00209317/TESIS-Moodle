@@ -15,21 +15,21 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Custom moove admin infos
+ * Custom ecampus admin infos
  *
- * @package    theme_moove
+ * @package    theme_ecampus
  * @copyright  2020 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_moove\util;
+namespace theme_ecampus\util;
 
 defined('MOODLE_INTERNAL') || die();
 
 /**
  * Class to get some admin infos in Moodle.
  *
- * @package    theme_moove
+ * @package    theme_ecampus
  * @copyright  2020 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -89,11 +89,11 @@ class admininfos {
      * @throws \coding_exception
      */
     public function get_totaldiskusage() {
-        $cache = \cache::make('theme_moove', 'admininfos');
+        $cache = \cache::make('theme_ecampus', 'admininfos');
         $totalusagereadable = $cache->get('totalusagereadable');
 
         if (!$totalusagereadable) {
-            return get_string('notcalculatedyet', 'theme_moove');
+            return get_string('notcalculatedyet', 'theme_ecampus');
         }
 
         $usageunit = ' MB';

@@ -1,11 +1,11 @@
 {
-    "name": "willianmano/moodle-theme_moove",
+    "name": "willianmano/moodle-theme_ecampus",
     "type": "moodle-theme",
     "require": {
         "composer/installers": "~1.0"
     },
     "extra": {
-        "installer-name": "moove"
+        "installer-name": "ecampus"
     }
 }
 

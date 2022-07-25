@@ -15,14 +15,22 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template theme_moove/header
+    @template theme_ecampus/header
 
     Page header template
 
     Example context (json): {}
 }}
 
-{{> theme_moove/accessibilitybar }}
+{{!
+    @template theme_ecampus/accessibilitymodal
+
+    Blocks drawer template
+
+    Example context (json): {}
+}}
+
+
 
 <nav class="fixed-top navbar navbar-light navbar-expand moodle-has-zindex">
     {{#hasdrawertoggle}}
@@ -37,7 +45,7 @@
         {{/ output.get_logo }}
             ">
         {{# output.get_logo }}
-            <span class="logo d-none d-sm-inline">
+            <span class="logo d-none d-md-inline">
                 <img src="{{output.get_logo}}" alt="{{sitename}}">
             </span>
         {{/ output.get_logo }}
@@ -45,24 +53,43 @@
             <span class="site-name d-none d-md-inline">{{{ sitename }}}</span>
         {{/ output.get_logo }}
     </a>
-
-    <ul class="navbar-nav d-none d-md-flex custom-menus">
+    <div class="coursecontrols nav-item d-flex justify-content-center align-items-center">
+        {{{output.dropdown_menu_button}}}
+        {{{output.edit_button_fhs}}}
+    </div>
+     {{> theme_ecampus/accessibilitybar }}
+    <ul class="navbar-nav d-none d-md-flex custom-menus ">
         <!-- custom_menu -->
         {{{ output.custom_menu }}}
         <!-- page_heading_menu -->
         {{{ output.page_heading_menu }}}
     </ul>
-    <ul class="nav navbar-nav ml-auto">
-        <div class="d-none d-lg-block">
-            {{{ output.search_box }}}
+    <ul class="nav navbar-nav ml-auto mr-3">
+        
+        
+
+        <div id="navbar_content_control">
+            <div class="popover-regionbar collapsed accesibilitybutton">
+                <div class="popover-regionbar-toggle nav-link icon-no-margin">
+                    <li class="nav-item accessibility-menu-btn-mod">
+                        <span id="themesettings-control-mod">
+                            <i title="{{#str}}themesettingstitle, theme_ecampus{{/str}}"
+                                class="fi fi-rr-brush">
+                            </i>
+                        </span>
+                        
+                    </li>
+                </div>
+                
+            </div> 
+            
+            {{{ output.navbar_plugin_output }}}
+    
+            {{{ output.user_menu }}}
         </div>
 
-        <li class="nav-item lang-menu">
-            {{{ output.render_lang_menu }}}
-        </li>
-
-        {{{ output.navbar_plugin_output }}}
-
-        {{{ output.user_menu }}}
+        {{> theme_ecampus/navbartools}}
+        
     </ul>
 </nav>
+

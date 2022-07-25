@@ -17,12 +17,12 @@
 /**
  * Certificates page renderer
  *
- * @package    theme_moove
+ * @package    theme_ecampus
  * @copyright  2020 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_moove\output;
+namespace theme_ecampus\output;
 
 defined('MOODLE_INTERNAL') || die;
 
@@ -33,7 +33,7 @@ use renderer_base;
 /**
  * My certificates page renderer
  *
- * @package    theme_moove
+ * @package    theme_ecampus
  * @copyright  2020 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -65,15 +65,15 @@ class certificates implements renderable, templatable {
     public function export_for_template(renderer_base $output) {
         global $USER;
 
-        $certificates = new \theme_moove\util\certificates($USER, $this->courseid);
+        $certificates = new \theme_ecampus\util\certificates($USER, $this->courseid);
 
         $issuedcertificates = $certificates->get_all_certificates();
 
-        $title = get_string('certificatestitle', 'theme_moove');
-        $subtitle = get_string('subtitleallcertificates', 'theme_moove');
+        $title = get_string('certificatestitle', 'theme_ecampus');
+        $subtitle = get_string('subtitleallcertificates', 'theme_ecampus');
 
         if ($this->courseid) {
-            $subtitle = get_string('subtitlecoursecertificates', 'theme_moove');
+            $subtitle = get_string('subtitlecoursecertificates', 'theme_ecampus');
         }
 
         return [

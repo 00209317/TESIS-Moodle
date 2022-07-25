@@ -17,12 +17,12 @@
 /**
  * Overriden course topics format renderer.
  *
- * @package    theme_moove
+ * @package    theme_ecampus
  * @copyright  2018 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_moove\privacy;
+namespace theme_ecampus\privacy;
 
 use \core_privacy\local\metadata\collection;
 use \core_privacy\local\metadata\provider as baseprovider;
@@ -32,7 +32,7 @@ use \core_privacy\local\request\writer;
 defined('MOODLE_INTERNAL') || die();
 
 /**
- * The moove theme does not store any data.
+ * The ecampus theme does not store any data.
  *
  * @copyright  2018 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -48,9 +48,7 @@ class provider implements
     /** The user preference for the site color. */
     const SITECOLOR = 'accessibilitystyles_sitecolorclass';
     /** The user preference for the font type. */
-    const FONTTYPE = 'thememoovesettings_fonttype';
-    /** The user preference for the enable accessibility toolbar. */
-    const TOOLBAR = 'thememoovesettings_enableaccessibilitytoolbar';
+    const FONTTYPE = 'themeecampussettings_fonttype';
 
     /**
      * Returns meta data about this system.
@@ -61,8 +59,7 @@ class provider implements
     public static function get_metadata(collection $items) : collection {
         $items->add_user_preference(self::FONTSIZE, 'privacy:metadata:preference:accessibilitystyles_fontsizeclass');
         $items->add_user_preference(self::SITECOLOR, 'privacy:metadata:preference:accessibilitystyles_sitecolorclass');
-        $items->add_user_preference(self::FONTTYPE, 'privacy:metadata:preference:thememoovesettings_fonttype');
-        $items->add_user_preference(self::TOOLBAR, 'privacy:metadata:preference:thememoovesettings_enableaccessibilitytoolbar');
+        $items->add_user_preference(self::FONTTYPE, 'privacy:metadata:preference:themeecampussettings_fonttype');
         return $items;
     }
 
@@ -73,43 +70,33 @@ class provider implements
      * @throws \coding_exception
      */
     public static function export_user_preferences(int $userid) {
-        $toolbar = get_user_preferences(self::TOOLBAR, null, $userid);
-        if (isset($toolbar)) {
+        $fontsize = get_user_preferences(self::FONTSIZE, null, $userid);
+        if (isset($fontsize)) {
             writer::export_user_preference(
-                'theme_moove',
-                self::TOOLBAR,
-                $toolbar,
-                get_string('privacy:thememoovesettings_enableaccessibilitytoolbar', 'theme_moove', $toolbar)
+                'theme_ecampus',
+                self::FONTSIZE,
+                $fontsize,
+                get_string('privacy:accessibilitystyles_fontsizeclass', 'theme_ecampus', $fontsize)
             );
+        }
 
-            $fontsize = get_user_preferences(self::FONTSIZE, null, $userid);
-            if (isset($fontsize)) {
-                writer::export_user_preference(
-                    'theme_moove',
-                    self::FONTSIZE,
-                    $fontsize,
-                    get_string('privacy:accessibilitystyles_fontsizeclass', 'theme_moove', $fontsize)
-                );
-            }
-
-            $sitecolor = get_user_preferences(self::SITECOLOR, null, $userid);
-            if (isset($sitecolor)) {
-                writer::export_user_preference(
-                    'theme_moove',
-                    self::SITECOLOR,
-                    $sitecolor,
-                    get_string('privacy:accessibilitystyles_sitecolorclass', 'theme_moove', $sitecolor)
-                );
-            }
+        $sitecolor = get_user_preferences(self::SITECOLOR, null, $userid);
+        if (isset($sitecolor)) {
+            writer::export_user_preference(
+                'theme_ecampus',
+                self::SITECOLOR,
+                $sitecolor,
+                get_string('privacy:accessibilitystyles_sitecolorclass', 'theme_ecampus', $sitecolor)
+            );
         }
 
         $fonttype = get_user_preferences(self::FONTTYPE, null, $userid);
         if (isset($fonttype)) {
             writer::export_user_preference(
-                'theme_moove',
+                'theme_ecampus',
                 self::FONTTYPE,
                 $fonttype,
-                get_string('privacy:thememoovesettings_fonttype', 'theme_moove', $fonttype)
+                get_string('privacy:themeecampussettings_fonttype', 'theme_ecampus', $fonttype)
             );
         }
     }

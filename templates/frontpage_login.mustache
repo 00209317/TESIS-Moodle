@@ -15,7 +15,7 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template theme_moove/frontpage_login
+    @template theme_ecampus/frontpage_login
 
     Accessibility toolbar template
 
@@ -26,7 +26,7 @@
     }
 }}
 <div class="card-body">
-    <h3>{{#str}}platform_access, theme_moove{{/str}}</h3>
+    <h3>{{#str}}platform_access, theme_ecampus{{/str}}</h3>
     <form class="signup-form" action="{{{ config.wwwroot }}}/login/index.php" method="POST" role="form">
         <input type="hidden" name="logintoken" value="{{logintoken}}">
         <label for="username">
@@ -48,8 +48,8 @@
             <input type="password" class="form-control" id="password" name="password" placeholder="{{#str}}password{{/str}}" required />
         </div>
 
-        <div class="sign-up-btn">
-            <button type="submit" class="btn btn-primary">{{#str}}login{{/str}}</button>
+        <div class="d-flex justify-content-end mt-4">
+            <button type="submit" class="btn btn-secondary pr-4 pl-4 pt-2 pb-2">{{#str}}login{{/str}} <i class="fa fa-angle-right pl-3" aria-hidden="true"></i></button>
         </div>
     </form>
 
